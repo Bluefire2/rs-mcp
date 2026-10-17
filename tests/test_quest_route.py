@@ -120,3 +120,37 @@ def test_finish_wins_when_a_quest_is_needed_both_ways():
 def test_route_counts_remaining_quests():
     result = progress(account(), "Dragon Slayer II")
     assert result.route_quests_remaining == len(result.route)
+
+
+def listing(data: WikiSyncData, startable_only: bool = True, rewards_skill: str | None = None):
+    return build_quest_progress(data, "incomplete", startable_only, False, None, rewards_skill)
+
+
+def test_startable_quests_follow_the_optimal_quest_guide():
+    quests = listing(account(level=1)).quests
+    orders = [q.optimal_order for q in quests if q.optimal_order is not None]
+    assert orders == sorted(orders) and len(orders) > 10
+    assert [q.name for q in quests[:2]] == ["Learning the Ropes", "Cook's Assistant"]
+    unlisted = [i for i, q in enumerate(quests) if q.optimal_order is None]
+    assert unlisted == list(range(len(quests) - len(unlisted), len(quests)))  # all at the end
+
+
+def test_rewards_skill_lists_quests_giving_that_xp():
+    result = listing(account(level=1), rewards_skill="agility")  # case-insensitive
+    assert result.quests
+    assert all("Agility" in q.xp_rewards for q in result.quests)
+    assert all(q.can_start is not False for q in result.quests)
+    everything = listing(account(level=1), startable_only=False, rewards_skill="Agility")
+    assert "Dragon Slayer II" in {q.name for q in everything.quests}
+    assert listing(account(level=1)).quests[0].xp_rewards is None  # only with rewards_skill
+
+
+def test_unknown_rewards_skill_is_an_actionable_error():
+    with pytest.raises(SourceError, match=r"Use one of: .*Agility"):
+        listing(account(), rewards_skill="Sneaking")
+
+
+def test_miniquests_are_flagged():
+    [entry] = progress(account(), "Barbarian Training").quests
+    assert entry.miniquest
+    assert not progress(account(), "Cook's Assistant").quests[0].miniquest

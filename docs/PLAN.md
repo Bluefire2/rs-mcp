@@ -125,14 +125,14 @@ Every tool takes an optional `rsn`, defaulting to `DEFAULT_RSN`. Hiscore tools a
 |---|---|---|---|
 | `get_stats` | Hiscores, 5 min | rsn, account_type | total_level, total_xp, combat_level (computed), skills[{skill, level, xp, rank\|null, xp_to_next, xp_to_99}], sorted by xp_to_99 asc; `closest_99` |
 | `get_activity_scores` | Hiscores, 5 min | category: bosses\|clues\|minigames\|all; include_unranked=false | [{name, score, rank}] for ranked entries only |
-| `get_quest_progress` | WikiSync + Questreq | status: completed\|in_progress\|not_started\|incomplete(default)\|all; startable_only=false | counts; quests[{name, status, can_start, missing:{skills[{skill,need,have}], quests[]}}] |
+| `get_quest_progress` | WikiSync + Questreq | status: completed\|in_progress\|not_started\|incomplete(default)\|all; startable_only=false (sorted by the Wiki's Optimal quest guide); rewards_skill?; quest? (single quest + route) | counts; quests[{name, status, miniquest, optimal_order, can_start, missing:{skills[{skill,need,have}], quests[]}}] |
 | `get_diary_progress` | WikiSync + diary data | region?, tier? | per region/tier {complete, done/total}; when a region/tier is given, incomplete tasks[{text}] + skill reqs vs current levels |
 | `get_combat_achievements` | WikiSync + CA bucket | tier?, monster?, status=incomplete, limit=50 | per-tier done/total; tasks[{name, tier, monster, type, description}] |
 | `get_gains` | WOM, 5 min | period: day\|week\|month\|year | non-zero skill xp/level gains, boss/activity gains, ehp/ehb, window start/end |
 | `refresh_gains_tracking` | WOM POST | rsn | Updated snapshot time. Description says it's rate-limited (20/min) and should be used rarely |
 | `get_item_price` | Wiki prices: latest 60 s, mapping 24 h | query, limit=5 | matches[{name, id, high, high_time, low, low_time, buy_limit, high_alch, members}] |
 | `get_bank` (P3) | GIM snapshot | search?, min_value?, sort=value\|qty\|name, limit=50 | updated_at, total_value, item_count, items[{name, qty, unit_price, value}] |
-| `get_equipment_and_inventory` (P3) | GIM snapshot | none | updated_at, equipment by slot, inventory, rune_pouch, quiver |
+| `get_equipment_and_inventory` (P3) | GIM snapshot | none | per section updated_at + age_minutes; equipment by slot, inventory, rune_pouch, quiver |
 
 Tool annotations: all tools are `readOnlyHint: true` except `refresh_gains_tracking`. Tool order is deterministic.
 

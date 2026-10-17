@@ -1,7 +1,7 @@
 """get_bank and get_equipment_and_inventory, from snapshots pushed by the Group Ironmen Tracker
 RuneLite plugin (see osrs_mcp.ingest.gim), named and valued with the OSRS Wiki prices API."""
 
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Annotated, Literal
 
 from fastmcp import FastMCP
@@ -99,6 +99,10 @@ class InventorySlot(Slot):
 
 class Section[T](BaseModel):
     updated_at: datetime | None = Field(description="null if the plugin never sent this")
+    age_minutes: int | None = Field(
+        description="Minutes since updated_at. The plugin only sends while the player is logged "
+        "in, so a large age means a past session, not what they're carrying now"
+    )
     items: T
 
 
@@ -194,11 +198,20 @@ def build_equipment_and_inventory(
     rune_pouch: Snapshot | None,
     quiver: Snapshot | None,
     items: Items,
+    now: datetime | None = None,
 ) -> EquipmentAndInventory:
+    now = now or datetime.now(UTC)
+
     def section(snapshot: Snapshot | None) -> tuple[datetime | None, list[tuple[int, Slot]]]:
         if snapshot is None:
             return None, []
         return snapshot.updated_at, slots(snapshot.data, items)
+
+    def age(at: datetime | None) -> int | None:
+        if at is None:
+            return None
+        at = at if at.tzinfo else at.replace(tzinfo=UTC)  # snapshots are written in UTC
+        return max(int((now - at).total_seconds() // 60), 0)
 
     eq_at, eq = section(equipment)
     inv_at, inv = section(inventory)
@@ -210,15 +223,21 @@ def build_equipment_and_inventory(
         source=SNAPSHOT_SOURCE,
         equipment=Section(
             updated_at=eq_at,
+            age_minutes=age(eq_at),
             items={EQUIPMENT_SLOTS.get(i, f"slot {i}"): slot for i, slot in eq},
         ),
         inventory=Section(
             updated_at=inv_at,
+            age_minutes=age(inv_at),
             items=[InventorySlot(slot=i, **slot.model_dump()) for i, slot in inv],
         ),
         free_inventory_slots=28 - len(inv) if inventory is not None else None,
-        rune_pouch=Section(updated_at=pouch_at, items=[slot for _, slot in pouch]),
-        quiver=Section(updated_at=quiver_at, items=[slot for _, slot in ammo]),
+        rune_pouch=Section(
+            updated_at=pouch_at, age_minutes=age(pouch_at), items=[slot for _, slot in pouch]
+        ),
+        quiver=Section(
+            updated_at=quiver_at, age_minutes=age(quiver_at), items=[slot for _, slot in ammo]
+        ),
     )
 
 
@@ -252,7 +271,8 @@ def register(mcp: FastMCP, sources: Sources, snapshots: SnapshotStore) -> None:
     async def get_equipment_and_inventory(rsn: Rsn = None) -> EquipmentAndInventory:
         """What the player is wearing (by slot), carrying in the inventory (by slot), and has in
         the rune pouch and Dizana's quiver, as last reported by RuneLite. Each section has its
-        own updated_at; the plugin sends changes within seconds while the player is logged in."""
+        own updated_at and age_minutes; the plugin sends changes within seconds while the player
+        is logged in, so an age of hours means a past session, not a trip in progress."""
         name = sources.rsn(rsn)
         equipment = await snapshots.get(name, "equipment")
         inventory = await snapshots.get(name, "inventory")

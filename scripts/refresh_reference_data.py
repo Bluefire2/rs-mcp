@@ -6,7 +6,9 @@ WikiSync reports *what* a player has done (quest states, diary task booleans, co
 IDs) but not names or requirements. This script pulls those from the Wiki:
 
 - quest_reqs.json: Module:Questreq/data (a Lua table of quest and diary prerequisites) plus
-  difficulty/length from the Quest bucket.
+  difficulty/length from the Quest bucket, the skills each quest page's {{Quest rewards}} gives
+  experience in, whether it's a miniquest (Category:Miniquests) and its position in the
+  "Optimal quest guide" table.
 - quest_points.json: quest -> quest points, from the qp= of each quest page's {{Quest rewards}}
   (the same field the Wiki's Quests/List tables show), checked against the Wiki's total.
 - diary_tasks.json: task text and requirements from each "<Region> Diary" page, in the same
@@ -270,6 +272,7 @@ UNRELEASED_CATEGORIES = {
 # Since the 22 October 2025 update every account's first quest point comes from Tutorial Island,
 # a miniquest page with no {{Quest rewards}} (see its changelog). WikiSync doesn't track it.
 TUTORIAL_ISLAND_QP = {"Tutorial Island": 1}
+MINIQUEST_CATEGORY = "Category:Miniquests"
 
 
 def parse_quest_rewards_qp(wikitext: str) -> int | None:
@@ -281,36 +284,46 @@ def parse_quest_rewards_qp(wikitext: str) -> int | None:
     return int(qp.group(1)) if qp else 1
 
 
-def quest_points(http: httpx.Client, titles: list[str]) -> dict[str, int]:
-    """Quest points per released quest or miniquest page (miniquests give 0)."""
-    points: dict[str, int] = {}
+def wikisync_name(title: str) -> str:
+    """Wiki page title -> the name WikiSync and Module:Questreq/data use."""
+    return normalise_prereq(title).removesuffix(" (miniquest)")
+
+
+def query(http: httpx.Client, **params: str) -> dict:
+    base = {"action": "query", "format": "json", "formatversion": "2"}
+    response = http.get(API, params=base | params)
+    response.raise_for_status()
+    return response.json()["query"]
+
+
+def quest_pages(http: httpx.Client, titles: list[str]) -> dict[str, tuple[set[str], str]]:
+    """Released quest and miniquest pages: title -> (categories, wikitext)."""
+    pages: dict[str, tuple[set[str], str]] = {}
     for start in range(0, len(titles), 50):
-        response = http.get(
-            API,
-            params={
-                "action": "query",
-                "format": "json",
-                "formatversion": "2",
-                "prop": "revisions|categories",
-                "rvprop": "content",
-                "rvslots": "main",
-                "cllimit": "max",
-                "titles": "|".join(titles[start : start + 50]),
-            },
+        result = query(
+            http,
+            prop="revisions|categories",
+            rvprop="content",
+            rvslots="main",
+            cllimit="max",
+            titles="|".join(titles[start : start + 50]),
         )
-        response.raise_for_status()
-        for page in response.json()["query"]["pages"]:
+        for page in result["pages"]:
             categories = {c["title"] for c in page.get("categories", [])}
             if categories & UNRELEASED_CATEGORIES:
                 continue
-            if "Category:Miniquests" in categories:
-                points[page["title"]] = 0
-                continue
-            qp = parse_quest_rewards_qp(page["revisions"][0]["slots"]["main"]["content"])
-            if qp is None:
-                raise RuntimeError(f"{page['title']}: released quest without {{{{Quest rewards}}}}")
-            points[page["title"]] = qp
-    return points
+            pages[page["title"]] = (categories, page["revisions"][0]["slots"]["main"]["content"])
+    return pages
+
+
+def page_quest_points(title: str, categories: set[str], wikitext: str) -> int:
+    """Quest points for one released page (miniquests give 0)."""
+    if MINIQUEST_CATEGORY in categories:
+        return 0
+    qp = parse_quest_rewards_qp(wikitext)
+    if qp is None:
+        raise RuntimeError(f"{title}: released quest without {{{{Quest rewards}}}}")
+    return qp
 
 
 def wiki_total_quest_points(http: httpx.Client) -> int:
@@ -322,14 +335,13 @@ def wiki_total_quest_points(http: httpx.Client) -> int:
     return int(match.group(1))
 
 
-def build_quest_points(http: httpx.Client, quest_rows: list[dict]) -> dict[str, int]:
+def build_quest_points(
+    http: httpx.Client, pages: dict[str, tuple[set[str], str]]
+) -> dict[str, int]:
     """Quest points keyed by WikiSync quest name, plus Tutorial Island."""
-    titles = sorted(
-        {row["page_name"] for row in quest_rows if not row["page_name"].endswith("/Full guide")}
-    )
     points = {
-        normalise_prereq(title).removesuffix(" (miniquest)"): qp
-        for title, qp in quest_points(http, titles).items()
+        wikisync_name(title): page_quest_points(title, categories, wikitext)
+        for title, (categories, wikitext) in pages.items()
     }
     # The Recipe for Disaster page lists all 10 points; the game awards (and WikiSync
     # tracks) them one per subquest, so the parent quest itself counts for nothing.
@@ -344,6 +356,94 @@ def build_quest_points(http: httpx.Client, quest_rows: list[dict]) -> dict[str, 
         raise RuntimeError(f"Quest points add up to {total}, the Wiki's total is {expected}")
     points.update(TUTORIAL_ISLAND_QP)
     return dict(sorted(points.items()))
+
+
+SKILLS = {
+    "Agility", "Attack", "Construction", "Cooking", "Crafting", "Defence", "Farming",
+    "Firemaking", "Fishing", "Fletching", "Herblore", "Hitpoints", "Hunter", "Magic", "Mining",
+    "Prayer", "Ranged", "Runecraft", "Sailing", "Slayer", "Smithing", "Strength", "Thieving",
+    "Woodcutting",
+}  # fmt: skip
+QUEST_REWARDS_START = re.compile(r"\{\{\s*Quest rewards\b", re.IGNORECASE)
+TEMPLATE_BRACES = re.compile(r"\{\{|\}\}")
+REWARD_SCP = re.compile(
+    r"\{\{\s*SCP\s*\|\s*([A-Za-z ]+?)\s*(?:\|\s*([\d,]+(?:\.\d+)?)\s*)?(?:\|[^{}]*)?\}\}"
+)
+XP_WORDS = re.compile(r"experience|\bxp\b", re.IGNORECASE)
+
+
+def quest_rewards_body(wikitext: str) -> str:
+    """The text of the page's {{Quest rewards ...}}, up to its matching }} ("" if none)."""
+    start = QUEST_REWARDS_START.search(wikitext)
+    if not start:
+        return ""
+    depth = 1
+    for brace in TEMPLATE_BRACES.finditer(wikitext, start.end()):
+        depth += 1 if brace.group() == "{{" else -1
+        if depth == 0:
+            return wikitext[start.end() : brace.start()]
+    return wikitext[start.end() :]
+
+
+def parse_xp_rewards(wikitext: str) -> dict[str, int | None]:
+    """Skills the page's {{Quest rewards}} gives experience in: skill -> fixed XP, or None when
+    there's no plain number next to the skill (a choice, "35,000 experience in {{SCP|Attack}}").
+    Only reward lines that mention experience count, so "(with {{SCP|Agility|37}})" unlocks
+    don't. Lamps for "any skill" name no skill and aren't listed."""
+    rewards: dict[str, int | None] = {}
+    for line in quest_rewards_body(wikitext).splitlines():
+        if not XP_WORDS.search(line):
+            continue
+        for name, amount in REWARD_SCP.findall(line):
+            skill = name.capitalize()  # {{SCP|thieving|1,500}} on Hazeel Cult
+            if skill not in SKILLS:
+                continue
+            if amount:
+                # Some amounts have decimals ({{SCP|Magic|20,006.9}}); the game truncates.
+                xp = int(float(amount.replace(",", "")))
+                rewards[skill] = max(rewards.get(skill) or 0, xp)
+            else:
+                rewards.setdefault(skill, None)
+    return dict(sorted(rewards.items()))
+
+
+def miniquest_names(http: httpx.Client, names: list[str]) -> set[str]:
+    """Which of `names` are miniquests: pages in Category:Miniquests, directly or through a
+    redirect ("Barbarian Firemaking" -> Barbarian Training#Firemaking)."""
+    members = query(
+        http, list="categorymembers", cmtitle=MINIQUEST_CATEGORY, cmnamespace="0", cmlimit="max"
+    )["categorymembers"]
+    pages = {m["title"] for m in members if "/" not in m["title"]}
+    result = {wikisync_name(title) for title in pages} & set(names)
+    unresolved = [name for name in names if name not in result]
+    for start in range(0, len(unresolved), 50):
+        found = query(http, titles="|".join(unresolved[start : start + 50]), redirects="1")
+        for redirect in found.get("redirects", []):
+            if redirect["to"] in pages:
+                result.add(redirect["from"])
+    return result
+
+
+OQG_ROW = re.compile(r"^\|-[^\n]*\bdata-rowid=[^\n]*\n\|([^\n]*)", re.MULTILINE)
+SORT_VALUE = re.compile(r'^\s*data-sort-value="[^"]*"\s*\|')
+FIRST_LINK = re.compile(r"\[\[([^\]|#]+)")
+
+
+def parse_optimal_order(wikitext: str, known: set[str]) -> list[str]:
+    """Quests in the order of the Optimal quest guide's table. Rows for diaries, unlocks and
+    other activities are skipped (their first link isn't a known quest); first appearance wins."""
+    known_by_case = {name.lower(): name for name in known}
+    order: list[str] = []
+    for match in OQG_ROW.finditer(wikitext):
+        cell = SORT_VALUE.sub("", match.group(1)).strip()
+        link = FIRST_LINK.search(cell)
+        if cell.startswith("Unlock:") or not link:
+            continue
+        name = wikisync_name(link.group(1))
+        name = known_by_case.get(name.lower())  # "Natural history quiz" -> "...History Quiz"
+        if name and name not in order:
+            order.append(name)
+    return order
 
 
 def raw_page(http: httpx.Client, title: str) -> str:
@@ -369,10 +469,12 @@ def main() -> int:
             "bucket('quest').select('page_name','official_difficulty','official_length',"
             "'requirements').limit(5000).run()",
         )
+        titles = {row["page_name"] for row in quest_rows}
+        pages = quest_pages(http, sorted(t for t in titles if not t.endswith("/Full guide")))
         for row in quest_rows:
             if row["page_name"].endswith("/Full guide"):
                 continue
-            name = normalise_prereq(row["page_name"]).removesuffix(" (miniquest)")
+            name = wikisync_name(row["page_name"])
             if name not in reqs:
                 entry = parse_bucket_requirements(row.get("requirements") or "")
                 entry["quests"] = [normalise_prereq(q) for q in entry["quests"]]
@@ -380,9 +482,17 @@ def main() -> int:
                 reqs[name] = entry
             reqs[name]["difficulty"] = row.get("official_difficulty")
             reqs[name]["length"] = row.get("official_length")
+            page = pages.get(row["page_name"])  # None if unreleased
+            reqs[name]["xp_rewards"] = parse_xp_rewards(page[1]) if page else {}
+        miniquests = miniquest_names(http, sorted(reqs))
+        order = parse_optimal_order(raw_page(http, "Optimal quest guide"), set(reqs))
+        for name, entry in reqs.items():
+            entry.setdefault("xp_rewards", {})  # Questreq-only entries have no quest page
+            entry["miniquest"] = name in miniquests
+            entry["optimal_order"] = order.index(name) + 1 if name in order else None
         write("quest_reqs.json", dict(sorted(reqs.items())))
 
-        write("quest_points.json", build_quest_points(http, quest_rows))
+        write("quest_points.json", build_quest_points(http, pages))
 
         diaries = {}
         for region in DIARY_REGIONS:

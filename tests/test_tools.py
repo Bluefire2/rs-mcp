@@ -2,6 +2,7 @@
 mocked from captured fixtures. This covers registration, input/output schemas and error text."""
 
 import json
+from datetime import UTC, datetime, timedelta
 
 import pytest
 import respx
@@ -15,7 +16,7 @@ from osrs_mcp.ingest.gim import GimUpdate, apply_update
 from osrs_mcp.reference import SkillReq
 from osrs_mcp.requirements import Checker, player_quest_points
 from osrs_mcp.server import create_app
-from osrs_mcp.snapshots import SnapshotStore
+from osrs_mcp.snapshots import Snapshot, SnapshotStore
 from osrs_mcp.sources import Sources
 from tests.conftest import fixture_json, fixture_text
 
@@ -162,6 +163,20 @@ async def test_get_quest_progress(mock_sources):
 
     incomplete = await call("get_quest_progress")
     assert all(q["status"] != "completed" for q in incomplete["quests"])
+
+
+async def test_get_quest_progress_omits_default_fields(mock_sources):
+    # miniquest/optimal_order/xp_rewards at their defaults added ~30% to status=all, which
+    # goes to phone chats; they're left out unless set (and the output still validates).
+    quests = {q["name"]: q for q in (await call("get_quest_progress", {"status": "all"}))["quests"]}
+    cooks = quests["Cook's Assistant"]
+    assert "miniquest" not in cooks and "xp_rewards" not in cooks
+    assert cooks["optimal_order"] >= 1
+    assert quests["Barbarian Training"]["miniquest"] is True
+    assert "optimal_order" not in quests["Barbarian Training"]
+
+    agility = await call("get_quest_progress", {"status": "all", "rewards_skill": "Agility"})
+    assert agility["quests"] and all("Agility" in q["xp_rewards"] for q in agility["quests"])
 
 
 async def test_get_diary_progress_summary_and_region(mock_sources):
@@ -407,6 +422,38 @@ async def test_get_equipment_and_inventory(mock_sources):
     ]
     assert gear["quiver"]["items"] == []
     assert gear["quiver"]["updated_at"]
+    assert gear["inventory"]["age_minutes"] == 0  # just pushed
+
+
+def test_equipment_sections_report_their_age():
+    # Seen in a skill test: a 9-hour-old inventory read as a trip in progress.
+    from osrs_mcp.tools.bank import Items, build_equipment_and_inventory
+
+    pushed = datetime(2026, 10, 17, 1, 0, tzinfo=UTC)
+    inventory = Snapshot(rsn="Iron Tester", kind="inventory", updated_at=pushed, data=[4151, 1])
+    gear = build_equipment_and_inventory(
+        "Iron Tester",
+        equipment=None,
+        inventory=inventory,
+        rune_pouch=None,
+        quiver=None,
+        items=Items(mapping=[], latest={}),
+        now=pushed + timedelta(hours=9, seconds=59),
+    )
+    assert gear.inventory.age_minutes == 540
+    assert gear.equipment.updated_at is None and gear.equipment.age_minutes is None
+
+    naive = inventory.model_copy(update={"updated_at": pushed.replace(tzinfo=None)})
+    gear = build_equipment_and_inventory(
+        "Iron Tester",
+        equipment=None,
+        inventory=naive,
+        rune_pouch=None,
+        quiver=None,
+        items=Items(mapping=[], latest={}),
+        now=pushed + timedelta(minutes=5),
+    )
+    assert gear.inventory.age_minutes == 5  # a naive timestamp is taken as UTC
 
 
 async def test_empty_rune_pouch_slots_are_minus_one(mock_sources):
