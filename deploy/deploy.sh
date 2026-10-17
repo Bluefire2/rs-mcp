@@ -18,6 +18,10 @@ REGION="${REGION:-us-west1}"
 SERVICE="${SERVICE:-osrs-mcp}"
 REPO="${REPO:-osrs-mcp}"
 SA_NAME="${SA_NAME:-osrs-mcp-run}"
+# Public address: a Cloud Run domain mapping for DOMAIN (a whole hostname), with the app
+# itself serving everything under PREFIX. DOMAIN= (empty) uses the bare run.app URL instead.
+DOMAIN="${DOMAIN-rs.example.com}"
+PREFIX="${PREFIX-/osrs}"
 ENV_FILE="${ENV_FILE:-.env}"
 
 DRY_RUN=0
@@ -68,12 +72,13 @@ fi
 COMMIT="$(git rev-parse --short=12 HEAD)"
 
 PROJECT_NUMBER="$(g projects describe "$PROJECT" --format='value(projectNumber)')"
-URL="https://${SERVICE}-${PROJECT_NUMBER}.${REGION}.run.app"
+RUN_URL="https://${SERVICE}-${PROJECT_NUMBER}.${REGION}.run.app"
+if [[ -n "$DOMAIN" ]]; then PUBLIC_URL="https://${DOMAIN}${PREFIX}"; else PUBLIC_URL="$RUN_URL"; PREFIX=""; fi
 IMAGE="${REGION}-docker.pkg.dev/${PROJECT}/${REPO}/${SERVICE}:${COMMIT}"
 SA="${SA_NAME}@${PROJECT}.iam.gserviceaccount.com"
 
 log "Project $PROJECT ($PROJECT_NUMBER), region $REGION, service $SERVICE"
-echo "  URL:   $URL"
+echo "  public URL: $PUBLIC_URL   (run.app: $RUN_URL)"
 echo "  image: $IMAGE"
 [[ $DRY_RUN -eq 1 ]] && echo "  DRY RUN: nothing will be changed"
 
@@ -168,7 +173,7 @@ fi
 log "Deploy"
 ENV_VARS=(
   "AUTH_MODE=google"
-  "PUBLIC_BASE_URL=$URL"
+  "PUBLIC_BASE_URL=$PUBLIC_URL"
   "STORE_BACKEND=firestore"
   "GOOGLE_CLIENT_ID=$(env_value GOOGLE_CLIENT_ID)"
   "ALLOWED_EMAIL=$(env_value ALLOWED_EMAIL)"
@@ -191,6 +196,21 @@ run run deploy "$SERVICE" --image="$IMAGE" --region="$REGION" \
   --min-instances=0 --max-instances=1 --cpu=1 --memory=512Mi --timeout=300 \
   --update-env-vars="$ENV_ARG" --update-secrets="$SECRETS_ARG"
 
+# --- custom domain ------------------------------------------------------------------------------
+
+if [[ -n "$DOMAIN" ]]; then
+  log "Domain mapping $DOMAIN"
+  if g beta run domain-mappings describe --domain="$DOMAIN" --region="$REGION" >/dev/null 2>&1; then
+    echo "  exists"
+  else
+    run beta run domain-mappings create --service="$SERVICE" --domain="$DOMAIN" --region="$REGION"
+  fi
+  if [[ $DRY_RUN -eq 0 ]]; then
+    echo "  DNS records it needs (add them at your DNS host, unproxied):"
+    g beta run domain-mappings describe --domain="$DOMAIN" --region="$REGION"       --format='table[box](status.resourceRecords[].name,status.resourceRecords[].type,status.resourceRecords[].rrdata)'
+  fi
+fi
+
 [[ $DRY_RUN -eq 1 ]] && { log "Dry run complete."; exit 0; }
 
 # --- verify the shape, not the exit code --------------------------------------------------------
@@ -203,7 +223,10 @@ echo "  containers: $("$GCLOUD" run services describe "$SERVICE" --region="$REGI
 echo "  env var names:"
 "$GCLOUD" run services describe "$SERVICE" --region="$REGION" --project="$PROJECT" \
   --format='value(spec.template.spec.containers[0].env[].name)' | tr ';' '\n' | sed 's/^/    /'
-echo "  /health: $(curl -s -o /dev/null -w "%{http_code}" "$URL/health")"
-echo "  /mcp without token: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'content-type: application/json' -d '{}' "$URL/mcp") (expect 401)"
-echo "  protected resource: $(curl -s "$URL/.well-known/oauth-protected-resource/mcp")"
-log "Done. Connector URL: $URL/mcp"
+CHECK="${RUN_URL}${PREFIX}"
+echo "  $CHECK/health: $(curl -s -o /dev/null -w "%{http_code}" "$CHECK/health")"
+echo "  /mcp without token: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'content-type: application/json' -d '{}' "$CHECK/mcp") (expect 401)"
+echo "  protected resource: $(curl -s "$RUN_URL/.well-known/oauth-protected-resource${PREFIX}/mcp")"
+log "Done. Connector URL: $PUBLIC_URL/mcp"
+echo "  Google OAuth redirect URI: $PUBLIC_URL/auth/callback"
+echo "  RuneLite plugin base URL:  $PUBLIC_URL"

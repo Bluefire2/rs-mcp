@@ -92,7 +92,7 @@ def test_healthz_needs_no_auth(client):
 def test_homepage_and_privacy_policy_are_public(client):
     # Google requires both URLs before the OAuth app can be published.
     home = client.get("/")
-    assert home.status_code == 200 and "/privacy" in home.text
+    assert home.status_code == 200 and 'href="privacy"' in home.text
     privacy = client.get("/privacy")
     assert privacy.status_code == 200
     assert "openid" in privacy.text and "Nothing is sold or shared" in privacy.text

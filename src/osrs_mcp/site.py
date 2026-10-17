@@ -46,7 +46,7 @@ owner's RuneLite client.</p>
 <p>It is a private tool for a single person. Signing in is restricted to one Google account;
 nobody else can use it.</p>
 <p>MCP endpoint: <code>{base}/mcp</code><br>
-<a href="/privacy">Privacy policy</a></p>
+<a href="privacy">Privacy policy</a></p>
 """,
         )
 

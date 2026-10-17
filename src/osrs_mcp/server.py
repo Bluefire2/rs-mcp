@@ -1,9 +1,16 @@
-"""The FastMCP app: tool registration, RuneLite ingest routes, health check, entry point."""
+"""The FastMCP app (tools, RuneLite ingest routes, pages, health check), the ASGI app that serves
+it, optionally under a URL prefix, and the entry point."""
 
+from urllib.parse import urlsplit
+
+import uvicorn
 from fastmcp import FastMCP
 from key_value.aio.protocols.key_value import AsyncKeyValue
+from starlette.applications import Starlette
 from starlette.requests import Request
-from starlette.responses import JSONResponse
+from starlette.responses import JSONResponse, RedirectResponse
+from starlette.routing import Mount, Route
+from starlette.types import ASGIApp
 
 from osrs_mcp import ingest, site
 from osrs_mcp.auth import make_auth
@@ -57,8 +64,30 @@ def create_app(
 MCP_PATH = "/mcp"
 
 
+def http_app(settings: Settings, mcp: FastMCP | None = None) -> ASGIApp:
+    """The ASGI app, served under PUBLIC_BASE_URL's path if it has one.
+
+    With PUBLIC_BASE_URL=https://rs.example.com/osrs everything (the MCP endpoint, OAuth
+    endpoints, ingest, pages) moves under /osrs, because a Cloud Run domain mapping can only map
+    a whole hostname. OAuth discovery documents stay at the domain root, where RFC 8414 and
+    RFC 9728 put them (/.well-known/oauth-authorization-server/osrs and
+    /.well-known/oauth-protected-resource/osrs/mcp).
+    """
+    mcp = mcp or create_app(settings)
+    inner = mcp.http_app(path=MCP_PATH)
+    prefix = urlsplit(settings.public_base_url).path.rstrip("/")
+    if not prefix:
+        return inner
+
+    async def to_prefix(request: Request) -> RedirectResponse:
+        return RedirectResponse(f"{prefix}/")
+
+    routes = [*mcp.auth.get_well_known_routes(mcp_path=MCP_PATH)] if mcp.auth else []
+    routes += [Route("/", to_prefix), Mount(prefix, app=inner)]
+    # The inner app's lifespan runs the MCP session manager and the server's own lifespan.
+    return Starlette(routes=routes, lifespan=inner.lifespan)
+
+
 def main() -> None:
     settings = get_settings()
-    create_app(settings).run(
-        transport="http", host=settings.host, port=settings.port, path=MCP_PATH
-    )
+    uvicorn.run(http_app(settings), host=settings.host, port=settings.port, lifespan="on")
