@@ -51,7 +51,9 @@ def mock_sources():
 
 
 def make_client(default_rsn: str = "Lynx Titan") -> Client:
-    settings = Settings(_env_file=None, default_rsn=default_rsn)
+    settings = Settings(
+        _env_file=None, default_rsn=default_rsn, auth_mode="none", store_backend="memory"
+    )
     sources = Sources.create(settings, HttpClient("tests/0.1", backoff_base=0))
     return Client(create_app(settings, sources))
 

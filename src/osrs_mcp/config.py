@@ -31,6 +31,22 @@ class Settings(BaseSettings):
     # Server
     host: str = "127.0.0.1"
     port: int = Field(default=8000, validation_alias="PORT")
+    # The URL clients reach this server at (no trailing slash, no /mcp). It is the OAuth
+    # issuer and must match the Google redirect URI: <public_base_url>/auth/callback.
+    public_base_url: str = "http://localhost:8000"
+
+    # Auth. "google" (default) requires Google sign-in restricted to ALLOWED_EMAIL; "none" is
+    # for local development against public data only.
+    auth_mode: Literal["google", "none"] = "google"
+    google_client_id: str = ""
+    google_client_secret: str = ""
+    allowed_email: str = ""
+    jwt_signing_key: str = ""  # signs the tokens this server issues to Claude
+    storage_encryption_key: str = ""  # Fernet key; encrypts stored upstream Google tokens
+
+    # Key-value storage for OAuth state (and later, RuneLite snapshots).
+    store_backend: Literal["file", "memory", "firestore"] = "file"
+    store_dir: str = "var/store"
 
     @property
     def full_user_agent(self) -> str:

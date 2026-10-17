@@ -52,13 +52,44 @@ cp .env.example .env
 ```
 
 Edit `.env` and set `DEFAULT_RSN` (your RuneScape name), `DEFAULT_ACCOUNT_TYPE` and `CONTACT`.
-Then start the server:
+Then generate the server's own signing and encryption keys:
+
+```bash
+python -m uv run python -m osrs_mcp.keys >> .env
+```
+
+Then set up Google sign-in (below), or set `AUTH_MODE=none` to skip auth while you only serve
+public data. Start the server:
 
 ```bash
 python -m uv run python -m osrs_mcp
 ```
 
-The MCP endpoint is `http://127.0.0.1:8000/mcp`, and the health check is `/healthz`.
+The MCP endpoint is `http://localhost:8000/mcp`, and the health check is `/healthz`.
+
+### Google sign-in
+
+With `AUTH_MODE=google` (the default), only the Google account in `ALLOWED_EMAIL` can use the
+connector. FastMCP's OAuth proxy acts as the authorization server Claude talks to (it supports
+Client ID Metadata Documents and Dynamic Client Registration) and sends you to Google to log in.
+Every MCP request re-checks the Google token and the email. The server refuses to start in this
+mode if any setting is missing.
+
+One-time setup in the Google Cloud console:
+
+1. **OAuth consent screen**:
+   - User type **External**.
+   - Scopes: only `openid` and `.../auth/userinfo.email`.
+   - **Publish** the app so its status is *In production*. In *Testing*, Google expires refresh
+     tokens after 7 days.
+2. **Clients → Create client**:
+   - Type: Web application.
+   - Authorized redirect URI: `<PUBLIC_BASE_URL>/auth/callback`, for example
+     `http://localhost:8000/auth/callback`.
+3. Put `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` and `ALLOWED_EMAIL` in `.env`.
+
+OAuth state (client registrations, encrypted Google tokens) is kept in `STORE_DIR`, so sign-ins
+survive restarts.
 
 For quests, diaries and combat achievements, enable the **WikiSync** plugin in RuneLite and log
 in once.
@@ -71,8 +102,11 @@ localhost**. Locally, use Claude Code or the MCP Inspector.
 Claude Code:
 
 ```bash
-claude mcp add --transport http osrs http://127.0.0.1:8000/mcp
+claude mcp add --transport http osrs http://localhost:8000/mcp
 ```
+
+Then run `/mcp` in Claude Code and choose **Authenticate** for `osrs`. Use `localhost`, not
+`127.0.0.1`: the URL must match `PUBLIC_BASE_URL`.
 
 MCP Inspector (opens a browser UI):
 
@@ -80,16 +114,19 @@ MCP Inspector (opens a browser UI):
 npx @modelcontextprotocol/inspector
 ```
 
-To try claude.ai before deploying, expose the server temporarily with a Cloudflare quick tunnel.
-Then add `https://<random>.trycloudflare.com/mcp` under **Customize > Connectors > Add custom
-connector** with "No sign-in":
+To try claude.ai before deploying, expose the server temporarily with a Cloudflare quick tunnel:
 
 ```bash
-cloudflared tunnel --url http://127.0.0.1:8000
+cloudflared tunnel --url http://localhost:8000
 ```
 
-The server has no authentication until Phase 2. Keep the tunnel up only while testing, and only
-while it serves public data.
+Then:
+1. Set `PUBLIC_BASE_URL` to the `https://<random>.trycloudflare.com` URL it prints, and restart
+   the server.
+2. Add `<that URL>/auth/callback` as a redirect URI on the Google client.
+3. In claude.ai, add `<that URL>/mcp` under **Customize > Connectors > Add custom connector**.
+
+The random URL changes every time the tunnel starts, so this is for one-off checks only.
 
 ## Development
 
@@ -120,6 +157,8 @@ python -m uv run python scripts/refresh_reference_data.py
 ```
 src/osrs_mcp/
   server.py         FastMCP app, /healthz, entry point
+  auth.py           Google sign-in via FastMCP's OAuth proxy + email allowlist
+  store.py          key-value storage (file tree / memory / Firestore)
   config.py         settings from env / .env
   http.py           shared HTTP client: User-Agent, timeout, retry, TTL cache
   sources.py        wires the data-source clients together
@@ -134,7 +173,6 @@ tests/
 
 ## Roadmap
 
-- **Phase 2:** Google OAuth via FastMCP's OAuth proxy, restricted to one email.
 - **Phase 3:** bank, inventory and gear, pushed by the
   [Group Ironmen Tracker](https://github.com/christoabrown/group-ironmen-tracker) plugin to this
   server (it supports a self-hosted base URL).
