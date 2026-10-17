@@ -26,20 +26,26 @@ class QuestEntry(BaseModel):
     status: Literal["completed", "in_progress", "not_started"]
     difficulty: str | None = None
     length: str | None = None
+    # These three are omitted from the output at their defaults: most entries have them, and
+    # quest lists go to phone chats (each null/false added ~30% to status=all).
     miniquest: bool = Field(
         default=False,
+        exclude_if=lambda v: not v,
         description="A miniquest (or part of one, like Barbarian Firemaking): no quest points, "
         "and usually no official difficulty or length",
     )
     optimal_order: int | None = Field(
         default=None,
+        exclude_if=lambda v: v is None,
         description="Position in the Wiki's Optimal quest guide (1 = first; lower = do sooner). "
         "None if the guide doesn't list it",
     )
     xp_rewards: dict[str, int | None] | None = Field(
         default=None,
-        description="With `rewards_skill`: skills the quest rewards XP in -> XP (None = the "
-        "amount depends on a choice; check the Wiki). Lamps for any skill aren't included",
+        exclude_if=lambda v: v is None,
+        description="With `rewards_skill`: skills the quest rewards XP in -> XP (None = no "
+        "fixed amount: a lamp or choice, or it scales with level; check the Wiki). Some "
+        "amounts are one option of a choice between skills. Lamps for any skill aren't included",
     )
     can_start: bool | None = Field(
         default=None,

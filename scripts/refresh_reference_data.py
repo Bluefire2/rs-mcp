@@ -366,7 +366,9 @@ SKILLS = {
 }  # fmt: skip
 QUEST_REWARDS_START = re.compile(r"\{\{\s*Quest rewards\b", re.IGNORECASE)
 TEMPLATE_BRACES = re.compile(r"\{\{|\}\}")
-REWARD_SCP = re.compile(r"\{\{\s*SCP\s*\|\s*([A-Za-z ]+?)\s*(?:\|\s*([\d,]+)\s*)?(?:\|[^{}]*)?\}\}")
+REWARD_SCP = re.compile(
+    r"\{\{\s*SCP\s*\|\s*([A-Za-z ]+?)\s*(?:\|\s*([\d,]+(?:\.\d+)?)\s*)?(?:\|[^{}]*)?\}\}"
+)
 XP_WORDS = re.compile(r"experience|\bxp\b", re.IGNORECASE)
 
 
@@ -397,7 +399,9 @@ def parse_xp_rewards(wikitext: str) -> dict[str, int | None]:
             if skill not in SKILLS:
                 continue
             if amount:
-                rewards[skill] = max(rewards.get(skill) or 0, int(amount.replace(",", "")))
+                # Some amounts have decimals ({{SCP|Magic|20,006.9}}); the game truncates.
+                xp = int(float(amount.replace(",", "")))
+                rewards[skill] = max(rewards.get(skill) or 0, xp)
             else:
                 rewards.setdefault(skill, None)
     return dict(sorted(rewards.items()))
@@ -428,6 +432,7 @@ FIRST_LINK = re.compile(r"\[\[([^\]|#]+)")
 def parse_optimal_order(wikitext: str, known: set[str]) -> list[str]:
     """Quests in the order of the Optimal quest guide's table. Rows for diaries, unlocks and
     other activities are skipped (their first link isn't a known quest); first appearance wins."""
+    known_by_case = {name.lower(): name for name in known}
     order: list[str] = []
     for match in OQG_ROW.finditer(wikitext):
         cell = SORT_VALUE.sub("", match.group(1)).strip()
@@ -435,7 +440,8 @@ def parse_optimal_order(wikitext: str, known: set[str]) -> list[str]:
         if cell.startswith("Unlock:") or not link:
             continue
         name = wikisync_name(link.group(1))
-        if name in known and name not in order:
+        name = known_by_case.get(name.lower())  # "Natural history quiz" -> "...History Quiz"
+        if name and name not in order:
             order.append(name)
     return order
 
@@ -481,6 +487,7 @@ def main() -> int:
         miniquests = miniquest_names(http, sorted(reqs))
         order = parse_optimal_order(raw_page(http, "Optimal quest guide"), set(reqs))
         for name, entry in reqs.items():
+            entry.setdefault("xp_rewards", {})  # Questreq-only entries have no quest page
             entry["miniquest"] = name in miniquests
             entry["optimal_order"] = order.index(name) + 1 if name in order else None
         write("quest_reqs.json", dict(sorted(reqs.items())))

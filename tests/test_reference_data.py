@@ -2,6 +2,7 @@
 parsers in scripts/refresh_reference_data.py."""
 
 import importlib.util
+import json
 from pathlib import Path
 
 import pytest
@@ -11,6 +12,7 @@ from osrs_mcp.requirements import player_quest_points
 from tests.conftest import fixture_json
 
 SCRIPT = Path(__file__).parent.parent / "scripts" / "refresh_reference_data.py"
+DATA = Path(__file__).parent.parent / "src" / "osrs_mcp" / "reference" / "data"
 spec = importlib.util.spec_from_file_location("refresh_reference_data", SCRIPT)
 refresh = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(refresh)
@@ -198,6 +200,8 @@ def test_most_wikisync_quests_have_an_optimal_order(wikisync):
     positions = [reqs[q].optimal_order for q in ordered]
     assert len(positions) == len(set(positions))
     assert reqs["Cook's Assistant"].optimal_order < reqs["Dragon Slayer II"].optimal_order
+    # The guide links "Natural history quiz"; names match whatever their case.
+    assert reqs["Natural History Quiz"].optimal_order is not None
 
 
 def test_miniquests_are_marked(wikisync):
@@ -215,6 +219,32 @@ def test_xp_reward_spot_values():
     assert reqs["Hazeel Cult"].xp_rewards == {"Thieving": 1500}
     assert reqs["The Tourist Trap"].xp_rewards["Agility"] is None  # a choice of skills
     assert reqs["Rune Mysteries"].xp_rewards == {}
+    assert reqs["Desert Treasure I"].xp_rewards == {"Magic": 20006}  # {{SCP|Magic|20,006.9}}
+
+
+def test_xp_amounts_are_none_only_without_a_fixed_number():
+    # Checked against each page's {{Quest rewards}}: these offer lamps or a choice of skills,
+    # or (While Guthix Sleeps) XP that scales with level. Any other None is a parser miss, like
+    # the decimal amounts ({{SCP|Magic|20,006.9}}) that once came out as None.
+    no_fixed_amount = {
+        "A Night at the Theatre",
+        "Contact!",
+        "Desert Treasure II - The Fallen Empire",
+        "Legends' Quest",
+        "Monkey Madness I",
+        "Observatory Quest",
+        "The Fremennik Isles",
+        "The Tourist Trap",
+        "While Guthix Sleeps",
+    }
+    with_none = {q for q, e in quest_reqs().items() if None in e.xp_rewards.values()}
+    assert with_none == no_fixed_amount
+
+
+def test_every_quest_entry_has_the_new_keys():
+    raw = json.loads(DATA.joinpath("quest_reqs.json").read_text("utf-8"))
+    keys = {"xp_rewards", "miniquest", "optimal_order"}
+    assert [quest for quest, entry in raw.items() if keys - entry.keys()] == []
 
 
 OQG_SAMPLE = """\
@@ -236,6 +266,8 @@ OQG_SAMPLE = """\
 |[[Recipe for Disaster/Freeing Evil Dave|RFD: Evil Dave]]
 |- data-rowid="Barcrawl"
 |[[Alfred Grimhand's Barcrawl]] (miniquest)
+|- data-rowid="Natural history quiz"
+|[[Natural history quiz]] (miniquest)
 |- data-rowid="Cook's Assistant again"
 |[[Cook's Assistant]]
 |}
@@ -248,6 +280,7 @@ def test_parse_optimal_order():
         "The Restless Ghost",
         "Recipe for Disaster - Evil Dave",
         "Alfred Grimhand's Barcrawl",
+        "Natural History Quiz",
         "Stronghold of Security",  # even if known, an Unlock: row isn't a quest step
     }
     assert refresh.parse_optimal_order(OQG_SAMPLE, known) == [
@@ -255,6 +288,7 @@ def test_parse_optimal_order():
         "The Restless Ghost",
         "Recipe for Disaster - Evil Dave",
         "Alfred Grimhand's Barcrawl",
+        "Natural History Quiz",  # the guide's link differs in case
     ]
 
 
@@ -263,12 +297,14 @@ def test_parse_xp_rewards():
         "==Rewards==\n{{Quest rewards\n|name=X|qp=2|rewards=*{{SCP|Prayer|8,000}} [[Prayer]] "
         "experience\n*{{SCP|thieving|1,000}} [[Thieving]] [[experience]]\n"
         "*4,650 experience in your choice of {{SCP|Agility}} [[Agility]] or {{SCP|Smithing}}\n"
+        "*{{SCP|Magic|20,006.9}} [[Magic]] experience\n"
         "*Use the shortcut (with {{SCP|Agility|37}} [[Agility]])\n"
         "*An [[antique lamp]] giving 2,500 XP in any skill\n*[[Robe of Elidinis]]}}\n"
         "*{{SCP|Mining|9,000}} experience outside the template\n"
     )
     assert refresh.parse_xp_rewards(wikitext) == {
         "Agility": None,
+        "Magic": 20006,  # decimals truncate, as in game
         "Prayer": 8000,
         "Smithing": None,
         "Thieving": 1000,

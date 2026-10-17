@@ -208,7 +208,10 @@ def build_equipment_and_inventory(
         return snapshot.updated_at, slots(snapshot.data, items)
 
     def age(at: datetime | None) -> int | None:
-        return None if at is None else max(int((now - at).total_seconds() // 60), 0)
+        if at is None:
+            return None
+        at = at if at.tzinfo else at.replace(tzinfo=UTC)  # snapshots are written in UTC
+        return max(int((now - at).total_seconds() // 60), 0)
 
     eq_at, eq = section(equipment)
     inv_at, inv = section(inventory)

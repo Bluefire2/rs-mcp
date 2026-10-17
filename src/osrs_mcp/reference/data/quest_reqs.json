@@ -58,7 +58,7 @@
   "length": "Long",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 160
+  "optimal_order": 161
  },
  "A Night at the Theatre": {
   "quests": [
@@ -77,7 +77,7 @@
    "Strength": null
   },
   "miniquest": false,
-  "optimal_order": 194
+  "optimal_order": 195
  },
  "A Porcine of Interest": {
   "quests": [],
@@ -89,7 +89,7 @@
    "Slayer": 1000
   },
   "miniquest": false,
-  "optimal_order": 76
+  "optimal_order": 77
  },
  "A Ruff Situation": {
   "quests": [],
@@ -108,7 +108,7 @@
    "Crafting": 1000
   },
   "miniquest": false,
-  "optimal_order": 38
+  "optimal_order": 39
  },
  "A Soul's Bane": {
   "quests": [],
@@ -121,7 +121,7 @@
    "Hitpoints": 500
   },
   "miniquest": false,
-  "optimal_order": 69
+  "optimal_order": 70
  },
  "A Tail of Two Cats": {
   "quests": [
@@ -133,7 +133,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 155
+  "optimal_order": 156
  },
  "A Taste of Hope": {
   "quests": [
@@ -177,7 +177,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 161
+  "optimal_order": 162
  },
  "Alfred Grimhand's Barcrawl": {
   "quests": [],
@@ -187,7 +187,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 65
+  "optimal_order": 66
  },
  "Animal Magnetism": {
   "quests": [
@@ -237,7 +237,7 @@
    "Woodcutting": 2500
   },
   "miniquest": false,
-  "optimal_order": 89
+  "optimal_order": 90
  },
  "Another Slice of H.A.M.": {
   "quests": [
@@ -267,7 +267,7 @@
    "Prayer": 3000
   },
   "miniquest": false,
-  "optimal_order": 83
+  "optimal_order": 84
  },
  "Architectural Alliance": {
   "quests": [],
@@ -320,7 +320,7 @@
    "Hunter": 4500
   },
   "miniquest": false,
-  "optimal_order": 162
+  "optimal_order": 163
  },
  "Barbarian Farming": {
   "quests": [],
@@ -333,6 +333,7 @@
    }
   ],
   "source": "Module:Questreq/data",
+  "xp_rewards": {},
   "miniquest": true,
   "optimal_order": null
  },
@@ -353,6 +354,7 @@
    }
   ],
   "source": "Module:Questreq/data",
+  "xp_rewards": {},
   "miniquest": true,
   "optimal_order": null
  },
@@ -379,6 +381,7 @@
    }
   ],
   "source": "Module:Questreq/data",
+  "xp_rewards": {},
   "miniquest": true,
   "optimal_order": null
  },
@@ -395,6 +398,7 @@
    }
   ],
   "source": "Module:Questreq/data",
+  "xp_rewards": {},
   "miniquest": true,
   "optimal_order": null
  },
@@ -413,6 +417,7 @@
    }
   ],
   "source": "Module:Questreq/data",
+  "xp_rewards": {},
   "miniquest": true,
   "optimal_order": null
  },
@@ -457,7 +462,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 178
+  "optimal_order": 179
  },
  "Beneath Cursed Sands": {
   "quests": [
@@ -490,7 +495,7 @@
    "Agility": 50000
   },
   "miniquest": false,
-  "optimal_order": 187
+  "optimal_order": 188
  },
  "Between a Rock...": {
   "quests": [
@@ -526,7 +531,7 @@
    "Smithing": 5000
   },
   "miniquest": false,
-  "optimal_order": 124
+  "optimal_order": 125
  },
  "Big Chompy Bird Hunting": {
   "quests": [],
@@ -559,7 +564,7 @@
    "Ranged": 735
   },
   "miniquest": false,
-  "optimal_order": 91
+  "optimal_order": 92
  },
  "Biohazard": {
   "quests": [
@@ -573,7 +578,7 @@
    "Thieving": 1250
   },
   "miniquest": false,
-  "optimal_order": 30
+  "optimal_order": 31
  },
  "Black Knights' Fortress": {
   "quests": [],
@@ -590,7 +595,7 @@
   "length": "Very Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 20
+  "optimal_order": 21
  },
  "Bone Voyage": {
   "quests": [
@@ -609,7 +614,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 79
+  "optimal_order": 80
  },
  "Cabin Fever": {
   "quests": [
@@ -651,7 +656,7 @@
    "Smithing": 7000
   },
   "miniquest": false,
-  "optimal_order": 136
+  "optimal_order": 137
  },
  "Children of the Sun": {
   "quests": [],
@@ -673,7 +678,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 73
+  "optimal_order": 74
  },
  "Clock Tower": {
   "quests": [],
@@ -683,7 +688,7 @@
   "length": "Very Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 204
+  "optimal_order": 205
  },
  "Cold War": {
   "quests": [],
@@ -734,7 +739,7 @@
    "Crafting": 2000
   },
   "miniquest": false,
-  "optimal_order": 127
+  "optimal_order": 128
  },
  "Contact!": {
   "quests": [
@@ -755,7 +760,7 @@
    "Thieving": 7000
   },
   "miniquest": false,
-  "optimal_order": 116
+  "optimal_order": 117
  },
  "Cook's Assistant": {
   "quests": [],
@@ -793,7 +798,7 @@
    "Sailing": 10000
   },
   "miniquest": false,
-  "optimal_order": 134
+  "optimal_order": 135
  },
  "Creature of Fenkenstrain": {
   "quests": [
@@ -827,7 +832,7 @@
    "Thieving": 1000
   },
   "miniquest": false,
-  "optimal_order": 90
+  "optimal_order": 91
  },
  "Current Affairs": {
   "quests": [],
@@ -853,7 +858,7 @@
    "Sailing": 1400
   },
   "miniquest": false,
-  "optimal_order": 58
+  "optimal_order": 59
  },
  "Curse of the Empty Lord": {
   "quests": [
@@ -879,7 +884,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 163
+  "optimal_order": 164
  },
  "Daddy's Home": {
   "quests": [],
@@ -889,7 +894,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 12
+  "optimal_order": 13
  },
  "Darkness of Hallowvale": {
   "quests": [
@@ -948,7 +953,7 @@
    "Thieving": 6000
   },
   "miniquest": false,
-  "optimal_order": 107
+  "optimal_order": 108
  },
  "Death Plateau": {
   "quests": [],
@@ -960,7 +965,7 @@
    "Attack": 3000
   },
   "miniquest": false,
-  "optimal_order": 33
+  "optimal_order": 34
  },
  "Death on the Isle": {
   "quests": [
@@ -989,7 +994,7 @@
    "Thieving": 10000
   },
   "miniquest": false,
-  "optimal_order": 64
+  "optimal_order": 65
  },
  "Death to the Dorgeshuun": {
   "quests": [
@@ -1017,7 +1022,7 @@
    "Thieving": 2000
   },
   "miniquest": false,
-  "optimal_order": 46
+  "optimal_order": 47
  },
  "Defender of Varrock": {
   "quests": [
@@ -1052,7 +1057,7 @@
    "Smithing": 15000
   },
   "miniquest": false,
-  "optimal_order": 179
+  "optimal_order": 180
  },
  "Demon Slayer": {
   "quests": [],
@@ -1062,7 +1067,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 86
+  "optimal_order": 87
  },
  "Desert Treasure I": {
   "quests": [
@@ -1103,10 +1108,10 @@
   "difficulty": "Master",
   "length": "Long",
   "xp_rewards": {
-   "Magic": null
+   "Magic": 20006
   },
   "miniquest": false,
-  "optimal_order": 151
+  "optimal_order": 152
  },
  "Desert Treasure II - The Fallen Empire": {
   "quests": [
@@ -1170,7 +1175,7 @@
    "Strength": null
   },
   "miniquest": false,
-  "optimal_order": 201
+  "optimal_order": 202
  },
  "Devious Minds": {
   "quests": [
@@ -1208,7 +1213,7 @@
    "Smithing": 6500
   },
   "miniquest": false,
-  "optimal_order": 180
+  "optimal_order": 181
  },
  "Doric's Quest": {
   "quests": [],
@@ -1227,7 +1232,7 @@
    "Mining": 1300
   },
   "miniquest": false,
-  "optimal_order": 16
+  "optimal_order": 17
  },
  "Dragon Slayer I": {
   "quests": [],
@@ -1253,7 +1258,7 @@
    "Strength": 18650
   },
   "miniquest": false,
-  "optimal_order": 110
+  "optimal_order": 111
  },
  "Dragon Slayer II": {
   "quests": [
@@ -1332,7 +1337,7 @@
    "Thieving": 50000
   },
   "miniquest": false,
-  "optimal_order": 195
+  "optimal_order": 196
  },
  "Dream Mentor": {
   "quests": [
@@ -1355,7 +1360,7 @@
    "Magic": 10000
   },
   "miniquest": false,
-  "optimal_order": 182
+  "optimal_order": 183
  },
  "Druidic Ritual": {
   "quests": [],
@@ -1367,7 +1372,7 @@
    "Herblore": 250
   },
   "miniquest": false,
-  "optimal_order": 21
+  "optimal_order": 22
  },
  "Dwarf Cannon": {
   "quests": [],
@@ -1379,7 +1384,7 @@
    "Crafting": 750
   },
   "miniquest": false,
-  "optimal_order": 13
+  "optimal_order": 14
  },
  "Eadgar's Ruse": {
   "quests": [
@@ -1401,7 +1406,7 @@
    "Herblore": 11000
   },
   "miniquest": false,
-  "optimal_order": 130
+  "optimal_order": 131
  },
  "Eagles' Peak": {
   "quests": [],
@@ -1420,7 +1425,7 @@
    "Hunter": 2500
   },
   "miniquest": false,
-  "optimal_order": 154
+  "optimal_order": 155
  },
  "Elemental Workshop I": {
   "quests": [],
@@ -1458,7 +1463,7 @@
    "Smithing": 5000
   },
   "miniquest": false,
-  "optimal_order": 47
+  "optimal_order": 48
  },
  "Elemental Workshop II": {
   "quests": [
@@ -1486,7 +1491,7 @@
    "Smithing": 7500
   },
   "miniquest": false,
-  "optimal_order": 68
+  "optimal_order": 69
  },
  "Enakhra's Lament": {
   "quests": [],
@@ -1532,7 +1537,7 @@
    "Mining": 7000
   },
   "miniquest": false,
-  "optimal_order": 129
+  "optimal_order": 130
  },
  "Enlightened Journey": {
   "quests": [],
@@ -1572,7 +1577,7 @@
    "Woodcutting": 1500
   },
   "miniquest": false,
-  "optimal_order": 98
+  "optimal_order": 99
  },
  "Enter the Abyss": {
   "quests": [
@@ -1584,7 +1589,7 @@
   "length": "Very Short",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 70
+  "optimal_order": 71
  },
  "Ernest the Chicken": {
   "quests": [],
@@ -1594,7 +1599,7 @@
   "length": "Very Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 85
+  "optimal_order": 86
  },
  "Ethically Acquired Antiquities": {
   "quests": [
@@ -1616,7 +1621,7 @@
    "Thieving": 6000
   },
   "miniquest": false,
-  "optimal_order": 146
+  "optimal_order": 147
  },
  "Fairytale I - Growing Pains": {
   "quests": [
@@ -1633,7 +1638,7 @@
    "Magic": 1000
   },
   "miniquest": false,
-  "optimal_order": 52
+  "optimal_order": 53
  },
  "Fairytale II - Cure a Queen": {
   "quests": [
@@ -1668,7 +1673,7 @@
    "Thieving": 2500
   },
   "miniquest": false,
-  "optimal_order": 168
+  "optimal_order": 169
  },
  "Fairytale III - Nexus of Power": {
   "quests": [],
@@ -1720,7 +1725,7 @@
    "Sailing": 12500
   },
   "miniquest": false,
-  "optimal_order": 191
+  "optimal_order": 192
  },
  "Family Crest": {
   "quests": [],
@@ -1755,7 +1760,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 152
+  "optimal_order": 153
  },
  "Family Pest": {
   "quests": [
@@ -1780,7 +1785,7 @@
    "Thieving": 2175
   },
   "miniquest": false,
-  "optimal_order": 25
+  "optimal_order": 26
  },
  "Fishing Contest": {
   "quests": [],
@@ -1799,7 +1804,7 @@
    "Fishing": 2437
   },
   "miniquest": false,
-  "optimal_order": 59
+  "optimal_order": 60
  },
  "Fool's Gold": {
   "quests": [],
@@ -1838,7 +1843,7 @@
    "Farming": 5000
   },
   "miniquest": false,
-  "optimal_order": 82
+  "optimal_order": 83
  },
  "Garden of Tranquillity": {
   "quests": [
@@ -1859,7 +1864,7 @@
    "Farming": 5000
   },
   "miniquest": false,
-  "optimal_order": 97
+  "optimal_order": 98
  },
  "Gertrude's Cat": {
   "quests": [],
@@ -1897,7 +1902,7 @@
    "Crafting": 4000
   },
   "miniquest": false,
-  "optimal_order": 126
+  "optimal_order": 127
  },
  "Ghosts Ahoy": {
   "quests": [
@@ -1925,7 +1930,7 @@
    "Prayer": 2400
   },
   "miniquest": false,
-  "optimal_order": 42
+  "optimal_order": 43
  },
  "Goblin Diplomacy": {
   "quests": [],
@@ -1937,7 +1942,7 @@
    "Crafting": 200
   },
   "miniquest": false,
-  "optimal_order": 23
+  "optimal_order": 24
  },
  "Grim Tales": {
   "quests": [
@@ -1988,7 +1993,7 @@
    "Woodcutting": 60000
   },
   "miniquest": false,
-  "optimal_order": 181
+  "optimal_order": 182
  },
  "Haunted Mine": {
   "quests": [
@@ -2009,7 +2014,7 @@
    "Strength": 22000
   },
   "miniquest": false,
-  "optimal_order": 143
+  "optimal_order": 144
  },
  "Hazeel Cult": {
   "quests": [],
@@ -2021,7 +2026,7 @@
    "Thieving": 1500
   },
   "miniquest": false,
-  "optimal_order": 28
+  "optimal_order": 29
  },
  "Heroes' Quest": {
   "quests": [
@@ -2081,7 +2086,7 @@
    "Woodcutting": 1575
   },
   "miniquest": false,
-  "optimal_order": 140
+  "optimal_order": 141
  },
  "His Faithful Servants": {
   "quests": [
@@ -2093,7 +2098,7 @@
   "length": "Very Short",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 165
+  "optimal_order": 166
  },
  "Holy Grail": {
   "quests": [
@@ -2115,7 +2120,7 @@
    "Prayer": 11000
   },
   "miniquest": false,
-  "optimal_order": 35
+  "optimal_order": 36
  },
  "Hopespear's Will": {
   "quests": [
@@ -2137,7 +2142,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 186
+  "optimal_order": 187
  },
  "Horror from the Deep": {
   "quests": [
@@ -2155,12 +2160,12 @@
   "difficulty": "Intermediate",
   "length": "Short",
   "xp_rewards": {
-   "Magic": null,
-   "Ranged": null,
-   "Strength": null
+   "Magic": 4662,
+   "Ranged": 4662,
+   "Strength": 4662
   },
   "miniquest": false,
-  "optimal_order": 88
+  "optimal_order": 89
  },
  "Icthlarin's Little Helper": {
   "quests": [
@@ -2176,7 +2181,7 @@
    "Woodcutting": 4000
   },
   "miniquest": false,
-  "optimal_order": 48
+  "optimal_order": 49
  },
  "Imp Catcher": {
   "quests": [],
@@ -2242,7 +2247,7 @@
    "Strength": 2000
   },
   "miniquest": false,
-  "optimal_order": 103
+  "optimal_order": 104
  },
  "In Search of Knowledge": {
   "quests": [],
@@ -2252,7 +2257,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 185
+  "optimal_order": 186
  },
  "In Search of the Myreque": {
   "quests": [
@@ -2277,7 +2282,7 @@
    "Strength": 600
   },
   "miniquest": false,
-  "optimal_order": 101
+  "optimal_order": 102
  },
  "Into the Tombs": {
   "quests": [
@@ -2289,7 +2294,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 193
+  "optimal_order": 194
  },
  "Jungle Potion": {
   "quests": [
@@ -2310,7 +2315,7 @@
    "Herblore": 775
   },
   "miniquest": false,
-  "optimal_order": 92
+  "optimal_order": 93
  },
  "King's Ransom": {
   "quests": [
@@ -2341,7 +2346,7 @@
    "Magic": 5000
   },
   "miniquest": false,
-  "optimal_order": 175
+  "optimal_order": 176
  },
  "Knight Waves Training Grounds": {
   "quests": [
@@ -2349,8 +2354,9 @@
   ],
   "skills": [],
   "source": "Module:Questreq/data",
+  "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 176
+  "optimal_order": 177
  },
  "Lair of Tarn Razorlor": {
   "quests": [
@@ -2369,7 +2375,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 144
+  "optimal_order": 145
  },
  "Land of the Goblins": {
   "quests": [
@@ -2412,7 +2418,7 @@
    "Thieving": 8000
   },
   "miniquest": false,
-  "optimal_order": 157
+  "optimal_order": 158
  },
  "Learning the Ropes": {
   "quests": [],
@@ -2518,7 +2524,7 @@
    "Woodcutting": null
   },
   "miniquest": false,
-  "optimal_order": 156
+  "optimal_order": 157
  },
  "Lost City": {
   "quests": [],
@@ -2541,7 +2547,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 51
+  "optimal_order": 52
  },
  "Lost Lover": {
   "quests": [],
@@ -2612,7 +2618,7 @@
    "Runecraft": 5000
   },
   "miniquest": false,
-  "optimal_order": 174
+  "optimal_order": 175
  },
  "Mage Arena I": {
   "quests": [],
@@ -2693,7 +2699,7 @@
    "Mining": 50000
   },
   "miniquest": false,
-  "optimal_order": 197
+  "optimal_order": 198
  },
  "Making History": {
   "quests": [
@@ -2709,7 +2715,7 @@
    "Prayer": 1000
   },
   "miniquest": false,
-  "optimal_order": 43
+  "optimal_order": 44
  },
  "Meat and Greet": {
   "quests": [
@@ -2723,7 +2729,7 @@
    "Cooking": 8000
   },
   "miniquest": false,
-  "optimal_order": 137
+  "optimal_order": 138
  },
  "Merlin's Crystal": {
   "quests": [],
@@ -2733,7 +2739,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 34
+  "optimal_order": 35
  },
  "Misthalin Mystery": {
   "quests": [],
@@ -2757,7 +2763,7 @@
    "Woodcutting": 2000
   },
   "miniquest": false,
-  "optimal_order": 27
+  "optimal_order": 28
  },
  "Monkey Madness I": {
   "quests": [
@@ -2775,7 +2781,7 @@
    "Strength": null
   },
   "miniquest": false,
-  "optimal_order": 145
+  "optimal_order": 146
  },
  "Monkey Madness II": {
   "quests": [
@@ -2833,7 +2839,7 @@
    "Thieving": 50000
   },
   "miniquest": false,
-  "optimal_order": 192
+  "optimal_order": 193
  },
  "Mountain Daughter": {
   "quests": [],
@@ -2853,7 +2859,7 @@
    "Prayer": 2000
   },
   "miniquest": false,
-  "optimal_order": 61
+  "optimal_order": 62
  },
  "Mourning's End Part I": {
   "quests": [
@@ -2883,7 +2889,7 @@
    "Thieving": 40000
   },
   "miniquest": false,
-  "optimal_order": 149
+  "optimal_order": 150
  },
  "Mourning's End Part II": {
   "quests": [
@@ -2897,7 +2903,7 @@
    "Agility": 60000
   },
   "miniquest": false,
-  "optimal_order": 150
+  "optimal_order": 151
  },
  "Murder Mystery": {
   "quests": [],
@@ -2909,7 +2915,7 @@
    "Crafting": 1406
   },
   "miniquest": false,
-  "optimal_order": 36
+  "optimal_order": 37
  },
  "My Arm's Big Adventure": {
   "quests": [
@@ -2939,14 +2945,15 @@
    "Herblore": 10000
   },
   "miniquest": false,
-  "optimal_order": 131
+  "optimal_order": 132
  },
  "Natural History Quiz": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
+  "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": null
+  "optimal_order": 12
  },
  "Nature Spirit": {
   "quests": [
@@ -2970,7 +2977,7 @@
    "Hitpoints": 2000
   },
   "miniquest": false,
-  "optimal_order": 41
+  "optimal_order": 42
  },
  "Observatory Quest": {
   "quests": [],
@@ -2986,7 +2993,7 @@
    "Strength": null
   },
   "miniquest": false,
-  "optimal_order": 95
+  "optimal_order": 96
  },
  "Olaf's Quest": {
   "quests": [
@@ -3013,7 +3020,7 @@
    "Defence": 12000
   },
   "miniquest": false,
-  "optimal_order": 159
+  "optimal_order": 160
  },
  "One Small Favour": {
   "quests": [
@@ -3051,7 +3058,7 @@
   "length": "Long",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 120
+  "optimal_order": 121
  },
  "Pandemonium": {
   "quests": [],
@@ -3063,7 +3070,7 @@
    "Sailing": 300
   },
   "miniquest": false,
-  "optimal_order": 56
+  "optimal_order": 57
  },
  "Perilous Moons": {
   "quests": [
@@ -3111,7 +3118,7 @@
    "Slayer": 40000
   },
   "miniquest": false,
-  "optimal_order": 171
+  "optimal_order": 172
  },
  "Pirate's Treasure": {
   "quests": [],
@@ -3121,7 +3128,7 @@
   "length": "Very Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 72
+  "optimal_order": 73
  },
  "Plague City": {
   "quests": [],
@@ -3133,7 +3140,7 @@
    "Mining": 2425
   },
   "miniquest": false,
-  "optimal_order": 26
+  "optimal_order": 27
  },
  "Priest in Peril": {
   "quests": [],
@@ -3145,7 +3152,7 @@
    "Prayer": 1406
   },
   "miniquest": false,
-  "optimal_order": 40
+  "optimal_order": 41
  },
  "Prince Ali Rescue": {
   "quests": [],
@@ -3184,7 +3191,7 @@
    "Smithing": 1000
   },
   "miniquest": false,
-  "optimal_order": 57
+  "optimal_order": 58
  },
  "Rag and Bone Man I": {
   "quests": [],
@@ -3197,7 +3204,7 @@
    "Prayer": 500
   },
   "miniquest": false,
-  "optimal_order": 39
+  "optimal_order": 40
  },
  "Rag and Bone Man II": {
   "quests": [
@@ -3230,7 +3237,7 @@
    "Prayer": 5000
   },
   "miniquest": false,
-  "optimal_order": 133
+  "optimal_order": 134
  },
  "Ratcatchers": {
   "quests": [
@@ -3245,7 +3252,7 @@
    "Thieving": 4500
   },
   "miniquest": false,
-  "optimal_order": 62
+  "optimal_order": 63
  },
  "Recipe for Disaster": {
   "quests": [
@@ -3276,7 +3283,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 53
+  "optimal_order": 54
  },
  "Recipe for Disaster - Culinaromancer": {
   "quests": [
@@ -3304,7 +3311,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 170
+  "optimal_order": 171
  },
  "Recipe for Disaster - Evil Dave": {
   "quests": [
@@ -3327,7 +3334,7 @@
    "Cooking": 7000
   },
   "miniquest": false,
-  "optimal_order": 113
+  "optimal_order": 114
  },
  "Recipe for Disaster - King Awowogei": {
   "quests": [
@@ -3356,7 +3363,7 @@
    "Cooking": 10000
   },
   "miniquest": false,
-  "optimal_order": 169
+  "optimal_order": 170
  },
  "Recipe for Disaster - Lumbridge Guide": {
   "quests": [
@@ -3384,7 +3391,7 @@
    "Magic": 2500
   },
   "miniquest": false,
-  "optimal_order": 138
+  "optimal_order": 139
  },
  "Recipe for Disaster - Mountain Dwarf": {
   "quests": [
@@ -3400,7 +3407,7 @@
    "Slayer": 1000
   },
   "miniquest": false,
-  "optimal_order": 60
+  "optimal_order": 61
  },
  "Recipe for Disaster - Pirate Pete": {
   "quests": [
@@ -3436,7 +3443,7 @@
    "Smithing": 1000
   },
   "miniquest": false,
-  "optimal_order": 114
+  "optimal_order": 115
  },
  "Recipe for Disaster - Sir Amik Varze": {
   "quests": [
@@ -3459,7 +3466,7 @@
    "Hitpoints": 4000
   },
   "miniquest": false,
-  "optimal_order": 158
+  "optimal_order": 159
  },
  "Recipe for Disaster - Skrach Uglogwee": {
   "quests": [
@@ -3490,7 +3497,7 @@
    "Woodcutting": 1500
   },
   "miniquest": false,
-  "optimal_order": 139
+  "optimal_order": 140
  },
  "Recipe for Disaster - Wartface & Bentnoze": {
   "quests": [
@@ -3507,7 +3514,7 @@
    "Farming": 1000
   },
   "miniquest": false,
-  "optimal_order": 54
+  "optimal_order": 55
  },
  "Recruitment Drive": {
   "quests": [
@@ -3519,12 +3526,12 @@
   "difficulty": "Novice",
   "length": "Short",
   "xp_rewards": {
-   "Agility": null,
-   "Herblore": null,
-   "Prayer": null
+   "Agility": 1000,
+   "Herblore": 1000,
+   "Prayer": 1000
   },
   "miniquest": false,
-  "optimal_order": 22
+  "optimal_order": 23
  },
  "Regicide": {
   "quests": [
@@ -3551,7 +3558,7 @@
    "Agility": 13750
   },
   "miniquest": false,
-  "optimal_order": 109
+  "optimal_order": 110
  },
  "Rogue Trader": {
   "quests": [
@@ -3575,7 +3582,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 99
+  "optimal_order": 100
  },
  "Roving Elves": {
   "quests": [
@@ -3597,7 +3604,7 @@
    "Strength": 10000
   },
   "miniquest": false,
-  "optimal_order": 148
+  "optimal_order": 149
  },
  "Royal Trouble": {
   "quests": [
@@ -3626,7 +3633,7 @@
    "Slayer": 5000
   },
   "miniquest": false,
-  "optimal_order": 142
+  "optimal_order": 143
  },
  "Rum Deal": {
   "quests": [
@@ -3674,7 +3681,7 @@
    "Prayer": 7000
   },
   "miniquest": false,
-  "optimal_order": 135
+  "optimal_order": 136
  },
  "Rune Mysteries": {
   "quests": [],
@@ -3690,6 +3697,7 @@
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
+  "xp_rewards": {},
   "miniquest": false,
   "optimal_order": null
  },
@@ -3712,7 +3720,7 @@
    "Strength": 6625
   },
   "miniquest": false,
-  "optimal_order": 66
+  "optimal_order": 67
  },
  "Scrambled!": {
   "quests": [
@@ -3747,7 +3755,7 @@
    "Smithing": 5000
   },
   "miniquest": false,
-  "optimal_order": 167
+  "optimal_order": 168
  },
  "Sea Slug": {
   "quests": [],
@@ -3766,7 +3774,7 @@
    "Fishing": 7175
   },
   "miniquest": false,
-  "optimal_order": 55
+  "optimal_order": 56
  },
  "Secrets of the North": {
   "quests": [
@@ -3804,7 +3812,7 @@
    "Thieving": 50000
   },
   "miniquest": false,
-  "optimal_order": 198
+  "optimal_order": 199
  },
  "Shades of Mort'ton": {
   "quests": [
@@ -3839,7 +3847,7 @@
    "Herblore": 2000
   },
   "miniquest": false,
-  "optimal_order": 102
+  "optimal_order": 103
  },
  "Shadow of the Storm": {
   "quests": [
@@ -3859,7 +3867,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 87
+  "optimal_order": 88
  },
  "Shadows of Custodia": {
   "quests": [
@@ -3901,7 +3909,7 @@
    "Slayer": 10000
   },
   "miniquest": false,
-  "optimal_order": 188
+  "optimal_order": 189
  },
  "Sheep Herder": {
   "quests": [],
@@ -3911,7 +3919,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 29
+  "optimal_order": 30
  },
  "Sheep Shearer": {
   "quests": [],
@@ -3933,7 +3941,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 78
+  "optimal_order": 79
  },
  "Shilo Village": {
   "quests": [
@@ -3966,7 +3974,7 @@
    "Crafting": 3875
   },
   "miniquest": false,
-  "optimal_order": 93
+  "optimal_order": 94
  },
  "Sins of the Father": {
   "quests": [
@@ -4022,7 +4030,7 @@
   "length": "Long",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 184
+  "optimal_order": 185
  },
  "Skippy and the Mogres": {
   "quests": [],
@@ -4039,7 +4047,7 @@
   "length": "Very Short",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 104
+  "optimal_order": 105
  },
  "Sleeping Giants": {
   "quests": [],
@@ -4058,7 +4066,7 @@
    "Smithing": 6000
   },
   "miniquest": false,
-  "optimal_order": 24
+  "optimal_order": 25
  },
  "Song of the Elves": {
   "quests": [
@@ -4130,7 +4138,7 @@
    "Woodcutting": 40000
   },
   "miniquest": false,
-  "optimal_order": 202
+  "optimal_order": 203
  },
  "Spirit of Adventure": {
   "quests": [],
@@ -4179,7 +4187,7 @@
    "Thieving": 1000
   },
   "miniquest": false,
-  "optimal_order": 96
+  "optimal_order": 97
  },
  "Swan Song": {
   "quests": [
@@ -4239,7 +4247,7 @@
    "Prayer": 10000
   },
   "miniquest": false,
-  "optimal_order": 177
+  "optimal_order": 178
  },
  "Tai Bwo Wannai Trio": {
   "quests": [
@@ -4287,7 +4295,7 @@
    "Strength": 2500
   },
   "miniquest": false,
-  "optimal_order": 115
+  "optimal_order": 116
  },
  "Tale of the Righteous": {
   "quests": [
@@ -4312,7 +4320,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 122
+  "optimal_order": 123
  },
  "Tears of Guthix": {
   "quests": [],
@@ -4349,7 +4357,7 @@
    "Crafting": 1000
   },
   "miniquest": false,
-  "optimal_order": 100
+  "optimal_order": 101
  },
  "Temple of Ikov": {
   "quests": [],
@@ -4375,7 +4383,7 @@
    "Ranged": 10500
   },
   "miniquest": false,
-  "optimal_order": 117
+  "optimal_order": 118
  },
  "Temple of the Eye": {
   "quests": [
@@ -4396,7 +4404,7 @@
    "Runecraft": 5000
   },
   "miniquest": false,
-  "optimal_order": 119
+  "optimal_order": 120
  },
  "The Ascent of Arceuus": {
   "quests": [
@@ -4418,7 +4426,7 @@
    "Runecraft": 500
   },
   "miniquest": false,
-  "optimal_order": 121
+  "optimal_order": 122
  },
  "The Blood Moon Rises": {
   "quests": [
@@ -4492,7 +4500,7 @@
   "length": "Very Long",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 203
+  "optimal_order": 204
  },
  "The Chosen Commander": {
   "quests": [
@@ -4533,7 +4541,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 205
+  "optimal_order": 206
  },
  "The Curse of Arrav": {
   "quests": [
@@ -4587,7 +4595,7 @@
    "Thieving": 40000
   },
   "miniquest": false,
-  "optimal_order": 196
+  "optimal_order": 197
  },
  "The Depths of Despair": {
   "quests": [
@@ -4608,7 +4616,7 @@
    "Agility": 1500
   },
   "miniquest": false,
-  "optimal_order": 75
+  "optimal_order": 76
  },
  "The Dig Site": {
   "quests": [
@@ -4642,7 +4650,7 @@
    "Mining": 15300
   },
   "miniquest": false,
-  "optimal_order": 67
+  "optimal_order": 68
  },
  "The Enchanted Key": {
   "quests": [
@@ -4690,7 +4698,7 @@
    "Woodcutting": 2500
   },
   "miniquest": false,
-  "optimal_order": 118
+  "optimal_order": 119
  },
  "The Feud": {
   "quests": [],
@@ -4709,7 +4717,7 @@
    "Thieving": 15000
   },
   "miniquest": false,
-  "optimal_order": 63
+  "optimal_order": 64
  },
  "The Final Dawn": {
   "quests": [
@@ -4745,7 +4753,7 @@
    "Thieving": 55000
   },
   "miniquest": false,
-  "optimal_order": 199
+  "optimal_order": 200
  },
  "The Forsaken Tower": {
   "quests": [
@@ -4760,7 +4768,7 @@
    "Smithing": 500
   },
   "miniquest": false,
-  "optimal_order": 123
+  "optimal_order": 124
  },
  "The Fremennik Exiles": {
   "quests": [
@@ -4810,7 +4818,7 @@
    "Slayer": 50000
   },
   "miniquest": false,
-  "optimal_order": 183
+  "optimal_order": 184
  },
  "The Fremennik Isles": {
   "quests": [
@@ -4849,7 +4857,7 @@
    "Woodcutting": 10000
   },
   "miniquest": false,
-  "optimal_order": 112
+  "optimal_order": 113
  },
  "The Fremennik Trials": {
   "quests": [],
@@ -4858,19 +4866,19 @@
   "difficulty": "Intermediate",
   "length": "Medium",
   "xp_rewards": {
-   "Agility": null,
-   "Attack": null,
-   "Crafting": null,
-   "Defence": null,
-   "Fishing": null,
-   "Fletching": null,
-   "Hitpoints": null,
-   "Strength": null,
-   "Thieving": null,
-   "Woodcutting": null
+   "Agility": 2812,
+   "Attack": 2812,
+   "Crafting": 2812,
+   "Defence": 2812,
+   "Fishing": 2812,
+   "Fletching": 2812,
+   "Hitpoints": 2812,
+   "Strength": 2812,
+   "Thieving": 2812,
+   "Woodcutting": 2812
   },
   "miniquest": false,
-  "optimal_order": 111
+  "optimal_order": 112
  },
  "The Frozen Door": {
   "quests": [
@@ -4926,7 +4934,7 @@
    "Farming": 10000
   },
   "miniquest": false,
-  "optimal_order": 132
+  "optimal_order": 133
  },
  "The General's Shadow": {
   "quests": [
@@ -4939,7 +4947,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": true,
-  "optimal_order": 164
+  "optimal_order": 165
  },
  "The Giant Dwarf": {
   "quests": [],
@@ -4981,7 +4989,7 @@
    "Thieving": 1500
   },
   "miniquest": false,
-  "optimal_order": 81
+  "optimal_order": 82
  },
  "The Golem": {
   "quests": [],
@@ -5007,7 +5015,7 @@
    "Thieving": 1000
   },
   "miniquest": false,
-  "optimal_order": 49
+  "optimal_order": 50
  },
  "The Grand Tree": {
   "quests": [],
@@ -5028,7 +5036,7 @@
    "Magic": 2150
   },
   "miniquest": false,
-  "optimal_order": 37
+  "optimal_order": 38
  },
  "The Graveyard": {
   "quests": [
@@ -5104,7 +5112,7 @@
    "Prayer": 6000
   },
   "miniquest": false,
-  "optimal_order": 166
+  "optimal_order": 167
  },
  "The Hand in the Sand": {
   "quests": [],
@@ -5130,7 +5138,7 @@
    "Thieving": 1000
   },
   "miniquest": false,
-  "optimal_order": 128
+  "optimal_order": 129
  },
  "The Heart of Darkness": {
   "quests": [
@@ -5172,7 +5180,7 @@
    "Thieving": 8000
   },
   "miniquest": false,
-  "optimal_order": 173
+  "optimal_order": 174
  },
  "The Ides of Milk": {
   "quests": [],
@@ -5182,7 +5190,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 44
+  "optimal_order": 45
  },
  "The Knight's Sword": {
   "quests": [],
@@ -5219,7 +5227,7 @@
    "Smithing": 12725
   },
   "miniquest": false,
-  "optimal_order": 18
+  "optimal_order": 19
  },
  "The Lost Tribe": {
   "quests": [
@@ -5253,7 +5261,7 @@
    "Mining": 3000
   },
   "miniquest": false,
-  "optimal_order": 45
+  "optimal_order": 46
  },
  "The Path of Glouphrie": {
   "quests": [
@@ -5303,7 +5311,7 @@
    "Thieving": 5000
   },
   "miniquest": false,
-  "optimal_order": 172
+  "optimal_order": 173
  },
  "The Queen of Thieves": {
   "quests": [
@@ -5324,7 +5332,7 @@
    "Thieving": 2000
   },
   "miniquest": false,
-  "optimal_order": 74
+  "optimal_order": 75
  },
  "The Red Reef": {
   "quests": [
@@ -5352,7 +5360,7 @@
    "Smithing": 5000
   },
   "miniquest": false,
-  "optimal_order": 190
+  "optimal_order": 191
  },
  "The Restless Ghost": {
   "quests": [],
@@ -5385,7 +5393,7 @@
    "Woodcutting": 2000
   },
   "miniquest": false,
-  "optimal_order": 50
+  "optimal_order": 51
  },
  "The Slug Menace": {
   "quests": [
@@ -5427,7 +5435,7 @@
    "Thieving": 3500
   },
   "miniquest": false,
-  "optimal_order": 125
+  "optimal_order": 126
  },
  "The Tourist Trap": {
   "quests": [],
@@ -5455,7 +5463,7 @@
    "Thieving": null
   },
   "miniquest": false,
-  "optimal_order": 19
+  "optimal_order": 20
  },
  "Throne of Miscellania": {
   "quests": [
@@ -5468,7 +5476,7 @@
   "length": "Medium",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 141
+  "optimal_order": 142
  },
  "Tower of Life": {
   "quests": [],
@@ -5489,7 +5497,7 @@
    "Thieving": 500
   },
   "miniquest": false,
-  "optimal_order": 31
+  "optimal_order": 32
  },
  "Tree Gnome Village": {
   "quests": [],
@@ -5501,7 +5509,7 @@
    "Attack": 11450
   },
   "miniquest": false,
-  "optimal_order": 15
+  "optimal_order": 16
  },
  "Tribal Totem": {
   "quests": [],
@@ -5520,7 +5528,7 @@
    "Thieving": 1775
   },
   "miniquest": false,
-  "optimal_order": 32
+  "optimal_order": 33
  },
  "Troll Romance": {
   "quests": [
@@ -5548,7 +5556,7 @@
    "Strength": 4000
   },
   "miniquest": false,
-  "optimal_order": 106
+  "optimal_order": 107
  },
  "Troll Stronghold": {
   "quests": [
@@ -5567,7 +5575,7 @@
   "length": "Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 105
+  "optimal_order": 106
  },
  "Troubled Tortugans": {
   "quests": [],
@@ -5617,12 +5625,13 @@
    "Slayer": 8000
   },
   "miniquest": false,
-  "optimal_order": 189
+  "optimal_order": 190
  },
  "Tutorial Island": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
+  "xp_rewards": {},
   "miniquest": true,
   "optimal_order": null
  },
@@ -5638,7 +5647,7 @@
    "Thieving": 3000
   },
   "miniquest": false,
-  "optimal_order": 147
+  "optimal_order": 148
  },
  "Underground Pass": {
   "quests": [
@@ -5660,7 +5669,7 @@
    "Attack": 3000
   },
   "miniquest": false,
-  "optimal_order": 108
+  "optimal_order": 109
  },
  "Vale Totems": {
   "quests": [
@@ -5691,7 +5700,7 @@
    "Attack": 4825
   },
   "miniquest": false,
-  "optimal_order": 84
+  "optimal_order": 85
  },
  "Wanted!": {
   "quests": [
@@ -5715,7 +5724,7 @@
    "Slayer": 5000
   },
   "miniquest": false,
-  "optimal_order": 77
+  "optimal_order": 78
  },
  "Watchtower": {
   "quests": [
@@ -5760,7 +5769,7 @@
    "Magic": 15250
   },
   "miniquest": false,
-  "optimal_order": 80
+  "optimal_order": 81
  },
  "Waterfall Quest": {
   "quests": [],
@@ -5773,7 +5782,7 @@
    "Strength": 13750
   },
   "miniquest": false,
-  "optimal_order": 14
+  "optimal_order": 15
  },
  "What Lies Below": {
   "quests": [
@@ -5795,7 +5804,7 @@
    "Runecraft": 8000
   },
   "miniquest": false,
-  "optimal_order": 153
+  "optimal_order": 154
  },
  "While Guthix Sleeps": {
   "quests": [
@@ -5865,7 +5874,7 @@
    "Thieving": 80000
   },
   "miniquest": false,
-  "optimal_order": 200
+  "optimal_order": 201
  },
  "Witch's House": {
   "quests": [],
@@ -5877,7 +5886,7 @@
    "Hitpoints": 6325
   },
   "miniquest": false,
-  "optimal_order": 17
+  "optimal_order": 18
  },
  "Witch's Potion": {
   "quests": [],
@@ -5899,7 +5908,7 @@
   "length": "Very Short",
   "xp_rewards": {},
   "miniquest": false,
-  "optimal_order": 71
+  "optimal_order": 72
  },
  "Zogre Flesh Eaters": {
   "quests": [
@@ -5935,6 +5944,6 @@
    "Ranged": 2000
   },
   "miniquest": false,
-  "optimal_order": 94
+  "optimal_order": 95
  }
 }
