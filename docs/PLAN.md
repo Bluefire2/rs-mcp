@@ -194,5 +194,5 @@ Tool annotations: all tools are `readOnlyHint: true` except `refresh_gains_track
 2. **GCP egress to the hiscores and Wiki** can't be confirmed from here. That's Phase 4 step 1.
 3. **Google consent screen "In production" without verification** for basic scopes: please confirm in the console when you create the client, rather than relying on docs.
 4. **Connectors inside claude.ai Projects** isn't documented. We'll confirm it during E2E.
-5. **GIM Tracker payload details** come from source reading, not live capture: Phase 3 is built and tested against source-derived fixtures. Phase 3 step 2 (a live capture with the plugin's debug logging) is still to do.
+5. ~~**GIM Tracker payload details**~~ Confirmed by a live capture on 2026-10-17 (via `INGEST_CAPTURE_DIR`): the real plugin's updates match the source-derived fixtures. Empty rune pouch slots arrive as id `-1`. Still unseen live: the collection log field. Untradeable items are named from the Wiki item list (`item_names.json`).
 6. **Quest points** aren't in WikiSync or the Questreq data. We'd derive them from the Wiki (Quest bucket `json` field or a quest list page) if needed; that's low priority.

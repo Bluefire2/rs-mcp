@@ -1,5 +1,5 @@
 {
- "_note": "Derived from reading the Group Ironmen Tracker plugin source (christoabrown/group-ironmen-tracker @ 343af95, src/main/java/men/groupiron/), not a live capture. 'body' is what DataManager.submitToApi() would POST: Gson of a map holding 'name' plus only the changed fields. Magic logs put in a bank deposit box with the bank closed: inventory plus 'deposited' (DepositedItems: unordered [id, qty] pairs of what left the inventory/equipment).",
+ "_note": "Derived from reading the Group Ironmen Tracker plugin source (christoabrown/group-ironmen-tracker @ 343af95, src/main/java/men/groupiron/), not a live capture. 'body' is what DataManager.submitToApi() would POST: Gson of a map holding 'name' plus only the changed fields. Magic logs put in a bank deposit box with the bank closed: inventory plus 'deposited' (DepositedItems: unordered [id, qty] pairs of what left the inventory/equipment). Verified against a live capture from the real plugin on 2026-10-17 (77 updates): field names and lengths match (inventory 56, equipment 28, rune_pouch 8, quiver 2, skills 24, quests 213, diary_vars 62, stats 7); empty rune pouch slots are sent as id -1. collection_log_v2 not yet seen live.",
  "body": {
   "name": "Iron\u00a0Tester",
   "inventory": [

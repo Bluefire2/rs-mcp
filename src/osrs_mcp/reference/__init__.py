@@ -58,6 +58,12 @@ def diary_tasks() -> dict[str, dict[str, list[DiaryTask]]]:
 
 
 @cache
+def item_names() -> dict[int, str]:
+    """Every item id the Wiki knows, tradeable or not."""
+    return {int(item_id): name for item_id, name in _load("item_names.json").items()}
+
+
+@cache
 def combat_achievements() -> dict[int, CombatAchievement]:
     rows = _load("combat_achievements.json")
     return {row["id"]: CombatAchievement.model_validate(row) for row in rows}

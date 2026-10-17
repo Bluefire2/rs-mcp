@@ -242,8 +242,9 @@ Alternatives considered:
 **Corrected**: There's no custom RuneLite plugin in Phase 3, so `runelite-plugin/` is dropped.
 Approved by the user.
 
-**Unconfirmed**: The exact field shapes come from reading the source, not from a live capture. A
-live capture is the first step of Phase 3.
+**Confirmed live (2026-10-17)**: a capture of 77 real updates matched the source-derived shapes
+field for field. Empty rune pouch slots are sent as id `-1`. The collection log field hasn't been
+seen live yet.
 
 ## R9. RuneLite plugin rules
 
@@ -275,7 +276,8 @@ live capture is the first step of Phase 3.
 1. GCP egress to the hiscores, Wiki and WOM (Cloudflare). Probe from Cloud Shell.
 2. Whether the Google consent screen can be "In production" without verification for basic scopes.
 3. Connectors inside claude.ai Projects.
-4. Group Ironmen Tracker payload shapes (pin them with a live capture).
+4. ~~Group Ironmen Tracker payload shapes~~ Confirmed by a live capture on 2026-10-17, except
+   the collection log field.
 5. Diary task order versus WikiSync indexes (checked by a test plus spot checks).
 6. Quest points: not in WikiSync or `Questreq/data`. Low priority.
 7. The `_fresh_start` and `_tournament` hiscore paths.

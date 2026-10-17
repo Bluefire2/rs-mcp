@@ -271,9 +271,9 @@ async def test_get_bank_values_and_sorts(mock_sources):
     assert bank["item_count"] == 8
     names = [item["name"] for item in bank["items"]]
     assert names[0] == "Twisted bow"  # highest value first
-    # Untradeables are listed (last, unpriced) with a placeholder name.
+    # Untradeables are listed (last, unpriced), named from the Wiki item list.
     assert bank["items"][-1] == {
-        "name": "unknown item 6570",
+        "name": "Fire cape",
         "id": 6570,
         "quantity": 1,
         "unit_price": None,
@@ -322,23 +322,45 @@ async def test_get_equipment_and_inventory(mock_sources):
     equipment = gear["equipment"]["items"]
     assert set(equipment) == {"cape", "weapon", "body", "legs", "ammo"}
     assert equipment["weapon"] == {"name": "Abyssal whip", "id": 4151, "quantity": 1}
-    assert equipment["cape"]["name"] == "unknown item 6570"
+    assert equipment["cape"]["name"] == "Fire cape"
     assert gear["equipment"]["updated_at"]
 
     inventory = gear["inventory"]["items"]
     assert [(i["slot"], i["name"]) for i in inventory] == [
         (0, "Toxic blowpipe (empty)"),
         (2, "Magic logs"),
-        (5, "unknown item 6570"),
+        (5, "Fire cape"),
     ]
     assert gear["free_inventory_slots"] == 25
 
     assert [(r["name"], r["quantity"]) for r in gear["rune_pouch"]["items"]] == [
         ("Nature rune", 1000),
-        ("unknown item 554", 2500),
+        ("Fire rune", 2500),
     ]
     assert gear["quiver"]["items"] == []
     assert gear["quiver"]["updated_at"]
+
+
+async def test_empty_rune_pouch_slots_are_minus_one(mock_sources):
+    # Seen in a live capture: the plugin sends id -1 (qty 0) for an empty pouch slot.
+    store = await seeded_store("full")
+    update = GimUpdate.model_validate(
+        {"name": "Iron Tester", "rune_pouch": [-1, 0, 561, 100, -1, 0, -1, 0]}
+    )
+    await apply_update(SnapshotStore(store), update)
+    gear = await call_snapshot_tool("get_equipment_and_inventory", {}, store)
+    assert [(r["name"], r["quantity"]) for r in gear["rune_pouch"]["items"]] == [
+        ("Nature rune", 100)
+    ]
+
+
+def test_item_names_fall_back_to_wiki_list_then_placeholder():
+    from osrs_mcp.tools.bank import Items
+
+    items = Items(mapping=[], latest={})
+    assert items.name(11849) == "Mark of Grace"  # untradeable, not in the prices mapping
+    assert items.name(995) == "Coins"
+    assert items.name(999_999_999) == "unknown item 999999999"
 
 
 async def test_snapshot_tools_explain_setup_when_empty(mock_sources):

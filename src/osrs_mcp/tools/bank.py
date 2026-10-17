@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field
 
 from osrs_mcp.clients.prices import ItemInfo, LatestPrice
 from osrs_mcp.errors import SourceError
+from osrs_mcp.reference import item_names
 from osrs_mcp.snapshots import Snapshot, SnapshotStore, pairs
 from osrs_mcp.sources import Sources
 from osrs_mcp.tools import READ_ONLY, Rsn
@@ -45,7 +46,8 @@ EQUIPMENT_SLOTS = {
 
 class Items:
     """Item names and GE prices by item id. The plugin canonicalises ids (noted items arrive
-    as the unnoted id), so most ids match the prices mapping; untradeables don't."""
+    as the unnoted id), so tradeables match the prices mapping; untradeables are named from
+    the Wiki's item list (reference/data/item_names.json) and have no price."""
 
     def __init__(self, mapping: list[ItemInfo], latest: dict[int, LatestPrice]) -> None:
         self._names = {item.id: item.name for item in mapping}
@@ -54,7 +56,7 @@ class Items:
     def name(self, item_id: int) -> str:
         if item_id in FIXED_VALUE_ITEMS:
             return FIXED_VALUE_ITEMS[item_id][0]
-        return self._names.get(item_id) or f"unknown item {item_id}"
+        return self._names.get(item_id) or item_names().get(item_id) or f"unknown item {item_id}"
 
     def unit_price(self, item_id: int) -> int | None:
         if item_id in FIXED_VALUE_ITEMS:

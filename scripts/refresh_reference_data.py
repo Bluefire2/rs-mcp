@@ -10,6 +10,9 @@ IDs) but not names or requirements. This script pulls those from the Wiki:
 - diary_tasks.json: task text and requirements from each "<Region> Diary" page, in the same
   order as WikiSync's task arrays.
 - combat_achievements.json: the combat_achievement bucket (id -> name, tier, monster, task).
+- item_names.json: every item id -> name from the infobox_item bucket. The GE prices mapping
+  covers tradeable items only; this names untradeables (Marks of grace, quest items, ...) in
+  the bank and gear tools.
 
 Run it after game updates that add quests, diary changes or combat achievements, then run the
 tests (they cross-check this data against a WikiSync fixture).
@@ -233,6 +236,27 @@ def bucket(http: httpx.Client, query: str) -> list[dict]:
     return payload["bucket"]
 
 
+def item_names(http: httpx.Client, page_size: int = 5000) -> dict[str, str]:
+    """Every item id -> name, paging through the infobox_item bucket."""
+    names: dict[int, str] = {}
+    offset = 0
+    while True:
+        rows = bucket(
+            http,
+            f"bucket('infobox_item').select('item_id','item_name')"
+            f".limit({page_size}).offset({offset}).run()",
+        )
+        for row in rows:
+            name = row.get("item_name")
+            ids = row.get("item_id") or []
+            for item_id in [ids] if isinstance(ids, str) else ids:
+                if name and str(item_id).strip().isdigit():
+                    names.setdefault(int(item_id), name)
+        if len(rows) < page_size:
+            return {str(item_id): names[item_id] for item_id in sorted(names)}
+        offset += page_size
+
+
 def raw_page(http: httpx.Client, title: str) -> str:
     response = http.get(f"{WIKI}/w/{title.replace(' ', '_')}", params={"action": "raw"})
     response.raise_for_status()
@@ -299,12 +323,17 @@ def main() -> int:
             key=lambda ca: ca["id"],
         )
         write("combat_achievements.json", cas)
+        write("item_names.json", item_names(http), compact=True)
     return 0
 
 
-def write(name: str, data: object) -> None:
+def write(name: str, data: object, *, compact: bool = False) -> None:
     path = OUT / name
-    path.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    if compact:
+        text = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+    else:
+        text = json.dumps(data, indent=1, ensure_ascii=False)
+    path.write_text(text + "\n", encoding="utf-8")
     print(f"wrote {path.relative_to(OUT.parent.parent.parent.parent)} ({path.stat().st_size} B)")
 
 
