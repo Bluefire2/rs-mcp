@@ -169,7 +169,7 @@ Tool annotations: all tools are `readOnlyHint: true` except `refresh_gains_track
 3. Configure the plugin: group name, token, base URL override `http://localhost:8000`. Open the bank and check the snapshot.
 4. Build `get_bank` and `get_equipment_and_inventory`, joining with the prices mapping.
 
-**Phase 4. GCP**
+**Phase 4. GCP** ✅ Deployed 2026-10-17 to project `your-gcp-project` (the billing account was at its 5-project limit, so `rs-mcp` couldn't be billed; a quota increase is requested). Service `https://osrs-mcp-123456789012.us-west1.run.app`. Verified: one container on the commit-tagged image, dedicated service account, env names, `/health`, 401 on `/mcp`, and a real Google sign-in with tool calls reaching every data source from Cloud Run. Egress was checked from Cloud Run itself rather than Cloud Shell. A $5 budget alert covers the project.
 1. **Egress probe first:** from Cloud Shell (a GCP IP), curl the hiscores JSON, WikiSync, WOM and prices with the real UA. If any are blocked, stop and discuss (options: a different region, or a relay).
 2. `Dockerfile` (uv, non-root). Write `deploy/deploy.sh` to be idempotent:
    - Enable the APIs, create the Artifact Registry repo, and create the service account (`secretmanager.secretAccessor`, `datastore.user`).
@@ -191,7 +191,7 @@ Tool annotations: all tools are `readOnlyHint: true` except `refresh_gains_track
 
 ## Open items for the user to decide or confirm
 1. **Your RSN and account type** (regular, ironman, …), for `DEFAULT_RSN`. Also: do you want a WOM API key (ask on their Discord)? Optional.
-2. **GCP egress to the hiscores and Wiki** can't be confirmed from here. That's Phase 4 step 1.
+2. ~~**GCP egress to the hiscores and Wiki**~~ Confirmed from Cloud Run on 2026-10-17: every source answered.
 3. **Google consent screen "In production" without verification** for basic scopes: please confirm in the console when you create the client, rather than relying on docs.
 4. **Connectors inside claude.ai Projects** isn't documented. We'll confirm it during E2E.
 5. ~~**GIM Tracker payload details**~~ Confirmed by a live capture on 2026-10-17 (via `INGEST_CAPTURE_DIR`): the real plugin's updates match the source-derived fixtures. Empty rune pouch slots arrive as id `-1`. Still unseen live: the collection log field. Untradeable items are named from the Wiki item list (`item_names.json`).

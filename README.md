@@ -207,8 +207,39 @@ scripts/            fixture capture, reference-data refresh
 tests/
 ```
 
-## Roadmap
+## Deploying to Cloud Run
 
-- **Phase 4:** deploy to Cloud Run.
+`deploy/deploy.sh` does the whole deploy and is safe to re-run. It:
+- enables the APIs and creates the Firestore `(default)` database, an Artifact Registry repo,
+  and a dedicated service account (Firestore user, plus read access to its own secrets only);
+- creates four Secret Manager secrets if they're missing. `GOOGLE_CLIENT_SECRET` and
+  `INGEST_TOKEN` are copied from `.env`; the signing and encryption keys are generated fresh.
+  Existing secrets are never overwritten, and values are never printed;
+- builds the image with Cloud Build, tagged with the git commit, and refuses to run with
+  uncommitted build inputs;
+- deploys with `--update-env-vars` / `--update-secrets`, which merge, so settings changed by
+  hand on the service survive;
+- checks the result: one container, the right image and service account, env var names,
+  `/health`, and a 401 from `/mcp`.
+
+```bash
+bash deploy/deploy.sh --dry-run
+```
+
+```bash
+bash deploy/deploy.sh
+```
+
+Defaults: project `your-gcp-project`, region `us-west1`, service `osrs-mcp`. Override
+with `PROJECT=… REGION=…`. The Firestore location is permanent once created. Run it from Git
+Bash; it calls the POSIX `gcloud`, because `gcloud.cmd` breaks arguments containing spaces.
+
+After the first deploy:
+1. Add `https://<service URL>/auth/callback` to the Google OAuth client's **Authorized redirect
+   URIs**. The service URL is printed, and is `https://osrs-mcp-<project number>.<region>.run.app`.
+2. In the Group Ironmen Tracker plugin, set **Server base URL override** to the service URL.
+3. In claude.ai, **Customize > Connectors > Add custom connector** with `<service URL>/mcp`.
+4. To publish the Google OAuth app (so sign-ins don't expire after 7 days), use `<service URL>/`
+   as the homepage and `<service URL>/privacy` as the privacy policy on the Branding page.
 
 See [docs/PLAN.md](docs/PLAN.md).

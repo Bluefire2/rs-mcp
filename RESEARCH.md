@@ -135,9 +135,11 @@ Source: https://www.anthropic.com/engineering/writing-tools-for-agents
 **Unconfirmed**
 - Free-tier numbers. As I recall them, roughly 180k vCPU-s, 360k GiB-s and 2M requests a month,
   but the pricing page didn't render for me. Re-check at deploy time.
-- **Outbound blocking from GCP IPs.** The hiscores sit behind Cloudflare: the 404 page carries a
-  Cloudflare challenge script. Every endpoint worked from a residential IP. We'll probe from
-  Cloud Shell before deploying (Phase 4 step 1).
+- ~~**Outbound blocking from GCP IPs.**~~ **Confirmed not blocked (2026-10-17):** from the
+  deployed Cloud Run service (us-west1), authenticated tool calls reached the hiscores (behind
+  Cloudflare), WikiSync, Wise Old Man and the Wiki prices API.
+- Cloud Run's front end reserves `/healthz` (it answers 404 without reaching the container), so
+  the service also serves `/health`.
 
 ## R5. Official hiscores (verified live)
 
@@ -273,7 +275,7 @@ seen live yet.
 
 ## Still unconfirmed (to decide or check)
 
-1. GCP egress to the hiscores, Wiki and WOM (Cloudflare). Probe from Cloud Shell.
+1. ~~GCP egress to the hiscores, Wiki and WOM~~ Confirmed working from Cloud Run on 2026-10-17.
 2. Whether the Google consent screen can be "In production" without verification for basic scopes.
 3. Connectors inside claude.ai Projects.
 4. ~~Group Ironmen Tracker payload shapes~~ Confirmed by a live capture on 2026-10-17, except
