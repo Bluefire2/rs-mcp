@@ -13,15 +13,13 @@
 # hand survives a redeploy.
 set -euo pipefail
 
-PROJECT="${PROJECT:-your-gcp-project}"
+# The GCP project and public address come from .env (GCP_PROJECT, DEPLOY_DOMAIN,
+# DEPLOY_PREFIX) so they stay out of the repo; environment variables of the same short names
+# (PROJECT, DOMAIN, PREFIX) override them. See .env.example.
 REGION="${REGION:-us-west1}"
 SERVICE="${SERVICE:-osrs-mcp}"
 REPO="${REPO:-osrs-mcp}"
 SA_NAME="${SA_NAME:-osrs-mcp-run}"
-# Public address: a Cloud Run domain mapping for DOMAIN (a whole hostname), with the app
-# itself serving everything under PREFIX. DOMAIN= (empty) uses the bare run.app URL instead.
-DOMAIN="${DOMAIN-rs.example.com}"
-PREFIX="${PREFIX-/osrs}"
 ENV_FILE="${ENV_FILE:-.env}"
 
 DRY_RUN=0
@@ -64,6 +62,13 @@ require() {
 
 [[ -f "$ENV_FILE" ]] || { echo "No $ENV_FILE" >&2; exit 1; }
 require GOOGLE_CLIENT_ID GOOGLE_CLIENT_SECRET ALLOWED_EMAIL DEFAULT_RSN CONTACT GIM_GROUP INGEST_TOKEN
+
+PROJECT="${PROJECT:-$(env_value GCP_PROJECT)}"
+[[ -n "$PROJECT" ]] || { echo "Set GCP_PROJECT in $ENV_FILE (or PROJECT=...)." >&2; exit 1; }
+# Public address: a Cloud Run domain mapping for DOMAIN (a whole hostname), with the app itself
+# serving everything under PREFIX (e.g. /osrs). An empty DOMAIN uses the bare run.app URL.
+DOMAIN="${DOMAIN-$(env_value DEPLOY_DOMAIN)}"
+PREFIX="${PREFIX-$(env_value DEPLOY_PREFIX)}"
 
 if [[ -n "$(git status --porcelain -- Dockerfile pyproject.toml uv.lock .python-version src)" ]]; then
   echo "Uncommitted changes to build inputs; commit first so the image tag names a real commit." >&2

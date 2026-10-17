@@ -3,7 +3,7 @@ name = "osrs-mcp"
 version = "0.1.0"
 description = "Personal remote MCP server exposing an Old School RuneScape account to Claude"
 authors = [
-    { name = "Kyrylo Chernyshov", email = "you@example.com" }
+    { name = "Kyrylo Chernyshov" }
 ]
 requires-python = ">=3.14"
 dependencies = [

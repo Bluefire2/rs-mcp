@@ -230,8 +230,10 @@ bash deploy/deploy.sh --dry-run
 bash deploy/deploy.sh
 ```
 
-Defaults: project `your-gcp-project`, region `us-west1`, service `osrs-mcp`. Override
-with `PROJECT=… REGION=…`. The Firestore location is permanent once created. Run it from Git
+The project and public address come from `.env`: `GCP_PROJECT` (required), and optionally
+`DEPLOY_DOMAIN` and `DEPLOY_PREFIX` for a custom domain such as `https://rs.example.com/osrs`
+(see `.env.example`). Region `us-west1` and service `osrs-mcp` are defaults; override any of
+them with `PROJECT=… REGION=… DOMAIN=… PREFIX=…`. The Firestore location is permanent once created. Run it from Git
 Bash; it calls the POSIX `gcloud`, because `gcloud.cmd` breaks arguments containing spaces.
 
 After the first deploy:

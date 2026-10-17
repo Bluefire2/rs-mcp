@@ -64,7 +64,7 @@ def test_advertised_oauth_endpoints_are_served_under_the_prefix(client):
 
 def test_plugin_ingest_resolves_under_the_prefix(client):
     # The plugin appends /api/group/... to its base URL, which is set to BASE.
-    url = "/osrs/api/group/osrs-mcp/am-i-in-group?member_name=Test Player"
+    url = "/osrs/api/group/osrs-mcp/am-i-in-group?member_name=Test%20Player"
     assert client.get(url, headers={"authorization": TOKEN}).status_code == 200
     assert client.get(url, headers={"authorization": "nope"}).status_code == 401
 
