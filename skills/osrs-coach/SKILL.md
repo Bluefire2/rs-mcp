@@ -125,7 +125,8 @@ Reading the results correctly:
 - **Gains** only cover the span between Wise Old Man snapshots. An empty result with no time window
   means there aren't two snapshots yet, not that the player was idle.
 - **Levels:** `get_stats` already takes the higher of the hiscores and WikiSync for each skill
-  (the hiscores can show an unranked skill as level 1). A skill with `level_source: wikisync`
+  (the hiscores lag until the player logs out or hops, so recently trained skills can still show
+  their old level, even 1). A skill with `level_source: wikisync`
   has `xp_is_minimum: true`: its XP-to-go figures are upper bounds. `rank: null` only means the
   player is outside the ranked range.
 - **Item prices** match names fuzzily. When the query is ambiguous ("d boots"), confirm which item

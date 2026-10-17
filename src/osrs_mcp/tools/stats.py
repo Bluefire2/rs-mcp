@@ -63,9 +63,9 @@ def _with_xp(stat: SkillStat, xp: int) -> SkillStat:
 def build_stats(hiscores: Hiscores, wikisync_levels: Mapping[str, int] | None = None) -> Stats:
     """Hiscore stats, with any skill WikiSync reports higher taken from WikiSync.
 
-    Seen on a real account: the hiscores list an unranked account's lower skills as level 1 with
-    0 XP while WikiSync has the real level (Agility 25). Levels never go down, so the higher of
-    the two is the more current.
+    Seen on a real account: the hiscores still showed recently trained skills at level 1 with 0 XP
+    (they only update on logout or world hop) while WikiSync already had the real level
+    (Agility 25). Levels never go down, so the higher of the two is the more current.
     """
     wikisync_levels = wikisync_levels or {}
     skills = []
