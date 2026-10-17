@@ -177,8 +177,10 @@ ENV_VARS=(
   "CONTACT=$(env_value CONTACT)"
   "GIM_GROUP=$(env_value GIM_GROUP)"
 )
-# "^@^" makes @ the list separator, so values may contain commas.
-ENV_ARG="^@^$(IFS=@; echo "${ENV_VARS[*]}")"
+# "^##^" makes ## the list separator (gcloud topic escaping), so values may contain commas and
+# the @ of email addresses.
+ENV_ARG="^##^$(printf '%s##' "${ENV_VARS[@]}")"
+ENV_ARG="${ENV_ARG%##}"
 SECRETS_ARG="GOOGLE_CLIENT_SECRET=osrs-mcp-google-client-secret:latest,\
 INGEST_TOKEN=osrs-mcp-ingest-token:latest,\
 JWT_SIGNING_KEY=osrs-mcp-jwt-signing-key:latest,\
