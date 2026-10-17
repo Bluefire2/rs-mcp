@@ -1,6 +1,8 @@
 """Exercise every tool through a real FastMCP client (in-memory transport), with outbound HTTP
 mocked from captured fixtures. This covers registration, input/output schemas and error text."""
 
+import json
+
 import pytest
 import respx
 from fastmcp import Client
@@ -84,17 +86,61 @@ async def test_tool_list_and_annotations(mock_sources):
         assert tool.annotations.read_only_hint is expected_read_only, name
 
 
+def wikisync_levels(levels: dict[str, int]) -> dict:
+    payload = json.loads(fixture_text("wikisync_b0aty.json"))
+    payload["levels"] = levels
+    return payload
+
+
 async def test_get_stats(mock_sources):
+    # Hiscores only: this player doesn't use WikiSync.
+    mock_sources.get(url__regex=r"https://sync\.runescape\.wiki/.*").respond(
+        400, text=fixture_text("wikisync_no_data.json")
+    )
     stats = await call("get_stats")
     assert stats["total_level"] == 2278
     assert stats["combat_level"] == 126
     sailing = next(s for s in stats["skills"] if s["skill"] == "Sailing")
-    # Unranked (rank -1) but the level is still real.
-    assert (sailing["level"], sailing["rank"]) == (1, None)
+    assert (sailing["level"], sailing["rank"], sailing["level_source"]) == (1, None, "hiscores")
     attack = next(s for s in stats["skills"] if s["skill"] == "Attack")
     assert attack["xp_to_99"] == 0
     assert stats["closest_99s"] == ["Sailing"]
-    assert "hiscores" in stats["source"].lower()
+    assert "hiscores" in stats["source"].lower() and "wikisync" not in stats["source"].lower()
+
+
+async def test_get_stats_takes_higher_levels_from_wikisync(mock_sources):
+    # Seen live: the hiscores showed Agility 1 / 0 XP while WikiSync had 25.
+    mock_sources.get(url__regex=r"https://sync\.runescape\.wiki/.*").respond(
+        200, json=wikisync_levels({"Sailing": 25, "Attack": 90})
+    )
+    stats = await call("get_stats")
+    sailing = next(s for s in stats["skills"] if s["skill"] == "Sailing")
+    assert sailing["level"] == 25
+    assert sailing["level_source"] == "wikisync" and sailing["xp_is_minimum"] is True
+    assert sailing["xp"] == 7842  # minimum XP for level 25
+    assert sailing["xp_to_99"] == 13_034_431 - 7842
+    # A lower WikiSync level never overrides the hiscores.
+    attack = next(s for s in stats["skills"] if s["skill"] == "Attack")
+    assert (attack["level"], attack["level_source"]) == (99, "hiscores")
+    assert stats["total_level"] == 2278 + 24  # recomputed from merged levels
+    assert "wikisync" in stats["source"].lower()
+
+
+async def test_get_stats_recomputes_combat_from_wikisync(mock_sources):
+    mock_sources.get(url__regex=r"https://secure\.runescape\.com/.*").respond(
+        200, text=fixture_text("hiscores_lynx_titan.json").replace('"level":99', '"level":1')
+    )
+    mock_sources.get(url__regex=r"https://sync\.runescape\.wiki/.*").respond(
+        200,
+        json=wikisync_levels(
+            {
+                s: 99
+                for s in ("Attack", "Strength", "Defence", "Hitpoints", "Ranged", "Prayer", "Magic")
+            }
+        ),
+    )
+    stats = await call("get_stats")
+    assert stats["combat_level"] == 126
 
 
 async def test_get_activity_scores_filters(mock_sources):
