@@ -45,8 +45,10 @@ def create_app(
     ingest.register(mcp, settings, snapshots)
     site.register(mcp, settings)
 
+    # /health for Cloud Run, whose front end reserves /healthz and never forwards it.
+    @mcp.custom_route("/health", methods=["GET"], include_in_schema=False)
     @mcp.custom_route("/healthz", methods=["GET"], include_in_schema=False)
-    async def healthz(request: Request) -> JSONResponse:
+    async def health(request: Request) -> JSONResponse:
         return JSONResponse({"status": "ok"})
 
     return mcp

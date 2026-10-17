@@ -86,6 +86,7 @@ def test_authorization_server_metadata_supports_claude(client):
 
 def test_healthz_needs_no_auth(client):
     assert client.get("/healthz").json() == {"status": "ok"}
+    assert client.get("/health").json() == {"status": "ok"}  # Cloud Run reserves /healthz
 
 
 def test_homepage_and_privacy_policy_are_public(client):

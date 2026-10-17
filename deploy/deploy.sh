@@ -203,7 +203,7 @@ echo "  containers: $("$GCLOUD" run services describe "$SERVICE" --region="$REGI
 echo "  env var names:"
 "$GCLOUD" run services describe "$SERVICE" --region="$REGION" --project="$PROJECT" \
   --format='value(spec.template.spec.containers[0].env[].name)' | tr ';' '\n' | sed 's/^/    /'
-echo "  /healthz: $(curl -s -o /dev/null -w '%{http_code}' "$URL/healthz")"
-echo "  /mcp without token: $(curl -s -o /dev/null -w '%{http_code}' -X POST "$URL/mcp")"
+echo "  /health: $(curl -s -o /dev/null -w "%{http_code}" "$URL/health")"
+echo "  /mcp without token: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'content-type: application/json' -d '{}' "$URL/mcp") (expect 401)"
 echo "  protected resource: $(curl -s "$URL/.well-known/oauth-protected-resource/mcp")"
 log "Done. Connector URL: $URL/mcp"
