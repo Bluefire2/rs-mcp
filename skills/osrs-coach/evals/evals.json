@@ -10,7 +10,7 @@
     {
       "id": 2,
       "prompt": "I want to work towards Barrows gloves. How far off am I and what's the route?",
-      "expected_output": "Builds the Recipe for Disaster route from the Recipe_for_Disaster Wiki page (subquests and the 175 quest-point requirement of the final subquest) and the player's actual quest states and levels from get_quest_progress and get_stats: which subquests/prerequisites are done or missing, skill targets with XP to go; flags unverifiable requirements rather than guessing; links the Wiki pages; offers next steps in order.",
+      "expected_output": "Calls get_quest_progress with quest=\"Recipe for Disaster\" for the ordered route, skill targets and the player's quest points; uses the Recipe for Disaster Wiki page for the subquests and the 175 QP gate; names QP as the main wall if it is; lays out next steps in order; links the Wiki pages; leads with the next step and stays near 250 words.",
       "files": []
     },
     {
@@ -28,7 +28,7 @@
     {
       "id": 5,
       "prompt": "can i do vorkath yet",
-      "expected_output": "Answers yes or no first. Checks Dragon Slayer II completion with get_quest_progress, stats with get_stats, and current gear/bank for a viable setup; uses the Vorkath and Vorkath/Strategies Wiki pages for recommended stats and gear; names the one or two biggest blockers (for this account, Dragon Slayer II and its requirements); suggests the DPS calculator.",
+      "expected_output": "Answers no/yes first. Uses get_quest_progress with quest=\"Dragon Slayer II\" (route, skill targets, QP) and stops there if DS2 is far off rather than checking bank/gear; uses the Vorkath Wiki page for anything else; names the one or two biggest blockers; uses get_stats levels as given (already merged with WikiSync).",
       "files": []
     },
     {
