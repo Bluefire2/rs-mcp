@@ -88,6 +88,15 @@ def test_healthz_needs_no_auth(client):
     assert client.get("/healthz").json() == {"status": "ok"}
 
 
+def test_homepage_and_privacy_policy_are_public(client):
+    # Google requires both URLs before the OAuth app can be published.
+    home = client.get("/")
+    assert home.status_code == 200 and "/privacy" in home.text
+    privacy = client.get("/privacy")
+    assert privacy.status_code == 200
+    assert "openid" in privacy.text and "Nothing is sold or shared" in privacy.text
+
+
 @pytest.mark.parametrize("missing", ["google_client_id", "allowed_email", "jwt_signing_key"])
 def test_google_mode_fails_closed_without_config(missing):
     settings = auth_settings(**{missing: ""})

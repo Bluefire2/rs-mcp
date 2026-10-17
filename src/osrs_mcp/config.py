@@ -49,6 +49,9 @@ class Settings(BaseSettings):
     # Key-value storage for OAuth state and RuneLite snapshots.
     store_backend: Literal["file", "memory", "firestore"] = "file"
     store_dir: str = "var/store"
+    # Firestore backend: project defaults to the environment's (the Cloud Run service's own).
+    firestore_project: str = ""
+    firestore_database: str = "(default)"
 
     # Ingest from the Group Ironmen Tracker RuneLite plugin (bank, inventory, gear). Disabled
     # (every ingest request refused) unless both GIM_GROUP and INGEST_TOKEN are set.

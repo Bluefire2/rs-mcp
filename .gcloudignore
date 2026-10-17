@@ -1,0 +1,10 @@
+# What `gcloud builds submit` uploads (gitignore syntax). Allowlist: only the Docker build's
+# inputs leave the machine. Never .env, var/ (local OAuth state and snapshots) or worktrees.
+/*
+!/Dockerfile
+!/.dockerignore
+!/pyproject.toml
+!/uv.lock
+!/.python-version
+!/src/
+**/__pycache__/

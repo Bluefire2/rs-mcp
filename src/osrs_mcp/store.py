@@ -30,4 +30,18 @@ def make_store(settings: Settings) -> AsyncKeyValue:
                 ),
             )
         case "firestore":
-            raise NotImplementedError("Firestore storage arrives with the Cloud Run deploy.")
+            from key_value.aio.stores.firestore import (
+                FirestoreStore,
+                FirestoreV1CollectionSanitizationStrategy,
+                FirestoreV1KeySanitizationStrategy,
+            )
+
+            # Credentials come from the environment: the service account on Cloud Run, or
+            # FIRESTORE_EMULATOR_HOST locally. Keys like "zezima/bank" contain characters
+            # Firestore document ids can't, hence the sanitization strategies.
+            return FirestoreStore(
+                project=settings.firestore_project or None,
+                database=settings.firestore_database,
+                key_sanitization_strategy=FirestoreV1KeySanitizationStrategy(),
+                collection_sanitization_strategy=FirestoreV1CollectionSanitizationStrategy(),
+            )

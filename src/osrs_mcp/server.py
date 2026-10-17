@@ -5,7 +5,7 @@ from key_value.aio.protocols.key_value import AsyncKeyValue
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
-from osrs_mcp import ingest
+from osrs_mcp import ingest, site
 from osrs_mcp.auth import make_auth
 from osrs_mcp.config import Settings, get_settings
 from osrs_mcp.snapshots import SnapshotStore
@@ -43,6 +43,7 @@ def create_app(
     )
     register_all(mcp, sources, snapshots)
     ingest.register(mcp, settings, snapshots)
+    site.register(mcp, settings)
 
     @mcp.custom_route("/healthz", methods=["GET"], include_in_schema=False)
     async def healthz(request: Request) -> JSONResponse:
