@@ -16,7 +16,13 @@
     {
       "id": 3,
       "prompt": "I have around 460k cash. What's a good gear upgrade for me and is there anything in my bank I should just sell?",
-      "expected_output": "Checks bank and current equipment plus stats; suggests upgrades the player can afford AND wear (level requirements checked), priced with get_item_price; points out sellable bank items by value; notes bank snapshot freshness; doesn't recommend items already owned.",
+      "expected_output": "Checks bank and current equipment plus stats; suggests upgrades the player can afford AND wear (requirements checked on the Wiki against their levels), priced with get_item_price; points out sellable bank items by value; notes bank snapshot freshness; doesn't recommend items already owned.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "whats the best way for me to train agility right now",
+      "expected_output": "Reads the Wiki's Pay-to-play Agility training guide for current methods and rates, checks the player's Agility level (and quests/money that gate methods) with the account tools, and recommends the method that fits their level now plus the next milestone, linking the Wiki page.",
       "files": []
     }
   ]
