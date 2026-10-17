@@ -25,8 +25,9 @@ DRY_RUN=0
 
 cd "$(dirname "$0")/.."
 
-# Git Bash on Windows: gcloud is a .cmd shim.
-if command -v gcloud.cmd >/dev/null 2>&1; then GCLOUD=gcloud.cmd; else GCLOUD=gcloud; fi
+# Use the POSIX `gcloud` script, also present in Git Bash on Windows. Never gcloud.cmd: it
+# mangles any argument containing a space ("'C:\Program' is not recognized").
+GCLOUD=gcloud
 g() { "$GCLOUD" "$@" --project "$PROJECT" --quiet; }
 
 log() { printf '\n==> %s\n' "$*"; }
