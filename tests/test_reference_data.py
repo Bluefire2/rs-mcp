@@ -184,3 +184,93 @@ def test_parse_bucket_requirements():
         ("Quest point", 20),
         ("Thieving", 66),
     ]
+
+
+def test_most_wikisync_quests_have_an_optimal_order(wikisync):
+    reqs = quest_reqs()
+    quests = [q for q in wikisync["quests"] if q != "."]
+    ordered = [q for q in quests if reqs[q].optimal_order is not None]
+    assert len(ordered) >= 0.9 * len(quests)
+    # Only miniquests (and Recipe for Disaster, listed by subquest) are missing from the guide.
+    assert {q for q in quests if q not in ordered and not reqs[q].miniquest} == {
+        "Recipe for Disaster"
+    }
+    positions = [reqs[q].optimal_order for q in ordered]
+    assert len(positions) == len(set(positions))
+    assert reqs["Cook's Assistant"].optimal_order < reqs["Dragon Slayer II"].optimal_order
+
+
+def test_miniquests_are_marked(wikisync):
+    reqs = quest_reqs()
+    assert reqs["Barbarian Training"].miniquest
+    assert reqs["Barbarian Firemaking"].miniquest  # a route step that redirects to it
+    assert not reqs["Cook's Assistant"].miniquest
+    points = quest_points()
+    assert all(points[q] == 0 for q in wikisync["quests"] if q in reqs and reqs[q].miniquest)
+
+
+def test_xp_reward_spot_values():
+    reqs = quest_reqs()
+    assert reqs["The Grand Tree"].xp_rewards == {"Agility": 7900, "Attack": 18400, "Magic": 2150}
+    assert reqs["Hazeel Cult"].xp_rewards == {"Thieving": 1500}
+    assert reqs["The Tourist Trap"].xp_rewards["Agility"] is None  # a choice of skills
+    assert reqs["Rune Mysteries"].xp_rewards == {}
+
+
+OQG_SAMPLE = """\
+{| class="wikitable oqg-table" data-tableid="OQG"
+! Quest/Activity
+|- data-rowid="Tutorial Island"
+|[[Learning the Ropes]]
+|''N/A''
+|- data-rowid="Cook's Assistant"
+|[[Cook's Assistant]]
+|[[Cook's Assistant/Quick guide|QG]]
+|- data-rowid="Stronghold of Security"
+|Unlock: [[Stronghold of Security]]
+|- data-rowid="Easy Ardougne Diary"
+| Easy [[Ardougne Diary]]
+|- data-rowid="The Restless Ghost"
+| data-sort-value="Restless Ghost, The" |[[The Restless Ghost]]
+|- data-rowid="Evil Dave"
+|[[Recipe for Disaster/Freeing Evil Dave|RFD: Evil Dave]]
+|- data-rowid="Barcrawl"
+|[[Alfred Grimhand's Barcrawl]] (miniquest)
+|- data-rowid="Cook's Assistant again"
+|[[Cook's Assistant]]
+|}
+"""
+
+
+def test_parse_optimal_order():
+    known = {
+        "Cook's Assistant",
+        "The Restless Ghost",
+        "Recipe for Disaster - Evil Dave",
+        "Alfred Grimhand's Barcrawl",
+        "Stronghold of Security",  # even if known, an Unlock: row isn't a quest step
+    }
+    assert refresh.parse_optimal_order(OQG_SAMPLE, known) == [
+        "Cook's Assistant",
+        "The Restless Ghost",
+        "Recipe for Disaster - Evil Dave",
+        "Alfred Grimhand's Barcrawl",
+    ]
+
+
+def test_parse_xp_rewards():
+    wikitext = (
+        "==Rewards==\n{{Quest rewards\n|name=X|qp=2|rewards=*{{SCP|Prayer|8,000}} [[Prayer]] "
+        "experience\n*{{SCP|thieving|1,000}} [[Thieving]] [[experience]]\n"
+        "*4,650 experience in your choice of {{SCP|Agility}} [[Agility]] or {{SCP|Smithing}}\n"
+        "*Use the shortcut (with {{SCP|Agility|37}} [[Agility]])\n"
+        "*An [[antique lamp]] giving 2,500 XP in any skill\n*[[Robe of Elidinis]]}}\n"
+        "*{{SCP|Mining|9,000}} experience outside the template\n"
+    )
+    assert refresh.parse_xp_rewards(wikitext) == {
+        "Agility": None,
+        "Prayer": 8000,
+        "Smithing": None,
+        "Thieving": 1000,
+    }
+    assert refresh.parse_xp_rewards("no rewards here") == {}

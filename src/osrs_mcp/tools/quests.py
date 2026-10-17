@@ -26,6 +26,21 @@ class QuestEntry(BaseModel):
     status: Literal["completed", "in_progress", "not_started"]
     difficulty: str | None = None
     length: str | None = None
+    miniquest: bool = Field(
+        default=False,
+        description="A miniquest (or part of one, like Barbarian Firemaking): no quest points, "
+        "and usually no official difficulty or length",
+    )
+    optimal_order: int | None = Field(
+        default=None,
+        description="Position in the Wiki's Optimal quest guide (1 = first; lower = do sooner). "
+        "None if the guide doesn't list it",
+    )
+    xp_rewards: dict[str, int | None] | None = Field(
+        default=None,
+        description="With `rewards_skill`: skills the quest rewards XP in -> XP (None = the "
+        "amount depends on a choice; check the Wiki). Lamps for any skill aren't included",
+    )
     can_start: bool | None = Field(
         default=None,
         description="Requirements to start met? None = only unverifiable requirements remain "
@@ -129,6 +144,7 @@ def build_quest_progress(
     startable_only: bool,
     is_ironman: bool,
     quest: str | None = None,
+    rewards_skill: str | None = None,
 ) -> QuestProgress:
     reqs = quest_reqs()
     qp = player_quest_points(data.quests)
@@ -144,6 +160,8 @@ def build_quest_progress(
             status=quest_status,
             difficulty=req.difficulty if req else None,
             length=req.length if req else None,
+            miniquest=req.miniquest if req else False,
+            optimal_order=req.optimal_order if req else None,
         )
         if quest_status != "completed":
             if req:
@@ -187,6 +205,14 @@ def build_quest_progress(
             route_targets = sorted(targets.values(), key=lambda m: m.need - m.have, reverse=True)
             route_remaining = sum(1 for step in route if step.status != "completed")
     else:
+        skill = None
+        if rewards_skill:
+            skill = next(
+                (s for s in data.levels if s.lower() == rewards_skill.strip().lower()), None
+            )
+            if skill is None:
+                skills = ", ".join(sorted(data.levels))
+                raise SourceError(f"Unknown skill '{rewards_skill}'. Use one of: {skills}.")
         entries = []
         for name, state in sorted(states.items()):
             quest_status = QUEST_STATES[state]
@@ -197,10 +223,18 @@ def build_quest_progress(
             )
             if not wanted:
                 continue
+            req = reqs.get(name)
+            if skill and not (req and skill in req.xp_rewards):
+                continue
             entry = entry_for(name)
             if startable_only and entry.can_start is False:
                 continue
+            if skill:
+                entry.xp_rewards = req.xp_rewards
             entries.append(entry)
+        if startable_only or skill:
+            # Next-quest lists read best in the Optimal quest guide's order; unlisted ones last.
+            entries.sort(key=lambda e: (e.optimal_order is None, e.optimal_order or 0, e.name))
 
     return QuestProgress(
         rsn=data.username,
@@ -229,21 +263,37 @@ def register(mcp: FastMCP, sources: Sources) -> None:
             Field(description="Which quests to list; 'incomplete' = in progress + not started"),
         ] = "incomplete",
         startable_only: Annotated[
-            bool, Field(description="Only quests whose requirements are met (or unverifiable)")
+            bool,
+            Field(
+                description="Only quests whose requirements are met (or unverifiable), in the "
+                "Wiki's Optimal quest guide order (best next quest first)"
+            ),
         ] = False,
+        rewards_skill: Annotated[
+            str | None,
+            Field(
+                description="Only quests whose rewards include XP in this skill (e.g. "
+                "'Agility'), each with its xp_rewards; combine with startable_only for "
+                '"quests I can do for Agility XP"'
+            ),
+        ] = None,
         quest: Annotated[
             str | None,
             Field(
                 description="One quest by name (e.g. 'Dragon Slayer II', 'Recipe for "
                 "Disaster'): returns just that quest plus its full route of unfinished "
-                "prerequisites and the skill targets along it. Ignores status/startable_only."
+                "prerequisites and the skill targets along it. Ignores status, startable_only "
+                "and rewards_skill."
             ),
         ] = None,
     ) -> QuestProgress:
         """Quest completion and quest points, with, for each unfinished quest, whether it can
         be started now and exactly which skills or prerequisite quests are missing. Use
         `quest` for "can I do X?" or "how far am I from X?" (small answer, includes the full
-        prerequisite route); use `startable_only` for "what quests can I do next?". Counts
-        cover all quests regardless of filters. Requires the WikiSync RuneLite plugin."""
+        prerequisite route); use `startable_only` for "what quests can I do next?" (sorted by
+        the Wiki's Optimal quest guide, so the first few are the usual answer). Counts cover
+        all quests regardless of filters. Requires the WikiSync RuneLite plugin."""
         data = await sources.wikisync.fetch(sources.rsn(rsn))
-        return build_quest_progress(data, status, startable_only, sources.is_ironman, quest)
+        return build_quest_progress(
+            data, status, startable_only, sources.is_ironman, quest, rewards_skill
+        )

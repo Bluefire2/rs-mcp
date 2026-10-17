@@ -55,7 +55,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 160
  },
  "A Night at the Theatre": {
   "quests": [
@@ -64,14 +67,29 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Attack": null,
+   "Defence": null,
+   "Hitpoints": null,
+   "Magic": null,
+   "Ranged": null,
+   "Strength": null
+  },
+  "miniquest": false,
+  "optimal_order": 194
  },
  "A Porcine of Interest": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Slayer": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 76
  },
  "A Ruff Situation": {
   "quests": [],
@@ -85,14 +103,25 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 38
  },
  "A Soul's Bane": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Defence": 500,
+   "Hitpoints": 500
+  },
+  "miniquest": false,
+  "optimal_order": 69
  },
  "A Tail of Two Cats": {
   "quests": [
@@ -101,7 +130,10 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 155
  },
  "A Taste of Hope": {
   "quests": [
@@ -142,14 +174,20 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 161
  },
  "Alfred Grimhand's Barcrawl": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 65
  },
  "Animal Magnetism": {
   "quests": [
@@ -191,7 +229,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Crafting": 1000,
+   "Fletching": 1000,
+   "Slayer": 1000,
+   "Woodcutting": 2500
+  },
+  "miniquest": false,
+  "optimal_order": 89
  },
  "Another Slice of H.A.M.": {
   "quests": [
@@ -215,7 +261,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Mining": 3000,
+   "Prayer": 3000
+  },
+  "miniquest": false,
+  "optimal_order": 83
  },
  "Architectural Alliance": {
   "quests": [],
@@ -229,7 +281,10 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Experienced",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "At First Light": {
   "quests": [
@@ -258,7 +313,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Construction": 800,
+   "Herblore": 500,
+   "Hunter": 4500
+  },
+  "miniquest": false,
+  "optimal_order": 162
  },
  "Barbarian Farming": {
   "quests": [],
@@ -270,7 +332,9 @@
     "boostable": false
    }
   ],
-  "source": "Module:Questreq/data"
+  "source": "Module:Questreq/data",
+  "miniquest": true,
+  "optimal_order": null
  },
  "Barbarian Firemaking": {
   "quests": [],
@@ -288,7 +352,9 @@
     "boostable": false
    }
   ],
-  "source": "Module:Questreq/data"
+  "source": "Module:Questreq/data",
+  "miniquest": true,
+  "optimal_order": null
  },
  "Barbarian Fishing": {
   "quests": [],
@@ -312,7 +378,9 @@
     "boostable": false
    }
   ],
-  "source": "Module:Questreq/data"
+  "source": "Module:Questreq/data",
+  "miniquest": true,
+  "optimal_order": null
  },
  "Barbarian Herblore": {
   "quests": [
@@ -326,7 +394,9 @@
     "boostable": false
    }
   ],
-  "source": "Module:Questreq/data"
+  "source": "Module:Questreq/data",
+  "miniquest": true,
+  "optimal_order": null
  },
  "Barbarian Smithing": {
   "quests": [
@@ -342,7 +412,9 @@
     "boostable": false
    }
   ],
-  "source": "Module:Questreq/data"
+  "source": "Module:Questreq/data",
+  "miniquest": true,
+  "optimal_order": null
  },
  "Barbarian Training": {
   "quests": [
@@ -355,14 +427,20 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "Bear Your Soul": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "Below Ice Mountain": {
   "quests": [],
@@ -376,7 +454,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 178
  },
  "Beneath Cursed Sands": {
   "quests": [
@@ -404,7 +485,12 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 50000
+  },
+  "miniquest": false,
+  "optimal_order": 187
  },
  "Between a Rock...": {
   "quests": [
@@ -433,7 +519,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Defence": 5000,
+   "Mining": 5000,
+   "Smithing": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 124
  },
  "Big Chompy Bird Hunting": {
   "quests": [],
@@ -459,7 +552,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Cooking": 1470,
+   "Fletching": 262,
+   "Ranged": 735
+  },
+  "miniquest": false,
+  "optimal_order": 91
  },
  "Biohazard": {
   "quests": [
@@ -468,7 +568,12 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Thieving": 1250
+  },
+  "miniquest": false,
+  "optimal_order": 30
  },
  "Black Knights' Fortress": {
   "quests": [],
@@ -482,7 +587,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 20
  },
  "Bone Voyage": {
   "quests": [
@@ -498,7 +606,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 79
  },
  "Cabin Fever": {
   "quests": [
@@ -533,14 +644,24 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Agility": 7000,
+   "Crafting": 7000,
+   "Smithing": 7000
+  },
+  "miniquest": false,
+  "optimal_order": 136
  },
  "Children of the Sun": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 11
  },
  "Client of Kourend": {
   "quests": [
@@ -549,14 +670,20 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 73
  },
  "Clock Tower": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 204
  },
  "Cold War": {
   "quests": [],
@@ -600,7 +727,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 5000,
+   "Construction": 1500,
+   "Crafting": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 127
  },
  "Contact!": {
   "quests": [
@@ -610,14 +744,30 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Attack": null,
+   "Defence": null,
+   "Hitpoints": null,
+   "Magic": null,
+   "Ranged": null,
+   "Strength": null,
+   "Thieving": 7000
+  },
+  "miniquest": false,
+  "optimal_order": 116
  },
  "Cook's Assistant": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Cooking": 300
+  },
+  "miniquest": false,
+  "optimal_order": 2
  },
  "Crab Quest": {
   "quests": [],
@@ -637,7 +787,13 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Fishing": 3000,
+   "Sailing": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 134
  },
  "Creature of Fenkenstrain": {
   "quests": [
@@ -666,7 +822,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Thieving": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 90
  },
  "Current Affairs": {
   "quests": [],
@@ -686,7 +847,13 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Fishing": 1000,
+   "Sailing": 1400
+  },
+  "miniquest": false,
+  "optimal_order": 58
  },
  "Curse of the Empty Lord": {
   "quests": [
@@ -709,14 +876,20 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 163
  },
  "Daddy's Home": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 12
  },
  "Darkness of Hallowvale": {
   "quests": [
@@ -768,14 +941,26 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Agility": 7000,
+   "Construction": 2000,
+   "Thieving": 6000
+  },
+  "miniquest": false,
+  "optimal_order": 107
  },
  "Death Plateau": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Attack": 3000
+  },
+  "miniquest": false,
+  "optimal_order": 33
  },
  "Death on the Isle": {
   "quests": [
@@ -797,7 +982,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 7500,
+   "Crafting": 5000,
+   "Thieving": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 64
  },
  "Death to the Dorgeshuun": {
   "quests": [
@@ -819,7 +1011,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Ranged": 2000,
+   "Thieving": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 46
  },
  "Defender of Varrock": {
   "quests": [
@@ -848,14 +1046,23 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Hunter": 15000,
+   "Smithing": 15000
+  },
+  "miniquest": false,
+  "optimal_order": 179
  },
  "Demon Slayer": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 86
  },
  "Desert Treasure I": {
   "quests": [
@@ -894,7 +1101,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Magic": null
+  },
+  "miniquest": false,
+  "optimal_order": 151
  },
  "Desert Treasure II - The Fallen Empire": {
   "quests": [
@@ -946,7 +1158,19 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Grandmaster",
-  "length": "Very Long"
+  "length": "Very Long",
+  "xp_rewards": {
+   "Attack": null,
+   "Defence": null,
+   "Hitpoints": null,
+   "Magic": null,
+   "Prayer": null,
+   "Ranged": null,
+   "Smithing": null,
+   "Strength": null
+  },
+  "miniquest": false,
+  "optimal_order": 201
  },
  "Devious Minds": {
   "quests": [
@@ -977,7 +1201,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Fletching": 5000,
+   "Runecraft": 5000,
+   "Smithing": 6500
+  },
+  "miniquest": false,
+  "optimal_order": 180
  },
  "Doric's Quest": {
   "quests": [],
@@ -991,7 +1222,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Mining": 1300
+  },
+  "miniquest": false,
+  "optimal_order": 16
  },
  "Dragon Slayer I": {
   "quests": [],
@@ -1011,7 +1247,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Defence": 18650,
+   "Strength": 18650
+  },
+  "miniquest": false,
+  "optimal_order": 110
  },
  "Dragon Slayer II": {
   "quests": [
@@ -1082,7 +1324,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Grandmaster",
-  "length": "Very Long"
+  "length": "Very Long",
+  "xp_rewards": {
+   "Agility": 50000,
+   "Mining": 60000,
+   "Smithing": 80000,
+   "Thieving": 50000
+  },
+  "miniquest": false,
+  "optimal_order": 195
  },
  "Dream Mentor": {
   "quests": [
@@ -1099,21 +1349,37 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Hitpoints": 15000,
+   "Magic": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 182
  },
  "Druidic Ritual": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Herblore": 250
+  },
+  "miniquest": false,
+  "optimal_order": 21
  },
  "Dwarf Cannon": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 750
+  },
+  "miniquest": false,
+  "optimal_order": 13
  },
  "Eadgar's Ruse": {
   "quests": [
@@ -1130,7 +1396,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Herblore": 11000
+  },
+  "miniquest": false,
+  "optimal_order": 130
  },
  "Eagles' Peak": {
   "quests": [],
@@ -1144,7 +1415,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Hunter": 2500
+  },
+  "miniquest": false,
+  "optimal_order": 154
  },
  "Elemental Workshop I": {
   "quests": [],
@@ -1176,7 +1452,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Crafting": 5000,
+   "Smithing": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 47
  },
  "Elemental Workshop II": {
   "quests": [
@@ -1198,7 +1480,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 7500,
+   "Smithing": 7500
+  },
+  "miniquest": false,
+  "optimal_order": 68
  },
  "Enakhra's Lament": {
   "quests": [],
@@ -1236,7 +1524,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Crafting": 7000,
+   "Firemaking": 7000,
+   "Magic": 7000,
+   "Mining": 7000
+  },
+  "miniquest": false,
+  "optimal_order": 129
  },
  "Enlightened Journey": {
   "quests": [],
@@ -1268,7 +1564,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 2000,
+   "Farming": 3000,
+   "Firemaking": 4000,
+   "Woodcutting": 1500
+  },
+  "miniquest": false,
+  "optimal_order": 98
  },
  "Enter the Abyss": {
   "quests": [
@@ -1277,14 +1581,20 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 70
  },
  "Ernest the Chicken": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 85
  },
  "Ethically Acquired Antiquities": {
   "quests": [
@@ -1301,7 +1611,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Thieving": 6000
+  },
+  "miniquest": false,
+  "optimal_order": 146
  },
  "Fairytale I - Growing Pains": {
   "quests": [
@@ -1311,7 +1626,14 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Attack": 2000,
+   "Farming": 3500,
+   "Magic": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 52
  },
  "Fairytale II - Cure a Queen": {
   "quests": [
@@ -1340,14 +1662,23 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Herblore": 3500,
+   "Thieving": 2500
+  },
+  "miniquest": false,
+  "optimal_order": 168
  },
  "Fairytale III - Nexus of Power": {
   "quests": [],
   "skills": [],
   "source": "Quest bucket",
   "difficulty": "Master",
-  "length": ""
+  "length": "",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": null
  },
  "Fallen From Grace": {
   "quests": [
@@ -1381,7 +1712,15 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Experienced",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 10000,
+   "Mining": 5000,
+   "Runecraft": 5000,
+   "Sailing": 12500
+  },
+  "miniquest": false,
+  "optimal_order": 191
  },
  "Family Crest": {
   "quests": [],
@@ -1413,7 +1752,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 152
  },
  "Family Pest": {
   "quests": [
@@ -1422,14 +1764,23 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "Fight Arena": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Attack": 12175,
+   "Thieving": 2175
+  },
+  "miniquest": false,
+  "optimal_order": 25
  },
  "Fishing Contest": {
   "quests": [],
@@ -1443,14 +1794,22 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Fishing": 2437
+  },
+  "miniquest": false,
+  "optimal_order": 59
  },
  "Fool's Gold": {
   "quests": [],
   "skills": [],
   "source": "Quest bucket",
   "difficulty": "Master",
-  "length": ""
+  "length": "",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": null
  },
  "Forgettable Tale...": {
   "quests": [
@@ -1473,7 +1832,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Cooking": 5000,
+   "Farming": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 82
  },
  "Garden of Tranquillity": {
   "quests": [
@@ -1489,14 +1854,24 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Farming": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 97
  },
  "Gertrude's Cat": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Cooking": 1525
+  },
+  "miniquest": false,
+  "optimal_order": 10
  },
  "Getting Ahead": {
   "quests": [],
@@ -1516,7 +1891,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Construction": 3200,
+   "Crafting": 4000
+  },
+  "miniquest": false,
+  "optimal_order": 126
  },
  "Ghosts Ahoy": {
   "quests": [
@@ -1539,14 +1920,24 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Prayer": 2400
+  },
+  "miniquest": false,
+  "optimal_order": 42
  },
  "Goblin Diplomacy": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Crafting": 200
+  },
+  "miniquest": false,
+  "optimal_order": 23
  },
  "Grim Tales": {
   "quests": [
@@ -1587,7 +1978,17 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 25000,
+   "Farming": 10000,
+   "Herblore": 15000,
+   "Hitpoints": 5000,
+   "Thieving": 25000,
+   "Woodcutting": 60000
+  },
+  "miniquest": false,
+  "optimal_order": 181
  },
  "Haunted Mine": {
   "quests": [
@@ -1603,14 +2004,24 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Strength": 22000
+  },
+  "miniquest": false,
+  "optimal_order": 143
  },
  "Hazeel Cult": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Thieving": 1500
+  },
+  "miniquest": false,
+  "optimal_order": 28
  },
  "Heroes' Quest": {
   "quests": [
@@ -1654,7 +2065,23 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Attack": 3075,
+   "Cooking": 2825,
+   "Defence": 3075,
+   "Firemaking": 1575,
+   "Fishing": 2725,
+   "Herblore": 1325,
+   "Hitpoints": 3075,
+   "Mining": 2575,
+   "Ranged": 2075,
+   "Smithing": 2275,
+   "Strength": 3075,
+   "Woodcutting": 1575
+  },
+  "miniquest": false,
+  "optimal_order": 140
  },
  "His Faithful Servants": {
   "quests": [
@@ -1663,7 +2090,10 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 165
  },
  "Holy Grail": {
   "quests": [
@@ -1679,7 +2109,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Defence": 15300,
+   "Prayer": 11000
+  },
+  "miniquest": false,
+  "optimal_order": 35
  },
  "Hopespear's Will": {
   "quests": [
@@ -1698,7 +2134,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 186
  },
  "Horror from the Deep": {
   "quests": [
@@ -1714,7 +2153,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Magic": null,
+   "Ranged": null,
+   "Strength": null
+  },
+  "miniquest": false,
+  "optimal_order": 88
  },
  "Icthlarin's Little Helper": {
   "quests": [
@@ -1723,14 +2169,26 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 4000,
+   "Thieving": 4500,
+   "Woodcutting": 4000
+  },
+  "miniquest": false,
+  "optimal_order": 48
  },
  "Imp Catcher": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Magic": 875
+  },
+  "miniquest": false,
+  "optimal_order": 8
  },
  "In Aid of the Myreque": {
   "quests": [
@@ -1776,14 +2234,25 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Attack": 2000,
+   "Crafting": 2000,
+   "Defence": 2000,
+   "Strength": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 103
  },
  "In Search of Knowledge": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 185
  },
  "In Search of the Myreque": {
   "quests": [
@@ -1799,7 +2268,16 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Attack": 600,
+   "Crafting": 600,
+   "Defence": 600,
+   "Hitpoints": 600,
+   "Strength": 600
+  },
+  "miniquest": false,
+  "optimal_order": 101
  },
  "Into the Tombs": {
   "quests": [
@@ -1808,7 +2286,10 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 193
  },
  "Jungle Potion": {
   "quests": [
@@ -1824,7 +2305,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Herblore": 775
+  },
+  "miniquest": false,
+  "optimal_order": 92
  },
  "King's Ransom": {
   "quests": [
@@ -1849,14 +2335,22 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Defence": 33000,
+   "Magic": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 175
  },
  "Knight Waves Training Grounds": {
   "quests": [
    "King's Ransom"
   ],
   "skills": [],
-  "source": "Module:Questreq/data"
+  "source": "Module:Questreq/data",
+  "miniquest": true,
+  "optimal_order": 176
  },
  "Lair of Tarn Razorlor": {
   "quests": [
@@ -1872,7 +2366,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 144
  },
  "Land of the Goblins": {
   "quests": [
@@ -1907,14 +2404,25 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 8000,
+   "Fishing": 8000,
+   "Herblore": 8000,
+   "Thieving": 8000
+  },
+  "miniquest": false,
+  "optimal_order": 157
  },
  "Learning the Ropes": {
   "quests": [],
   "skills": [],
   "source": "Quest bucket",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 1
  },
  "Legends' Quest": {
   "quests": [
@@ -1994,7 +2502,23 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Agility": null,
+   "Attack": null,
+   "Crafting": null,
+   "Defence": null,
+   "Herblore": null,
+   "Hitpoints": null,
+   "Magic": null,
+   "Prayer": null,
+   "Smithing": null,
+   "Strength": null,
+   "Thieving": null,
+   "Woodcutting": null
+  },
+  "miniquest": false,
+  "optimal_order": 156
  },
  "Lost City": {
   "quests": [],
@@ -2014,14 +2538,20 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 51
  },
  "Lost Lover": {
   "quests": [],
   "skills": [],
   "source": "Quest bucket",
   "difficulty": null,
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "Lunar Diplomacy": {
   "quests": [
@@ -2076,7 +2606,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Magic": 5000,
+   "Runecraft": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 174
  },
  "Mage Arena I": {
   "quests": [],
@@ -2090,7 +2626,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "Mage Arena II": {
   "quests": [
@@ -2106,7 +2645,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "Making Friends with My Arm": {
   "quests": [
@@ -2143,7 +2685,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 50000,
+   "Construction": 10000,
+   "Firemaking": 40000,
+   "Mining": 50000
+  },
+  "miniquest": false,
+  "optimal_order": 197
  },
  "Making History": {
   "quests": [
@@ -2153,7 +2703,13 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 1000,
+   "Prayer": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 43
  },
  "Meat and Greet": {
   "quests": [
@@ -2162,28 +2718,46 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Cooking": 8000
+  },
+  "miniquest": false,
+  "optimal_order": 137
  },
  "Merlin's Crystal": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 34
  },
  "Misthalin Mystery": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 600
+  },
+  "miniquest": false,
+  "optimal_order": 4
  },
  "Monk's Friend": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Woodcutting": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 27
  },
  "Monkey Madness I": {
   "quests": [
@@ -2193,7 +2767,15 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Attack": null,
+   "Defence": null,
+   "Hitpoints": null,
+   "Strength": null
+  },
+  "miniquest": false,
+  "optimal_order": 145
  },
  "Monkey Madness II": {
   "quests": [
@@ -2243,7 +2825,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Grandmaster",
-  "length": "Very Long"
+  "length": "Very Long",
+  "xp_rewards": {
+   "Agility": 60000,
+   "Hunter": 50000,
+   "Slayer": 80000,
+   "Thieving": 50000
+  },
+  "miniquest": false,
+  "optimal_order": 192
  },
  "Mountain Daughter": {
   "quests": [],
@@ -2257,7 +2847,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Attack": 1000,
+   "Prayer": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 61
  },
  "Mourning's End Part I": {
   "quests": [
@@ -2281,7 +2877,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Hitpoints": 25000,
+   "Thieving": 40000
+  },
+  "miniquest": false,
+  "optimal_order": 149
  },
  "Mourning's End Part II": {
   "quests": [
@@ -2290,14 +2892,24 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Agility": 60000
+  },
+  "miniquest": false,
+  "optimal_order": 150
  },
  "Murder Mystery": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 1406
+  },
+  "miniquest": false,
+  "optimal_order": 36
  },
  "My Arm's Big Adventure": {
   "quests": [
@@ -2321,12 +2933,20 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Farming": 5000,
+   "Herblore": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 131
  },
  "Natural History Quiz": {
   "quests": [],
   "skills": [],
-  "source": "Module:Questreq/data"
+  "source": "Module:Questreq/data",
+  "miniquest": true,
+  "optimal_order": null
  },
  "Nature Spirit": {
   "quests": [
@@ -2343,14 +2963,30 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 3000,
+   "Defence": 2000,
+   "Hitpoints": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 41
  },
  "Observatory Quest": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Attack": null,
+   "Crafting": 2250,
+   "Defence": null,
+   "Hitpoints": null,
+   "Strength": null
+  },
+  "miniquest": false,
+  "optimal_order": 95
  },
  "Olaf's Quest": {
   "quests": [
@@ -2372,7 +3008,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Defence": 12000
+  },
+  "miniquest": false,
+  "optimal_order": 159
  },
  "One Small Favour": {
   "quests": [
@@ -2407,14 +3048,22 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 120
  },
  "Pandemonium": {
   "quests": [],
   "skills": [],
   "source": "Quest bucket",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Sailing": 300
+  },
+  "miniquest": false,
+  "optimal_order": 56
  },
  "Perilous Moons": {
   "quests": [
@@ -2454,35 +3103,59 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Fishing": 5000,
+   "Hunter": 5000,
+   "Runecraft": 5000,
+   "Slayer": 40000
+  },
+  "miniquest": false,
+  "optimal_order": 171
  },
  "Pirate's Treasure": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 72
  },
  "Plague City": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Mining": 2425
+  },
+  "miniquest": false,
+  "optimal_order": 26
  },
  "Priest in Peril": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Prayer": 1406
+  },
+  "miniquest": false,
+  "optimal_order": 40
  },
  "Prince Ali Rescue": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 5
  },
  "Prying Times": {
   "quests": [
@@ -2505,14 +3178,26 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Sailing": 800,
+   "Smithing": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 57
  },
  "Rag and Bone Man I": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Cooking": 500,
+   "Prayer": 500
+  },
+  "miniquest": false,
+  "optimal_order": 39
  },
  "Rag and Bone Man II": {
   "quests": [
@@ -2540,7 +3225,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Prayer": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 133
  },
  "Ratcatchers": {
   "quests": [
@@ -2550,7 +3240,12 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Thieving": 4500
+  },
+  "miniquest": false,
+  "optimal_order": 62
  },
  "Recipe for Disaster": {
   "quests": [
@@ -2559,7 +3254,10 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Very Long"
+  "length": "Very Long",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": null
  },
  "Recipe for Disaster - Another Cook's Quest": {
   "quests": [
@@ -2575,7 +3273,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 53
  },
  "Recipe for Disaster - Culinaromancer": {
   "quests": [
@@ -2600,7 +3301,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 170
  },
  "Recipe for Disaster - Evil Dave": {
   "quests": [
@@ -2618,7 +3322,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Cooking": 7000
+  },
+  "miniquest": false,
+  "optimal_order": 113
  },
  "Recipe for Disaster - King Awowogei": {
   "quests": [
@@ -2641,7 +3350,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Agility": 10000,
+   "Cooking": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 169
  },
  "Recipe for Disaster - Lumbridge Guide": {
   "quests": [
@@ -2663,7 +3378,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Cooking": 2500,
+   "Magic": 2500
+  },
+  "miniquest": false,
+  "optimal_order": 138
  },
  "Recipe for Disaster - Mountain Dwarf": {
   "quests": [
@@ -2673,7 +3394,13 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Cooking": 1000,
+   "Slayer": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 60
  },
  "Recipe for Disaster - Pirate Pete": {
   "quests": [
@@ -2701,7 +3428,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Cooking": 1000,
+   "Crafting": 1000,
+   "Fishing": 1000,
+   "Smithing": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 114
  },
  "Recipe for Disaster - Sir Amik Varze": {
   "quests": [
@@ -2718,7 +3453,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Cooking": 4000,
+   "Hitpoints": 4000
+  },
+  "miniquest": false,
+  "optimal_order": 158
  },
  "Recipe for Disaster - Skrach Uglogwee": {
   "quests": [
@@ -2741,7 +3482,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Cooking": 1500,
+   "Crafting": 1500,
+   "Ranged": 1500,
+   "Woodcutting": 1500
+  },
+  "miniquest": false,
+  "optimal_order": 139
  },
  "Recipe for Disaster - Wartface & Bentnoze": {
   "quests": [
@@ -2751,7 +3500,14 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Special",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Cooking": 1000,
+   "Crafting": 1000,
+   "Farming": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 54
  },
  "Recruitment Drive": {
   "quests": [
@@ -2761,7 +3517,14 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Agility": null,
+   "Herblore": null,
+   "Prayer": null
+  },
+  "miniquest": false,
+  "optimal_order": 22
  },
  "Regicide": {
   "quests": [
@@ -2783,7 +3546,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Agility": 13750
+  },
+  "miniquest": false,
+  "optimal_order": 109
  },
  "Rogue Trader": {
   "quests": [
@@ -2794,14 +3562,20 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": null,
-  "length": "Short - Medium"
+  "length": "Short - Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "Romeo & Juliet": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 99
  },
  "Roving Elves": {
   "quests": [
@@ -2818,7 +3592,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Strength": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 148
  },
  "Royal Trouble": {
   "quests": [
@@ -2840,7 +3619,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 5000,
+   "Hitpoints": 5000,
+   "Slayer": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 142
  },
  "Rum Deal": {
   "quests": [
@@ -2881,19 +3667,31 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Farming": 7000,
+   "Fishing": 7000,
+   "Prayer": 7000
+  },
+  "miniquest": false,
+  "optimal_order": 135
  },
  "Rune Mysteries": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 7
  },
  "Sacred Bone Burner restoration": {
   "quests": [],
   "skills": [],
-  "source": "Module:Questreq/data"
+  "source": "Module:Questreq/data",
+  "miniquest": false,
+  "optimal_order": null
  },
  "Scorpion Catcher": {
   "quests": [
@@ -2909,7 +3707,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Strength": 6625
+  },
+  "miniquest": false,
+  "optimal_order": 66
  },
  "Scrambled!": {
   "quests": [
@@ -2937,7 +3740,14 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Construction": 5000,
+   "Cooking": 5000,
+   "Smithing": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 167
  },
  "Sea Slug": {
   "quests": [],
@@ -2951,7 +3761,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Fishing": 7175
+  },
+  "miniquest": false,
+  "optimal_order": 55
  },
  "Secrets of the North": {
   "quests": [
@@ -2982,7 +3797,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 60000,
+   "Hunter": 40000,
+   "Thieving": 50000
+  },
+  "miniquest": false,
+  "optimal_order": 198
  },
  "Shades of Mort'ton": {
   "quests": [
@@ -3011,7 +3833,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 2000,
+   "Herblore": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 102
  },
  "Shadow of the Storm": {
   "quests": [
@@ -3028,7 +3856,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 87
  },
  "Shadows of Custodia": {
   "quests": [
@@ -3062,28 +3893,47 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Experienced",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Construction": 3000,
+   "Fishing": 3000,
+   "Hunter": 4000,
+   "Slayer": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 188
  },
  "Sheep Herder": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 29
  },
  "Sheep Shearer": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Crafting": 150
+  },
+  "miniquest": false,
+  "optimal_order": 3
  },
  "Shield of Arrav": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 78
  },
  "Shilo Village": {
   "quests": [
@@ -3111,7 +3961,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Crafting": 3875
+  },
+  "miniquest": false,
+  "optimal_order": 93
  },
  "Sins of the Father": {
   "quests": [
@@ -3164,7 +4019,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 184
  },
  "Skippy and the Mogres": {
   "quests": [],
@@ -3178,7 +4036,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 104
  },
  "Sleeping Giants": {
   "quests": [],
@@ -3192,7 +4053,12 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Intermediate",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Smithing": 6000
+  },
+  "miniquest": false,
+  "optimal_order": 24
  },
  "Song of the Elves": {
   "quests": [
@@ -3252,14 +4118,29 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Grandmaster",
-  "length": "Very Long"
+  "length": "Very Long",
+  "xp_rewards": {
+   "Agility": 40000,
+   "Construction": 40000,
+   "Farming": 40000,
+   "Herblore": 40000,
+   "Hunter": 40000,
+   "Mining": 40000,
+   "Smithing": 40000,
+   "Woodcutting": 40000
+  },
+  "miniquest": false,
+  "optimal_order": 202
  },
  "Spirit of Adventure": {
   "quests": [],
   "skills": [],
   "source": "Quest bucket",
   "difficulty": null,
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "Spirits of the Elid": {
   "quests": [],
@@ -3291,7 +4172,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Magic": 1000,
+   "Prayer": 8000,
+   "Thieving": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 96
  },
  "Swan Song": {
   "quests": [
@@ -3344,7 +4232,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Fishing": 50000,
+   "Magic": 15000,
+   "Prayer": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 177
  },
  "Tai Bwo Wannai Trio": {
   "quests": [
@@ -3384,7 +4279,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Attack": 2500,
+   "Cooking": 5000,
+   "Fishing": 5000,
+   "Strength": 2500
+  },
+  "miniquest": false,
+  "optimal_order": 115
  },
  "Tale of the Righteous": {
   "quests": [
@@ -3406,7 +4309,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 122
  },
  "Tears of Guthix": {
   "quests": [],
@@ -3438,7 +4344,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Crafting": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 100
  },
  "Temple of Ikov": {
   "quests": [],
@@ -3458,7 +4369,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Fletching": 8000,
+   "Ranged": 10500
+  },
+  "miniquest": false,
+  "optimal_order": 117
  },
  "Temple of the Eye": {
   "quests": [
@@ -3474,7 +4391,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Runecraft": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 119
  },
  "The Ascent of Arceuus": {
   "quests": [
@@ -3490,7 +4412,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Hunter": 1500,
+   "Runecraft": 500
+  },
+  "miniquest": false,
+  "optimal_order": 121
  },
  "The Blood Moon Rises": {
   "quests": [
@@ -3561,7 +4489,10 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Grandmaster",
-  "length": "Very Long"
+  "length": "Very Long",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 203
  },
  "The Chosen Commander": {
   "quests": [
@@ -3589,14 +4520,20 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Master",
-  "length": ""
+  "length": "",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": null
  },
  "The Corsair Curse": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 205
  },
  "The Curse of Arrav": {
   "quests": [
@@ -3643,7 +4580,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 40000,
+   "Mining": 40000,
+   "Thieving": 40000
+  },
+  "miniquest": false,
+  "optimal_order": 196
  },
  "The Depths of Despair": {
   "quests": [
@@ -3659,7 +4603,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Agility": 1500
+  },
+  "miniquest": false,
+  "optimal_order": 75
  },
  "The Dig Site": {
   "quests": [
@@ -3687,7 +4636,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Herblore": 2000,
+   "Mining": 15300
+  },
+  "miniquest": false,
+  "optimal_order": 67
  },
  "The Enchanted Key": {
   "quests": [
@@ -3696,7 +4651,10 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "The Eyes of Glouphrie": {
   "quests": [
@@ -3724,7 +4682,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Construction": 250,
+   "Magic": 12000,
+   "Runecraft": 6000,
+   "Woodcutting": 2500
+  },
+  "miniquest": false,
+  "optimal_order": 118
  },
  "The Feud": {
   "quests": [],
@@ -3738,7 +4704,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Thieving": 15000
+  },
+  "miniquest": false,
+  "optimal_order": 63
  },
  "The Final Dawn": {
   "quests": [
@@ -3767,7 +4738,14 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Master",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Fletching": 25000,
+   "Runecraft": 25000,
+   "Thieving": 55000
+  },
+  "miniquest": false,
+  "optimal_order": 199
  },
  "The Forsaken Tower": {
   "quests": [
@@ -3776,7 +4754,13 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Mining": 500,
+   "Smithing": 500
+  },
+  "miniquest": false,
+  "optimal_order": 123
  },
  "The Fremennik Exiles": {
   "quests": [
@@ -3819,7 +4803,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Crafting": 50000,
+   "Runecraft": 30000,
+   "Slayer": 50000
+  },
+  "miniquest": false,
+  "optimal_order": 183
  },
  "The Fremennik Isles": {
   "quests": [
@@ -3847,14 +4838,39 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Attack": null,
+   "Construction": 5000,
+   "Crafting": 5000,
+   "Defence": null,
+   "Hitpoints": null,
+   "Strength": null,
+   "Woodcutting": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 112
  },
  "The Fremennik Trials": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": null,
+   "Attack": null,
+   "Crafting": null,
+   "Defence": null,
+   "Fishing": null,
+   "Fletching": null,
+   "Hitpoints": null,
+   "Strength": null,
+   "Thieving": null,
+   "Woodcutting": null
+  },
+  "miniquest": false,
+  "optimal_order": 111
  },
  "The Frozen Door": {
   "quests": [
@@ -3888,7 +4904,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Master",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "The Garden of Death": {
   "quests": [],
@@ -3902,7 +4921,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Farming": 10000
+  },
+  "miniquest": false,
+  "optimal_order": 132
  },
  "The General's Shadow": {
   "quests": [
@@ -3912,7 +4936,10 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": 164
  },
  "The Giant Dwarf": {
   "quests": [],
@@ -3944,7 +4971,17 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Crafting": 2500,
+   "Firemaking": 1500,
+   "Magic": 1500,
+   "Mining": 2500,
+   "Smithing": 2500,
+   "Thieving": 1500
+  },
+  "miniquest": false,
+  "optimal_order": 81
  },
  "The Golem": {
   "quests": [],
@@ -3964,7 +5001,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 1000,
+   "Thieving": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 49
  },
  "The Grand Tree": {
   "quests": [],
@@ -3978,7 +5021,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 7900,
+   "Attack": 18400,
+   "Magic": 2150
+  },
+  "miniquest": false,
+  "optimal_order": 37
  },
  "The Graveyard": {
   "quests": [
@@ -4014,7 +5064,10 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Master",
-  "length": ""
+  "length": "",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": null
  },
  "The Great Brain Robbery": {
   "quests": [
@@ -4044,7 +5097,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Construction": 2000,
+   "Crafting": 3000,
+   "Prayer": 6000
+  },
+  "miniquest": false,
+  "optimal_order": 166
  },
  "The Hand in the Sand": {
   "quests": [],
@@ -4064,7 +5124,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Crafting": 9000,
+   "Thieving": 1000
+  },
+  "miniquest": false,
+  "optimal_order": 128
  },
  "The Heart of Darkness": {
   "quests": [
@@ -4098,14 +5164,25 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": 8000,
+   "Mining": 8000,
+   "Slayer": 8000,
+   "Thieving": 8000
+  },
+  "miniquest": false,
+  "optimal_order": 173
  },
  "The Ides of Milk": {
   "quests": [],
   "skills": [],
   "source": "Quest bucket",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 44
  },
  "The Knight's Sword": {
   "quests": [],
@@ -4137,7 +5214,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Smithing": 12725
+  },
+  "miniquest": false,
+  "optimal_order": 18
  },
  "The Lost Tribe": {
   "quests": [
@@ -4166,7 +5248,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Mining": 3000
+  },
+  "miniquest": false,
+  "optimal_order": 45
  },
  "The Path of Glouphrie": {
   "quests": [
@@ -4208,7 +5295,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Magic": 5000,
+   "Slayer": 20000,
+   "Strength": 30000,
+   "Thieving": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 172
  },
  "The Queen of Thieves": {
   "quests": [
@@ -4224,7 +5319,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Thieving": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 74
  },
  "The Red Reef": {
   "quests": [
@@ -4246,14 +5346,25 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Sailing": 15000,
+   "Smithing": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 190
  },
  "The Restless Ghost": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Prayer": 1125
+  },
+  "miniquest": false,
+  "optimal_order": 6
  },
  "The Ribbiting Tale of a Lily Pad Labour Dispute": {
   "quests": [
@@ -4269,7 +5380,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Woodcutting": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 50
  },
  "The Slug Menace": {
   "quests": [
@@ -4304,7 +5420,14 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Crafting": 3500,
+   "Runecraft": 3500,
+   "Thieving": 3500
+  },
+  "miniquest": false,
+  "optimal_order": 125
  },
  "The Tourist Trap": {
   "quests": [],
@@ -4324,7 +5447,15 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Agility": null,
+   "Fletching": null,
+   "Smithing": null,
+   "Thieving": null
+  },
+  "miniquest": false,
+  "optimal_order": 19
  },
  "Throne of Miscellania": {
   "quests": [
@@ -4334,7 +5465,10 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 141
  },
  "Tower of Life": {
   "quests": [],
@@ -4348,14 +5482,26 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Construction": 1000,
+   "Crafting": 500,
+   "Thieving": 500
+  },
+  "miniquest": false,
+  "optimal_order": 31
  },
  "Tree Gnome Village": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Attack": 11450
+  },
+  "miniquest": false,
+  "optimal_order": 15
  },
  "Tribal Totem": {
   "quests": [],
@@ -4369,7 +5515,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Thieving": 1775
+  },
+  "miniquest": false,
+  "optimal_order": 32
  },
  "Troll Romance": {
   "quests": [
@@ -4391,7 +5542,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Agility": 8000,
+   "Strength": 4000
+  },
+  "miniquest": false,
+  "optimal_order": 106
  },
  "Troll Stronghold": {
   "quests": [
@@ -4407,7 +5564,10 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 105
  },
  "Troubled Tortugans": {
   "quests": [],
@@ -4451,12 +5611,20 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Experienced",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Sailing": 10000,
+   "Slayer": 8000
+  },
+  "miniquest": false,
+  "optimal_order": 189
  },
  "Tutorial Island": {
   "quests": [],
   "skills": [],
-  "source": "Module:Questreq/data"
+  "source": "Module:Questreq/data",
+  "miniquest": true,
+  "optimal_order": null
  },
  "Twilight's Promise": {
   "quests": [
@@ -4465,7 +5633,12 @@
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Thieving": 3000
+  },
+  "miniquest": false,
+  "optimal_order": 147
  },
  "Underground Pass": {
   "quests": [
@@ -4481,7 +5654,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Experienced",
-  "length": "Long"
+  "length": "Long",
+  "xp_rewards": {
+   "Agility": 3000,
+   "Attack": 3000
+  },
+  "miniquest": false,
+  "optimal_order": 108
  },
  "Vale Totems": {
   "quests": [
@@ -4497,14 +5676,22 @@
   ],
   "source": "Quest bucket",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": true,
+  "optimal_order": null
  },
  "Vampyre Slayer": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Attack": 4825
+  },
+  "miniquest": false,
+  "optimal_order": 84
  },
  "Wanted!": {
   "quests": [
@@ -4523,7 +5710,12 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Slayer": 5000
+  },
+  "miniquest": false,
+  "optimal_order": 77
  },
  "Watchtower": {
   "quests": [
@@ -4563,14 +5755,25 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Medium"
+  "length": "Medium",
+  "xp_rewards": {
+   "Magic": 15250
+  },
+  "miniquest": false,
+  "optimal_order": 80
  },
  "Waterfall Quest": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Attack": 13750,
+   "Strength": 13750
+  },
+  "miniquest": false,
+  "optimal_order": 14
  },
  "What Lies Below": {
   "quests": [
@@ -4586,7 +5789,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Defence": 2000,
+   "Runecraft": 8000
+  },
+  "miniquest": false,
+  "optimal_order": 153
  },
  "While Guthix Sleeps": {
   "quests": [
@@ -4647,28 +5856,50 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Grandmaster",
-  "length": "Very Long"
+  "length": "Very Long",
+  "xp_rewards": {
+   "Farming": 75000,
+   "Herblore": 75000,
+   "Hunter": 50000,
+   "Slayer": null,
+   "Thieving": 80000
+  },
+  "miniquest": false,
+  "optimal_order": 200
  },
  "Witch's House": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Hitpoints": 6325
+  },
+  "miniquest": false,
+  "optimal_order": 17
  },
  "Witch's Potion": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {
+   "Magic": 325
+  },
+  "miniquest": false,
+  "optimal_order": 9
  },
  "X Marks the Spot": {
   "quests": [],
   "skills": [],
   "source": "Module:Questreq/data",
   "difficulty": "Novice",
-  "length": "Very Short"
+  "length": "Very Short",
+  "xp_rewards": {},
+  "miniquest": false,
+  "optimal_order": 71
  },
  "Zogre Flesh Eaters": {
   "quests": [
@@ -4697,6 +5928,13 @@
   ],
   "source": "Module:Questreq/data",
   "difficulty": "Intermediate",
-  "length": "Short"
+  "length": "Short",
+  "xp_rewards": {
+   "Fletching": 2000,
+   "Herblore": 2000,
+   "Ranged": 2000
+  },
+  "miniquest": false,
+  "optimal_order": 94
  }
 }

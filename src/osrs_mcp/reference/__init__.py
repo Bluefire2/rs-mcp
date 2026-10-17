@@ -19,6 +19,9 @@ class QuestReqs(BaseModel):
     skills: list[SkillReq]
     difficulty: str | None = None
     length: str | None = None
+    miniquest: bool = False
+    optimal_order: int | None = None  # position in the Wiki's "Optimal quest guide", 1 = first
+    xp_rewards: dict[str, int | None] = {}  # skill -> fixed XP, None if chosen or variable
 
 
 class DiaryTask(BaseModel):
