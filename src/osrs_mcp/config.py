@@ -56,6 +56,9 @@ class Settings(BaseSettings):
     ingest_token: str = ""  # the plugin's "Group Token" setting; a long random secret
     # Comma-separated RuneScape names allowed to push data. Blank means DEFAULT_RSN only.
     ingest_allowed_rsns: str = ""
+    # Debugging aid: when set, every authenticated POST body is also saved raw to this directory
+    # (before validation), to pin the plugin's real payload shapes. Leave unset normally.
+    ingest_capture_dir: str = ""
 
     @property
     def ingest_enabled(self) -> bool:

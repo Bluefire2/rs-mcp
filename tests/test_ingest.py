@@ -221,6 +221,20 @@ async def test_invalid_json_is_rejected(client):
     assert response.status_code == 400
 
 
+async def test_capture_saves_raw_authenticated_bodies(store, tmp_path):
+    capture_dir = tmp_path / "captures"
+    async with make_client(store, ingest_capture_dir=str(capture_dir)) as client:
+        good = json.dumps(body("inventory")).encode()
+        assert (await client.post(UPDATE, content=good, headers=AUTH)).status_code == 200
+        # Captured even when our models reject it: the point is to see what the plugin sends.
+        assert (await client.post(UPDATE, content=b"{not json", headers=AUTH)).status_code == 400
+        # Never captured without the token.
+        bad_auth = {"authorization": "nope"}
+        assert (await client.post(UPDATE, content=good, headers=bad_auth)).status_code == 401
+    saved = sorted(p.read_bytes() for p in capture_dir.iterdir())
+    assert sorted(saved) == sorted([good, b"{not json"])
+
+
 async def test_oversized_body_is_rejected_before_parsing(client, store):
     huge = json.dumps({"name": "Iron Tester", "bank": [4151, 1] * 300_000}).encode()
     assert len(huge) > gim.MAX_BODY_BYTES

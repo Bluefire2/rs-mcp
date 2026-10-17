@@ -20,6 +20,8 @@ There is no group here, just an allowlist of RuneScape names that may push data.
 
 import hmac
 import logging
+from datetime import UTC, datetime
+from pathlib import Path
 from typing import Any
 
 from fastmcp import FastMCP
@@ -190,6 +192,8 @@ def register(mcp: FastMCP, settings: Settings, snapshots: SnapshotStore) -> None
         body = await read_limited(request, MAX_BODY_BYTES)
         if body is None:
             return PlainTextResponse("Request body too large", status_code=413)
+        if settings.ingest_capture_dir:
+            capture(Path(settings.ingest_capture_dir), body)
         try:
             update = GimUpdate.model_validate_json(body)
         except ValidationError as exc:
@@ -202,6 +206,16 @@ def register(mcp: FastMCP, settings: Settings, snapshots: SnapshotStore) -> None
         if written:
             logger.info("Stored %s for %s", ", ".join(written), update.name)
         return JSONResponse({})
+
+
+def capture(directory: Path, body: bytes) -> None:
+    """Save a raw update body for inspection (INGEST_CAPTURE_DIR). Never fails the request."""
+    try:
+        directory.mkdir(parents=True, exist_ok=True)
+        stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
+        (directory / f"update-{stamp}.json").write_bytes(body)
+    except OSError:
+        logger.exception("Could not write ingest capture to %s", directory)
 
 
 async def read_limited(request: Request, limit: int) -> bytes | None:
