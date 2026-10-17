@@ -47,6 +47,13 @@ def quest_reqs() -> dict[str, QuestReqs]:
 
 
 @cache
+def quest_points() -> dict[str, int]:
+    """Quest points per WikiSync quest name (miniquests 0), plus "Tutorial Island", which
+    WikiSync doesn't report."""
+    return _load("quest_points.json")
+
+
+@cache
 def diary_tasks() -> dict[str, dict[str, list[DiaryTask]]]:
     return {
         region: {

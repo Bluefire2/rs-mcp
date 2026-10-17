@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field
 
 from osrs_mcp.clients.wikisync import QUEST_STATES, WikiSyncData
 from osrs_mcp.reference import quest_reqs
-from osrs_mcp.requirements import Checker, MissingSkill
+from osrs_mcp.requirements import Checker, MissingSkill, player_quest_points
 from osrs_mcp.sources import Sources
 from osrs_mcp.tools import READ_ONLY, Rsn
 
@@ -27,7 +27,7 @@ class QuestEntry(BaseModel):
     can_start: bool | None = Field(
         default=None,
         description="Requirements met? None = only unverifiable requirements remain "
-        "(quest points, miniquests WikiSync doesn't track). Omitted for completed quests.",
+        "(miniquests WikiSync doesn't track). Omitted for completed quests.",
     )
     missing_quests: list[str] = []
     missing_skills: list[MissingSkill] = []
@@ -38,6 +38,9 @@ class QuestProgress(BaseModel):
     rsn: str
     source: str
     data_as_of: datetime
+    quest_points: int = Field(
+        description="Total quest points: completed quests (Wiki QP values) plus Tutorial Island's 1"
+    )
     counts: dict[str, int]
     note: str
     quests: list[QuestEntry]
@@ -47,7 +50,8 @@ def build_quest_progress(
     data: WikiSyncData, status: StatusFilter, startable_only: bool, is_ironman: bool
 ) -> QuestProgress:
     reqs = quest_reqs()
-    checker = Checker(data.levels, data.quests, is_ironman)
+    qp = player_quest_points(data.quests)
+    checker = Checker(data.levels, data.quests, is_ironman, quest_points=qp)
     counts = {"completed": 0, "in_progress": 0, "not_started": 0}
     entries = []
     for name, state in sorted(data.quests.items()):
@@ -85,6 +89,7 @@ def build_quest_progress(
         rsn=data.username,
         source=WIKISYNC_SOURCE + "; requirements from the OSRS Wiki",
         data_as_of=data.timestamp,
+        quest_points=qp,
         counts=counts,
         note=(
             "Requirement checks cover skills and prerequisite quests only (not items or "

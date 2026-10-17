@@ -7,6 +7,8 @@ IDs) but not names or requirements. This script pulls those from the Wiki:
 
 - quest_reqs.json: Module:Questreq/data (a Lua table of quest and diary prerequisites) plus
   difficulty/length from the Quest bucket.
+- quest_points.json: quest -> quest points, from the qp= of each quest page's {{Quest rewards}}
+  (the same field the Wiki's Quests/List tables show), checked against the Wiki's total.
 - diary_tasks.json: task text and requirements from each "<Region> Diary" page, in the same
   order as WikiSync's task arrays.
 - combat_achievements.json: the combat_achievement bucket (id -> name, tier, monster, task).
@@ -257,6 +259,93 @@ def item_names(http: httpx.Client, page_size: int = 5000) -> dict[str, str]:
         offset += page_size
 
 
+QUEST_REWARDS_QP = re.compile(r"\{\{\s*Quest rewards\b([^{}]*)", re.IGNORECASE)
+QP_PARAM = re.compile(r"\|\s*qp\s*=\s*(\d+)")
+# Categories the Wiki's own quest lists (the DPL on Quests/Members) leave out.
+UNRELEASED_CATEGORIES = {
+    "Category:Future content",
+    "Category:Sailing alpha content",
+    "Category:Sailing beta content",
+}
+# Since the 22 October 2025 update every account's first quest point comes from Tutorial Island,
+# a miniquest page with no {{Quest rewards}} (see its changelog). WikiSync doesn't track it.
+TUTORIAL_ISLAND_QP = {"Tutorial Island": 1}
+
+
+def parse_quest_rewards_qp(wikitext: str) -> int | None:
+    """qp= of the page's {{Quest rewards}}; the template defaults to 1. None if there isn't one."""
+    match = QUEST_REWARDS_QP.search(wikitext)
+    if not match:
+        return None
+    qp = QP_PARAM.search(match.group(1))
+    return int(qp.group(1)) if qp else 1
+
+
+def quest_points(http: httpx.Client, titles: list[str]) -> dict[str, int]:
+    """Quest points per released quest or miniquest page (miniquests give 0)."""
+    points: dict[str, int] = {}
+    for start in range(0, len(titles), 50):
+        response = http.get(
+            API,
+            params={
+                "action": "query",
+                "format": "json",
+                "formatversion": "2",
+                "prop": "revisions|categories",
+                "rvprop": "content",
+                "rvslots": "main",
+                "cllimit": "max",
+                "titles": "|".join(titles[start : start + 50]),
+            },
+        )
+        response.raise_for_status()
+        for page in response.json()["query"]["pages"]:
+            categories = {c["title"] for c in page.get("categories", [])}
+            if categories & UNRELEASED_CATEGORIES:
+                continue
+            if "Category:Miniquests" in categories:
+                points[page["title"]] = 0
+                continue
+            qp = parse_quest_rewards_qp(page["revisions"][0]["slots"]["main"]["content"])
+            if qp is None:
+                raise RuntimeError(f"{page['title']}: released quest without {{{{Quest rewards}}}}")
+            points[page["title"]] = qp
+    return points
+
+
+def wiki_total_quest_points(http: httpx.Client) -> int:
+    match = re.search(
+        r"\['quest points'\]\s*=\s*\{[^}]*?'(\d+)'", raw_page(http, "Module:Globals/data")
+    )
+    if not match:
+        raise RuntimeError("Module:Globals/data: no 'quest points' total")
+    return int(match.group(1))
+
+
+def build_quest_points(http: httpx.Client, quest_rows: list[dict]) -> dict[str, int]:
+    """Quest points keyed by WikiSync quest name, plus Tutorial Island."""
+    titles = sorted(
+        {row["page_name"] for row in quest_rows if not row["page_name"].endswith("/Full guide")}
+    )
+    points = {
+        normalise_prereq(title).removesuffix(" (miniquest)"): qp
+        for title, qp in quest_points(http, titles).items()
+    }
+    # The Recipe for Disaster page lists all 10 points; the game awards (and WikiSync
+    # tracks) them one per subquest, so the parent quest itself counts for nothing.
+    subquests = sum(qp for name, qp in points.items() if name.startswith("Recipe for Disaster - "))
+    if points.get("Recipe for Disaster") != subquests:
+        raise RuntimeError(
+            f"Recipe for Disaster QP {points.get('Recipe for Disaster')} != {subquests}"
+        )
+    points["Recipe for Disaster"] = 0
+    total, expected = sum(points.values()), wiki_total_quest_points(http)
+    if total != expected:
+        raise RuntimeError(f"Quest points add up to {total}, the Wiki's total is {expected}")
+    points.update(TUTORIAL_ISLAND_QP)
+    return dict(sorted(points.items()))
+
+
 def raw_page(http: httpx.Client, title: str) -> str:
     response = http.get(f"{WIKI}/w/{title.replace(' ', '_')}", params={"action": "raw"})
     response.raise_for_status()
@@ -292,6 +381,8 @@ def main() -> int:
             reqs[name]["difficulty"] = row.get("official_difficulty")
             reqs[name]["length"] = row.get("official_length")
         write("quest_reqs.json", dict(sorted(reqs.items())))
+
+        write("quest_points.json", build_quest_points(http, quest_rows))
 
         diaries = {}
         for region in DIARY_REGIONS:

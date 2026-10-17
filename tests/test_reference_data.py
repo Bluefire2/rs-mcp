@@ -6,7 +6,8 @@ from pathlib import Path
 
 import pytest
 
-from osrs_mcp.reference import combat_achievements, diary_tasks, quest_reqs
+from osrs_mcp.reference import combat_achievements, diary_tasks, quest_points, quest_reqs
+from osrs_mcp.requirements import player_quest_points
 from tests.conftest import fixture_json
 
 SCRIPT = Path(__file__).parent.parent / "scripts" / "refresh_reference_data.py"
@@ -43,6 +44,30 @@ def test_every_prerequisite_is_a_known_quest(wikisync):
         if p.removeprefix("Started:") not in known
     }
     assert unknown == set()
+
+
+def test_every_wikisync_quest_has_quest_points(wikisync):
+    points = quest_points()
+    assert [q for q in wikisync["quests"] if q not in points and q != "."] == []
+    reqs = quest_reqs()
+    miniquests = [q for q, state in wikisync["quests"].items() if state != 2 and q != "."]
+    assert miniquests and all(points[q] == 0 for q in miniquests)  # B0aty: only miniquests left
+    assert {q for q in points if q not in reqs} <= {"Tutorial Island"}
+
+
+def test_quest_points_spot_values():
+    points = quest_points()
+    assert points["Cook's Assistant"] == 1
+    assert points["Dragon Slayer I"] == 2
+    assert points["Recipe for Disaster"] == 0  # its 10 points come from the subquests
+    assert sum(v for q, v in points.items() if q.startswith("Recipe for Disaster - ")) == 10
+    assert points["Barbarian Training"] == 0  # miniquest
+    assert points["Tutorial Island"] == 1
+
+
+def test_quest_cape_total(wikisync):
+    # B0aty has every quest done: the Wiki's total (343 in Module:Globals/data) + Tutorial Island.
+    assert player_quest_points(wikisync["quests"]) == sum(quest_points().values()) == 344
 
 
 def test_every_completed_combat_achievement_id_is_known(wikisync):
@@ -134,6 +159,14 @@ def test_parse_diary_page():
     assert easy[0]["quests"] == ["Rune Mysteries"]
     assert easy[1]["skills"] == [{"skill": "Thieving", "level": 5}]
     assert easy[2] == {"task": "Use the altar.", "skills": [], "quests": []}
+
+
+def test_parse_quest_rewards_qp():
+    parse = refresh.parse_quest_rewards_qp
+    assert parse("{{Quest rewards\n|name=Dragon Slayer I|qp=2\n}}") == 2
+    assert parse("{{Quest rewards\n|qp = 0\n|rewards=x}}") == 0
+    assert parse("{{Quest rewards|rewards=x}}") == 1  # the template's default
+    assert parse("{{Infobox Quest|qp=5}}") is None
 
 
 def test_parse_bucket_requirements():

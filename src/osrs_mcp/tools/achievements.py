@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 from osrs_mcp.clients.wikisync import WikiSyncData
 from osrs_mcp.errors import SourceError
 from osrs_mcp.reference import combat_achievements, diary_tasks
-from osrs_mcp.requirements import Checker, MissingSkill
+from osrs_mcp.requirements import Checker, MissingSkill, player_quest_points
 from osrs_mcp.sources import Sources
 from osrs_mcp.tools import READ_ONLY, Rsn
 from osrs_mcp.tools.quests import WIKISYNC_SOURCE
@@ -70,7 +70,9 @@ def _resolve_region(region: str) -> str:
 def build_diary_progress(
     data: WikiSyncData, region: str | None, tier: DiaryTierName | None, is_ironman: bool
 ) -> DiaryProgress:
-    checker = Checker(data.levels, data.quests, is_ironman)
+    checker = Checker(
+        data.levels, data.quests, is_ironman, quest_points=player_quest_points(data.quests)
+    )
     reference = diary_tasks()
     wanted_region = _resolve_region(region) if region else None
 

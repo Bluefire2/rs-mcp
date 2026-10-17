@@ -195,4 +195,4 @@ Tool annotations: all tools are `readOnlyHint: true` except `refresh_gains_track
 3. **Google consent screen "In production" without verification** for basic scopes: please confirm in the console when you create the client, rather than relying on docs.
 4. **Connectors inside claude.ai Projects** isn't documented. We'll confirm it during E2E.
 5. ~~**GIM Tracker payload details**~~ Confirmed by a live capture on 2026-10-17 (via `INGEST_CAPTURE_DIR`): the real plugin's updates match the source-derived fixtures. Empty rune pouch slots arrive as id `-1`. Still unseen live: the collection log field. Untradeable items are named from the Wiki item list (`item_names.json`).
-6. **Quest points** aren't in WikiSync or the Questreq data. We'd derive them from the Wiki (Quest bucket `json` field or a quest list page) if needed; that's low priority.
+6. ~~**Quest points**~~ Done 2026-10-17: not in WikiSync, so `quest_points.json` holds each quest's QP from the Wiki's `{{Quest rewards}}` (checked against the Wiki's 343 total) and the tools sum completed quests, plus 1 for Tutorial Island (worth 1 QP since the 22 October 2025 update; WikiSync doesn't track it).
