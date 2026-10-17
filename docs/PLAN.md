@@ -70,7 +70,7 @@ The design doc ("OSRS_MCP_PLAN.md", Google Doc `10DJYSpd…`) describes a person
 **R8 Existing export tools**
 - **Group Ironmen Tracker** (`christoabrown/group-ironmen-tracker`, on the Plugin Hub, pushed 2026-07-20) has a `baseUrlOverride` setting.
   - Every few seconds it POSTs only the changed fields to `{base}/api/group/{group}/update-group-member`, with header `Authorization: <token>` (raw, no "Bearer").
-  - Fields: `name, inventory, bank, equipment, rune_pouch, quiver, seed_vault, potion_storage, skills, quests, diary_vars, coordinates, deposited, collection log items`. Item containers are a flat `[id, qty, id, qty…]` list.
+  - Fields: `name, inventory, bank, equipment, shared_bank, rune_pouch, quiver, seed_vault, potion_storage, skills, quests, diary_vars, stats, coordinates, interacting, deposited, collection_log_v2`. Item containers are a flat `[id, qty, id, qty, ...]` list; inventory (28 slots) and equipment (14) are positional with `0,0` for empty slots, rune_pouch is always 4 pairs, quiver 1 pair. Ids are canonicalised (noted becomes unnoted) and bank placeholders are dropped. Shapes are pinned in `tests/fixtures/gim_update_*.json` (derived from source at plugin commit 343af95).
   - Before POSTing it calls `GET …/am-i-in-group?member_name=<rsn>`, and a 2xx means "member". There's no account-type check.
 - Others (Dink = event webhooks only; Data Exporter, Bank Memory, Claude Export = local files; Bank Ledger Uploader = third-party site) are worse fits.
 
@@ -163,7 +163,7 @@ Tool annotations: all tools are `readOnlyHint: true` except `refresh_gains_track
 **Phase 3. Bank and gear via GIM Tracker (local first)**
 1. `ingest/gim.py`:
    - `GET /api/group/{group}/am-i-in-group?member_name=` returns 200 only for `GIM_GROUP` + an allowlisted RSN + `Authorization == INGEST_TOKEN` (constant-time compare); everything else gets 401.
-   - `POST …/update-group-member` does the same checks, enforces a body size limit, uses permissive pydantic models (unknown fields ignored and logged once), and **merges** partial updates into `players/<rsn>/snapshots/<kind>` with `updated_at`.
+   - `POST …/update-group-member` does the same checks, enforces a body size limit, uses permissive pydantic models (unknown fields ignored and logged once), and **merges** partial updates into the `snapshots` collection, key `<normalised rsn>/<kind>`, with `updated_at`. `deposited` is added to the stored bank and `collection_log_v2` merged into a `collection_log` document. The per-second fields (`stats`, `coordinates`, `interacting`) are accepted but not stored.
    - These routes are outside the OAuth gate but protected by the ingest token.
 2. Turn on debug logging in the plugin locally, capture real payloads into fixtures, and pin the models to them before trusting the shapes.
 3. Configure the plugin: group name, token, base URL override `http://localhost:8000`. Open the bank and check the snapshot.
@@ -194,5 +194,5 @@ Tool annotations: all tools are `readOnlyHint: true` except `refresh_gains_track
 2. **GCP egress to the hiscores and Wiki** can't be confirmed from here. That's Phase 4 step 1.
 3. **Google consent screen "In production" without verification** for basic scopes: please confirm in the console when you create the client, rather than relying on docs.
 4. **Connectors inside claude.ai Projects** isn't documented. We'll confirm it during E2E.
-5. **GIM Tracker payload details** (bank tabs, deposited, diary_vars) come from source reading, not live capture. They'll be pinned in Phase 3 step 2.
+5. **GIM Tracker payload details** come from source reading, not live capture: Phase 3 is built and tested against source-derived fixtures. Phase 3 step 2 (a live capture with the plugin's debug logging) is still to do.
 6. **Quest points** aren't in WikiSync or the Questreq data. We'd derive them from the Wiki (Quest bucket `json` field or a quest list page) if needed; that's low priority.

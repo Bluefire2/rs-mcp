@@ -5,8 +5,8 @@ School RuneScape account: skills, boss kill counts, quests, achievement diaries,
 achievements, recent gains and Grand Exchange prices. It's built to be added to claude.ai as a
 custom connector (web and mobile). It runs locally first, then on Google Cloud Run.
 
-It never handles Jagex credentials. Everything comes from public APIs, or (Phase 3) from the
-player's own RuneLite client pushing data out.
+It never handles Jagex credentials. Everything comes from public APIs, or (bank, inventory and
+gear) from the player's own RuneLite client pushing data out.
 
 - Design and build order: [docs/PLAN.md](docs/PLAN.md)
 - Research behind the design (with sources): [RESEARCH.md](RESEARCH.md)
@@ -20,6 +20,7 @@ player's own RuneLite client pushing data out.
 | OSRS Wiki (build time) | Quest requirements, diary task text, CA names. See `scripts/refresh_reference_data.py` | Refreshed manually |
 | [Wise Old Man](https://wiseoldman.net) | Gains over a day/week/month/year | Per WOM snapshot. Cached 5 min |
 | [OSRS Wiki prices](https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices) | GE instant-buy/sell, buy limits, alch values | Cached 60 s (mapping 24 h) |
+| [Group Ironmen Tracker](https://github.com/christoabrown/group-ironmen-tracker) (RuneLite plugin) | Bank, inventory, equipment, rune pouch, quiver | Pushed within seconds of a change; the bank only when it's opened |
 
 Every outbound request sends a descriptive User-Agent with contact info. The Wiki requires this.
 
@@ -35,6 +36,8 @@ Every outbound request sends a descriptive User-Agent with contact info. The Wik
 | `get_gains` | XP, levels and KCs gained over a period |
 | `refresh_gains_tracking` | Ask WOM for a fresh snapshot (rate-limited, so used sparingly) |
 | `get_item_price` | GE prices for an item. Partial names and typos are OK |
+| `get_bank` | Bank contents with GE values and total; search, minimum value, sort |
+| `get_equipment_and_inventory` | Worn gear by slot, inventory, rune pouch, quiver |
 
 Each result includes its `source` and a `fetched_at` / `data_as_of` timestamp, so Claude can say
 how stale its answer is.
@@ -93,6 +96,37 @@ survive restarts.
 
 For quests, diaries and combat achievements, enable the **WikiSync** plugin in RuneLite and log
 in once.
+
+### Bank, inventory and gear (Group Ironmen Tracker)
+
+The [Group Ironmen Tracker](https://github.com/christoabrown/group-ironmen-tracker) RuneLite
+plugin can send its data to a self-hosted server instead of groupiron.men. This server speaks
+the same protocol, so you don't need a group ironman account or a groupiron.men group: the
+"group" is just a name and a secret that you make up.
+
+1. Generate a token (or reuse the `INGEST_TOKEN` line from `python -m osrs_mcp.keys`) and set in
+   `.env`:
+   - `GIM_GROUP`: any group name, for example `osrs-mcp`. Avoid spaces.
+   - `INGEST_TOKEN`: the long random secret.
+   - `INGEST_ALLOWED_RSNS` (optional): comma-separated RuneScape names allowed to push data.
+     Blank means `DEFAULT_RSN` only.
+
+   Restart the server. Ingest stays off until both `GIM_GROUP` and `INGEST_TOKEN` are set.
+2. In RuneLite, install **Group Ironmen Tracker** from the Plugin Hub and open its settings:
+   - **Group Name**: the `GIM_GROUP` value.
+   - **Group Token**: the `INGEST_TOKEN` value.
+   - **Self Hosted Config > Server base URL override**: `PUBLIC_BASE_URL`, for example
+     `http://localhost:8000` (no trailing slash, no `/mcp`).
+3. Log in and **open your bank once**. Inventory, equipment, rune pouch and quiver are sent within
+   a few seconds of changing; the bank only when you open it (items put in a deposit box are
+   added to the stored bank in between).
+
+The plugin calls `GET /api/group/<group>/am-i-in-group` and then `POST
+/api/group/<group>/update-group-member` with `Authorization: <token>`. These routes are outside
+the Google sign-in (RuneLite can't do OAuth). Instead they check the token in constant time, the
+group name and the player name, and limit bodies to 2 MB. Snapshots are stored per player and
+kind in `STORE_DIR` (collection `snapshots`). Position, HP/prayer and the current target are
+sent every second and are accepted but not stored.
 
 ### Trying it from Claude
 
@@ -158,6 +192,8 @@ python -m uv run python scripts/refresh_reference_data.py
 src/osrs_mcp/
   server.py         FastMCP app, /healthz, entry point
   auth.py           Google sign-in via FastMCP's OAuth proxy + email allowlist
+  ingest/gim.py     Group Ironmen Tracker-compatible endpoints the RuneLite plugin pushes to
+  snapshots.py      per-player snapshots (bank, inventory, ...) in the key-value store
   store.py          key-value storage (file tree / memory / Firestore)
   config.py         settings from env / .env
   http.py           shared HTTP client: User-Agent, timeout, retry, TTL cache
@@ -173,9 +209,6 @@ tests/
 
 ## Roadmap
 
-- **Phase 3:** bank, inventory and gear, pushed by the
-  [Group Ironmen Tracker](https://github.com/christoabrown/group-ironmen-tracker) plugin to this
-  server (it supports a self-hosted base URL).
 - **Phase 4:** deploy to Cloud Run.
 
 See [docs/PLAN.md](docs/PLAN.md).
