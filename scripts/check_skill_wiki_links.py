@@ -19,9 +19,10 @@ SKILL = Path(__file__).resolve().parent.parent / "skills" / "osrs-coach" / "SKIL
 API = "https://oldschool.runescape.wiki/api.php"
 
 # In the skill, a backticked token starting with a capital letter is a wiki title
-# (`Skill_training_guides`, `Quests/List`, `Category:Strategies`); tool names and arguments are
-# lowercase. Keep it that way so this check stays complete.
-TITLE = re.compile(r"`((?:Category:)?[A-Z][A-Za-z0-9_()/'-]*)`")
+# (`Skill_training_guides`, `Quests/List`, `Category:Strategies`, `Calculator:Armoury`); tool
+# names and arguments are lowercase. Keep it that way so this check stays complete. Placeholders
+# like `<Monster>/Strategies` don't start with a capital letter, so they're skipped.
+TITLE = re.compile(r"`((?:[A-Z][a-z]+:)?[A-Z][A-Za-z0-9_()/'-]*)`")
 
 
 def titles_in_skill() -> list[str]:
