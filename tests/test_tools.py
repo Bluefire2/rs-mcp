@@ -89,10 +89,11 @@ async def test_get_stats(mock_sources):
     assert stats["total_level"] == 2278
     assert stats["combat_level"] == 126
     sailing = next(s for s in stats["skills"] if s["skill"] == "Sailing")
-    assert sailing["level"] is None  # unranked on the hiscores
+    # Unranked (rank -1) but the level is still real.
+    assert (sailing["level"], sailing["rank"]) == (1, None)
     attack = next(s for s in stats["skills"] if s["skill"] == "Attack")
     assert attack["xp_to_99"] == 0
-    assert stats["closest_99s"] == []
+    assert stats["closest_99s"] == ["Sailing"]
     assert "hiscores" in stats["source"].lower()
 
 

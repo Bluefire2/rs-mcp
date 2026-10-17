@@ -23,14 +23,16 @@ HISCORE_PATHS: dict[AccountType, str] = {
 
 class Skill(BaseModel):
     name: str
-    level: int
-    xp: int
-    rank: int | None  # None = not ranked; level/xp are then the hiscores' placeholders
+    # Rank -1 only means "outside the ranked range": level and XP are still real. They are
+    # None only if the hiscores report XP as -1 (no data).
+    level: int | None
+    xp: int | None
+    rank: int | None
 
 
 class Activity(BaseModel):
     name: str
-    score: int | None  # None = not ranked
+    score: int | None  # None = below the hiscores' minimum score (-1); 0 is a real score
     rank: int | None
 
 
@@ -49,7 +51,12 @@ def _ranked(value: int) -> int | None:
 
 def parse(payload: dict, account_type: AccountType, fetched_at: datetime) -> Hiscores:
     skills = [
-        Skill(name=s["name"], level=s["level"], xp=max(s["xp"], 0), rank=_ranked(s["rank"]))
+        Skill(
+            name=s["name"],
+            level=s["level"] if s["xp"] >= 0 else None,
+            xp=s["xp"] if s["xp"] >= 0 else None,
+            rank=_ranked(s["rank"]),
+        )
         for s in payload["skills"]
     ]
     overall, *rest = skills

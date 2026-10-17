@@ -17,9 +17,9 @@ HISCORES_SOURCE = "Official OSRS hiscores (cached up to 5 minutes)"
 
 class SkillStat(BaseModel):
     skill: str
-    level: int | None = Field(description="None if the skill is unranked on the hiscores")
+    level: int | None = Field(description="None only if the hiscores have no data")
     xp: int | None
-    rank: int | None
+    rank: int | None = Field(description="None if outside the ranked range (level is still real)")
     xp_to_next_level: int | None
     xp_to_99: int | None = Field(description="0 once the skill is 99")
 
@@ -29,9 +29,9 @@ class Stats(BaseModel):
     account_type: AccountType
     source: str
     fetched_at: datetime
-    total_level: int
-    total_xp: int
-    combat_level: int | None = Field(description="None if a combat skill is unranked")
+    total_level: int | None
+    total_xp: int | None
+    combat_level: int | None = Field(description="None if a combat skill has no data")
     closest_99s: list[str] = Field(description="Up to five non-99 skills, least XP remaining first")
     skills: list[SkillStat]
 
@@ -39,7 +39,7 @@ class Stats(BaseModel):
 def build_stats(hiscores: Hiscores) -> Stats:
     skills = []
     for s in hiscores.skills:
-        if s.rank is None:
+        if s.level is None or s.xp is None:
             skills.append(
                 SkillStat(
                     skill=s.name,
@@ -134,7 +134,7 @@ def build_activities(
     rows = [
         ActivityScore(name=a.name, category=category_of(a.name), score=a.score, rank=a.rank)
         for a in hiscores.activities
-        if (include_unranked or a.score is not None)
+        if (include_unranked or (a.score or 0) > 0)
         and (category == "all" or category_of(a.name) == category)
     ]
     return ActivityScores(
@@ -169,11 +169,11 @@ def register(mcp: FastMCP, sources: Sources) -> None:
             Category, Field(description="bosses (kill counts), clues, minigames, or all")
         ] = "all",
         include_unranked: Annotated[
-            bool, Field(description="Also list activities with no hiscore entry")
+            bool, Field(description="Also list activities with a score of 0 or below the minimum")
         ] = False,
     ) -> ActivityScores:
         """Boss kill counts, clue scroll completions and minigame scores from the official
-        hiscores. By default only activities the player is ranked in are returned."""
+        hiscores. By default only activities with a score above 0 are returned."""
         hiscores = await sources.hiscores.fetch(
             sources.rsn(rsn), sources.account_type(account_type)
         )
