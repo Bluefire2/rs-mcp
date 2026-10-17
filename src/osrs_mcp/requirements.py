@@ -5,9 +5,20 @@ from collections.abc import Iterable, Mapping
 from pydantic import BaseModel
 
 from osrs_mcp.game import COMBAT_SKILLS, combat_level
-from osrs_mcp.reference import SkillReq
+from osrs_mcp.reference import SkillReq, quest_points
 
 STARTED = "Started:"
+QUEST_POINT = "Quest point"  # the skill name Questreq uses for QP requirements
+
+
+def player_quest_points(quest_states: Mapping[str, int]) -> int:
+    """Quest points from completed quests, plus Tutorial Island's point: every account has
+    finished it, and WikiSync doesn't track it."""
+    points = quest_points()
+    total = sum(points.get(name, 0) for name, state in quest_states.items() if state == 2)
+    if "Tutorial Island" not in quest_states:
+        total += points["Tutorial Island"]
+    return total
 
 
 class MissingSkill(BaseModel):
@@ -28,11 +39,17 @@ class RequirementCheck(BaseModel):
 
 class Checker:
     def __init__(
-        self, levels: Mapping[str, int], quest_states: Mapping[str, int], is_ironman: bool
+        self,
+        levels: Mapping[str, int],
+        quest_states: Mapping[str, int],
+        is_ironman: bool,
+        quest_points: int | None = None,
     ) -> None:
         self.levels = dict(levels)
         if all(skill in levels for skill in COMBAT_SKILLS):
             self.levels["Combat"] = combat_level(levels)
+        if quest_points is not None:
+            self.levels[QUEST_POINT] = quest_points
         self.quest_states = quest_states
         self.is_ironman = is_ironman
 
@@ -46,7 +63,7 @@ class Checker:
                 continue
             have = self.levels.get(req.skill)
             if have is None:
-                # Quest points, Barbarian Assault ranks, Kudos, ...: not reported by WikiSync.
+                # Barbarian Assault ranks, Kudos, ...: not reported by WikiSync.
                 unverified.append(f"{req.level} {req.skill}")
             elif have < req.level:
                 missing_skills.append(

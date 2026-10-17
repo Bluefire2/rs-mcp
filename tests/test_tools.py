@@ -11,7 +11,7 @@ from osrs_mcp.config import Settings
 from osrs_mcp.http import HttpClient
 from osrs_mcp.ingest.gim import GimUpdate, apply_update
 from osrs_mcp.reference import SkillReq
-from osrs_mcp.requirements import Checker
+from osrs_mcp.requirements import Checker, player_quest_points
 from osrs_mcp.server import create_app
 from osrs_mcp.snapshots import SnapshotStore
 from osrs_mcp.sources import Sources
@@ -111,6 +111,8 @@ async def test_get_quest_progress(mock_sources):
     assert counts["completed"] > 150
     completed = next(q for q in result["quests"] if q["status"] == "completed")
     assert completed["can_start"] is None and completed["missing_skills"] == []
+    assert result["quest_points"] == 344  # B0aty has every quest done
+    assert not any("Quest point" in u for q in result["quests"] for u in q["unverified"])
 
     incomplete = await call("get_quest_progress")
     assert all(q["status"] != "completed" for q in incomplete["quests"])
@@ -238,6 +240,26 @@ def test_checker_outcomes():
 
     combat = checker.check([SkillReq(skill="Combat", level=85)], [])
     assert combat.met is False and combat.missing_skills[0].have < 85
+
+
+def test_checker_quest_points():
+    qp32 = [SkillReq(skill="Quest point", level=32)]
+    assert Checker({}, {}, is_ironman=False, quest_points=32).check(qp32, []).met is True
+    short = Checker({}, {}, is_ironman=False, quest_points=17).check(qp32, [])
+    assert short.met is False and short.unverified == []
+    assert short.missing_skills[0].model_dump() == {
+        "skill": "Quest point",
+        "need": 32,
+        "have": 17,
+        "boostable": False,
+    }
+
+
+def test_player_quest_points():
+    # Cook's Assistant 1 + Dragon Slayer I 2 + Tutorial Island 1; started and miniquests add 0.
+    states = {"Cook's Assistant": 2, "Dragon Slayer I": 2, "Demon Slayer": 1, "Vale Totems": 2}
+    assert player_quest_points(states) == 4
+    assert player_quest_points({}) == 1
 
 
 # --- bank and gear (snapshots from the Group Ironmen Tracker plugin) --------------------------

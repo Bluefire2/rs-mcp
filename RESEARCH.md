@@ -281,5 +281,5 @@ seen live yet.
 4. ~~Group Ironmen Tracker payload shapes~~ Confirmed by a live capture on 2026-10-17, except
    the collection log field.
 5. Diary task order versus WikiSync indexes (checked by a test plus spot checks).
-6. Quest points: not in WikiSync or `Questreq/data`. Low priority.
+6. ~~Quest points~~ Computed from Wiki QP values (`quest_points.json`) plus Tutorial Island's 1.
 7. The `_fresh_start` and `_tournament` hiscore paths.
