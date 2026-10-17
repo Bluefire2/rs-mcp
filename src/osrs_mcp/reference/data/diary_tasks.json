@@ -1,0 +1,4824 @@
+{
+ "Ardougne": {
+  "Easy": [
+   {
+    "task": "Have Wizard Cromperty teleport you to the Rune Essence mine.",
+    "skills": [],
+    "quests": [
+     "Rune Mysteries"
+    ]
+   },
+   {
+    "task": "Steal a cake from the Ardougne market stalls.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 5
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Sell Silk to Silk trader in Ardougne for 60 coins each.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Use the altar in East Ardougne's church.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Go out fishing on the Fishing Trawler",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter the Combat Training Camp north of W. Ardougne.",
+    "skills": [],
+    "quests": [
+     "Biohazard"
+    ]
+   },
+   {
+    "task": "Have Tindel Marchant identify a Rusted Sword for you.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Use the Ardougne Lever to teleport to the Wilderness.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "View Aleck's Hunter Emporium in Yanille.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Check what pets you have Insured with Probita in Ardougne.",
+    "skills": [],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Enter the Unicorn pen in Ardougne zoo using Fairy rings.",
+    "skills": [],
+    "quests": [
+     "Fairytale II - Cure a Queen"
+    ]
+   },
+   {
+    "task": "Grapple over Yanille's south wall.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 39
+     },
+     {
+      "skill": "Strength",
+      "level": 38
+     },
+     {
+      "skill": "Ranged",
+      "level": 21
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Harvest some strawberries from the Ardougne farming patch.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 31
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Cast the Ardougne Teleport spell.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 51
+     }
+    ],
+    "quests": [
+     "Plague City"
+    ]
+   },
+   {
+    "task": "Travel to Castlewars by Hot Air Balloon.",
+    "skills": [
+     {
+      "skill": "Firemaking",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Enlightened Journey"
+    ]
+   },
+   {
+    "task": "Claim buckets of sand from Bert in Yanille.",
+    "skills": [],
+    "quests": [
+     "The Hand in the Sand"
+    ]
+   },
+   {
+    "task": "Catch any fish on the Fishing Platform.",
+    "skills": [],
+    "quests": [
+     "Sea Slug"
+    ]
+   },
+   {
+    "task": "Pickpocket the master farmer north of Ardougne.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 38
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Collect some Nightshade from the Skavid Caves.",
+    "skills": [],
+    "quests": [
+     "Watchtower"
+    ]
+   },
+   {
+    "task": "Kill a swordchick in the Tower of Life.",
+    "skills": [],
+    "quests": [
+     "Tower of Life"
+    ]
+   },
+   {
+    "task": "Equip Iban's upgraded staff or upgrade an Iban staff.",
+    "skills": [],
+    "quests": [
+     "Underground Pass"
+    ]
+   },
+   {
+    "task": "Visit the Island East of the Necromancer's Tower.",
+    "skills": [],
+    "quests": [
+     "Fairytale II - Cure a Queen"
+    ]
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Recharge some Jewellery at the Totem in the Legends Guild.",
+    "skills": [],
+    "quests": [
+     "Legends' Quest"
+    ]
+   },
+   {
+    "task": "Enter the Magic Guild.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 66
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Steal from a chest in Ardougne Castle.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 72
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Have a zookeeper put you in Ardougne Zoo's monkey cage.",
+    "skills": [],
+    "quests": [
+     "Monkey Madness I"
+    ]
+   },
+   {
+    "task": "Teleport to the Watchtower.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 58
+     }
+    ],
+    "quests": [
+     "Watchtower"
+    ]
+   },
+   {
+    "task": "Catch a Red Salamander.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 59
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Check the health of a Palm tree near tree gnome village.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 68
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Pick some Poison Ivy berries from the patch south of Ardougne.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 70
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Smith a Mithril platebody near Ardougne.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 68
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Enter your POH from Yanille.",
+    "skills": [
+     {
+      "skill": "Construction",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Smith a Dragon sq shield in West Ardougne.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 60
+     }
+    ],
+    "quests": [
+     "Plague City"
+    ]
+   },
+   {
+    "task": "Craft some Death runes from Essence.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 65
+     }
+    ],
+    "quests": [
+     "Mourning's End Part II"
+    ]
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Catch a Manta ray in the Fishing Trawler and cook it in Port Khazard.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 81
+     },
+     {
+      "skill": "Cooking",
+      "level": 91
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Picklock the door to the basement of Yanille Agility Dungeon.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 82
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Pickpocket a Hero.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 80
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Make a rune crossbow yourself from scratch within Witchaven or Yanille.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 10
+     },
+     {
+      "skill": "Smithing",
+      "level": 91
+     },
+     {
+      "skill": "Fletching",
+      "level": 69
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Imbue a Salve amulet at Nightmare Zone, or equip a Salve amulet that was imbued there.",
+    "skills": [],
+    "quests": [
+     "Haunted Mine"
+    ]
+   },
+   {
+    "task": "Pick some Torstol from the patch north of Ardougne.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 85
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a lap of Ardougne's rooftop agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 90
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Cast Ice Barrage on another player within Castle Wars.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 94
+     }
+    ],
+    "quests": [
+     "Desert Treasure I"
+    ]
+   }
+  ]
+ },
+ "Desert": {
+  "Easy": [
+   {
+    "task": "Catch a Golden Warbler.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 5
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Mine 5 clay in the north-eastern desert.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter the Kalphite Hive.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter the Desert with a set of Desert robes equipped.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a Vulture",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Have the Nardah Herbalist clean a Herb for you.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Collect 5 Potato Cactus from the Kalphite Hive.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Sell some artefacts to Simon Templeton.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Open the Sarcophagus in the first room of Pyramid Plunder",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 21
+     }
+    ],
+    "quests": [
+     "Icthlarin's Little Helper"
+    ]
+   },
+   {
+    "task": "Cut a desert cactus open to fill a waterskin.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Travel from the Shantay Pass to Pollnivneach by Magic Carpet.",
+    "skills": [],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Climb to the summit of the Agility Pyramid.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 30
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Slay a desert lizard.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 22
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Catch an Orange Salamander.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 47
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Steal a feather from the Desert Phoenix.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 25
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Travel to Uzer via Magic Carpet.",
+    "skills": [],
+    "quests": [
+     "The Golem"
+    ]
+   },
+   {
+    "task": "Travel to the Desert via Eagle.",
+    "skills": [],
+    "quests": [
+     "Eagles' Peak"
+    ]
+   },
+   {
+    "task": "Pray at the Elidinis statuette in Nardah",
+    "skills": [],
+    "quests": [
+     "Spirits of the Elid"
+    ]
+   },
+   {
+    "task": "Create a combat potion in the desert.",
+    "skills": [
+     {
+      "skill": "Herblore",
+      "level": 36
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Teleport to Enakhra's Temple with the Camulet.",
+    "skills": [],
+    "quests": [
+     "Enakhra's Lament"
+    ]
+   },
+   {
+    "task": "Visit the Genie.",
+    "skills": [],
+    "quests": [
+     "Spirits of the Elid"
+    ]
+   },
+   {
+    "task": "Teleport to Pollnivneach with a redirected teleport to house tablet.",
+    "skills": [
+     {
+      "skill": "Construction",
+      "level": 20
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Chop some Teak Logs near Uzer.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 35
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Knock out and pickpocket a Menaphite Thug.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 65
+     }
+    ],
+    "quests": [
+     "The Feud"
+    ]
+   },
+   {
+    "task": "Mine some Granite.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 45
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Refill your waterskins in the Desert using Lunar magic.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 68
+     }
+    ],
+    "quests": [
+     "Dream Mentor"
+    ]
+   },
+   {
+    "task": "Kill the Kalphite Queen.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Complete a lap of the Pollnivneach agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 70
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Slay a Dust Devil in the desert cave with a Slayer helmet equipped.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 65
+     },
+     {
+      "skill": "Defence",
+      "level": 10
+     },
+     {
+      "skill": "Crafting",
+      "level": 55
+     }
+    ],
+    "quests": [
+     "Desert Treasure I"
+    ]
+   },
+   {
+    "task": "Activate Ancient Magicks at the altar in the Jaldraocht Pyramid.",
+    "skills": [],
+    "quests": [
+     "Desert Treasure I"
+    ]
+   },
+   {
+    "task": "Defeat a Locust Rider with Keris.",
+    "skills": [
+     {
+      "skill": "Attack",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Contact!"
+    ]
+   },
+   {
+    "task": "Burn some yew logs on the Nardah Mayor's balcony.",
+    "skills": [
+     {
+      "skill": "Firemaking",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Create a Mithril Platebody in Nardah.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 68
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Bake a wild pie at the Nardah Clay Oven.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 85
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Cast Ice Barrage against a foe in the Desert",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 94
+     }
+    ],
+    "quests": [
+     "Desert Treasure I"
+    ]
+   },
+   {
+    "task": "Fletch some Dragon darts at the Bedabin Camp.",
+    "skills": [
+     {
+      "skill": "Fletching",
+      "level": 95
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Speak to the KQ head in your POH.",
+    "skills": [
+     {
+      "skill": "Construction",
+      "level": 78
+     }
+    ],
+    "quests": [
+     "Priest in Peril"
+    ]
+   },
+   {
+    "task": "Steal from the Grand Gold Chest in the final room of Pyramid Plunder.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 91
+     }
+    ],
+    "quests": [
+     "Icthlarin's Little Helper"
+    ]
+   },
+   {
+    "task": "Restore at least 85 Prayer points when praying at the Altar in Sophanem.",
+    "skills": [
+     {
+      "skill": "Prayer",
+      "level": 85
+     }
+    ],
+    "quests": [
+     "Icthlarin's Little Helper"
+    ]
+   }
+  ]
+ },
+ "Falador": {
+  "Easy": [
+   {
+    "task": "Find out what your family crest is from Sir Renitee",
+    "skills": [
+     {
+      "skill": "Construction",
+      "level": 16
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Climb over the western Falador wall.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 5
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Browse Sarah's farm shop.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Get a Haircut or a Shave from the Falador Hairdresser.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Fill a bucket from the pump north of Falador west bank.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a duck in Falador Park.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Make a mind tiara.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Take the boat to Entrana.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Repair a broken strut in the Motherlode Mine.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Claim a security book from the Security guard at Port Sarim jail.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Smith some Blurite Limbs on Doric's anvil.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 10
+     },
+     {
+      "skill": "Smithing",
+      "level": 13
+     }
+    ],
+    "quests": [
+     "The Knight's Sword"
+    ]
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Light a Bullseye lantern at the Chemist's in Rimmington.",
+    "skills": [
+     {
+      "skill": "Firemaking",
+      "level": 49
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Telegrab some Wine of Zamorak at the Chaos Temple by the Wilderness.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 33
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Unlock the Crystal chest in Taverley.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Place a Scarecrow in the Falador farm flower patch.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 47
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Mogre at Mudskipper Point.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 32
+     }
+    ],
+    "quests": [
+     "Skippy and the Mogres"
+    ]
+   },
+   {
+    "task": "Visit the Port Sarim Rat Pits.",
+    "skills": [],
+    "quests": [
+     "Ratcatchers"
+    ]
+   },
+   {
+    "task": "Grapple up and then jump off the north Falador wall.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 11
+     },
+     {
+      "skill": "Strength",
+      "level": 37
+     },
+     {
+      "skill": "Ranged",
+      "level": 19
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Pickpocket a Falador guard.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 40
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Pray at the Altar of Guthix in Taverley whilst wearing full Initiate.",
+    "skills": [
+     {
+      "skill": "Prayer",
+      "level": 10
+     },
+     {
+      "skill": "Defence",
+      "level": 20
+     }
+    ],
+    "quests": [
+     "Recruitment Drive"
+    ]
+   },
+   {
+    "task": "Mine some Gold ore at the Crafting Guild.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 40
+     },
+     {
+      "skill": "Mining",
+      "level": 40
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Squeeze through the crevice in the Dwarven mines.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 42
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Chop and burn some Willow logs in Taverley.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 30
+     },
+     {
+      "skill": "Firemaking",
+      "level": 30
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Craft a fruit basket on the Falador Farm loom.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 36
+     },
+     {
+      "skill": "Farming",
+      "level": 30
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Teleport to Falador.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 37
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Craft 140 Mind runes simultaneously from Essence without the use of Extracts.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 56
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Change your family crest to the Saradomin symbol.",
+    "skills": [
+     {
+      "skill": "Prayer",
+      "level": 70
+     },
+     {
+      "skill": "Construction",
+      "level": 16
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill the Giant Mole beneath Falador Park.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a Skeletal Wyvern in the Asgarnia Ice Dungeon.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 72
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a lap of the Falador rooftop agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Enter the mining guild while wearing a Prospector helmet.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill the Blue Dragon under the Heroes' Guild.",
+    "skills": [],
+    "quests": [
+     "Heroes' Quest"
+    ]
+   },
+   {
+    "task": "Crack a wall safe within Rogues' Den.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Recharge your prayer in the Port Sarim church while wearing full Proselyte.",
+    "skills": [
+     {
+      "skill": "Defence",
+      "level": 30
+     },
+     {
+      "skill": "Prayer",
+      "level": 20
+     }
+    ],
+    "quests": [
+     "The Slug Menace"
+    ]
+   },
+   {
+    "task": "Enter the Warriors' Guild.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Equip a dwarven helmet within the dwarven mines.",
+    "skills": [
+     {
+      "skill": "Defence",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Grim Tales"
+    ]
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Craft 252 Air Runes simultaneously from Essence without the use of Extracts.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 88
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Purchase a White 2h Sword from Sir Vyvin.",
+    "skills": [],
+    "quests": [
+     "Wanted!"
+    ]
+   },
+   {
+    "task": "Find at least 3 magic roots at once when digging up your magic tree in Falador.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 91
+     },
+     {
+      "skill": "Woodcutting",
+      "level": 75
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Perform a skillcape or quest cape emote at the top of Falador Castle.",
+    "skills": [],
+    "quests": [
+     "quest"
+    ]
+   },
+   {
+    "task": "Jump over the strange floor in Taverley dungeon.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 80
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Mix a Saradomin brew in Falador east bank.",
+    "skills": [
+     {
+      "skill": "Herblore",
+      "level": 81
+     }
+    ],
+    "quests": []
+   }
+  ]
+ },
+ "Fremennik": {
+  "Easy": [
+   {
+    "task": "Catch a Cerulean twitch.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 11
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Change your boots at Yrsa's Shoe Store.",
+    "skills": [],
+    "quests": [
+     "The Fremennik Trials"
+    ]
+   },
+   {
+    "task": "Kill 5 Rock crabs.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Craft a tiara from scratch in Rellekka.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 23
+     },
+     {
+      "skill": "Mining",
+      "level": 20
+     },
+     {
+      "skill": "Smithing",
+      "level": 20
+     }
+    ],
+    "quests": [
+     "The Fremennik Trials"
+    ]
+   },
+   {
+    "task": "Browse the Stonemasons shop.",
+    "skills": [],
+    "quests": [
+     "The Giant Dwarf"
+    ]
+   },
+   {
+    "task": "Collect 5 Snape grass on Waterbirth Island.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Steal from the Keldagrim crafting or baker's stall.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 5
+     }
+    ],
+    "quests": [
+     "The Giant Dwarf"
+    ]
+   },
+   {
+    "task": "Fill a bucket with water at the Rellekka well.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter the Troll Stronghold.",
+    "skills": [],
+    "quests": [
+     "Troll Stronghold"
+    ]
+   },
+   {
+    "task": "Chop and burn some oak logs in the Fremennik Province.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 15
+     },
+     {
+      "skill": "Firemaking",
+      "level": 15
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Slay a Brine rat.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 47
+     }
+    ],
+    "quests": [
+     "Olaf's Quest"
+    ]
+   },
+   {
+    "task": "Travel to the Snowy Hunter Area via Eagle.",
+    "skills": [],
+    "quests": [
+     "Eagles' Peak"
+    ]
+   },
+   {
+    "task": "Mine some coal in Rellekka.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 30
+     }
+    ],
+    "quests": [
+     "The Fremennik Trials"
+    ]
+   },
+   {
+    "task": "Steal from the Rellekka Fish stalls.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 42
+     }
+    ],
+    "quests": [
+     "The Fremennik Trials"
+    ]
+   },
+   {
+    "task": "Travel to Miscellania by Fairy ring.",
+    "skills": [],
+    "quests": [
+     "The Fremennik Trials"
+    ]
+   },
+   {
+    "task": "Catch a Snowy knight.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 45
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Pick up your Pet Rock from your POH Menagerie.",
+    "skills": [
+     {
+      "skill": "Construction",
+      "level": 37
+     }
+    ],
+    "quests": [
+     "The Fremennik Trials"
+    ]
+   },
+   {
+    "task": "Visit the Lighthouse from Waterbirth island.",
+    "skills": [
+     {
+      "skill": "Prayer",
+      "level": 43
+     },
+     {
+      "skill": "Agility",
+      "level": 85
+     }
+    ],
+    "quests": [
+     "Horror from the Deep"
+    ]
+   },
+   {
+    "task": "Mine some gold at the Arzinian mine.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 40
+     },
+     {
+      "skill": "Defence",
+      "level": 30
+     }
+    ],
+    "quests": [
+     "Between a Rock..."
+    ]
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Teleport to Trollheim.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 61
+     }
+    ],
+    "quests": [
+     "Eadgar's Ruse"
+    ]
+   },
+   {
+    "task": "Catch a Sabre-toothed Kyatt.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 55
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Mix a super defence potion in the Fremennik Province.",
+    "skills": [
+     {
+      "skill": "Herblore",
+      "level": 66
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Steal from the Keldagrim Gem Stall.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 75
+     }
+    ],
+    "quests": [
+     "The Giant Dwarf"
+    ]
+   },
+   {
+    "task": "Craft a Neitiznot shield on Neitiznot.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 56
+     }
+    ],
+    "quests": [
+     "The Fremennik Isles"
+    ]
+   },
+   {
+    "task": "Mine 5 Adamantite ores on Jatizso.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 70
+     }
+    ],
+    "quests": [
+     "The Fremennik Isles"
+    ]
+   },
+   {
+    "task": "Obtain 100% support from your kingdom subjects.",
+    "skills": [],
+    "quests": [
+     "Throne of Miscellania"
+    ]
+   },
+   {
+    "task": "Teleport to Waterbirth Island.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 72
+     }
+    ],
+    "quests": [
+     "Lunar Diplomacy"
+    ]
+   },
+   {
+    "task": "Obtain the Blast Furnace Foremans permission to use the Blast Furnace for free.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 60
+     }
+    ],
+    "quests": [
+     "The Giant Dwarf"
+    ]
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Kill each of the Dagannoth Kings.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 85
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Craft 56 astral runes simultaneously from Essence without the use of Extracts.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 82
+     }
+    ],
+    "quests": [
+     "Lunar Diplomacy"
+    ]
+   },
+   {
+    "task": "Create a dragonstone amulet in the Neitiznot furnace.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 80
+     }
+    ],
+    "quests": [
+     "The Fremennik Isles"
+    ]
+   },
+   {
+    "task": "Complete a lap of the Rellekka agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 80
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill the generals of Armadyl, Bandos, Saradomin and Zamorak in the God Wars Dungeon.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 70
+     },
+     {
+      "skill": "Strength",
+      "level": 70
+     },
+     {
+      "skill": "Hitpoints",
+      "level": 70
+     },
+     {
+      "skill": "Ranged",
+      "level": 70
+     }
+    ],
+    "quests": [
+     "Troll Stronghold"
+    ]
+   },
+   {
+    "task": "Slay a Spiritual mage within the Godwars Dungeon.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 83
+     }
+    ],
+    "quests": [
+     "Troll Stronghold"
+    ]
+   }
+  ]
+ },
+ "Kandarin": {
+  "Easy": [
+   {
+    "task": "Catch a Mackerel at Catherby.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 16
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Buy a candle from the Chandler in Catherby.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Collect five Flax from the Seers' flax fields.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Play the Organ in Seers' church.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Plant some Jute seeds in the patch north of McGrubor's Wood.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 13
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Have Galahad make you a cup of tea.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Defeat one of each elemental in the workshop.",
+    "skills": [],
+    "quests": [
+     "Elemental Workshop I"
+    ]
+   },
+   {
+    "task": "Get a pet fish from Harry in Catherby.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Buy a Stew from the Seers' pub.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Speak to Sherlock.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Cross the Coal truck log shortcut.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 20
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Complete a lap of the Barbarian agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 35
+     }
+    ],
+    "quests": [
+     "Alfred Grimhand's Barcrawl"
+    ]
+   },
+   {
+    "task": "Create a Super Antipoison potion from scratch in the Seers/Catherby Area.",
+    "skills": [
+     {
+      "skill": "Herblore",
+      "level": 48
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Enter the Ranging guild.",
+    "skills": [
+     {
+      "skill": "Ranged",
+      "level": 40
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Use the grapple shortcut to get from the water obelisk to Catherby shore.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 70
+     },
+     {
+      "skill": "Strength",
+      "level": 22
+     },
+     {
+      "skill": "Ranged",
+      "level": 39
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Catch and cook a Bass in Catherby.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 46
+     },
+     {
+      "skill": "Cooking",
+      "level": 43
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Teleport to Camelot.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 45
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "String a Maple shortbow in Seers' Village bank.",
+    "skills": [
+     {
+      "skill": "Fletching",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Pick some Limpwurt root from the farming patch in Catherby.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 26
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Create a Mind helmet.",
+    "skills": [],
+    "quests": [
+     "Elemental Workshop II"
+    ]
+   },
+   {
+    "task": "Kill a Fire Giant inside Baxtorian Waterfall.",
+    "skills": [],
+    "quests": [
+     "Waterfall Quest"
+    ]
+   },
+   {
+    "task": "Complete a wave of Barbarian Assault.",
+    "skills": [],
+    "quests": [
+     "Barbarian Assault tutorial"
+    ]
+   },
+   {
+    "task": "Steal from the chest in Hemenster.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 47
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Travel to McGrubor's Wood by Fairy Ring.",
+    "skills": [],
+    "quests": [
+     "Fairytale II - Cure a Queen"
+    ]
+   },
+   {
+    "task": "Mine some coal near the coal trucks.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 30
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Catch a Leaping Sturgeon.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 70
+     },
+     {
+      "skill": "Agility",
+      "level": 45
+     },
+     {
+      "skill": "Strength",
+      "level": 45
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a lap of the Seers' Village agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Create a Yew Longbow from scratch around Seers' Village.",
+    "skills": [
+     {
+      "skill": "Fletching",
+      "level": 70
+     },
+     {
+      "skill": "Woodcutting",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Enter the Seers' Village courthouse with piety turned on.",
+    "skills": [
+     {
+      "skill": "Prayer",
+      "level": 70
+     },
+     {
+      "skill": "Defence",
+      "level": 70
+     }
+    ],
+    "quests": [
+     "King's Ransom"
+    ]
+   },
+   {
+    "task": "Charge a Water Orb.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 56
+     },
+     {
+      "skill": "Agility",
+      "level": 70
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Burn some Maple logs with a bow in Seers' Village.",
+    "skills": [
+     {
+      "skill": "Firemaking",
+      "level": 65
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Shadow Hound in the Shadow dungeon.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 53
+     }
+    ],
+    "quests": [
+     "Desert Treasure I"
+    ]
+   },
+   {
+    "task": "Kill a Mithril Dragon.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Purchase and equip a granite body from Barbarian Assault.",
+    "skills": [
+     {
+      "skill": "Strength",
+      "level": 50
+     },
+     {
+      "skill": "Defence",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Have the Seers' estate agent decorate your house with Fancy Stone.",
+    "skills": [
+     {
+      "skill": "Construction",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Smith an Adamant spear at Otto's Grotto.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 75
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Read the Blackboard at Barbarian Assault after reaching level 5 in every role.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Pick some Dwarf weed from the herb patch at Catherby.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 79
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Fish and Cook 5 Sharks in Catherby using the Cooking gauntlets.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 76
+     },
+     {
+      "skill": "Cooking",
+      "level": 80
+     }
+    ],
+    "quests": [
+     "Family Crest"
+    ]
+   },
+   {
+    "task": "Mix a Stamina Mix on top of the Seers' Village bank.",
+    "skills": [
+     {
+      "skill": "Herblore",
+      "level": 86
+     },
+     {
+      "skill": "Agility",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Smith a Rune Hasta at Otto's Grotto.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 90
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Construct a Pyre ship from Magic Logs.",
+    "skills": [
+     {
+      "skill": "Firemaking",
+      "level": 85
+     },
+     {
+      "skill": "Crafting",
+      "level": 85
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Teleport to Catherby.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 87
+     }
+    ],
+    "quests": [
+     "Lunar Diplomacy"
+    ]
+   }
+  ]
+ },
+ "Karamja": {
+  "Easy": [
+   {
+    "task": "Pick 5 bananas from the plantation located east of the volcano.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Use the rope swing to travel to the Moss Giant Island north-west of Karamja.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 10
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Mine some gold from the rocks on the north-west peninsula of Karamja.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 40
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Travel to Port Sarim via the dock, east of Musa Point.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Travel to Ardougne via the port near Brimhaven.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Explore Cairn Island to the west of Karamja.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Use the Fishing spots north of the banana plantation.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Collect 5 seaweed from anywhere on Karamja.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Attempt the TzHaar Fight Pits or Fight Cave.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a jogre in the Pothole dungeon.",
+    "skills": [],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Claim a ticket from the Agility Arena in Brimhaven.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 40
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Discover hidden wall in the dungeon below the volcano.",
+    "skills": [],
+    "quests": [
+     "Dragon Slayer I"
+    ]
+   },
+   {
+    "task": "Visit the Isle of Crandor via the dungeon below the volcano.",
+    "skills": [],
+    "quests": [
+     "Dragon Slayer I"
+    ]
+   },
+   {
+    "task": "Use Vigroy and Hajedy's cart service.",
+    "skills": [],
+    "quests": [
+     "Shilo Village"
+    ]
+   },
+   {
+    "task": "Earn 100% favour in the village of Tai Bwo Wannai.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 10
+     }
+    ],
+    "quests": [
+     "Jungle Potion"
+    ]
+   },
+   {
+    "task": "Cook a spider on a stick.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 16
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Charter the Lady of the Waves from Cairn Isle to Port Khazard.",
+    "skills": [],
+    "quests": [
+     "Shilo Village"
+    ]
+   },
+   {
+    "task": "Cut a log from a teak tree.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 35
+     },
+     {
+      "skill": "Agility",
+      "level": 79
+     }
+    ],
+    "quests": [
+     "Jungle Potion"
+    ]
+   },
+   {
+    "task": "Cut a log from a mahogany tree.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 50
+     },
+     {
+      "skill": "Agility",
+      "level": 79
+     }
+    ],
+    "quests": [
+     "Jungle Potion"
+    ]
+   },
+   {
+    "task": "Catch a karambwan.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 65
+     }
+    ],
+    "quests": [
+     "Tai Bwo Wannai Trio"
+    ]
+   },
+   {
+    "task": "Exchange gems for a machete.",
+    "skills": [],
+    "quests": [
+     "Jungle Potion"
+    ]
+   },
+   {
+    "task": "Use the gnome glider to travel to Karamja.",
+    "skills": [],
+    "quests": [
+     "The Grand Tree"
+    ]
+   },
+   {
+    "task": "Grow a healthy fruit tree in the patch near Brimhaven.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 27
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Trap a horned graahk.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 41
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Chop the vines to gain deeper access to Brimhaven Dungeon.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 10
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Cross the lava using the stepping stones within Brimhaven Dungeon.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 10
+     },
+     {
+      "skill": "Agility",
+      "level": 12
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Climb the stairs within Brimhaven Dungeon.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 10
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Charter a ship from the shipyard in the far east of Karamja.",
+    "skills": [],
+    "quests": [
+     "The Grand Tree"
+    ]
+   },
+   {
+    "task": "Mine a red topaz from a gem rock.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 40
+     }
+    ],
+    "quests": [
+     "Jungle Potion"
+    ]
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Become the Champion of the Fight Pits.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a Ket-Zek in the Fight Caves.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Eat an oomlie wrap.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Craft some nature runes from Essence.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 44
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Cook a karambwan thoroughly.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 30
+     }
+    ],
+    "quests": [
+     "Tai Bwo Wannai Trio"
+    ]
+   },
+   {
+    "task": "Kill a deathwing in the dungeon under the Kharazi Jungle.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 50
+     },
+     {
+      "skill": "Thieving",
+      "level": 50
+     },
+     {
+      "skill": "Mining",
+      "level": 52
+     },
+     {
+      "skill": "Strength",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Legends' Quest"
+    ]
+   },
+   {
+    "task": "Use the crossbow shortcut south of the volcano.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 53
+     },
+     {
+      "skill": "Ranged",
+      "level": 42
+     },
+     {
+      "skill": "Strength",
+      "level": 21
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Collect 5 palm leaves.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 79
+     }
+    ],
+    "quests": [
+     "Legends' Quest"
+    ]
+   },
+   {
+    "task": "Be assigned a Slayer task by the Slayer Master in Shilo Village.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Shilo Village"
+    ]
+   },
+   {
+    "task": "Kill a metal dragon in Brimhaven Dungeon.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 10
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Craft 56 Nature runes simultaneously from Essence without the use of Extracts.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 91
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Equip a Fire Cape or Infernal Cape in Mor Ul Rek.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Check the health of a palm tree in Brimhaven.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 68
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Create an antivenom potion whilst standing in the horse shoe mine.",
+    "skills": [
+     {
+      "skill": "Herblore",
+      "level": 87
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Check the health of your Calquat tree patch.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 72
+     }
+    ],
+    "quests": []
+   }
+  ]
+ },
+ "Kourend & Kebos": {
+  "Easy": [
+   {
+    "task": "Mine some Iron at the Mount Karuulm mine.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Sandcrab.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Hand in a book at the Arceuus Library.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Steal from a Hosidius Food Stall.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 25
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Browse the Warrens General Store.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Take a boat to Land's End.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Pray at the Altar in Kourend Castle",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Dig up some Saltpetre.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter your Player Owned House from Hosidius.",
+    "skills": [
+     {
+      "skill": "Construction",
+      "level": 25
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Do a lap of either tier of the Shayzien Agility Course.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Create a Strength potion in the Lovakengj Pub.",
+    "skills": [
+     {
+      "skill": "Herblore",
+      "level": 12
+     }
+    ],
+    "quests": [
+     "Druidic Ritual"
+    ]
+   },
+   {
+    "task": "Fish a Trout from the River Molch.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 20
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Travel to the Fairy Ring south of Mount Karuulm.",
+    "skills": [],
+    "quests": [
+     "Fairytale II - Cure a Queen"
+    ]
+   },
+   {
+    "task": "Kill a Lizardman.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Use Kharedst's memoirs to teleport to all five cities in Great Kourend.",
+    "skills": [],
+    "quests": [
+     "The Depths of Despair"
+    ]
+   },
+   {
+    "task": "Mine some Volcanic Sulphur.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 42
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Enter the Farming Guild.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 45
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Switch to the Necromancy Spellbook at Tyss.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Repair a Piscarilius crane.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 30
+     },
+     {
+      "skill": "Construction",
+      "level": 30
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Deliver some intelligence to Captain Ginea.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Catch a Bluegill on Molch Island.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 43
+     },
+     {
+      "skill": "Hunter",
+      "level": 35
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Use the boulder leap shortcut in the Arceuus essence mine.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 49
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Subdue the Wintertodt",
+    "skills": [
+     {
+      "skill": "Firemaking",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Catch a Chinchompa in the Kourend Woodland.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 53
+     }
+    ],
+    "quests": [
+     "Eagles' Peak"
+    ]
+   },
+   {
+    "task": "Chop some Mahogany logs north of the Farming Guild.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 50
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Enter the Woodcutting Guild.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Smelt an Adamantite bar in The Forsaken Tower.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 70
+     }
+    ],
+    "quests": [
+     "The Forsaken Tower"
+    ]
+   },
+   {
+    "task": "Kill a Lizardman Shaman in the Lizardman Temple.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Mine some Lovakite.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 65
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Plant some Logavano seeds at the Tithe Farm.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 74
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Zombie in the Shayzien Crypts.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Teleport to Xeric's Heart using Xeric's Talisman.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Deliver an artefact to Captain Khaled.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 49
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Wyrm in the Karuulm Slayer Dungeon.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 62
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Cast Monster Examine on a Troll south of Mount Quidamortem.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 66
+     }
+    ],
+    "quests": [
+     "Dream Mentor"
+    ]
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Craft one or more Blood runes from Dark essence.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 77
+     },
+     {
+      "skill": "Mining",
+      "level": 38
+     },
+     {
+      "skill": "Crafting",
+      "level": 38
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Chop some Redwood logs.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 90
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Defeat Skotizo in the Catacombs of Kourend.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Catch an Anglerfish and cook it whilst in Great Kourend.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 82
+     },
+     {
+      "skill": "Cooking",
+      "level": 84
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Hydra in the Karuulm Slayer Dungeon.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 95
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Create an Ape Atoll teleport tablet.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 90
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a Raid in the Chambers of Xeric.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Create your own Battlestaff from scratch within the Farming Guild.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 85
+     },
+     {
+      "skill": "Fletching",
+      "level": 40
+     }
+    ],
+    "quests": []
+   }
+  ]
+ },
+ "Lumbridge & Draynor": {
+  "Easy": [
+   {
+    "task": "Complete a lap of the Draynor Village agility course.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Slay a Cave bug beneath Lumbridge Swamp.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 7
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Have Sedridor teleport you to the Rune essence mine.",
+    "skills": [],
+    "quests": [
+     "Rune Mysteries"
+    ]
+   },
+   {
+    "task": "Craft some water runes from Essence.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 5
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Learn your age from Hans in Lumbridge.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Pickpocket a man or woman in Lumbridge.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Chop and burn some oak logs in Lumbridge.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 15
+     },
+     {
+      "skill": "Firemaking",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Zombie in Draynor Sewers.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Catch some Anchovies in Al Kharid.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Bake some Bread on the Lumbridge kitchen range.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 34
+     }
+    ],
+    "quests": [
+     "Cook's Assistant"
+    ]
+   },
+   {
+    "task": "Mine some Iron ore at the Al Kharid mine.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Enter the H.A.M. Hideout.",
+    "skills": [],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Complete a lap of the Al Kharid agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 20
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Grapple across the River Lum.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 8
+     },
+     {
+      "skill": "Strength",
+      "level": 19
+     },
+     {
+      "skill": "Ranged",
+      "level": 37
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Purchase an upgraded device from Ava.",
+    "skills": [
+     {
+      "skill": "Ranged",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Animal Magnetism"
+    ]
+   },
+   {
+    "task": "Travel to the Wizards' Tower by Fairy ring.",
+    "skills": [],
+    "quests": [
+     "Fairytale II - Cure a Queen"
+    ]
+   },
+   {
+    "task": "Cast the Teleport to Lumbridge spell.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 31
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Catch some Salmon in Lumbridge.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 30
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Craft a coif in the Lumbridge cow pen.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 38
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Chop some willow logs in Draynor Village.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 30
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Pickpocket Martin the Master Gardener.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 38
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Get a slayer task from Chaeldar.",
+    "skills": [],
+    "quests": [
+     "Lost City"
+    ]
+   },
+   {
+    "task": "Catch an Essence or Eclectic impling in Puro-Puro.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 42
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Craft some Lava runes at the fire altar in Al Kharid.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 23
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Cast Bones to Peaches in Al Kharid palace.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Squeeze past the jutting wall on your way to the cosmic altar.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 46
+     }
+    ],
+    "quests": [
+     "Lost City"
+    ]
+   },
+   {
+    "task": "Craft 56 Cosmic runes simultaneously from Essence without the use of Extracts.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 59
+     }
+    ],
+    "quests": [
+     "Lost City"
+    ]
+   },
+   {
+    "task": "Travel from Lumbridge to Edgeville on a Waka Canoe.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 57
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Collect at least 100 Tears of Guthix in one visit.",
+    "skills": [],
+    "quests": [
+     "Tears of Guthix (quest)"
+    ]
+   },
+   {
+    "task": "Take the train from Dorgesh-Kaan to Keldagrim.",
+    "skills": [],
+    "quests": [
+     "Another Slice of H.A.M."
+    ]
+   },
+   {
+    "task": "Purchase some Barrows gloves from the Lumbridge bank chest.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Pick some Belladonna from the farming patch at Draynor Manor.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 63
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Light your mining helmet in the Lumbridge castle basement.",
+    "skills": [
+     {
+      "skill": "Firemaking",
+      "level": 65
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Recharge your prayer at Emir's Arena with Smite activated.",
+    "skills": [
+     {
+      "skill": "Prayer",
+      "level": 52
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Craft, string and enchant an Amulet of Power in Lumbridge.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 70
+     },
+     {
+      "skill": "Magic",
+      "level": 57
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Steal from a Dorgesh-Kaan rich chest.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 78
+     }
+    ],
+    "quests": [
+     "Death to the Dorgeshuun"
+    ]
+   },
+   {
+    "task": "Grapple across a pylon on the Dorgesh-Kaan Agility Course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 70
+     },
+     {
+      "skill": "Ranged",
+      "level": 70
+     },
+     {
+      "skill": "Strength",
+      "level": 70
+     }
+    ],
+    "quests": [
+     "Death to the Dorgeshuun"
+    ]
+   },
+   {
+    "task": "Chop some magic logs at the Mage Training Arena.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 75
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Smith an Adamant platebody down Draynor sewer.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 88
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Craft 140 or more Water runes simultaneously from Essence without the use of Extracts.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 76
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Perform the Quest cape emote in the Wise Old Man's house.",
+    "skills": [],
+    "quests": []
+   }
+  ]
+ },
+ "Morytania": {
+  "Easy": [
+   {
+    "task": "Craft any Snelm from scratch in Morytania.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Cook a thin Snail on the Port Phasmatys range.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 12
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Get a slayer task from the Slayer Master in Canifis.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a Banshee in the Slayer Tower.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Have Sbott in Canifis tan something for you.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter Mort Myre Swamp.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a Ghoul.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Place a Scarecrow in the Morytania flower patch.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 47
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Offer some bonemeal at the Ectofuntus.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a werewolf in its human form using the Wolfbane Dagger.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Restore your prayer points at the nature altar.",
+    "skills": [],
+    "quests": [
+     "Nature Spirit"
+    ]
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Catch a swamp lizard.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 29
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a lap of the Canifis agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 40
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Obtain some Bark from a Hollow tree.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 45
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Travel to Dragontooth Isle.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a Terror Dog.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 40
+     }
+    ],
+    "quests": [
+     "Lair of Tarn Razorlor"
+    ]
+   },
+   {
+    "task": "Complete a game of trouble brewing.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 40
+     }
+    ],
+    "quests": [
+     "Cabin Fever"
+    ]
+   },
+   {
+    "task": "Board the Swampy boat at the Hollows.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Make a batch of cannonballs at the Port Phasmatys furnace.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 35
+     }
+    ],
+    "quests": [
+     "Dwarf Cannon"
+    ]
+   },
+   {
+    "task": "Kill a Fever Spider on Braindeath Island.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 42
+     }
+    ],
+    "quests": [
+     "Rum Deal"
+    ]
+   },
+   {
+    "task": "Use an ectophial to return to Port Phasmatys.",
+    "skills": [],
+    "quests": [
+     "Ghosts Ahoy"
+    ]
+   },
+   {
+    "task": "Mix a Guthix Balance potion while in Morytania.",
+    "skills": [
+     {
+      "skill": "Herblore",
+      "level": 22
+     }
+    ],
+    "quests": [
+     "In Aid of the Myreque"
+    ]
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Enter the Kharyrll Portal in your POH.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 66
+     },
+     {
+      "skill": "Construction",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Desert Treasure I"
+    ]
+   },
+   {
+    "task": "Climb up the advanced spike chain within Slayer Tower.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 71
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Harvest some Watermelon from the Allotment patch on Harmony Island.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 47
+     }
+    ],
+    "quests": [
+     "The Great Brain Robbery"
+    ]
+   },
+   {
+    "task": "Chop and burn some mahogany logs on Mos Le'Harmless.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 50
+     },
+     {
+      "skill": "Firemaking",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Cabin Fever"
+    ]
+   },
+   {
+    "task": "Complete a temple trek with a hard companion.",
+    "skills": [],
+    "quests": [
+     "In Aid of the Myreque"
+    ]
+   },
+   {
+    "task": "Kill a Cave Horror.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 58
+     }
+    ],
+    "quests": [
+     "Cabin Fever"
+    ]
+   },
+   {
+    "task": "Harvest some Bittercap Mushrooms from the patch in Canifis.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 53
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Pray at the Altar of Nature with Piety activated.",
+    "skills": [
+     {
+      "skill": "Prayer",
+      "level": 70
+     },
+     {
+      "skill": "Defence",
+      "level": 70
+     }
+    ],
+    "quests": [
+     "Nature Spirit"
+    ]
+   },
+   {
+    "task": "Use the shortcut to get to the bridge over the Salve.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 65
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Mine some Mithril ore in the Abandoned Mine.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 55
+     }
+    ],
+    "quests": [
+     "Haunted Mine"
+    ]
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Catch a shark in Burgh de Rott with your bare hands.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 96
+     },
+     {
+      "skill": "Strength",
+      "level": 76
+     }
+    ],
+    "quests": [
+     "In Aid of the Myreque"
+    ]
+   },
+   {
+    "task": "Cremate any Shade remains on a Magic or Redwood pyre.",
+    "skills": [
+     {
+      "skill": "Firemaking",
+      "level": 80
+     }
+    ],
+    "quests": [
+     "Shades of Mort'ton"
+    ]
+   },
+   {
+    "task": "Fertilize the Morytania herb patch using Lunar Magic.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 83
+     }
+    ],
+    "quests": [
+     "Lunar Diplomacy"
+    ]
+   },
+   {
+    "task": "Craft a Black dragonhide body in Canifis bank.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 84
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill an Abyssal demon in the Slayer Tower.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 85
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Loot the Barrows chest while wearing any complete barrows set.",
+    "skills": [
+     {
+      "skill": "Defence",
+      "level": 70
+     },
+     {
+      "skill": "Attack",
+      "level": 70
+     },
+     {
+      "skill": "Magic",
+      "level": 70
+     },
+     {
+      "skill": "Strength",
+      "level": 70
+     },
+     {
+      "skill": "Ranged",
+      "level": 70
+     }
+    ],
+    "quests": []
+   }
+  ]
+ },
+ "Varrock": {
+  "Easy": [
+   {
+    "task": "Browse Thessalia's store.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Have Aubury teleport you to the Essence mine.",
+    "skills": [],
+    "quests": [
+     "Rune Mysteries"
+    ]
+   },
+   {
+    "task": "Mine some Iron in the south-east mining patch near Varrock.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Make a normal plank at the Sawmill.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter the second level of the Stronghold of Security.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Jump over the fence south of Varrock.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 13
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Chop down a dying tree in the Lumber Yard.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Buy a newspaper.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Give a dog a bone!",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Spin a bowl on the pottery wheel and fire it in the oven in Barb Village.",
+    "skills": [
+     {
+      "skill": "Crafting",
+      "level": 8
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Speak to Haig Halen after obtaining at least 50 Kudos.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Craft some Earth runes from Essence.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 9
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Catch some trout in the River Lum at Barbarian Village.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 20
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Steal from the Tea stall in Varrock.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 5
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Have the Apothecary in Varrock make you a strength potion.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter the Champions' Guild.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Select a colour for your kitten.",
+    "skills": [],
+    "quests": [
+     "Gertrude's Cat"
+    ]
+   },
+   {
+    "task": "Use the spirit tree north of Varrock.",
+    "skills": [],
+    "quests": [
+     "Tree Gnome Village"
+    ]
+   },
+   {
+    "task": "Perform the 4 emotes from the Stronghold of Security.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter the Tolna dungeon after completing A Soul's Bane.",
+    "skills": [],
+    "quests": [
+     "A Soul's Bane"
+    ]
+   },
+   {
+    "task": "Teleport to the digsite using a Digsite pendant.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 49
+     }
+    ],
+    "quests": [
+     "The Dig Site"
+    ]
+   },
+   {
+    "task": "Cast the teleport to Varrock spell.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 25
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Get a Slayer task from Vannaka.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Make 20 Mahogany Planks in one go.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Pick a White tree fruit.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 25
+     }
+    ],
+    "quests": [
+     "Garden of Tranquillity"
+    ]
+   },
+   {
+    "task": "Use the balloon to travel from Varrock.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 30
+     },
+     {
+      "skill": "Firemaking",
+      "level": 40
+     }
+    ],
+    "quests": [
+     "Enlightened Journey"
+    ]
+   },
+   {
+    "task": "Complete a lap of the Varrock Agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 30
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Trade furs with the Fancy Dress Seller for a spottier cape and equip it.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 69
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Speak to Orlando Smith when you have achieved 153 Kudos.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Make a Waka canoe near Edgeville.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 57
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Teleport to Paddewwa.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 54
+     }
+    ],
+    "quests": [
+     "Desert Treasure I"
+    ]
+   },
+   {
+    "task": "Teleport to Barbarian Village with a skull sceptre.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Chop some yew logs in Varrock and burn them at the top of the Varrock church.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 60
+     },
+     {
+      "skill": "Firemaking",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Have the Varrock estate agent decorate your house with Fancy Stone.",
+    "skills": [
+     {
+      "skill": "Construction",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Collect at least 2 yew roots from the Tree patch in Varrock Palace.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 68
+     },
+     {
+      "skill": "Woodcutting",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Pray at the altar in Varrock palace with Smite active.",
+    "skills": [
+     {
+      "skill": "Prayer",
+      "level": 52
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Squeeze through the obstacle pipe in Edgeville dungeon.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 51
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Create a super combat potion in Varrock west bank.",
+    "skills": [
+     {
+      "skill": "Herblore",
+      "level": 90
+     }
+    ],
+    "quests": [
+     "Druidic Ritual"
+    ]
+   },
+   {
+    "task": "Use Lunar magic to make 20 mahogany planks at the Lumberyard.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 86
+     }
+    ],
+    "quests": [
+     "Dream Mentor"
+    ]
+   },
+   {
+    "task": "Bake a summer pie in the Cooking Guild.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 95
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Smith and fletch ten rune darts within Varrock.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 89
+     },
+     {
+      "skill": "Fletching",
+      "level": 81
+     }
+    ],
+    "quests": [
+     "The Tourist Trap"
+    ]
+   },
+   {
+    "task": "Craft 100 or more earth runes simultaneously from Essence without the use of Extracts.",
+    "skills": [
+     {
+      "skill": "Runecraft",
+      "level": 78
+     }
+    ],
+    "quests": []
+   }
+  ]
+ },
+ "Western Provinces": {
+  "Easy": [
+   {
+    "task": "Catch a Copper Longtail.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 9
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a novice game of Pest Control.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Mine some Iron Ore near Piscatoris.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a lap of the Gnome agility course.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Score a goal in a Gnomeball match.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Claim any Chompy bird hat from Rantz.",
+    "skills": [],
+    "quests": [
+     "Big Chompy Bird Hunting"
+    ]
+   },
+   {
+    "task": "Teleport to Pest Control using the Minigame Teleport.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Collect a swamp toad at the Gnome Stronghold.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Have Brimstail teleport you to the Essence Mine.",
+    "skills": [],
+    "quests": [
+     "Rune Mysteries"
+    ]
+   },
+   {
+    "task": "Fletch an Oak Shortbow in the Gnome Stronghold.",
+    "skills": [
+     {
+      "skill": "Fletching",
+      "level": 20
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Terrorbird in the Terrorbird enclosure.",
+    "skills": [],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Take the agility shortcut from the Grand Tree to Otto's Grotto.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 37
+     }
+    ],
+    "quests": [
+     "Tree Gnome Village"
+    ]
+   },
+   {
+    "task": "Travel to the Gnome Stronghold by Spirit Tree.",
+    "skills": [],
+    "quests": [
+     "Tree Gnome Village"
+    ]
+   },
+   {
+    "task": "Trap a Spined Larupia.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 31
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Fish some Bass on Ape Atoll.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 46
+     }
+    ],
+    "quests": [
+     "Monkey Madness I"
+    ]
+   },
+   {
+    "task": "Chop and burn some teak logs on Ape Atoll.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 35
+     },
+     {
+      "skill": "Firemaking",
+      "level": 35
+     }
+    ],
+    "quests": [
+     "Monkey Madness I"
+    ]
+   },
+   {
+    "task": "Complete an intermediate game of Pest Control.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Travel to the Feldip Hills by Gnome Glider.",
+    "skills": [],
+    "quests": [
+     "The Grand Tree"
+    ]
+   },
+   {
+    "task": "Claim a Chompy bird hat from Rantz after registering at least 125 kills.",
+    "skills": [],
+    "quests": [
+     "Big Chompy Bird Hunting"
+    ]
+   },
+   {
+    "task": "Travel from Eagles' Peak to the Feldip Hills by Eagle.",
+    "skills": [],
+    "quests": [
+     "Eagles' Peak"
+    ]
+   },
+   {
+    "task": "Make a Chocolate Bomb at the Grand Tree.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 42
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a delivery for the Gnome Restaurant.",
+    "skills": [
+     {
+      "skill": "Cooking",
+      "level": 29
+     }
+    ],
+    "quests": [
+     "Gnome Restaurant tutorial"
+    ]
+   },
+   {
+    "task": "Turn your small crystal seed into a Crystal saw.",
+    "skills": [],
+    "quests": [
+     "The Eyes of Glouphrie"
+    ]
+   },
+   {
+    "task": "Mine some Gold ore underneath the Grand Tree.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 40
+     }
+    ],
+    "quests": [
+     "The Grand Tree"
+    ]
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Kill an Elf with a Crystal bow.",
+    "skills": [
+     {
+      "skill": "Ranged",
+      "level": 70
+     }
+    ],
+    "quests": [
+     "Roving Elves"
+    ]
+   },
+   {
+    "task": "Catch and cook a Monkfish in Piscatoris.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 62
+     },
+     {
+      "skill": "Cooking",
+      "level": 62
+     }
+    ],
+    "quests": [
+     "Swan Song"
+    ]
+   },
+   {
+    "task": "Complete a Veteran game of Pest Control.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Catch a Dashing Kebbit.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 69
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a lap of the Ape Atoll agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 48
+     }
+    ],
+    "quests": [
+     "Monkey Madness I"
+    ]
+   },
+   {
+    "task": "Chop and burn some Mahogany logs on Ape Atoll.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 50
+     },
+     {
+      "skill": "Firemaking",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Monkey Madness I"
+    ]
+   },
+   {
+    "task": "Mine some Adamantite ore in Tirannwn.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 70
+     }
+    ],
+    "quests": [
+     "Regicide"
+    ]
+   },
+   {
+    "task": "Check the health of your Palm tree in Lletya.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 68
+     }
+    ],
+    "quests": [
+     "Mourning's End Part I"
+    ]
+   },
+   {
+    "task": "Claim a Chompy bird hat from Rantz after registering at least 300 kills.",
+    "skills": [],
+    "quests": [
+     "Big Chompy Bird Hunting"
+    ]
+   },
+   {
+    "task": "Build an Isafdar painting in your POH Quest hall.",
+    "skills": [
+     {
+      "skill": "Construction",
+      "level": 65
+     }
+    ],
+    "quests": [
+     "Roving Elves"
+    ]
+   },
+   {
+    "task": "Kill Zulrah.",
+    "skills": [],
+    "quests": [
+     "Regicide"
+    ]
+   },
+   {
+    "task": "Teleport to Ape Atoll.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 64
+     }
+    ],
+    "quests": [
+     "Recipe for Disaster/Freeing King Awowogei"
+    ]
+   },
+   {
+    "task": "Pickpocket a Gnome.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 75
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Fletch a Magic Longbow in Tirannwn.",
+    "skills": [
+     {
+      "skill": "Fletching",
+      "level": 85
+     }
+    ],
+    "quests": [
+     "Regicide"
+    ]
+   },
+   {
+    "task": "Kill the Thermonuclear Smoke Devil.",
+    "skills": [
+     {
+      "skill": "Slayer",
+      "level": 93
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Have Prissy Scilla protect your Magic tree.",
+    "skills": [
+     {
+      "skill": "Farming",
+      "level": 75
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Use the Elven overpass advanced cliffside shortcut.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 85
+     }
+    ],
+    "quests": [
+     "Underground Pass"
+    ]
+   },
+   {
+    "task": "Equip any complete void set.",
+    "skills": [
+     {
+      "skill": "Prayer",
+      "level": 22
+     },
+     {
+      "skill": "Attack",
+      "level": 42
+     },
+     {
+      "skill": "Strength",
+      "level": 42
+     },
+     {
+      "skill": "Defence",
+      "level": 42
+     },
+     {
+      "skill": "Hitpoints",
+      "level": 42
+     },
+     {
+      "skill": "Ranged",
+      "level": 42
+     },
+     {
+      "skill": "Magic",
+      "level": 42
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Claim a Chompy bird hat from Rantz after registering at least 1,000 kills.",
+    "skills": [],
+    "quests": [
+     "Big Chompy Bird Hunting"
+    ]
+   },
+   {
+    "task": "Pickpocket an Elf.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 85
+     }
+    ],
+    "quests": [
+     "Mourning's End Part I"
+    ]
+   }
+  ]
+ },
+ "Wilderness": {
+  "Easy": [
+   {
+    "task": "Cast Low Alchemy at the Fountain of Rune.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 21
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Enter the Wilderness from the Ardougne or Edgeville lever.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Pray at the Chaos Altar in the Western Wilderness.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter the Chaos Runecrafting temple.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill a Mammoth in the Wilderness.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill an Earth Warrior in the Wilderness beneath Edgeville.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Restore some prayer points at the demonic ruins.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Enter the King Black Dragon's lair.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Collect 5 Red spiders' eggs from the Wilderness",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Mine some Iron ore in the Wilderness.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 15
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Have the Mage of Zamorak teleport you to the Abyss.",
+    "skills": [],
+    "quests": [
+     "Enter the Abyss"
+    ]
+   },
+   {
+    "task": "Equip any team cape in the Wilderness.",
+    "skills": [],
+    "quests": []
+   }
+  ],
+  "Medium": [
+   {
+    "task": "Mine some Mithril ore in the wilderness.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 55
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Chop some yew logs from a fallen Ent.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 61
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Enter the Wilderness Godwars Dungeon.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 60
+     },
+     {
+      "skill": "Strength",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Complete a lap of the Wilderness Agility course.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 52
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Green Dragon.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill an Ankou in the Wilderness.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Charge an Earth Orb.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 60
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Bloodveld in the Wilderness Godwars Dungeon.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 60
+     },
+     {
+      "skill": "Strength",
+      "level": 60
+     },
+     {
+      "skill": "Slayer",
+      "level": 50
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Talk to the Emblem Trader in Edgeville about emblems. (He's just north of the bank)",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Smith a Golden helmet in the Resource Area.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 50
+     }
+    ],
+    "quests": [
+     "Between a Rock..."
+    ]
+   },
+   {
+    "task": "Open the Muddy Chest in the lava maze.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 82
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Hard": [
+   {
+    "task": "Cast any of the 3 God spells against another player in the Wilderness.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 60
+     }
+    ],
+    "quests": [
+     "Mage Arena I"
+    ]
+   },
+   {
+    "task": "Charge an Air Orb.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 66
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Catch a Black Salamander in the Wilderness.",
+    "skills": [
+     {
+      "skill": "Hunter",
+      "level": 67
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Smith an Adamant scimitar in the Resource Area.",
+    "skills": [
+     {
+      "skill": "Smithing",
+      "level": 75
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Kill a Lava Dragon.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill the Chaos Elemental.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Kill the Crazy Arc., Chaos Fanatic & Scorpia.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Take the agility shortcut from Trollheim into the Wilderness.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 64
+     }
+    ],
+    "quests": [
+     "Troll Stronghold"
+    ]
+   },
+   {
+    "task": "Kill a Spiritual warrior in the Wilderness Godwars Dungeon.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 60
+     },
+     {
+      "skill": "Strength",
+      "level": 60
+     },
+     {
+      "skill": "Slayer",
+      "level": 68
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Fish some Raw Lava Eel in the Wilderness.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 53
+     },
+     {
+      "skill": "Herblore",
+      "level": 25
+     }
+    ],
+    "quests": []
+   }
+  ],
+  "Elite": [
+   {
+    "task": "Kill Callisto, Venenatis & Vet'ion.",
+    "skills": [],
+    "quests": []
+   },
+   {
+    "task": "Teleport to Ghorrock.",
+    "skills": [
+     {
+      "skill": "Magic",
+      "level": 96
+     }
+    ],
+    "quests": [
+     "Desert Treasure I"
+    ]
+   },
+   {
+    "task": "Fish and Cook a Dark Crab in the Resource Area.",
+    "skills": [
+     {
+      "skill": "Fishing",
+      "level": 85
+     },
+     {
+      "skill": "Cooking",
+      "level": 90
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Smith a rune scimitar from scratch in the Resource Area.",
+    "skills": [
+     {
+      "skill": "Mining",
+      "level": 85
+     },
+     {
+      "skill": "Smithing",
+      "level": 90
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Steal from the Rogues' chest.",
+    "skills": [
+     {
+      "skill": "Thieving",
+      "level": 84
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Slay a spiritual mage inside the wilderness Godwars Dungeon.",
+    "skills": [
+     {
+      "skill": "Agility",
+      "level": 60
+     },
+     {
+      "skill": "Strength",
+      "level": 60
+     },
+     {
+      "skill": "Slayer",
+      "level": 83
+     }
+    ],
+    "quests": []
+   },
+   {
+    "task": "Cut and burn some magic logs in the Resource Area.",
+    "skills": [
+     {
+      "skill": "Woodcutting",
+      "level": 75
+     },
+     {
+      "skill": "Firemaking",
+      "level": 75
+     }
+    ],
+    "quests": []
+   }
+  ]
+ }
+}
