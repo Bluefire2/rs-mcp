@@ -34,3 +34,13 @@ def combat_level(levels: Mapping[str, int]) -> int:
 
 
 COMBAT_SKILLS = ("Attack", "Strength", "Defence", "Hitpoints", "Ranged", "Prayer", "Magic")
+
+
+def normalize_rsn(name: str) -> str:
+    """The comparison form of a RuneScape name.
+
+    The game treats spaces and underscores in names as the same character, and RuneLite reports
+    the local player's name with non-breaking spaces. Case never matters.
+    """
+    cleaned = name.replace("\u00a0", " ").replace("_", " ")
+    return " ".join(cleaned.split()).lower()

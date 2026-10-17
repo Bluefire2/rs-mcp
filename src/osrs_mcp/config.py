@@ -6,6 +6,8 @@ from typing import Literal
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from osrs_mcp.game import normalize_rsn
+
 AccountType = Literal[
     "regular",
     "ironman",
@@ -44,9 +46,27 @@ class Settings(BaseSettings):
     jwt_signing_key: str = ""  # signs the tokens this server issues to Claude
     storage_encryption_key: str = ""  # Fernet key; encrypts stored upstream Google tokens
 
-    # Key-value storage for OAuth state (and later, RuneLite snapshots).
+    # Key-value storage for OAuth state and RuneLite snapshots.
     store_backend: Literal["file", "memory", "firestore"] = "file"
     store_dir: str = "var/store"
+
+    # Ingest from the Group Ironmen Tracker RuneLite plugin (bank, inventory, gear). Disabled
+    # (every ingest request refused) unless both GIM_GROUP and INGEST_TOKEN are set.
+    gim_group: str = ""  # the plugin's "Group Name" setting
+    ingest_token: str = ""  # the plugin's "Group Token" setting; a long random secret
+    # Comma-separated RuneScape names allowed to push data. Blank means DEFAULT_RSN only.
+    ingest_allowed_rsns: str = ""
+
+    @property
+    def ingest_enabled(self) -> bool:
+        return bool(self.gim_group.strip() and self.ingest_token.strip())
+
+    @property
+    def ingest_rsns(self) -> frozenset[str]:
+        """Normalised names allowed to push snapshots (empty means nobody can)."""
+        names = self.ingest_allowed_rsns.split(",") if self.ingest_allowed_rsns.strip() else []
+        names = names or [self.default_rsn]
+        return frozenset(n for n in (normalize_rsn(name) for name in names) if n)
 
     @property
     def full_user_agent(self) -> str:

@@ -5,14 +5,17 @@ import pytest
 import respx
 from fastmcp import Client
 from fastmcp.exceptions import ToolError
+from key_value.aio.stores.memory import MemoryStore
 
 from osrs_mcp.config import Settings
 from osrs_mcp.http import HttpClient
+from osrs_mcp.ingest.gim import GimUpdate, apply_update
 from osrs_mcp.reference import SkillReq
 from osrs_mcp.requirements import Checker
 from osrs_mcp.server import create_app
+from osrs_mcp.snapshots import SnapshotStore
 from osrs_mcp.sources import Sources
-from tests.conftest import fixture_text
+from tests.conftest import fixture_json, fixture_text
 
 EXPECTED_TOOLS = {
     "get_stats",
@@ -23,6 +26,8 @@ EXPECTED_TOOLS = {
     "get_gains",
     "refresh_gains_tracking",
     "get_item_price",
+    "get_bank",
+    "get_equipment_and_inventory",
 }
 
 
@@ -50,12 +55,16 @@ def mock_sources():
         yield router
 
 
-def make_client(default_rsn: str = "Lynx Titan") -> Client:
+def make_client(default_rsn: str = "Lynx Titan", store=None, **settings_overrides) -> Client:
     settings = Settings(
-        _env_file=None, default_rsn=default_rsn, auth_mode="none", store_backend="memory"
+        _env_file=None,
+        default_rsn=default_rsn,
+        auth_mode="none",
+        store_backend="memory",
+        **settings_overrides,
     )
     sources = Sources.create(settings, HttpClient("tests/0.1", backoff_base=0))
-    return Client(create_app(settings, sources))
+    return Client(create_app(settings, sources, store))
 
 
 async def call(name: str, args: dict | None = None, default_rsn: str = "Lynx Titan") -> dict:
@@ -228,3 +237,121 @@ def test_checker_outcomes():
 
     combat = checker.check([SkillReq(skill="Combat", level=85)], [])
     assert combat.met is False and combat.missing_skills[0].have < 85
+
+
+# --- bank and gear (snapshots from the Group Ironmen Tracker plugin) --------------------------
+
+INGEST = {"gim_group": "My Group", "ingest_token": "secret-token"}
+
+
+async def seeded_store(*fixtures: str) -> MemoryStore:
+    store = MemoryStore()
+    snapshots = SnapshotStore(store)
+    for name in fixtures:
+        update = GimUpdate.model_validate(fixture_json(f"gim_update_{name}.json")["body"])
+        await apply_update(snapshots, update)
+    return store
+
+
+async def call_snapshot_tool(name: str, args: dict, store, **overrides) -> dict:
+    settings = INGEST | overrides
+    async with make_client("Iron Tester", store, **settings) as client:
+        result = await client.call_tool(name, args)
+        return result.structured_content
+
+
+async def test_get_bank_values_and_sorts(mock_sources):
+    store = await seeded_store("full")
+    bank = await call_snapshot_tool("get_bank", {}, store)
+
+    assert bank["rsn"] == "Iron\u00a0Tester"
+    assert bank["updated_at"]
+    assert "Group Ironmen Tracker" in bank["source"]
+    assert bank["item_count"] == 8
+    names = [item["name"] for item in bank["items"]]
+    assert names[0] == "Twisted bow"  # highest value first
+    # Untradeables are listed (last, unpriced) with a placeholder name.
+    assert bank["items"][-1] == {
+        "name": "unknown item 6570",
+        "id": 6570,
+        "quantity": 1,
+        "unit_price": None,
+        "value": None,
+    }
+    coins = next(i for i in bank["items"] if i["id"] == 995)
+    assert coins == {
+        "name": "Coins",
+        "id": 995,
+        "quantity": 1234567,
+        "unit_price": 1,
+        "value": 1234567,
+    }
+    whip = next(i for i in bank["items"] if i["name"] == "Abyssal whip")
+    assert whip["unit_price"] == (784892 + 769675) // 2
+    assert bank["total_value"] == sum(i["value"] or 0 for i in bank["items"])
+
+
+async def test_get_bank_filters(mock_sources):
+    store = await seeded_store("full")
+    runes = await call_snapshot_tool("get_bank", {"search": "RUNE"}, store)
+    assert [i["name"] for i in runes["items"]] == ["Nature rune"]
+    assert runes["matching_count"] == 1
+    assert runes["item_count"] == 8  # whole-bank figures are unaffected by filters
+
+    rich = await call_snapshot_tool("get_bank", {"min_value": 1_000_000, "limit": 2}, store)
+    assert rich["matching_count"] == 3  # twisted bow, bandos chestplate, coins (whip < 1m)
+    assert len(rich["items"]) == 2
+
+    by_qty = await call_snapshot_tool("get_bank", {"sort": "quantity"}, store)
+    assert by_qty["items"][0]["name"] == "Coins"
+    by_name = await call_snapshot_tool("get_bank", {"sort": "name"}, store)
+    assert by_name["items"][0]["name"] == "Abyssal whip"
+
+
+async def test_get_bank_includes_deposit_box_items(mock_sources):
+    store = await seeded_store("full", "deposited")
+    bank = await call_snapshot_tool("get_bank", {"search": "magic logs"}, store)
+    assert bank["items"][0]["quantity"] == 325
+
+
+async def test_get_equipment_and_inventory(mock_sources):
+    store = await seeded_store("full", "inventory")
+    gear = await call_snapshot_tool("get_equipment_and_inventory", {}, store)
+
+    equipment = gear["equipment"]["items"]
+    assert set(equipment) == {"cape", "weapon", "body", "legs", "ammo"}
+    assert equipment["weapon"] == {"name": "Abyssal whip", "id": 4151, "quantity": 1}
+    assert equipment["cape"]["name"] == "unknown item 6570"
+    assert gear["equipment"]["updated_at"]
+
+    inventory = gear["inventory"]["items"]
+    assert [(i["slot"], i["name"]) for i in inventory] == [
+        (0, "Toxic blowpipe (empty)"),
+        (2, "Magic logs"),
+        (5, "unknown item 6570"),
+    ]
+    assert gear["free_inventory_slots"] == 25
+
+    assert [(r["name"], r["quantity"]) for r in gear["rune_pouch"]["items"]] == [
+        ("Nature rune", 1000),
+        ("unknown item 554", 2500),
+    ]
+    assert gear["quiver"]["items"] == []
+    assert gear["quiver"]["updated_at"]
+
+
+async def test_snapshot_tools_explain_setup_when_empty(mock_sources):
+    for tool in ("get_bank", "get_equipment_and_inventory"):
+        async with make_client("Iron Tester", MemoryStore(), **INGEST) as client:
+            with pytest.raises(ToolError, match="Group Ironmen Tracker") as error:
+                await client.call_tool(tool, {})
+        message = str(error.value)
+        assert "Server base URL override = http://localhost:8000" in message
+        assert "Group Name = My Group" in message
+        assert "secret-token" not in message
+
+
+async def test_snapshot_tools_say_when_ingest_is_off(mock_sources):
+    async with make_client("Iron Tester", MemoryStore()) as client:
+        with pytest.raises(ToolError, match="GIM_GROUP and INGEST_TOKEN"):
+            await client.call_tool("get_bank", {})

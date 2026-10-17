@@ -5,6 +5,7 @@ from mcp.types import ToolAnnotations
 from pydantic import Field
 
 from osrs_mcp.config import AccountType
+from osrs_mcp.snapshots import SnapshotStore
 from osrs_mcp.sources import Sources
 
 Rsn = Annotated[
@@ -19,8 +20,9 @@ AccountTypeArg = Annotated[
 READ_ONLY = ToolAnnotations(read_only_hint=True, open_world_hint=True)
 
 
-def register_all(mcp: FastMCP, sources: Sources) -> None:
-    from osrs_mcp.tools import achievements, gains, prices, quests, stats
+def register_all(mcp: FastMCP, sources: Sources, snapshots: SnapshotStore) -> None:
+    from osrs_mcp.tools import achievements, bank, gains, prices, quests, stats
 
     for module in (stats, quests, achievements, gains, prices):
         module.register(mcp, sources)
+    bank.register(mcp, sources, snapshots)
