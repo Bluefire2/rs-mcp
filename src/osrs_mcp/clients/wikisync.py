@@ -1,10 +1,11 @@
-"""WikiSync: quest, diary, combat-achievement and level data uploaded by the WikiSync RuneLite
-plugin. The plugin uploads when the player logs in and as things change in game."""
+"""WikiSync: quest, diary, combat-achievement, level and collection log data uploaded by the
+WikiSync RuneLite plugin. The plugin uploads when the player logs in and as things change in game
+(the collection log only when the player presses its WikiSync button)."""
 
 from datetime import datetime
 from urllib.parse import quote
 
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, Field, ValidationError
 
 from osrs_mcp.errors import SourceError
 from osrs_mcp.http import HttpClient
@@ -27,6 +28,10 @@ class WikiSyncData(BaseModel):
     achievement_diaries: dict[str, dict[str, DiaryTier]]
     levels: dict[str, int]
     combat_achievements: list[int]
+    # Obtained item ids; empty until the player presses the WikiSync button in the collection
+    # log interface, which (unlike everything else) the plugin doesn't upload by itself.
+    collection_log: list[int] | None = None
+    collection_log_item_count: int | None = Field(None, alias="collectionLogItemCount")
 
 
 class WikiSyncClient:

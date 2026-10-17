@@ -26,6 +26,7 @@ EXPECTED_TOOLS = {
     "get_quest_progress",
     "get_diary_progress",
     "get_combat_achievements",
+    "get_collection_log",
     "get_gains",
     "refresh_gains_tracking",
     "get_item_price",
@@ -228,6 +229,89 @@ async def test_get_combat_achievements(mock_sources):
 
     zulrah = await call("get_combat_achievements", {"monster": "zulrah", "status": "all"})
     assert zulrah["tasks"] and all("Zulrah" in t["monster"] for t in zulrah["tasks"])
+
+
+def wikisync_collection_log(item_ids: list[int]) -> dict:
+    payload = json.loads(fixture_text("wikisync_b0aty.json"))
+    payload["collection_log"] = item_ids
+    payload["collectionLogItemCount"] = 1721
+    return payload
+
+
+async def test_get_collection_log_not_synced(mock_sources):
+    # The fixture's collection_log is [], as for any player who never pressed the WikiSync
+    # button in the collection log.
+    async with make_client() as client:
+        with pytest.raises(ToolError, match="press the WikiSync button"):
+            await client.call_tool("get_collection_log", {})
+
+
+async def test_get_collection_log(mock_sources):
+    # All of Vorkath's page except the Draconic visage (11286), including Vorki (21992), which
+    # is also on All Pets.
+    vorkath = [21907, 21992, 22006, 22106, 22111]
+    mock_sources.get(url__regex=r"https://sync\.runescape\.wiki/.*").respond(
+        200, json=wikisync_collection_log(vorkath)
+    )
+    result = await call("get_collection_log")
+    assert (result["obtained"], result["total"]) == (5, 1721)
+    assert result["by_tab"]["Bosses"]["obtained"] == 5  # Vorki counted once
+    pages = {p["page"]: p for p in result["pages"]}
+    assert (pages["Vorkath"]["obtained"], pages["Vorkath"]["total"]) == (5, 6)
+    assert pages["All Pets"]["obtained"] == 1
+    assert "page_details" not in result
+    rates = [m["completion_pct"] or 0 for m in result["most_common_missing"]]
+    assert len(rates) == 15 and rates == sorted(rates, reverse=True)
+
+    detail = await call("get_collection_log", {"page": "vork"})
+    [page] = detail["page_details"]
+    assert page["page"] == "Vorkath" and [p["page"] for p in detail["pages"]] == ["Vorkath"]
+    missing = [item["name"] for item in page["items"] if not item["obtained"]]
+    assert missing == ["Draconic visage"]
+    assert [m["name"] for m in detail["most_common_missing"]] == ["Draconic visage"]
+
+    raids = await call("get_collection_log", {"tab": "Raids"})
+    assert {p["tab"] for p in raids["pages"]} == {"Raids"} and len(raids["pages"]) == 3
+
+
+async def test_get_collection_log_merges_runelite_snapshot(mock_sources):
+    # WikiSync has Vorkath's head; the RuneLite plugin has since seen a Draconic visage.
+    mock_sources.get(url__regex=r"https://sync\.runescape\.wiki/.*").respond(
+        200, json=wikisync_collection_log([21907])
+    )
+    store = MemoryStore()
+    await SnapshotStore(store).put("Lynx Titan", "collection_log", {"11286": 1, "21907": 3})
+    async with make_client(store=store) as client:
+        result = (
+            await client.call_tool("get_collection_log", {"page": "Vorkath"})
+        ).structured_content
+    assert result["obtained"] == 2
+    assert result["wikisync_as_of"] and result["runelite_as_of"]
+    items = {item["name"]: item for item in result["page_details"][0]["items"]}
+    assert items["Draconic visage"]["obtained"] and items["Draconic visage"]["quantity"] == 1
+    assert items["Vorkath's head"]["quantity"] == 3
+    assert "quantity" not in items["Vorki"]
+
+
+async def test_get_collection_log_from_runelite_alone(mock_sources):
+    mock_sources.get(url__regex=r"https://sync\.runescape\.wiki/.*").respond(
+        400, text=fixture_text("wikisync_no_data.json")
+    )
+    store = MemoryStore()
+    await SnapshotStore(store).put("Lynx Titan", "collection_log", {"11286": 1})
+    async with make_client(store=store) as client:
+        result = (await client.call_tool("get_collection_log", {})).structured_content
+    assert result["obtained"] == 1 and result["wikisync_as_of"] is None
+    assert "WikiSync" not in result["source"].split(";")[0]
+
+
+async def test_get_collection_log_unknown_page(mock_sources):
+    mock_sources.get(url__regex=r"https://sync\.runescape\.wiki/.*").respond(
+        200, json=wikisync_collection_log([21907])
+    )
+    async with make_client() as client:
+        with pytest.raises(ToolError, match="No collection log page matches"):
+            await client.call_tool("get_collection_log", {"page": "Atlantis"})
 
 
 async def test_get_gains(mock_sources):

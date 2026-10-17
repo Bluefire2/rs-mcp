@@ -17,6 +17,10 @@ IDs) but not names or requirements. This script pulls those from the Wiki:
 - item_names.json: every item id -> name from the infobox_item bucket. The GE prices mapping
   covers tradeable items only; this names untradeables (Marks of grace, quest items, ...) in
   the bank and gear tools.
+- collection_log.json: every collection log page (in game order, under its tab: Bosses, Raids,
+  Clues, Minigames, Other) and its items, from Module:Collection log/data.json, the headings of
+  the "Collection log" page, and Module:Collection log/completion.json (the share of WikiSync
+  users who have each item).
 
 Run it after game updates that add quests, diary changes or combat achievements, then run the
 tests (they cross-check this data against a WikiSync fixture).
@@ -446,6 +450,51 @@ def parse_optimal_order(wikitext: str, known: set[str]) -> list[str]:
     return order
 
 
+COLLECTION_LOG_TABS = ("Bosses", "Raids", "Clues", "Minigames", "Other")
+HEADING = re.compile(r"^(={2,3})\s*([^=].*?)\s*\1\s*$", re.MULTILINE)
+
+
+def collection_log_key(page: str) -> str:
+    # The page's headings say "Hard Treasure Trail Rewards (Rare)" where the data says
+    # "Hard Treasure Trails (Rare)", and differ in case ("Crazy archaeologist").
+    return page.lower().replace("trail rewards", "trails")
+
+
+def parse_collection_log_headings(wikitext: str) -> list[tuple[str, str]]:
+    """(tab, page heading) for each ===page=== under the five ==tab== sections, in order."""
+    headings, tab = [], None
+    for match in HEADING.finditer(wikitext):
+        level, title = len(match.group(1)), match.group(2)
+        if level == 2:
+            tab = title if title in COLLECTION_LOG_TABS else None
+        elif tab:
+            headings.append((tab, title))
+    return headings
+
+
+def build_collection_log(
+    items: list[dict], completion: dict[str, float], headings: list[tuple[str, str]]
+) -> list[dict]:
+    order = {collection_log_key(title): (i, tab) for i, (tab, title) in enumerate(headings)}
+    pages: dict[str, list[dict]] = {}
+    for item in items:
+        for page in item["tabs"]:
+            pages.setdefault(page, []).append(
+                {
+                    "id": item["id"],
+                    "name": item["name"],
+                    "completion": completion.get(str(item["id"])),
+                }
+            )
+    unplaced = sorted(page for page in pages if collection_log_key(page) not in order)
+    if unplaced:
+        raise RuntimeError(f"Collection log pages with no heading on the Wiki page: {unplaced}")
+    return [
+        {"page": page, "tab": order[collection_log_key(page)][1], "items": pages[page]}
+        for page in sorted(pages, key=lambda page: order[collection_log_key(page)][0])
+    ]
+
+
 def raw_page(http: httpx.Client, title: str) -> str:
     response = http.get(f"{WIKI}/w/{title.replace(' ', '_')}", params={"action": "raw"})
     response.raise_for_status()
@@ -525,6 +574,13 @@ def main() -> int:
         )
         write("combat_achievements.json", cas)
         write("item_names.json", item_names(http), compact=True)
+
+        collection_log = build_collection_log(
+            json.loads(raw_page(http, "Module:Collection log/data.json")),
+            json.loads(raw_page(http, "Module:Collection log/completion.json")),
+            parse_collection_log_headings(raw_page(http, "Collection log")),
+        )
+        write("collection_log.json", collection_log)
     return 0
 
 

@@ -1,6 +1,6 @@
 ---
 name: osrs-coach
-description: Coach for the user's Old School RuneScape (OSRS) account — what to do next, quests, achievement diaries, skill training, gear, GE prices, money making, slayer, bossing, clue scrolls, combat achievements and weekly progress — using the OSRS Wiki for game knowledge and the user's own account data when the answer depends on their account. Use it for any OSRS question however short or casual ("whats my cb lvl", "can i do vorkath yet", "how do i get barrows gloves", "best agility at 50", "is a whip worth it", "what should i do tonight"), even when the user doesn't mention the wiki, their account, or any tools. Not for RuneScape 3, and not for non-game questions like "what did I do this week" at work.
+description: Coach for the user's Old School RuneScape (OSRS) account — what to do next, quests, achievement diaries, skill training, gear, GE prices, money making, slayer, bossing, clue scrolls, combat achievements, collection log and weekly progress — using the OSRS Wiki for game knowledge and the user's own account data when the answer depends on their account. Use it for any OSRS question however short or casual ("whats my cb lvl", "can i do vorkath yet", "how do i get barrows gloves", "best agility at 50", "is a whip worth it", "what should i do tonight"), even when the user doesn't mention the wiki, their account, or any tools. Not for RuneScape 3, and not for non-game questions like "what did I do this week" at work.
 ---
 
 # OSRS coach
@@ -97,6 +97,7 @@ answer depends on the account, in parallel when you need several.
 | Quest points; what's startable now and what's missing | `get_quest_progress` (`startable_only=true` for "what can I do now"; add `rewards_skill="Agility"` for quests that give XP in a skill) |
 | Diary progress; remaining tasks with missing requirements | `get_diary_progress` (summary, or `region` for detail) |
 | Combat achievement points and open tasks | `get_combat_achievements` |
+| Collection log: slots per page, easy missing slots, a page's items | `get_collection_log` (`page="Barrows"` for one page). If it has no data, the user must press the WikiSync button in the in-game collection log |
 | What they gained over a day, week, month, year | `get_gains` |
 | Bank contents and value | `get_bank` (`search`, `min_value`, `sort`) |
 | Worn gear and inventory right now | `get_equipment_and_inventory` |

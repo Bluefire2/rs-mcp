@@ -77,3 +77,21 @@ def item_names() -> dict[int, str]:
 def combat_achievements() -> dict[int, CombatAchievement]:
     rows = _load("combat_achievements.json")
     return {row["id"]: CombatAchievement.model_validate(row) for row in rows}
+
+
+class CollectionLogItem(BaseModel):
+    id: int
+    name: str
+    completion: float | None  # % of WikiSync collection log users who have it
+
+
+class CollectionLogPage(BaseModel):
+    page: str
+    tab: str  # Bosses, Raids, Clues, Minigames or Other
+    items: list[CollectionLogItem]
+
+
+@cache
+def collection_log() -> list[CollectionLogPage]:
+    """Every collection log page in game order. An item can be on more than one page."""
+    return [CollectionLogPage.model_validate(page) for page in _load("collection_log.json")]

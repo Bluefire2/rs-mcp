@@ -1,0 +1,10376 @@
+[
+ {
+  "page": "Abyssal Sire",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 4151,
+    "name": "Abyssal whip",
+    "completion": 37.2
+   },
+   {
+    "id": 7979,
+    "name": "Abyssal head",
+    "completion": 17.2
+   },
+   {
+    "id": 13262,
+    "name": "Abyssal orphan",
+    "completion": 3.3
+   },
+   {
+    "id": 13265,
+    "name": "Abyssal dagger",
+    "completion": 12.1
+   },
+   {
+    "id": 13274,
+    "name": "Bludgeon spine",
+    "completion": 11.4
+   },
+   {
+    "id": 13275,
+    "name": "Bludgeon claw",
+    "completion": 11.5
+   },
+   {
+    "id": 13276,
+    "name": "Bludgeon axon",
+    "completion": 11.4
+   },
+   {
+    "id": 13277,
+    "name": "Jar of Miasma",
+    "completion": 6.1
+   },
+   {
+    "id": 25624,
+    "name": "Unsired",
+    "completion": 18.6
+   }
+  ]
+ },
+ {
+  "page": "Alchemical Hydra",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 20849,
+    "name": "Dragon thrownaxe",
+    "completion": 23
+   },
+   {
+    "id": 22746,
+    "name": "Ikkle Hydra",
+    "completion": 4.5
+   },
+   {
+    "id": 22804,
+    "name": "Dragon knife",
+    "completion": 22.8
+   },
+   {
+    "id": 22966,
+    "name": "Hydra's claw",
+    "completion": 10.7
+   },
+   {
+    "id": 22969,
+    "name": "Hydra's heart",
+    "completion": 11.3
+   },
+   {
+    "id": 22971,
+    "name": "Hydra's fang",
+    "completion": 13.6
+   },
+   {
+    "id": 22973,
+    "name": "Hydra's eye",
+    "completion": 16.7
+   },
+   {
+    "id": 22983,
+    "name": "Hydra leather",
+    "completion": 12.9
+   },
+   {
+    "id": 22988,
+    "name": "Hydra tail",
+    "completion": 12.4
+   },
+   {
+    "id": 23064,
+    "name": "Jar of Chemicals",
+    "completion": 5.5
+   },
+   {
+    "id": 23077,
+    "name": "Alchemical hydra heads",
+    "completion": 15
+   }
+  ]
+ },
+ {
+  "page": "Amoxliatl",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 29889,
+    "name": "Glacial temotli",
+    "completion": 13.7
+   },
+   {
+    "id": 29892,
+    "name": "Pendant of Ates (inert)",
+    "completion": 27.3
+   },
+   {
+    "id": 29895,
+    "name": "Frozen tear",
+    "completion": 34.6
+   },
+   {
+    "id": 30154,
+    "name": "Moxi",
+    "completion": 0.7
+   }
+  ]
+ },
+ {
+  "page": "Araxxor",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 29781,
+    "name": "Coagulated venom",
+    "completion": 10.5
+   },
+   {
+    "id": 29782,
+    "name": "Spider cave teleport",
+    "completion": 21.4
+   },
+   {
+    "id": 29784,
+    "name": "Araxyte venom sac",
+    "completion": 25.3
+   },
+   {
+    "id": 29786,
+    "name": "Jar of Venom",
+    "completion": 5.6
+   },
+   {
+    "id": 29788,
+    "name": "Araxyte head",
+    "completion": 16.6
+   },
+   {
+    "id": 29790,
+    "name": "Noxious point",
+    "completion": 12.9
+   },
+   {
+    "id": 29792,
+    "name": "Noxious blade",
+    "completion": 12.9
+   },
+   {
+    "id": 29794,
+    "name": "Noxious pommel",
+    "completion": 12.9
+   },
+   {
+    "id": 29799,
+    "name": "Araxyte fang",
+    "completion": 12.1
+   },
+   {
+    "id": 29836,
+    "name": "Nid",
+    "completion": 4
+   }
+  ]
+ },
+ {
+  "page": "Barrows Chests",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 4708,
+    "name": "Ahrim's hood",
+    "completion": 17
+   },
+   {
+    "id": 4710,
+    "name": "Ahrim's staff",
+    "completion": 17
+   },
+   {
+    "id": 4712,
+    "name": "Ahrim's robetop",
+    "completion": 17.5
+   },
+   {
+    "id": 4714,
+    "name": "Ahrim's robeskirt",
+    "completion": 17.4
+   },
+   {
+    "id": 4716,
+    "name": "Dharok's helm",
+    "completion": 17
+   },
+   {
+    "id": 4718,
+    "name": "Dharok's greataxe",
+    "completion": 17.1
+   },
+   {
+    "id": 4720,
+    "name": "Dharok's platebody",
+    "completion": 17.2
+   },
+   {
+    "id": 4722,
+    "name": "Dharok's platelegs",
+    "completion": 17.2
+   },
+   {
+    "id": 4724,
+    "name": "Guthan's helm",
+    "completion": 17
+   },
+   {
+    "id": 4726,
+    "name": "Guthan's warspear",
+    "completion": 17
+   },
+   {
+    "id": 4728,
+    "name": "Guthan's platebody",
+    "completion": 17.3
+   },
+   {
+    "id": 4730,
+    "name": "Guthan's chainskirt",
+    "completion": 17.2
+   },
+   {
+    "id": 4732,
+    "name": "Karil's coif",
+    "completion": 17
+   },
+   {
+    "id": 4734,
+    "name": "Karil's crossbow",
+    "completion": 17
+   },
+   {
+    "id": 4736,
+    "name": "Karil's leathertop",
+    "completion": 17.4
+   },
+   {
+    "id": 4738,
+    "name": "Karil's leatherskirt",
+    "completion": 17.2
+   },
+   {
+    "id": 4740,
+    "name": "Bolt rack",
+    "completion": 51.6
+   },
+   {
+    "id": 4745,
+    "name": "Torag's helm",
+    "completion": 16.9
+   },
+   {
+    "id": 4747,
+    "name": "Torag's hammers",
+    "completion": 16.8
+   },
+   {
+    "id": 4749,
+    "name": "Torag's platebody",
+    "completion": 17
+   },
+   {
+    "id": 4751,
+    "name": "Torag's platelegs",
+    "completion": 17
+   },
+   {
+    "id": 4753,
+    "name": "Verac's helm",
+    "completion": 17.1
+   },
+   {
+    "id": 4755,
+    "name": "Verac's flail",
+    "completion": 17.1
+   },
+   {
+    "id": 4757,
+    "name": "Verac's brassard",
+    "completion": 16.9
+   },
+   {
+    "id": 4759,
+    "name": "Verac's plateskirt",
+    "completion": 17.2
+   }
+  ]
+ },
+ {
+  "page": "Brutus",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 33091,
+    "name": "Bottomless milk bucket (empty)",
+    "completion": 9
+   },
+   {
+    "id": 33093,
+    "name": "Cow slippers",
+    "completion": 7.1
+   },
+   {
+    "id": 33101,
+    "name": "Mooleta",
+    "completion": 9.3
+   },
+   {
+    "id": 33124,
+    "name": "Beef",
+    "completion": 4.6
+   }
+  ]
+ },
+ {
+  "page": "Bryophyta",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 22372,
+    "name": "Bryophyta's essence",
+    "completion": 3.8
+   }
+  ]
+ },
+ {
+  "page": "Callisto and Artio",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 7158,
+    "name": "Dragon 2h sword",
+    "completion": 23.8
+   },
+   {
+    "id": 11920,
+    "name": "Dragon pickaxe",
+    "completion": 23.6
+   },
+   {
+    "id": 12603,
+    "name": "Tyrannical ring",
+    "completion": 5.1
+   },
+   {
+    "id": 13178,
+    "name": "Callisto cub",
+    "completion": 2.3
+   },
+   {
+    "id": 27667,
+    "name": "Claws of Callisto",
+    "completion": 5.9
+   },
+   {
+    "id": 27681,
+    "name": "Voidwaker hilt",
+    "completion": 5.8
+   }
+  ]
+ },
+ {
+  "page": "Cerberus",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 13227,
+    "name": "Eternal crystal",
+    "completion": 14.8
+   },
+   {
+    "id": 13229,
+    "name": "Pegasian crystal",
+    "completion": 14.7
+   },
+   {
+    "id": 13231,
+    "name": "Primordial crystal",
+    "completion": 16
+   },
+   {
+    "id": 13233,
+    "name": "Smouldering stone",
+    "completion": 15.7
+   },
+   {
+    "id": 13245,
+    "name": "Jar of Souls",
+    "completion": 5.9
+   },
+   {
+    "id": 13247,
+    "name": "Hellpuppy",
+    "completion": 5
+   },
+   {
+    "id": 13249,
+    "name": "Key master teleport",
+    "completion": 23.8
+   }
+  ]
+ },
+ {
+  "page": "Chaos Elemental",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 7158,
+    "name": "Dragon 2h sword",
+    "completion": 23.8
+   },
+   {
+    "id": 11920,
+    "name": "Dragon pickaxe",
+    "completion": 23.6
+   },
+   {
+    "id": 11995,
+    "name": "Pet chaos elemental",
+    "completion": 6.2
+   }
+  ]
+ },
+ {
+  "page": "Chaos Fanatic",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 11928,
+    "name": "Odium shard 1",
+    "completion": 4.9
+   },
+   {
+    "id": 11931,
+    "name": "Malediction shard 1",
+    "completion": 4.8
+   },
+   {
+    "id": 11995,
+    "name": "Pet chaos elemental",
+    "completion": 6.2
+   }
+  ]
+ },
+ {
+  "page": "Commander Zilyana",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 11785,
+    "name": "Armadyl crossbow",
+    "completion": 6.8
+   },
+   {
+    "id": 11814,
+    "name": "Saradomin hilt",
+    "completion": 6.4
+   },
+   {
+    "id": 11818,
+    "name": "Godsword shard 1",
+    "completion": 18.7
+   },
+   {
+    "id": 11820,
+    "name": "Godsword shard 2",
+    "completion": 18.7
+   },
+   {
+    "id": 11822,
+    "name": "Godsword shard 3",
+    "completion": 18.7
+   },
+   {
+    "id": 11838,
+    "name": "Saradomin sword",
+    "completion": 11.8
+   },
+   {
+    "id": 12651,
+    "name": "Pet Zilyana",
+    "completion": 1
+   },
+   {
+    "id": 13256,
+    "name": "Saradomin's light",
+    "completion": 8.4
+   }
+  ]
+ },
+ {
+  "page": "Corporeal Beast",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 12816,
+    "name": "Pet dark core",
+    "completion": 0.5
+   },
+   {
+    "id": 12819,
+    "name": "Elysian sigil",
+    "completion": 0.6
+   },
+   {
+    "id": 12823,
+    "name": "Spectral sigil",
+    "completion": 1.3
+   },
+   {
+    "id": 12827,
+    "name": "Arcane sigil",
+    "completion": 1.3
+   },
+   {
+    "id": 12829,
+    "name": "Spirit shield",
+    "completion": 7.4
+   },
+   {
+    "id": 12833,
+    "name": "Holy elixir",
+    "completion": 4.8
+   },
+   {
+    "id": 25521,
+    "name": "Jar of Spirits",
+    "completion": 1.3
+   }
+  ]
+ },
+ {
+  "page": "Crazy Archaeologist",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 11929,
+    "name": "Odium shard 2",
+    "completion": 6.5
+   },
+   {
+    "id": 11932,
+    "name": "Malediction shard 2",
+    "completion": 6.3
+   },
+   {
+    "id": 11990,
+    "name": "Fedora",
+    "completion": 9.7
+   }
+  ]
+ },
+ {
+  "page": "Dagannoth Kings",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 6562,
+    "name": "Mud battlestaff",
+    "completion": 16.5
+   },
+   {
+    "id": 6724,
+    "name": "Seercull",
+    "completion": 16.3
+   },
+   {
+    "id": 6731,
+    "name": "Seers ring",
+    "completion": 17.6
+   },
+   {
+    "id": 6733,
+    "name": "Archers ring",
+    "completion": 17.5
+   },
+   {
+    "id": 6735,
+    "name": "Warrior ring",
+    "completion": 25.4
+   },
+   {
+    "id": 6737,
+    "name": "Berserker ring",
+    "completion": 31
+   },
+   {
+    "id": 6739,
+    "name": "Dragon axe",
+    "completion": 35.4
+   },
+   {
+    "id": 12643,
+    "name": "Pet Dagannoth Supreme",
+    "completion": 1.3
+   },
+   {
+    "id": 12644,
+    "name": "Pet Dagannoth Prime",
+    "completion": 1.3
+   },
+   {
+    "id": 12645,
+    "name": "Pet Dagannoth Rex",
+    "completion": 1.8
+   }
+  ]
+ },
+ {
+  "page": "Deranged archaeologist",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 30895,
+    "name": "Steel ring",
+    "completion": 5.2
+   }
+  ]
+ },
+ {
+  "page": "Doom of Mokhaiotl",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 31130,
+    "name": "Dom",
+    "completion": 2.3
+   },
+   {
+    "id": 31088,
+    "name": "Avernic treads",
+    "completion": 3.7
+   },
+   {
+    "id": 31115,
+    "name": "Eye of Ayak",
+    "completion": 3.8
+   },
+   {
+    "id": 31109,
+    "name": "Mokhaiotl cloth",
+    "completion": 4.1
+   },
+   {
+    "id": 31099,
+    "name": "Mokhaiotl waystone",
+    "completion": 10.5
+   },
+   {
+    "id": 31111,
+    "name": "Demon tear",
+    "completion": 11.1
+   }
+  ]
+ },
+ {
+  "page": "Duke Sucellus",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 26241,
+    "name": "Virtus mask",
+    "completion": 5.7
+   },
+   {
+    "id": 26243,
+    "name": "Virtus robe top",
+    "completion": 5.7
+   },
+   {
+    "id": 26245,
+    "name": "Virtus robe bottom",
+    "completion": 5.7
+   },
+   {
+    "id": 28250,
+    "name": "Baron",
+    "completion": 2.5
+   },
+   {
+    "id": 28270,
+    "name": "Ice quartz",
+    "completion": 12.1
+   },
+   {
+    "id": 28276,
+    "name": "Chromium ingot",
+    "completion": 14.4
+   },
+   {
+    "id": 28281,
+    "name": "Magus vestige",
+    "completion": 5.4
+   },
+   {
+    "id": 28321,
+    "name": "Eye of the Duke",
+    "completion": 6.7
+   },
+   {
+    "id": 28333,
+    "name": "Frozen tablet",
+    "completion": 20
+   },
+   {
+    "id": 28334,
+    "name": "Awakener's orb",
+    "completion": 19.8
+   }
+  ]
+ },
+ {
+  "page": "The Fight Caves",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 6570,
+    "name": "Fire cape",
+    "completion": 63.5
+   },
+   {
+    "id": 13225,
+    "name": "TzRek-Jad",
+    "completion": 3.4
+   }
+  ]
+ },
+ {
+  "page": "Fortis Colosseum",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 6571,
+    "name": "Uncut onyx",
+    "completion": 17.1
+   },
+   {
+    "id": 28919,
+    "name": "Tonalztics of Ralos (uncharged)",
+    "completion": 1.6
+   },
+   {
+    "id": 28924,
+    "name": "Sunfire splinters",
+    "completion": 46.9
+   },
+   {
+    "id": 28933,
+    "name": "Sunfire fanatic helm",
+    "completion": 4
+   },
+   {
+    "id": 28936,
+    "name": "Sunfire fanatic cuirass",
+    "completion": 4.6
+   },
+   {
+    "id": 28939,
+    "name": "Sunfire fanatic chausses",
+    "completion": 3.9
+   },
+   {
+    "id": 28942,
+    "name": "Echo crystal",
+    "completion": 5
+   },
+   {
+    "id": 28947,
+    "name": "Dizana's quiver (uncharged)",
+    "completion": 7.9
+   },
+   {
+    "id": 28960,
+    "name": "Smol Heredit",
+    "completion": 0.7
+   }
+  ]
+ },
+ {
+  "page": "The Gauntlet",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 4207,
+    "name": "Crystal weapon seed",
+    "completion": 24.5
+   },
+   {
+    "id": 23757,
+    "name": "Youngllef",
+    "completion": 6.6
+   },
+   {
+    "id": 23859,
+    "name": "Gauntlet cape",
+    "completion": 30
+   },
+   {
+    "id": 23956,
+    "name": "Crystal armour seed",
+    "completion": 22.9
+   },
+   {
+    "id": 25859,
+    "name": "Enhanced crystal weapon seed",
+    "completion": 13.2
+   }
+  ]
+ },
+ {
+  "page": "General Graardor",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 11812,
+    "name": "Bandos hilt",
+    "completion": 10.1
+   },
+   {
+    "id": 11818,
+    "name": "Godsword shard 1",
+    "completion": 18.7
+   },
+   {
+    "id": 11820,
+    "name": "Godsword shard 2",
+    "completion": 18.7
+   },
+   {
+    "id": 11822,
+    "name": "Godsword shard 3",
+    "completion": 18.7
+   },
+   {
+    "id": 11832,
+    "name": "Bandos chestplate",
+    "completion": 12.1
+   },
+   {
+    "id": 11834,
+    "name": "Bandos tassets",
+    "completion": 12.3
+   },
+   {
+    "id": 11836,
+    "name": "Bandos boots",
+    "completion": 11.2
+   },
+   {
+    "id": 12650,
+    "name": "Pet General Graardor",
+    "completion": 1.6
+   }
+  ]
+ },
+ {
+  "page": "Giant Mole",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 7416,
+    "name": "Mole claw",
+    "completion": 54.1
+   },
+   {
+    "id": 7418,
+    "name": "Mole skin",
+    "completion": 53.2
+   },
+   {
+    "id": 12646,
+    "name": "Baby Mole",
+    "completion": 3.8
+   },
+   {
+    "id": 33382,
+    "name": "Immaculate mole skin",
+    "completion": 1.7
+   }
+  ]
+ },
+ {
+  "page": "Grotesque Guardians",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 21726,
+    "name": "Granite dust",
+    "completion": 33.3
+   },
+   {
+    "id": 21730,
+    "name": "Black tourmaline core",
+    "completion": 7.3
+   },
+   {
+    "id": 21736,
+    "name": "Granite gloves",
+    "completion": 10.7
+   },
+   {
+    "id": 21739,
+    "name": "Granite ring",
+    "completion": 10.6
+   },
+   {
+    "id": 21742,
+    "name": "Granite hammer",
+    "completion": 8.4
+   },
+   {
+    "id": 21745,
+    "name": "Jar of Stone",
+    "completion": 1.1
+   },
+   {
+    "id": 21748,
+    "name": "Noon",
+    "completion": 2
+   }
+  ]
+ },
+ {
+  "page": "Hespori",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 22881,
+    "name": "Attas seed",
+    "completion": 59.8
+   },
+   {
+    "id": 22883,
+    "name": "Iasor seed",
+    "completion": 59.7
+   },
+   {
+    "id": 22885,
+    "name": "Kronos seed",
+    "completion": 59.8
+   },
+   {
+    "id": 22994,
+    "name": "Bottomless compost bucket",
+    "completion": 33.9
+   }
+  ]
+ },
+ {
+  "page": "The Hueycoatl",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 30066,
+    "name": "Tome of Earth (empty)",
+    "completion": 4.5
+   },
+   {
+    "id": 30068,
+    "name": "Soiled page",
+    "completion": 23.4
+   },
+   {
+    "id": 30070,
+    "name": "Dragon hunter wand",
+    "completion": 3.5
+   },
+   {
+    "id": 30085,
+    "name": "Hueycoatl hide",
+    "completion": 9
+   },
+   {
+    "id": 30088,
+    "name": "Huasca seed",
+    "completion": 25.3
+   },
+   {
+    "id": 30152,
+    "name": "Huberte",
+    "completion": 1.4
+   }
+  ]
+ },
+ {
+  "page": "The Inferno",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 21291,
+    "name": "Jal-Nib-Rek",
+    "completion": 0.6
+   },
+   {
+    "id": 21295,
+    "name": "Infernal cape",
+    "completion": 9.8
+   }
+  ]
+ },
+ {
+  "page": "Kalphite Queen",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 3140,
+    "name": "Dragon chainbody",
+    "completion": 17.8
+   },
+   {
+    "id": 7158,
+    "name": "Dragon 2h sword",
+    "completion": 23.8
+   },
+   {
+    "id": 7981,
+    "name": "Kq head",
+    "completion": 17
+   },
+   {
+    "id": 11920,
+    "name": "Dragon pickaxe",
+    "completion": 23.6
+   },
+   {
+    "id": 12647,
+    "name": "Kalphite Princess",
+    "completion": 1.5
+   },
+   {
+    "id": 12885,
+    "name": "Jar of Sand",
+    "completion": 1.8
+   }
+  ]
+ },
+ {
+  "page": "King Black Dragon",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 7980,
+    "name": "Kbd heads",
+    "completion": 17.3
+   },
+   {
+    "id": 11286,
+    "name": "Draconic visage",
+    "completion": 7.6
+   },
+   {
+    "id": 11920,
+    "name": "Dragon pickaxe",
+    "completion": 23.6
+   },
+   {
+    "id": 12653,
+    "name": "Prince Black Dragon",
+    "completion": 2.5
+   }
+  ]
+ },
+ {
+  "page": "Kraken",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 11905,
+    "name": "Trident of the Seas (full)",
+    "completion": 25.1
+   },
+   {
+    "id": 12004,
+    "name": "Kraken tentacle",
+    "completion": 28.8
+   },
+   {
+    "id": 12007,
+    "name": "Jar of Dirt",
+    "completion": 19.4
+   },
+   {
+    "id": 12655,
+    "name": "Pet Kraken",
+    "completion": 12.1
+   }
+  ]
+ },
+ {
+  "page": "Kree'arra",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 11810,
+    "name": "Armadyl hilt",
+    "completion": 4.7
+   },
+   {
+    "id": 11818,
+    "name": "Godsword shard 1",
+    "completion": 18.7
+   },
+   {
+    "id": 11820,
+    "name": "Godsword shard 2",
+    "completion": 18.7
+   },
+   {
+    "id": 11822,
+    "name": "Godsword shard 3",
+    "completion": 18.7
+   },
+   {
+    "id": 11826,
+    "name": "Armadyl helmet",
+    "completion": 6.1
+   },
+   {
+    "id": 11828,
+    "name": "Armadyl chestplate",
+    "completion": 6.3
+   },
+   {
+    "id": 11830,
+    "name": "Armadyl chainskirt",
+    "completion": 6.2
+   },
+   {
+    "id": 12649,
+    "name": "Pet Kree'arra",
+    "completion": 0.9
+   }
+  ]
+ },
+ {
+  "page": "K'ril Tsutsaroth",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 11787,
+    "name": "Steam battlestaff",
+    "completion": 12.5
+   },
+   {
+    "id": 11791,
+    "name": "Staff of the Dead",
+    "completion": 5.7
+   },
+   {
+    "id": 11816,
+    "name": "Zamorak hilt",
+    "completion": 6.1
+   },
+   {
+    "id": 11818,
+    "name": "Godsword shard 1",
+    "completion": 18.7
+   },
+   {
+    "id": 11820,
+    "name": "Godsword shard 2",
+    "completion": 18.7
+   },
+   {
+    "id": 11822,
+    "name": "Godsword shard 3",
+    "completion": 18.7
+   },
+   {
+    "id": 11824,
+    "name": "Zamorakian spear",
+    "completion": 15.1
+   },
+   {
+    "id": 12652,
+    "name": "Pet K'ril Tsutsaroth",
+    "completion": 1
+   }
+  ]
+ },
+ {
+  "page": "The Leviathan",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 26241,
+    "name": "Virtus mask",
+    "completion": 5.7
+   },
+   {
+    "id": 26243,
+    "name": "Virtus robe top",
+    "completion": 5.7
+   },
+   {
+    "id": 26245,
+    "name": "Virtus robe bottom",
+    "completion": 5.7
+   },
+   {
+    "id": 28252,
+    "name": "Lil'viathan",
+    "completion": 1.3
+   },
+   {
+    "id": 28274,
+    "name": "Smoke quartz",
+    "completion": 5.5
+   },
+   {
+    "id": 28276,
+    "name": "Chromium ingot",
+    "completion": 14.4
+   },
+   {
+    "id": 28283,
+    "name": "Venator vestige",
+    "completion": 2.5
+   },
+   {
+    "id": 28325,
+    "name": "Leviathan's lure",
+    "completion": 3.6
+   },
+   {
+    "id": 28332,
+    "name": "Scarred tablet",
+    "completion": 9.2
+   },
+   {
+    "id": 28334,
+    "name": "Awakener's orb",
+    "completion": 19.8
+   }
+  ]
+ },
+ {
+  "page": "The Mad Angel",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 21726,
+    "name": "Granite dust",
+    "completion": 33.3
+   },
+   {
+    "id": 34027,
+    "name": "Hallowfell",
+    "completion": null
+   },
+   {
+    "id": 34033,
+    "name": "Ardeaglais teleport",
+    "completion": null
+   },
+   {
+    "id": 34042,
+    "name": "Aggy",
+    "completion": null
+   },
+   {
+    "id": 34030,
+    "name": "Jar of Light",
+    "completion": null
+   }
+  ]
+ },
+ {
+  "page": "Maggot King",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 33642,
+    "name": "Maggot marquess",
+    "completion": null
+   },
+   {
+    "id": 33631,
+    "name": "Crimson kisten",
+    "completion": null
+   },
+   {
+    "id": 33634,
+    "name": "Elder venator fang",
+    "completion": null
+   }
+  ]
+ },
+ {
+  "page": "Moons of Peril",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 28988,
+    "name": "Blue Moon spear",
+    "completion": 18.5
+   },
+   {
+    "id": 28991,
+    "name": "Atlatl dart",
+    "completion": 51.7
+   },
+   {
+    "id": 28997,
+    "name": "Dual macuahuitl",
+    "completion": 18.9
+   },
+   {
+    "id": 29000,
+    "name": "Eclipse atlatl",
+    "completion": 18.2
+   },
+   {
+    "id": 29004,
+    "name": "Eclipse Moon chestplate",
+    "completion": 13.5
+   },
+   {
+    "id": 29007,
+    "name": "Eclipse Moon tassets",
+    "completion": 12.3
+   },
+   {
+    "id": 29010,
+    "name": "Eclipse Moon helm",
+    "completion": 15.3
+   },
+   {
+    "id": 29013,
+    "name": "Blue Moon chestplate",
+    "completion": 14.2
+   },
+   {
+    "id": 29016,
+    "name": "Blue Moon tassets",
+    "completion": 12.9
+   },
+   {
+    "id": 29019,
+    "name": "Blue Moon helm",
+    "completion": 15.9
+   },
+   {
+    "id": 29022,
+    "name": "Blood Moon chestplate",
+    "completion": 14.2
+   },
+   {
+    "id": 29025,
+    "name": "Blood Moon tassets",
+    "completion": 13.2
+   },
+   {
+    "id": 29028,
+    "name": "Blood Moon helm",
+    "completion": 15.9
+   }
+  ]
+ },
+ {
+  "page": "Nex",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 26231,
+    "name": "Nihil shard",
+    "completion": 18.2
+   },
+   {
+    "id": 26235,
+    "name": "Zaryte vambraces",
+    "completion": 2.6
+   },
+   {
+    "id": 26348,
+    "name": "Nexling",
+    "completion": 1.4
+   },
+   {
+    "id": 26370,
+    "name": "Ancient hilt",
+    "completion": 1.3
+   },
+   {
+    "id": 26372,
+    "name": "Nihil horn",
+    "completion": 2.1
+   },
+   {
+    "id": 26376,
+    "name": "Torva full helm (damaged)",
+    "completion": 2.1
+   },
+   {
+    "id": 26378,
+    "name": "Torva platebody (damaged)",
+    "completion": 2.1
+   },
+   {
+    "id": 26380,
+    "name": "Torva platelegs (damaged)",
+    "completion": 2.1
+   }
+  ]
+ },
+ {
+  "page": "The Nightmare",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 24417,
+    "name": "Inquisitor's mace",
+    "completion": 0.7
+   },
+   {
+    "id": 24419,
+    "name": "Inquisitor's great helm",
+    "completion": 1.1
+   },
+   {
+    "id": 24420,
+    "name": "Inquisitor's hauberk",
+    "completion": 1
+   },
+   {
+    "id": 24421,
+    "name": "Inquisitor's plateskirt",
+    "completion": 1.1
+   },
+   {
+    "id": 24422,
+    "name": "Nightmare staff",
+    "completion": 1.4
+   },
+   {
+    "id": 24491,
+    "name": "Little Nightmare",
+    "completion": 0.8
+   },
+   {
+    "id": 24495,
+    "name": "Jar of Dreams",
+    "completion": 0.6
+   },
+   {
+    "id": 24511,
+    "name": "Harmonised orb",
+    "completion": 0.5
+   },
+   {
+    "id": 24514,
+    "name": "Volatile orb",
+    "completion": 0.5
+   },
+   {
+    "id": 24517,
+    "name": "Eldritch orb",
+    "completion": 0.5
+   },
+   {
+    "id": 25837,
+    "name": "Slepey tablet",
+    "completion": 3.8
+   },
+   {
+    "id": 25838,
+    "name": "Parasitic egg",
+    "completion": 2
+   }
+  ]
+ },
+ {
+  "page": "Obor",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 20756,
+    "name": "Hill giant club",
+    "completion": 2.7
+   }
+  ]
+ },
+ {
+  "page": "Phantom Muspah",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 27590,
+    "name": "Muphin",
+    "completion": 1.8
+   },
+   {
+    "id": 27614,
+    "name": "Venator shard",
+    "completion": 14.7
+   },
+   {
+    "id": 27616,
+    "name": "Ancient essence",
+    "completion": 26.5
+   },
+   {
+    "id": 27622,
+    "name": "Frozen cache",
+    "completion": 20.7
+   },
+   {
+    "id": 27627,
+    "name": "Ancient icon",
+    "completion": 20.2
+   },
+   {
+    "id": 27643,
+    "name": "Charged ice",
+    "completion": 18.4
+   }
+  ]
+ },
+ {
+  "page": "Royal Titans",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 30622,
+    "name": "Bran",
+    "completion": 1.9
+   },
+   {
+    "id": 30626,
+    "name": "Deadeye prayer scroll",
+    "completion": 15.7
+   },
+   {
+    "id": 30627,
+    "name": "Mystic vigour prayer scroll",
+    "completion": 14.5
+   },
+   {
+    "id": 30628,
+    "name": "Ice element staff crown",
+    "completion": 13.7
+   },
+   {
+    "id": 30631,
+    "name": "Fire element staff crown",
+    "completion": 13.4
+   },
+   {
+    "id": 30637,
+    "name": "Giantsoul amulet (uncharged)",
+    "completion": 29.3
+   },
+   {
+    "id": 30640,
+    "name": "Desiccated page",
+    "completion": 32.3
+   }
+  ]
+ },
+ {
+  "page": "Sarachnis",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 23495,
+    "name": "Sraracha",
+    "completion": 2.5
+   },
+   {
+    "id": 23517,
+    "name": "Giant egg sac(full)",
+    "completion": 30
+   },
+   {
+    "id": 23525,
+    "name": "Jar of Eyes",
+    "completion": 2.9
+   },
+   {
+    "id": 23528,
+    "name": "Sarachnis cudgel",
+    "completion": 8.8
+   },
+   {
+    "id": 33133,
+    "name": "Pristine spider silk",
+    "completion": 3.2
+   }
+  ]
+ },
+ {
+  "page": "Scorpia",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 7158,
+    "name": "Dragon 2h sword",
+    "completion": 23.8
+   },
+   {
+    "id": 11930,
+    "name": "Odium shard 3",
+    "completion": 4.1
+   },
+   {
+    "id": 11933,
+    "name": "Malediction shard 3",
+    "completion": 4
+   },
+   {
+    "id": 13181,
+    "name": "Scorpia's offspring",
+    "completion": 1.1
+   }
+  ]
+ },
+ {
+  "page": "Scurrius",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 28798,
+    "name": "Scurrius' spine",
+    "completion": 34
+   },
+   {
+    "id": 28801,
+    "name": "Scurry",
+    "completion": 1.5
+   }
+  ]
+ },
+ {
+  "page": "Shellbane Gryphon",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 31285,
+    "name": "Gull (pet)",
+    "completion": 0.5
+   },
+   {
+    "id": 32921,
+    "name": "Jar of Feathers",
+    "completion": 0.7
+   },
+   {
+    "id": 31245,
+    "name": "Belle's folly (tarnished)",
+    "completion": 2.7
+   },
+   {
+    "id": 31235,
+    "name": "Gryphon feather",
+    "completion": 7.1
+   }
+  ]
+ },
+ {
+  "page": "Skotizo",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 6571,
+    "name": "Uncut onyx",
+    "completion": 17.1
+   },
+   {
+    "id": 19677,
+    "name": "Ancient shard",
+    "completion": 74.2
+   },
+   {
+    "id": 19685,
+    "name": "Dark totem",
+    "completion": 5.9
+   },
+   {
+    "id": 19701,
+    "name": "Jar of Darkness",
+    "completion": 2.8
+   },
+   {
+    "id": 21273,
+    "name": "Skotos",
+    "completion": 11.7
+   },
+   {
+    "id": 21275,
+    "name": "Dark claw",
+    "completion": 22.1
+   }
+  ]
+ },
+ {
+  "page": "Tempoross",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 21028,
+    "name": "Dragon harpoon",
+    "completion": 20.9
+   },
+   {
+    "id": 25559,
+    "name": "Big harpoonfish",
+    "completion": 10.9
+   },
+   {
+    "id": 25576,
+    "name": "Tome of Water (empty)",
+    "completion": 11.2
+   },
+   {
+    "id": 25578,
+    "name": "Soaked page",
+    "completion": 56.9
+   },
+   {
+    "id": 25580,
+    "name": "Tackle box",
+    "completion": 28.6
+   },
+   {
+    "id": 25582,
+    "name": "Fish barrel",
+    "completion": 33.8
+   },
+   {
+    "id": 25588,
+    "name": "Spirit flakes",
+    "completion": 68.3
+   },
+   {
+    "id": 25592,
+    "name": "Spirit angler headband",
+    "completion": 22.8
+   },
+   {
+    "id": 25594,
+    "name": "Spirit angler top",
+    "completion": 23.8
+   },
+   {
+    "id": 25596,
+    "name": "Spirit angler waders",
+    "completion": 22.1
+   },
+   {
+    "id": 25598,
+    "name": "Spirit angler boots",
+    "completion": 20.4
+   },
+   {
+    "id": 25602,
+    "name": "Tiny tempor",
+    "completion": 2.9
+   }
+  ]
+ },
+ {
+  "page": "Thermonuclear Smoke Devil",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 3140,
+    "name": "Dragon chainbody",
+    "completion": 17.8
+   },
+   {
+    "id": 11998,
+    "name": "Smoke battlestaff",
+    "completion": 11.1
+   },
+   {
+    "id": 12002,
+    "name": "Occult necklace",
+    "completion": 22.8
+   },
+   {
+    "id": 12648,
+    "name": "Pet Smoke Devil",
+    "completion": 4.6
+   },
+   {
+    "id": 25524,
+    "name": "Jar of Smoke",
+    "completion": 4.3
+   }
+  ]
+ },
+ {
+  "page": "Vardorvis",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 26241,
+    "name": "Virtus mask",
+    "completion": 5.7
+   },
+   {
+    "id": 26243,
+    "name": "Virtus robe top",
+    "completion": 5.7
+   },
+   {
+    "id": 26245,
+    "name": "Virtus robe bottom",
+    "completion": 5.7
+   },
+   {
+    "id": 28248,
+    "name": "Butch",
+    "completion": 2.6
+   },
+   {
+    "id": 28268,
+    "name": "Blood quartz",
+    "completion": 10.9
+   },
+   {
+    "id": 28276,
+    "name": "Chromium ingot",
+    "completion": 14.4
+   },
+   {
+    "id": 28285,
+    "name": "Ultor vestige",
+    "completion": 5.5
+   },
+   {
+    "id": 28319,
+    "name": "Executioner's axe head",
+    "completion": 5.6
+   },
+   {
+    "id": 28330,
+    "name": "Strangled tablet",
+    "completion": 15.2
+   },
+   {
+    "id": 28334,
+    "name": "Awakener's orb",
+    "completion": 19.8
+   }
+  ]
+ },
+ {
+  "page": "Venenatis and Spindel",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 7158,
+    "name": "Dragon 2h sword",
+    "completion": 23.8
+   },
+   {
+    "id": 11920,
+    "name": "Dragon pickaxe",
+    "completion": 23.6
+   },
+   {
+    "id": 12605,
+    "name": "Treasonous ring",
+    "completion": 5
+   },
+   {
+    "id": 13177,
+    "name": "Venenatis spiderling",
+    "completion": 2.3
+   },
+   {
+    "id": 27670,
+    "name": "Fangs of Venenatis",
+    "completion": 5.6
+   },
+   {
+    "id": 27687,
+    "name": "Voidwaker gem",
+    "completion": 5.4
+   }
+  ]
+ },
+ {
+  "page": "Vet'ion and Calvar'ion",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 7158,
+    "name": "Dragon 2h sword",
+    "completion": 23.8
+   },
+   {
+    "id": 11920,
+    "name": "Dragon pickaxe",
+    "completion": 23.6
+   },
+   {
+    "id": 12601,
+    "name": "Ring of the gods",
+    "completion": 6.4
+   },
+   {
+    "id": 13179,
+    "name": "Vet'ion Jr.",
+    "completion": 2.5
+   },
+   {
+    "id": 27673,
+    "name": "Skull of Vet'ion",
+    "completion": 7.8
+   },
+   {
+    "id": 27684,
+    "name": "Voidwaker blade",
+    "completion": 7.2
+   }
+  ]
+ },
+ {
+  "page": "Vorkath",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 11286,
+    "name": "Draconic visage",
+    "completion": 7.6
+   },
+   {
+    "id": 21907,
+    "name": "Vorkath's head",
+    "completion": 47.4
+   },
+   {
+    "id": 21992,
+    "name": "Vorki",
+    "completion": 4
+   },
+   {
+    "id": 22006,
+    "name": "Skeletal visage",
+    "completion": 2.3
+   },
+   {
+    "id": 22106,
+    "name": "Jar of Decay",
+    "completion": 3.5
+   },
+   {
+    "id": 22111,
+    "name": "Dragonbone necklace",
+    "completion": 8.4
+   }
+  ]
+ },
+ {
+  "page": "The Whisperer",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 26241,
+    "name": "Virtus mask",
+    "completion": 5.7
+   },
+   {
+    "id": 26243,
+    "name": "Virtus robe top",
+    "completion": 5.7
+   },
+   {
+    "id": 26245,
+    "name": "Virtus robe bottom",
+    "completion": 5.7
+   },
+   {
+    "id": 28246,
+    "name": "Wisp",
+    "completion": 1.3
+   },
+   {
+    "id": 28272,
+    "name": "Shadow quartz",
+    "completion": 5
+   },
+   {
+    "id": 28276,
+    "name": "Chromium ingot",
+    "completion": 14.4
+   },
+   {
+    "id": 28279,
+    "name": "Bellator vestige",
+    "completion": 2.7
+   },
+   {
+    "id": 28323,
+    "name": "Siren's staff",
+    "completion": 3.8
+   },
+   {
+    "id": 28331,
+    "name": "Sirenic tablet",
+    "completion": 8.4
+   },
+   {
+    "id": 28334,
+    "name": "Awakener's orb",
+    "completion": 19.8
+   }
+  ]
+ },
+ {
+  "page": "Wintertodt",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 6739,
+    "name": "Dragon axe",
+    "completion": 35.4
+   },
+   {
+    "id": 20693,
+    "name": "Phoenix",
+    "completion": 6.6
+   },
+   {
+    "id": 20704,
+    "name": "Pyromancer garb",
+    "completion": 61.5
+   },
+   {
+    "id": 20706,
+    "name": "Pyromancer robe",
+    "completion": 38.1
+   },
+   {
+    "id": 20708,
+    "name": "Pyromancer hood",
+    "completion": 47.4
+   },
+   {
+    "id": 20710,
+    "name": "Pyromancer boots",
+    "completion": 30.2
+   },
+   {
+    "id": 20712,
+    "name": "Warm gloves",
+    "completion": 61.5
+   },
+   {
+    "id": 20716,
+    "name": "Tome of Fire (empty)",
+    "completion": 23.8
+   },
+   {
+    "id": 20718,
+    "name": "Burnt page",
+    "completion": 72.6
+   },
+   {
+    "id": 20720,
+    "name": "Bruma torch",
+    "completion": 61.3
+   }
+  ]
+ },
+ {
+  "page": "Yama",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 30888,
+    "name": "Yami",
+    "completion": 1.5
+   },
+   {
+    "id": 30775,
+    "name": "Chasm teleport scroll",
+    "completion": 10.8
+   },
+   {
+    "id": 30750,
+    "name": "Oathplate helm",
+    "completion": 2.9
+   },
+   {
+    "id": 30753,
+    "name": "Oathplate chest",
+    "completion": 3
+   },
+   {
+    "id": 30756,
+    "name": "Oathplate legs",
+    "completion": 3
+   },
+   {
+    "id": 30759,
+    "name": "Soulflame horn",
+    "completion": 4.3
+   },
+   {
+    "id": 30765,
+    "name": "Oathplate shards",
+    "completion": 11.2
+   },
+   {
+    "id": 30806,
+    "name": "Rite of vile transference",
+    "completion": 8.5
+   },
+   {
+    "id": 30763,
+    "name": "Forgotten lockbox",
+    "completion": 10.4
+   },
+   {
+    "id": 30805,
+    "name": "Dossier",
+    "completion": 10.5
+   },
+   {
+    "id": 30795,
+    "name": "Barrel of demonic tallow (full)",
+    "completion": 11
+   }
+  ]
+ },
+ {
+  "page": "Zalcano",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 6571,
+    "name": "Uncut onyx",
+    "completion": 17.1
+   },
+   {
+    "id": 23760,
+    "name": "Smolcano",
+    "completion": 1.7
+   },
+   {
+    "id": 23908,
+    "name": "Zalcano shard",
+    "completion": 2.8
+   },
+   {
+    "id": 23953,
+    "name": "Crystal tool seed",
+    "completion": 2.7
+   }
+  ]
+ },
+ {
+  "page": "Zulrah",
+  "tab": "Bosses",
+  "items": [
+   {
+    "id": 6571,
+    "name": "Uncut onyx",
+    "completion": 17.1
+   },
+   {
+    "id": 12921,
+    "name": "Pet Snakeling",
+    "completion": 4.6
+   },
+   {
+    "id": 12922,
+    "name": "Tanzanite fang",
+    "completion": 18.4
+   },
+   {
+    "id": 12927,
+    "name": "Serpentine visage",
+    "completion": 16.7
+   },
+   {
+    "id": 12932,
+    "name": "Magic fang",
+    "completion": 17.5
+   },
+   {
+    "id": 12934,
+    "name": "Zulrah's scales",
+    "completion": 50
+   },
+   {
+    "id": 12936,
+    "name": "Jar of Swamp",
+    "completion": 5.1
+   },
+   {
+    "id": 12938,
+    "name": "Zul-andra teleport",
+    "completion": 35.7
+   },
+   {
+    "id": 13200,
+    "name": "Tanzanite mutagen",
+    "completion": 2.9
+   },
+   {
+    "id": 13201,
+    "name": "Magma mutagen",
+    "completion": 2.8
+   }
+  ]
+ },
+ {
+  "page": "Chambers of Xeric",
+  "tab": "Raids",
+  "items": [
+   {
+    "id": 6573,
+    "name": "Onyx",
+    "completion": 4.2
+   },
+   {
+    "id": 13652,
+    "name": "Dragon claws",
+    "completion": 4.7
+   },
+   {
+    "id": 20851,
+    "name": "Olmlet",
+    "completion": 2.8
+   },
+   {
+    "id": 20997,
+    "name": "Twisted bow",
+    "completion": 3.9
+   },
+   {
+    "id": 21000,
+    "name": "Twisted buckler",
+    "completion": 5.6
+   },
+   {
+    "id": 21003,
+    "name": "Elder maul",
+    "completion": 3.6
+   },
+   {
+    "id": 21012,
+    "name": "Dragon hunter crossbow",
+    "completion": 5.5
+   },
+   {
+    "id": 21015,
+    "name": "Dinh's bulwark",
+    "completion": 4.7
+   },
+   {
+    "id": 21018,
+    "name": "Ancestral hat",
+    "completion": 4.7
+   },
+   {
+    "id": 21021,
+    "name": "Ancestral robe top",
+    "completion": 4.7
+   },
+   {
+    "id": 21024,
+    "name": "Ancestral robe bottom",
+    "completion": 4.7
+   },
+   {
+    "id": 21027,
+    "name": "Dark relic",
+    "completion": 19.6
+   },
+   {
+    "id": 21034,
+    "name": "Dexterous prayer scroll",
+    "completion": 11.5
+   },
+   {
+    "id": 21043,
+    "name": "Kodai insignia",
+    "completion": 3.6
+   },
+   {
+    "id": 21047,
+    "name": "Torn prayer scroll",
+    "completion": 19.6
+   },
+   {
+    "id": 21079,
+    "name": "Arcane prayer scroll",
+    "completion": 11.2
+   },
+   {
+    "id": 22386,
+    "name": "Metamorphic dust",
+    "completion": 1.9
+   },
+   {
+    "id": 22388,
+    "name": "Xeric's guard",
+    "completion": 2.3
+   },
+   {
+    "id": 22390,
+    "name": "Xeric's warrior",
+    "completion": 0.4
+   },
+   {
+    "id": 22392,
+    "name": "Xeric's sentinel",
+    "completion": 0.1
+   },
+   {
+    "id": 22394,
+    "name": "Xeric's general",
+    "completion": 0
+   },
+   {
+    "id": 22396,
+    "name": "Xeric's champion",
+    "completion": 0
+   },
+   {
+    "id": 24670,
+    "name": "Twisted ancestral colour kit",
+    "completion": 4.4
+   }
+  ]
+ },
+ {
+  "page": "Theatre of Blood",
+  "tab": "Raids",
+  "items": [
+   {
+    "id": 22324,
+    "name": "Ghrazi rapier",
+    "completion": 3.5
+   },
+   {
+    "id": 22326,
+    "name": "Justiciar faceguard",
+    "completion": 3.4
+   },
+   {
+    "id": 22327,
+    "name": "Justiciar chestguard",
+    "completion": 3.5
+   },
+   {
+    "id": 22328,
+    "name": "Justiciar legguards",
+    "completion": 3.5
+   },
+   {
+    "id": 22446,
+    "name": "Vial of blood",
+    "completion": 16.6
+   },
+   {
+    "id": 22473,
+    "name": "Lil' Zik",
+    "completion": 2.6
+   },
+   {
+    "id": 22477,
+    "name": "Avernic defender hilt",
+    "completion": 5.8
+   },
+   {
+    "id": 22481,
+    "name": "Sanguinesti staff (uncharged)",
+    "completion": 3.4
+   },
+   {
+    "id": 22486,
+    "name": "Scythe of Vitur (uncharged)",
+    "completion": 2.5
+   },
+   {
+    "id": 22494,
+    "name": "Sinhaza shroud tier 1",
+    "completion": 2.9
+   },
+   {
+    "id": 22496,
+    "name": "Sinhaza shroud tier 2",
+    "completion": 1.5
+   },
+   {
+    "id": 22498,
+    "name": "Sinhaza shroud tier 3",
+    "completion": 0.7
+   },
+   {
+    "id": 22500,
+    "name": "Sinhaza shroud tier 4",
+    "completion": 0.3
+   },
+   {
+    "id": 22502,
+    "name": "Sinhaza shroud tier 5",
+    "completion": 0.2
+   },
+   {
+    "id": 25742,
+    "name": "Holy ornament kit",
+    "completion": 1.6
+   },
+   {
+    "id": 25744,
+    "name": "Sanguine ornament kit",
+    "completion": 1.4
+   },
+   {
+    "id": 25746,
+    "name": "Sanguine dust",
+    "completion": 1
+   }
+  ]
+ },
+ {
+  "page": "Tombs of Amascut",
+  "tab": "Raids",
+  "items": [
+   {
+    "id": 25975,
+    "name": "Lightbearer",
+    "completion": 13.4
+   },
+   {
+    "id": 25985,
+    "name": "Elidinis' ward",
+    "completion": 9.1
+   },
+   {
+    "id": 26219,
+    "name": "Osmumten's fang",
+    "completion": 13.6
+   },
+   {
+    "id": 27226,
+    "name": "Masori mask",
+    "completion": 7.3
+   },
+   {
+    "id": 27229,
+    "name": "Masori body",
+    "completion": 7.4
+   },
+   {
+    "id": 27232,
+    "name": "Masori chaps",
+    "completion": 7.4
+   },
+   {
+    "id": 27248,
+    "name": "Cursed phalanx",
+    "completion": 5
+   },
+   {
+    "id": 27255,
+    "name": "Menaphite ornament kit",
+    "completion": 6.1
+   },
+   {
+    "id": 27257,
+    "name": "Icthlarin's shroud (tier 1)",
+    "completion": 7.4
+   },
+   {
+    "id": 27259,
+    "name": "Icthlarin's shroud (tier 2)",
+    "completion": 1.5
+   },
+   {
+    "id": 27261,
+    "name": "Icthlarin's shroud (tier 3)",
+    "completion": 0.3
+   },
+   {
+    "id": 27263,
+    "name": "Icthlarin's shroud (tier 4)",
+    "completion": 0.1
+   },
+   {
+    "id": 27265,
+    "name": "Icthlarin's shroud (tier 5)",
+    "completion": 0
+   },
+   {
+    "id": 27277,
+    "name": "Tumeken's shadow (uncharged)",
+    "completion": 5.1
+   },
+   {
+    "id": 27279,
+    "name": "Thread of Elidinis",
+    "completion": 32.8
+   },
+   {
+    "id": 27283,
+    "name": "Breach of the Scarab",
+    "completion": 18.8
+   },
+   {
+    "id": 27285,
+    "name": "Eye of the Corruptor",
+    "completion": 18.7
+   },
+   {
+    "id": 27289,
+    "name": "Jewel of the Sun",
+    "completion": 18.7
+   },
+   {
+    "id": 27293,
+    "name": "Cache of runes",
+    "completion": 30.3
+   },
+   {
+    "id": 27352,
+    "name": "Tumeken's guardian",
+    "completion": 4.4
+   },
+   {
+    "id": 27372,
+    "name": "Masori crafting kit",
+    "completion": 14.1
+   },
+   {
+    "id": 27377,
+    "name": "Remnant of Akkha",
+    "completion": 1.8
+   },
+   {
+    "id": 27378,
+    "name": "Remnant of Ba-Ba",
+    "completion": 3.5
+   },
+   {
+    "id": 27379,
+    "name": "Remnant of Kephri",
+    "completion": 1.3
+   },
+   {
+    "id": 27380,
+    "name": "Remnant of Zebak",
+    "completion": 2.9
+   },
+   {
+    "id": 27381,
+    "name": "Ancient remnant",
+    "completion": 3.8
+   },
+   {
+    "id": 30893,
+    "name": "Jewel of Amascut",
+    "completion": 10.9
+   }
+  ]
+ },
+ {
+  "page": "Beginner Treasure Trails",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 12297,
+    "name": "Black pickaxe",
+    "completion": 36.1
+   },
+   {
+    "id": 23285,
+    "name": "Mole slippers",
+    "completion": 8.3
+   },
+   {
+    "id": 23288,
+    "name": "Frog slippers",
+    "completion": 8.2
+   },
+   {
+    "id": 23291,
+    "name": "Bear feet",
+    "completion": 8.2
+   },
+   {
+    "id": 23294,
+    "name": "Demon feet",
+    "completion": 8.2
+   },
+   {
+    "id": 23297,
+    "name": "Jester cape",
+    "completion": 8.2
+   },
+   {
+    "id": 23300,
+    "name": "Shoulder parrot",
+    "completion": 8.1
+   },
+   {
+    "id": 23303,
+    "name": "Monk's robe top (t)",
+    "completion": 8.2
+   },
+   {
+    "id": 23306,
+    "name": "Monk's robe (t)",
+    "completion": 8.2
+   },
+   {
+    "id": 23309,
+    "name": "Amulet of defence (t)",
+    "completion": 8.2
+   },
+   {
+    "id": 23312,
+    "name": "Sandwich lady hat",
+    "completion": 8.2
+   },
+   {
+    "id": 23315,
+    "name": "Sandwich lady top",
+    "completion": 8.2
+   },
+   {
+    "id": 23318,
+    "name": "Sandwich lady bottom",
+    "completion": 8.2
+   },
+   {
+    "id": 23321,
+    "name": "Rune scimitar ornament kit (Guthix)",
+    "completion": 8.2
+   },
+   {
+    "id": 23324,
+    "name": "Rune scimitar ornament kit (Saradomin)",
+    "completion": 8.2
+   },
+   {
+    "id": 23327,
+    "name": "Rune scimitar ornament kit (Zamorak)",
+    "completion": 8.2
+   }
+  ]
+ },
+ {
+  "page": "Easy Treasure Trails",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 2583,
+    "name": "Black platebody (t)",
+    "completion": 5
+   },
+   {
+    "id": 2585,
+    "name": "Black platelegs (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 2587,
+    "name": "Black full helm (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 2589,
+    "name": "Black kiteshield (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 2591,
+    "name": "Black platebody (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 2593,
+    "name": "Black platelegs (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 2595,
+    "name": "Black full helm (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 2597,
+    "name": "Black kiteshield (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 2631,
+    "name": "Highwayman mask",
+    "completion": 4.9
+   },
+   {
+    "id": 2633,
+    "name": "Blue beret",
+    "completion": 5
+   },
+   {
+    "id": 2635,
+    "name": "Black beret",
+    "completion": 4.9
+   },
+   {
+    "id": 2637,
+    "name": "White beret",
+    "completion": 4.9
+   },
+   {
+    "id": 3472,
+    "name": "Black plateskirt (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 3473,
+    "name": "Black plateskirt (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 7332,
+    "name": "Black shield (h1)",
+    "completion": 4.9
+   },
+   {
+    "id": 7338,
+    "name": "Black shield (h2)",
+    "completion": 5
+   },
+   {
+    "id": 7344,
+    "name": "Black shield (h3)",
+    "completion": 5
+   },
+   {
+    "id": 7350,
+    "name": "Black shield (h4)",
+    "completion": 4.9
+   },
+   {
+    "id": 7356,
+    "name": "Black shield (h5)",
+    "completion": 4.8
+   },
+   {
+    "id": 7362,
+    "name": "Studded body (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 7364,
+    "name": "Studded body (t)",
+    "completion": 5
+   },
+   {
+    "id": 7366,
+    "name": "Studded chaps (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 7368,
+    "name": "Studded chaps (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 7386,
+    "name": "Blue skirt (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 7388,
+    "name": "Blue skirt (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 7390,
+    "name": "Blue wizard robe (g)",
+    "completion": 5
+   },
+   {
+    "id": 7392,
+    "name": "Blue wizard robe (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 7394,
+    "name": "Blue wizard hat (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 7396,
+    "name": "Blue wizard hat (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 10280,
+    "name": "Willow comp bow",
+    "completion": 11.9
+   },
+   {
+    "id": 10306,
+    "name": "Black helm (h1)",
+    "completion": 4.9
+   },
+   {
+    "id": 10308,
+    "name": "Black helm (h2)",
+    "completion": 5
+   },
+   {
+    "id": 10310,
+    "name": "Black helm (h3)",
+    "completion": 4.9
+   },
+   {
+    "id": 10312,
+    "name": "Black helm (h4)",
+    "completion": 4.9
+   },
+   {
+    "id": 10314,
+    "name": "Black helm (h5)",
+    "completion": 4.9
+   },
+   {
+    "id": 10316,
+    "name": "Bob's red shirt",
+    "completion": 5
+   },
+   {
+    "id": 10318,
+    "name": "Bob's blue shirt",
+    "completion": 4.9
+   },
+   {
+    "id": 10320,
+    "name": "Bob's green shirt",
+    "completion": 4.9
+   },
+   {
+    "id": 10322,
+    "name": "Bob's black shirt",
+    "completion": 4.9
+   },
+   {
+    "id": 10324,
+    "name": "Bob's purple shirt",
+    "completion": 4.9
+   },
+   {
+    "id": 10366,
+    "name": "Amulet of magic (t)",
+    "completion": 11.9
+   },
+   {
+    "id": 10392,
+    "name": "A powdered wig",
+    "completion": 4.9
+   },
+   {
+    "id": 10394,
+    "name": "Flared trousers",
+    "completion": 5.1
+   },
+   {
+    "id": 10396,
+    "name": "Pantaloons",
+    "completion": 4.9
+   },
+   {
+    "id": 10398,
+    "name": "Sleeping cap",
+    "completion": 4.9
+   },
+   {
+    "id": 10404,
+    "name": "Red elegant shirt",
+    "completion": 2.9
+   },
+   {
+    "id": 10406,
+    "name": "Red elegant legs",
+    "completion": 2.9
+   },
+   {
+    "id": 10408,
+    "name": "Blue elegant shirt",
+    "completion": 2.9
+   },
+   {
+    "id": 10410,
+    "name": "Blue elegant legs",
+    "completion": 2.9
+   },
+   {
+    "id": 10412,
+    "name": "Green elegant shirt",
+    "completion": 2.9
+   },
+   {
+    "id": 10414,
+    "name": "Green elegant legs",
+    "completion": 2.9
+   },
+   {
+    "id": 10424,
+    "name": "Red elegant blouse",
+    "completion": 2.9
+   },
+   {
+    "id": 10426,
+    "name": "Red elegant skirt",
+    "completion": 2.9
+   },
+   {
+    "id": 10428,
+    "name": "Blue elegant blouse",
+    "completion": 2.9
+   },
+   {
+    "id": 10430,
+    "name": "Blue elegant skirt",
+    "completion": 2.9
+   },
+   {
+    "id": 10432,
+    "name": "Green elegant blouse",
+    "completion": 2.9
+   },
+   {
+    "id": 10434,
+    "name": "Green elegant skirt",
+    "completion": 2.9
+   },
+   {
+    "id": 10458,
+    "name": "Saradomin robe top",
+    "completion": 5
+   },
+   {
+    "id": 10460,
+    "name": "Zamorak robe top",
+    "completion": 4.9
+   },
+   {
+    "id": 10462,
+    "name": "Guthix robe top",
+    "completion": 4.9
+   },
+   {
+    "id": 10464,
+    "name": "Saradomin robe legs",
+    "completion": 4.9
+   },
+   {
+    "id": 10466,
+    "name": "Guthix robe legs",
+    "completion": 4.9
+   },
+   {
+    "id": 10468,
+    "name": "Zamorak robe legs",
+    "completion": 4.8
+   },
+   {
+    "id": 12193,
+    "name": "Ancient robe top",
+    "completion": 5
+   },
+   {
+    "id": 12195,
+    "name": "Ancient robe legs",
+    "completion": 4.9
+   },
+   {
+    "id": 12205,
+    "name": "Bronze platebody (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12207,
+    "name": "Bronze platelegs (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12209,
+    "name": "Bronze plateskirt (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12211,
+    "name": "Bronze full helm (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12213,
+    "name": "Bronze kiteshield (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12215,
+    "name": "Bronze platebody (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12217,
+    "name": "Bronze platelegs (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12219,
+    "name": "Bronze plateskirt (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12221,
+    "name": "Bronze full helm (t)",
+    "completion": 5
+   },
+   {
+    "id": 12223,
+    "name": "Bronze kiteshield (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12225,
+    "name": "Iron platebody (t)",
+    "completion": 5
+   },
+   {
+    "id": 12227,
+    "name": "Iron platelegs (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12229,
+    "name": "Iron plateskirt (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12231,
+    "name": "Iron full helm (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12233,
+    "name": "Iron kiteshield (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12235,
+    "name": "Iron platebody (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12237,
+    "name": "Iron platelegs (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12239,
+    "name": "Iron plateskirt (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12241,
+    "name": "Iron full helm (g)",
+    "completion": 4.8
+   },
+   {
+    "id": 12243,
+    "name": "Iron kiteshield (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12245,
+    "name": "Beanie",
+    "completion": 4.9
+   },
+   {
+    "id": 12247,
+    "name": "Red beret",
+    "completion": 4.9
+   },
+   {
+    "id": 12249,
+    "name": "Imp mask",
+    "completion": 4.9
+   },
+   {
+    "id": 12251,
+    "name": "Goblin mask",
+    "completion": 5
+   },
+   {
+    "id": 12253,
+    "name": "Armadyl robe top",
+    "completion": 4.9
+   },
+   {
+    "id": 12255,
+    "name": "Armadyl robe legs",
+    "completion": 4.9
+   },
+   {
+    "id": 12265,
+    "name": "Bandos robe top",
+    "completion": 4.9
+   },
+   {
+    "id": 12267,
+    "name": "Bandos robe legs",
+    "completion": 4.9
+   },
+   {
+    "id": 12297,
+    "name": "Black pickaxe",
+    "completion": 36.1
+   },
+   {
+    "id": 12375,
+    "name": "Black cane",
+    "completion": 5
+   },
+   {
+    "id": 12445,
+    "name": "Black skirt (g)",
+    "completion": 5
+   },
+   {
+    "id": 12447,
+    "name": "Black skirt (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12449,
+    "name": "Black wizard robe (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12451,
+    "name": "Black wizard robe (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 12453,
+    "name": "Black wizard hat (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 12455,
+    "name": "Black wizard hat (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 20166,
+    "name": "Wooden shield (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 20169,
+    "name": "Steel platebody (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 20172,
+    "name": "Steel platelegs (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 20175,
+    "name": "Steel plateskirt (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 20178,
+    "name": "Steel full helm (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 20181,
+    "name": "Steel kiteshield (g)",
+    "completion": 4.9
+   },
+   {
+    "id": 20184,
+    "name": "Steel platebody (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 20187,
+    "name": "Steel platelegs (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 20190,
+    "name": "Steel plateskirt (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 20193,
+    "name": "Steel full helm (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 20196,
+    "name": "Steel kiteshield (t)",
+    "completion": 4.9
+   },
+   {
+    "id": 20199,
+    "name": "Monk's robe top (g)",
+    "completion": 0.7
+   },
+   {
+    "id": 20202,
+    "name": "Monk's robe (g)",
+    "completion": 0.7
+   },
+   {
+    "id": 20205,
+    "name": "Golden chef's hat",
+    "completion": 2.9
+   },
+   {
+    "id": 20208,
+    "name": "Golden apron",
+    "completion": 2.9
+   },
+   {
+    "id": 20211,
+    "name": "Team cape zero",
+    "completion": 1.6
+   },
+   {
+    "id": 20214,
+    "name": "Team cape x",
+    "completion": 1.7
+   },
+   {
+    "id": 20217,
+    "name": "Team cape i",
+    "completion": 1.7
+   },
+   {
+    "id": 23351,
+    "name": "Cape of skulls",
+    "completion": 1.6
+   },
+   {
+    "id": 23354,
+    "name": "Amulet of power (t)",
+    "completion": 4.8
+   },
+   {
+    "id": 23357,
+    "name": "Rain bow",
+    "completion": 4.8
+   },
+   {
+    "id": 23360,
+    "name": "Ham joint",
+    "completion": 4.9
+   },
+   {
+    "id": 23363,
+    "name": "Staff of Bob the Cat",
+    "completion": 4.8
+   },
+   {
+    "id": 23366,
+    "name": "Black platebody (h1)",
+    "completion": 4.8
+   },
+   {
+    "id": 23369,
+    "name": "Black platebody (h2)",
+    "completion": 4.9
+   },
+   {
+    "id": 23372,
+    "name": "Black platebody (h3)",
+    "completion": 4.8
+   },
+   {
+    "id": 23375,
+    "name": "Black platebody (h4)",
+    "completion": 4.8
+   },
+   {
+    "id": 23378,
+    "name": "Black platebody (h5)",
+    "completion": 4.8
+   },
+   {
+    "id": 23381,
+    "name": "Leather body (g)",
+    "completion": 4.8
+   },
+   {
+    "id": 23384,
+    "name": "Leather chaps (g)",
+    "completion": 4.8
+   }
+  ]
+ },
+ {
+  "page": "Medium Treasure Trails",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 2577,
+    "name": "Ranger boots",
+    "completion": 11.9
+   },
+   {
+    "id": 2579,
+    "name": "Wizard boots",
+    "completion": 10.1
+   },
+   {
+    "id": 2599,
+    "name": "Adamant platebody (t)",
+    "completion": 10.1
+   },
+   {
+    "id": 2601,
+    "name": "Adamant platelegs (t)",
+    "completion": 10
+   },
+   {
+    "id": 2603,
+    "name": "Adamant kiteshield (t)",
+    "completion": 10.1
+   },
+   {
+    "id": 2605,
+    "name": "Adamant full helm (t)",
+    "completion": 10.1
+   },
+   {
+    "id": 2607,
+    "name": "Adamant platebody (g)",
+    "completion": 10
+   },
+   {
+    "id": 2609,
+    "name": "Adamant platelegs (g)",
+    "completion": 10.1
+   },
+   {
+    "id": 2611,
+    "name": "Adamant kiteshield (g)",
+    "completion": 10.1
+   },
+   {
+    "id": 2613,
+    "name": "Adamant full helm (g)",
+    "completion": 10
+   },
+   {
+    "id": 2645,
+    "name": "Red headband",
+    "completion": 10.1
+   },
+   {
+    "id": 2647,
+    "name": "Black headband",
+    "completion": 10.1
+   },
+   {
+    "id": 2649,
+    "name": "Brown headband",
+    "completion": 10.1
+   },
+   {
+    "id": 3474,
+    "name": "Adamant plateskirt (t)",
+    "completion": 10
+   },
+   {
+    "id": 3475,
+    "name": "Adamant plateskirt (g)",
+    "completion": 10.1
+   },
+   {
+    "id": 7319,
+    "name": "Red boater",
+    "completion": 10
+   },
+   {
+    "id": 7321,
+    "name": "Orange boater",
+    "completion": 10.2
+   },
+   {
+    "id": 7323,
+    "name": "Green boater",
+    "completion": 10.1
+   },
+   {
+    "id": 7325,
+    "name": "Blue boater",
+    "completion": 10
+   },
+   {
+    "id": 7327,
+    "name": "Black boater",
+    "completion": 10
+   },
+   {
+    "id": 7334,
+    "name": "Adamant shield (h1)",
+    "completion": 10.1
+   },
+   {
+    "id": 7340,
+    "name": "Adamant shield (h2)",
+    "completion": 10.1
+   },
+   {
+    "id": 7346,
+    "name": "Adamant shield (h3)",
+    "completion": 10.1
+   },
+   {
+    "id": 7352,
+    "name": "Adamant shield (h4)",
+    "completion": 10.1
+   },
+   {
+    "id": 7358,
+    "name": "Adamant shield (h5)",
+    "completion": 10
+   },
+   {
+    "id": 7370,
+    "name": "Green d'hide body (g)",
+    "completion": 10.1
+   },
+   {
+    "id": 7372,
+    "name": "Green d'hide body (t)",
+    "completion": 10
+   },
+   {
+    "id": 7378,
+    "name": "Green d'hide chaps (g)",
+    "completion": 10.1
+   },
+   {
+    "id": 7380,
+    "name": "Green d'hide chaps (t)",
+    "completion": 10.1
+   },
+   {
+    "id": 10282,
+    "name": "Yew comp bow",
+    "completion": 21
+   },
+   {
+    "id": 10296,
+    "name": "Adamant helm (h1)",
+    "completion": 10
+   },
+   {
+    "id": 10298,
+    "name": "Adamant helm (h2)",
+    "completion": 10.1
+   },
+   {
+    "id": 10300,
+    "name": "Adamant helm (h3)",
+    "completion": 10
+   },
+   {
+    "id": 10302,
+    "name": "Adamant helm (h4)",
+    "completion": 10.1
+   },
+   {
+    "id": 10304,
+    "name": "Adamant helm (h5)",
+    "completion": 10.1
+   },
+   {
+    "id": 10364,
+    "name": "Strength amulet (t)",
+    "completion": 21
+   },
+   {
+    "id": 10400,
+    "name": "Black elegant shirt",
+    "completion": 6
+   },
+   {
+    "id": 10402,
+    "name": "Black elegant legs",
+    "completion": 6
+   },
+   {
+    "id": 10416,
+    "name": "Purple elegant shirt",
+    "completion": 6
+   },
+   {
+    "id": 10418,
+    "name": "Purple elegant legs",
+    "completion": 5.9
+   },
+   {
+    "id": 10420,
+    "name": "White elegant blouse",
+    "completion": 6
+   },
+   {
+    "id": 10422,
+    "name": "White elegant skirt",
+    "completion": 6.1
+   },
+   {
+    "id": 10436,
+    "name": "Purple elegant blouse",
+    "completion": 5.9
+   },
+   {
+    "id": 10438,
+    "name": "Purple elegant skirt",
+    "completion": 6
+   },
+   {
+    "id": 10446,
+    "name": "Saradomin cloak",
+    "completion": 10.1
+   },
+   {
+    "id": 10448,
+    "name": "Guthix cloak",
+    "completion": 10.1
+   },
+   {
+    "id": 10450,
+    "name": "Zamorak cloak",
+    "completion": 10
+   },
+   {
+    "id": 10452,
+    "name": "Saradomin mitre",
+    "completion": 10.1
+   },
+   {
+    "id": 10454,
+    "name": "Guthix mitre",
+    "completion": 10
+   },
+   {
+    "id": 10456,
+    "name": "Zamorak mitre",
+    "completion": 10
+   },
+   {
+    "id": 12197,
+    "name": "Ancient cloak",
+    "completion": 10.1
+   },
+   {
+    "id": 12199,
+    "name": "Ancient crozier",
+    "completion": 10.1
+   },
+   {
+    "id": 12201,
+    "name": "Ancient stole",
+    "completion": 10.1
+   },
+   {
+    "id": 12203,
+    "name": "Ancient mitre",
+    "completion": 10
+   },
+   {
+    "id": 12257,
+    "name": "Armadyl stole",
+    "completion": 10.1
+   },
+   {
+    "id": 12259,
+    "name": "Armadyl mitre",
+    "completion": 10
+   },
+   {
+    "id": 12261,
+    "name": "Armadyl cloak",
+    "completion": 10
+   },
+   {
+    "id": 12263,
+    "name": "Armadyl crozier",
+    "completion": 10.1
+   },
+   {
+    "id": 12269,
+    "name": "Bandos stole",
+    "completion": 10.1
+   },
+   {
+    "id": 12271,
+    "name": "Bandos mitre",
+    "completion": 10.1
+   },
+   {
+    "id": 12273,
+    "name": "Bandos cloak",
+    "completion": 10.2
+   },
+   {
+    "id": 12275,
+    "name": "Bandos crozier",
+    "completion": 10
+   },
+   {
+    "id": 12277,
+    "name": "Mithril platebody (g)",
+    "completion": 10.1
+   },
+   {
+    "id": 12279,
+    "name": "Mithril platelegs (g)",
+    "completion": 10
+   },
+   {
+    "id": 12281,
+    "name": "Mithril kiteshield (g)",
+    "completion": 10.1
+   },
+   {
+    "id": 12283,
+    "name": "Mithril full helm (g)",
+    "completion": 10.1
+   },
+   {
+    "id": 12285,
+    "name": "Mithril plateskirt (g)",
+    "completion": 10
+   },
+   {
+    "id": 12287,
+    "name": "Mithril platebody (t)",
+    "completion": 10.2
+   },
+   {
+    "id": 12289,
+    "name": "Mithril platelegs (t)",
+    "completion": 10
+   },
+   {
+    "id": 12291,
+    "name": "Mithril kiteshield (t)",
+    "completion": 10.1
+   },
+   {
+    "id": 12293,
+    "name": "Mithril full helm (t)",
+    "completion": 10.1
+   },
+   {
+    "id": 12295,
+    "name": "Mithril plateskirt (t)",
+    "completion": 10
+   },
+   {
+    "id": 12299,
+    "name": "White headband",
+    "completion": 10
+   },
+   {
+    "id": 12301,
+    "name": "Blue headband",
+    "completion": 10.1
+   },
+   {
+    "id": 12303,
+    "name": "Gold headband",
+    "completion": 10
+   },
+   {
+    "id": 12305,
+    "name": "Pink headband",
+    "completion": 10.1
+   },
+   {
+    "id": 12307,
+    "name": "Green headband",
+    "completion": 10.1
+   },
+   {
+    "id": 12309,
+    "name": "Pink boater",
+    "completion": 10.1
+   },
+   {
+    "id": 12311,
+    "name": "Purple boater",
+    "completion": 10.1
+   },
+   {
+    "id": 12313,
+    "name": "White boater",
+    "completion": 10.1
+   },
+   {
+    "id": 12315,
+    "name": "Pink elegant shirt",
+    "completion": 6
+   },
+   {
+    "id": 12317,
+    "name": "Pink elegant legs",
+    "completion": 6
+   },
+   {
+    "id": 12319,
+    "name": "Crier hat",
+    "completion": 10.1
+   },
+   {
+    "id": 12339,
+    "name": "Pink elegant blouse",
+    "completion": 6
+   },
+   {
+    "id": 12341,
+    "name": "Pink elegant skirt",
+    "completion": 6
+   },
+   {
+    "id": 12343,
+    "name": "Gold elegant blouse",
+    "completion": 5.9
+   },
+   {
+    "id": 12345,
+    "name": "Gold elegant skirt",
+    "completion": 6
+   },
+   {
+    "id": 12347,
+    "name": "Gold elegant shirt",
+    "completion": 6
+   },
+   {
+    "id": 12349,
+    "name": "Gold elegant legs",
+    "completion": 6
+   },
+   {
+    "id": 12359,
+    "name": "Leprechaun hat",
+    "completion": 10
+   },
+   {
+    "id": 12361,
+    "name": "Cat mask",
+    "completion": 10.1
+   },
+   {
+    "id": 12377,
+    "name": "Adamant cane",
+    "completion": 10.1
+   },
+   {
+    "id": 12428,
+    "name": "Penguin mask",
+    "completion": 10.1
+   },
+   {
+    "id": 12598,
+    "name": "Holy sandals",
+    "completion": 10.1
+   },
+   {
+    "id": 20240,
+    "name": "Crier coat",
+    "completion": 10.1
+   },
+   {
+    "id": 20243,
+    "name": "Crier bell",
+    "completion": 10.1
+   },
+   {
+    "id": 20246,
+    "name": "Black leprechaun hat",
+    "completion": 10.1
+   },
+   {
+    "id": 20251,
+    "name": "Arceuus banner",
+    "completion": 10
+   },
+   {
+    "id": 20254,
+    "name": "Hosidius banner",
+    "completion": 10
+   },
+   {
+    "id": 20257,
+    "name": "Lovakengj banner",
+    "completion": 10
+   },
+   {
+    "id": 20260,
+    "name": "Piscarilius banner",
+    "completion": 10.1
+   },
+   {
+    "id": 20263,
+    "name": "Shayzien banner",
+    "completion": 10.1
+   },
+   {
+    "id": 20266,
+    "name": "Black unicorn mask",
+    "completion": 6
+   },
+   {
+    "id": 20269,
+    "name": "White unicorn mask",
+    "completion": 6
+   },
+   {
+    "id": 20272,
+    "name": "Cabbage round shield",
+    "completion": 10.1
+   },
+   {
+    "id": 20275,
+    "name": "Gnomish firelighter",
+    "completion": 21
+   },
+   {
+    "id": 23389,
+    "name": "Spiked manacles",
+    "completion": 9.8
+   },
+   {
+    "id": 23392,
+    "name": "Adamant platebody (h1)",
+    "completion": 9.7
+   },
+   {
+    "id": 23395,
+    "name": "Adamant platebody (h2)",
+    "completion": 9.8
+   },
+   {
+    "id": 23398,
+    "name": "Adamant platebody (h3)",
+    "completion": 9.7
+   },
+   {
+    "id": 23401,
+    "name": "Adamant platebody (h4)",
+    "completion": 9.8
+   },
+   {
+    "id": 23404,
+    "name": "Adamant platebody (h5)",
+    "completion": 9.8
+   },
+   {
+    "id": 23407,
+    "name": "Wolf mask",
+    "completion": 9.8
+   },
+   {
+    "id": 23410,
+    "name": "Wolf cloak",
+    "completion": 9.7
+   },
+   {
+    "id": 23413,
+    "name": "Climbing boots (g)",
+    "completion": 9.8
+   }
+  ]
+ },
+ {
+  "page": "Hard Treasure Trails",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 2581,
+    "name": "Robin Hood hat",
+    "completion": 10.7
+   },
+   {
+    "id": 2615,
+    "name": "Rune platebody (g)",
+    "completion": 10.9
+   },
+   {
+    "id": 2617,
+    "name": "Rune platelegs (g)",
+    "completion": 10.8
+   },
+   {
+    "id": 2619,
+    "name": "Rune full helm (g)",
+    "completion": 10.8
+   },
+   {
+    "id": 2621,
+    "name": "Rune kiteshield (g)",
+    "completion": 10.8
+   },
+   {
+    "id": 2623,
+    "name": "Rune platebody (t)",
+    "completion": 10.8
+   },
+   {
+    "id": 2625,
+    "name": "Rune platelegs (t)",
+    "completion": 10.7
+   },
+   {
+    "id": 2627,
+    "name": "Rune full helm (t)",
+    "completion": 10.9
+   },
+   {
+    "id": 2629,
+    "name": "Rune kiteshield (t)",
+    "completion": 10.9
+   },
+   {
+    "id": 2639,
+    "name": "Tan cavalier",
+    "completion": 10.8
+   },
+   {
+    "id": 2641,
+    "name": "Dark cavalier",
+    "completion": 10.8
+   },
+   {
+    "id": 2643,
+    "name": "Black cavalier",
+    "completion": 10.8
+   },
+   {
+    "id": 2651,
+    "name": "Pirate's hat",
+    "completion": 10.8
+   },
+   {
+    "id": 2653,
+    "name": "Zamorak platebody",
+    "completion": 10.7
+   },
+   {
+    "id": 2655,
+    "name": "Zamorak platelegs",
+    "completion": 10.9
+   },
+   {
+    "id": 2657,
+    "name": "Zamorak full helm",
+    "completion": 10.8
+   },
+   {
+    "id": 2659,
+    "name": "Zamorak kiteshield",
+    "completion": 10.9
+   },
+   {
+    "id": 2661,
+    "name": "Saradomin platebody",
+    "completion": 10.8
+   },
+   {
+    "id": 2663,
+    "name": "Saradomin platelegs",
+    "completion": 10.8
+   },
+   {
+    "id": 2665,
+    "name": "Saradomin full helm",
+    "completion": 10.8
+   },
+   {
+    "id": 2667,
+    "name": "Saradomin kiteshield",
+    "completion": 10.8
+   },
+   {
+    "id": 2669,
+    "name": "Guthix platebody",
+    "completion": 10.8
+   },
+   {
+    "id": 2671,
+    "name": "Guthix platelegs",
+    "completion": 10.8
+   },
+   {
+    "id": 2673,
+    "name": "Guthix full helm",
+    "completion": 10.9
+   },
+   {
+    "id": 2675,
+    "name": "Guthix kiteshield",
+    "completion": 10.8
+   },
+   {
+    "id": 3476,
+    "name": "Rune plateskirt (g)",
+    "completion": 10.8
+   },
+   {
+    "id": 3477,
+    "name": "Rune plateskirt (t)",
+    "completion": 10.7
+   },
+   {
+    "id": 3478,
+    "name": "Zamorak plateskirt",
+    "completion": 10.8
+   },
+   {
+    "id": 3479,
+    "name": "Saradomin plateskirt",
+    "completion": 10.8
+   },
+   {
+    "id": 3480,
+    "name": "Guthix plateskirt",
+    "completion": 10.8
+   },
+   {
+    "id": 7336,
+    "name": "Rune shield (h1)",
+    "completion": 10.7
+   },
+   {
+    "id": 7342,
+    "name": "Rune shield (h2)",
+    "completion": 10.7
+   },
+   {
+    "id": 7348,
+    "name": "Rune shield (h3)",
+    "completion": 10.8
+   },
+   {
+    "id": 7354,
+    "name": "Rune shield (h4)",
+    "completion": 10.8
+   },
+   {
+    "id": 7360,
+    "name": "Rune shield (h5)",
+    "completion": 10.7
+   },
+   {
+    "id": 7374,
+    "name": "Blue d'hide body (g)",
+    "completion": 10.8
+   },
+   {
+    "id": 7376,
+    "name": "Blue d'hide body (t)",
+    "completion": 10.8
+   },
+   {
+    "id": 7382,
+    "name": "Blue d'hide chaps (g)",
+    "completion": 10.8
+   },
+   {
+    "id": 7384,
+    "name": "Blue d'hide chaps (t)",
+    "completion": 10.8
+   },
+   {
+    "id": 7398,
+    "name": "Enchanted robe",
+    "completion": 10.9
+   },
+   {
+    "id": 7399,
+    "name": "Enchanted top",
+    "completion": 10.8
+   },
+   {
+    "id": 7400,
+    "name": "Enchanted hat",
+    "completion": 10.7
+   },
+   {
+    "id": 10284,
+    "name": "Magic comp bow",
+    "completion": 31.2
+   },
+   {
+    "id": 10286,
+    "name": "Rune helm (h1)",
+    "completion": 10.8
+   },
+   {
+    "id": 10288,
+    "name": "Rune helm (h2)",
+    "completion": 10.9
+   },
+   {
+    "id": 10290,
+    "name": "Rune helm (h3)",
+    "completion": 10.8
+   },
+   {
+    "id": 10292,
+    "name": "Rune helm (h4)",
+    "completion": 10.7
+   },
+   {
+    "id": 10294,
+    "name": "Rune helm (h5)",
+    "completion": 10.8
+   },
+   {
+    "id": 10354,
+    "name": "Amulet of glory (t4)",
+    "completion": 10.7
+   },
+   {
+    "id": 10368,
+    "name": "Zamorak bracers",
+    "completion": 10.8
+   },
+   {
+    "id": 10370,
+    "name": "Zamorak d'hide body",
+    "completion": 10.8
+   },
+   {
+    "id": 10372,
+    "name": "Zamorak chaps",
+    "completion": 10.8
+   },
+   {
+    "id": 10374,
+    "name": "Zamorak coif",
+    "completion": 10.8
+   },
+   {
+    "id": 10376,
+    "name": "Guthix bracers",
+    "completion": 10.9
+   },
+   {
+    "id": 10378,
+    "name": "Guthix d'hide body",
+    "completion": 10.8
+   },
+   {
+    "id": 10380,
+    "name": "Guthix chaps",
+    "completion": 10.8
+   },
+   {
+    "id": 10382,
+    "name": "Guthix coif",
+    "completion": 10.7
+   },
+   {
+    "id": 10384,
+    "name": "Saradomin bracers",
+    "completion": 10.8
+   },
+   {
+    "id": 10386,
+    "name": "Saradomin d'hide body",
+    "completion": 10.8
+   },
+   {
+    "id": 10388,
+    "name": "Saradomin chaps",
+    "completion": 10.8
+   },
+   {
+    "id": 10390,
+    "name": "Saradomin coif",
+    "completion": 10.8
+   },
+   {
+    "id": 10440,
+    "name": "Saradomin crozier",
+    "completion": 10.8
+   },
+   {
+    "id": 10442,
+    "name": "Guthix crozier",
+    "completion": 10.7
+   },
+   {
+    "id": 10444,
+    "name": "Zamorak crozier",
+    "completion": 10.7
+   },
+   {
+    "id": 10470,
+    "name": "Saradomin stole",
+    "completion": 10.8
+   },
+   {
+    "id": 10472,
+    "name": "Guthix stole",
+    "completion": 10.8
+   },
+   {
+    "id": 10474,
+    "name": "Zamorak stole",
+    "completion": 10.8
+   },
+   {
+    "id": 12321,
+    "name": "White cavalier",
+    "completion": 10.9
+   },
+   {
+    "id": 12323,
+    "name": "Red cavalier",
+    "completion": 10.8
+   },
+   {
+    "id": 12325,
+    "name": "Navy cavalier",
+    "completion": 10.9
+   },
+   {
+    "id": 12327,
+    "name": "Red d'hide body (g)",
+    "completion": 10.8
+   },
+   {
+    "id": 12329,
+    "name": "Red d'hide chaps (g)",
+    "completion": 10.8
+   },
+   {
+    "id": 12331,
+    "name": "Red d'hide body (t)",
+    "completion": 10.8
+   },
+   {
+    "id": 12333,
+    "name": "Red d'hide chaps (t)",
+    "completion": 10.8
+   },
+   {
+    "id": 12379,
+    "name": "Rune cane",
+    "completion": 10.8
+   },
+   {
+    "id": 12460,
+    "name": "Ancient platebody",
+    "completion": 10.8
+   },
+   {
+    "id": 12462,
+    "name": "Ancient platelegs",
+    "completion": 10.8
+   },
+   {
+    "id": 12464,
+    "name": "Ancient plateskirt",
+    "completion": 10.7
+   },
+   {
+    "id": 12466,
+    "name": "Ancient full helm",
+    "completion": 10.8
+   },
+   {
+    "id": 12468,
+    "name": "Ancient kiteshield",
+    "completion": 10.7
+   },
+   {
+    "id": 12470,
+    "name": "Armadyl platebody",
+    "completion": 10.8
+   },
+   {
+    "id": 12472,
+    "name": "Armadyl platelegs",
+    "completion": 10.7
+   },
+   {
+    "id": 12474,
+    "name": "Armadyl plateskirt",
+    "completion": 10.8
+   },
+   {
+    "id": 12476,
+    "name": "Armadyl full helm",
+    "completion": 10.8
+   },
+   {
+    "id": 12478,
+    "name": "Armadyl kiteshield",
+    "completion": 10.8
+   },
+   {
+    "id": 12480,
+    "name": "Bandos platebody",
+    "completion": 10.9
+   },
+   {
+    "id": 12482,
+    "name": "Bandos platelegs",
+    "completion": 10.8
+   },
+   {
+    "id": 12484,
+    "name": "Bandos plateskirt",
+    "completion": 10.8
+   },
+   {
+    "id": 12486,
+    "name": "Bandos full helm",
+    "completion": 10.8
+   },
+   {
+    "id": 12488,
+    "name": "Bandos kiteshield",
+    "completion": 10.8
+   },
+   {
+    "id": 12490,
+    "name": "Ancient bracers",
+    "completion": 10.8
+   },
+   {
+    "id": 12492,
+    "name": "Ancient d'hide body",
+    "completion": 10.9
+   },
+   {
+    "id": 12494,
+    "name": "Ancient chaps",
+    "completion": 10.8
+   },
+   {
+    "id": 12496,
+    "name": "Ancient coif",
+    "completion": 10.7
+   },
+   {
+    "id": 12498,
+    "name": "Bandos bracers",
+    "completion": 10.8
+   },
+   {
+    "id": 12500,
+    "name": "Bandos d'hide body",
+    "completion": 10.8
+   },
+   {
+    "id": 12502,
+    "name": "Bandos chaps",
+    "completion": 10.8
+   },
+   {
+    "id": 12504,
+    "name": "Bandos coif",
+    "completion": 10.8
+   },
+   {
+    "id": 12506,
+    "name": "Armadyl bracers",
+    "completion": 10.8
+   },
+   {
+    "id": 12508,
+    "name": "Armadyl d'hide body",
+    "completion": 10.8
+   },
+   {
+    "id": 12510,
+    "name": "Armadyl chaps",
+    "completion": 10.8
+   },
+   {
+    "id": 12512,
+    "name": "Armadyl coif",
+    "completion": 10.8
+   },
+   {
+    "id": 12514,
+    "name": "Explorer backpack",
+    "completion": 10.8
+   },
+   {
+    "id": 12516,
+    "name": "Pith helmet",
+    "completion": 10.8
+   },
+   {
+    "id": 12518,
+    "name": "Green dragon mask",
+    "completion": 10.8
+   },
+   {
+    "id": 12520,
+    "name": "Blue dragon mask",
+    "completion": 10.8
+   },
+   {
+    "id": 12522,
+    "name": "Red dragon mask",
+    "completion": 10.8
+   },
+   {
+    "id": 12524,
+    "name": "Black dragon mask",
+    "completion": 10.9
+   },
+   {
+    "id": 19912,
+    "name": "Zombie head",
+    "completion": 10.8
+   },
+   {
+    "id": 19915,
+    "name": "Cyclops head",
+    "completion": 10.8
+   },
+   {
+    "id": 19918,
+    "name": "Nunchaku",
+    "completion": 10.7
+   },
+   {
+    "id": 19921,
+    "name": "Ancient d'hide boots",
+    "completion": 10.8
+   },
+   {
+    "id": 19924,
+    "name": "Bandos d'hide boots",
+    "completion": 10.8
+   },
+   {
+    "id": 19927,
+    "name": "Guthix d'hide boots",
+    "completion": 10.8
+   },
+   {
+    "id": 19930,
+    "name": "Armadyl d'hide boots",
+    "completion": 10.8
+   },
+   {
+    "id": 19933,
+    "name": "Saradomin d'hide boots",
+    "completion": 10.7
+   },
+   {
+    "id": 19936,
+    "name": "Zamorak d'hide boots",
+    "completion": 10.9
+   },
+   {
+    "id": 22231,
+    "name": "Dragon boots ornament kit",
+    "completion": 10.8
+   },
+   {
+    "id": 23188,
+    "name": "Guthix d'hide shield",
+    "completion": 2.2
+   },
+   {
+    "id": 23191,
+    "name": "Saradomin d'hide shield",
+    "completion": 2.3
+   },
+   {
+    "id": 23194,
+    "name": "Zamorak d'hide shield",
+    "completion": 2.3
+   },
+   {
+    "id": 23197,
+    "name": "Ancient d'hide shield",
+    "completion": 2.3
+   },
+   {
+    "id": 23200,
+    "name": "Armadyl d'hide shield",
+    "completion": 2.3
+   },
+   {
+    "id": 23203,
+    "name": "Bandos d'hide shield",
+    "completion": 2.3
+   },
+   {
+    "id": 23206,
+    "name": "Dual sai",
+    "completion": 10.5
+   },
+   {
+    "id": 23209,
+    "name": "Rune platebody (h1)",
+    "completion": 2.7
+   },
+   {
+    "id": 23212,
+    "name": "Rune platebody (h2)",
+    "completion": 2.7
+   },
+   {
+    "id": 23215,
+    "name": "Rune platebody (h3)",
+    "completion": 2.7
+   },
+   {
+    "id": 23218,
+    "name": "Rune platebody (h4)",
+    "completion": 2.7
+   },
+   {
+    "id": 23221,
+    "name": "Rune platebody (h5)",
+    "completion": 2.7
+   },
+   {
+    "id": 23224,
+    "name": "Thieving bag",
+    "completion": 10.6
+   },
+   {
+    "id": 23227,
+    "name": "Rune defender ornament kit",
+    "completion": 10.5
+   },
+   {
+    "id": 23232,
+    "name": "Tzhaar-ket-om ornament kit",
+    "completion": 10.5
+   },
+   {
+    "id": 23237,
+    "name": "Berserker necklace ornament kit",
+    "completion": 10.4
+   }
+  ]
+ },
+ {
+  "page": "Elite Treasure Trails",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 12335,
+    "name": "Briefcase",
+    "completion": 4.7
+   },
+   {
+    "id": 12337,
+    "name": "Sagacious spectacles",
+    "completion": 4.7
+   },
+   {
+    "id": 12351,
+    "name": "Musketeer hat",
+    "completion": 4.7
+   },
+   {
+    "id": 12353,
+    "name": "Monocle",
+    "completion": 4.7
+   },
+   {
+    "id": 12355,
+    "name": "Big pirate hat",
+    "completion": 4.6
+   },
+   {
+    "id": 12357,
+    "name": "Katana",
+    "completion": 4.7
+   },
+   {
+    "id": 12363,
+    "name": "Bronze dragon mask",
+    "completion": 4.7
+   },
+   {
+    "id": 12365,
+    "name": "Iron dragon mask",
+    "completion": 4.6
+   },
+   {
+    "id": 12367,
+    "name": "Steel dragon mask",
+    "completion": 4.7
+   },
+   {
+    "id": 12369,
+    "name": "Mithril dragon mask",
+    "completion": 4.6
+   },
+   {
+    "id": 12373,
+    "name": "Dragon cane",
+    "completion": 4.6
+   },
+   {
+    "id": 12381,
+    "name": "Black d'hide body (g)",
+    "completion": 4.7
+   },
+   {
+    "id": 12383,
+    "name": "Black d'hide chaps (g)",
+    "completion": 4.7
+   },
+   {
+    "id": 12385,
+    "name": "Black d'hide body (t)",
+    "completion": 4.6
+   },
+   {
+    "id": 12387,
+    "name": "Black d'hide chaps (t)",
+    "completion": 4.7
+   },
+   {
+    "id": 12393,
+    "name": "Royal gown top",
+    "completion": 4.7
+   },
+   {
+    "id": 12395,
+    "name": "Royal gown bottom",
+    "completion": 4.6
+   },
+   {
+    "id": 12397,
+    "name": "Royal crown",
+    "completion": 4.7
+   },
+   {
+    "id": 12430,
+    "name": "Afro",
+    "completion": 4.7
+   },
+   {
+    "id": 12432,
+    "name": "Top hat",
+    "completion": 4.7
+   },
+   {
+    "id": 12439,
+    "name": "Royal sceptre",
+    "completion": 4.6
+   },
+   {
+    "id": 12441,
+    "name": "Musketeer tabard",
+    "completion": 4.6
+   },
+   {
+    "id": 12443,
+    "name": "Musketeer pants",
+    "completion": 4.6
+   },
+   {
+    "id": 12526,
+    "name": "Fury ornament kit",
+    "completion": 4.7
+   },
+   {
+    "id": 12528,
+    "name": "Dark infinity colour kit",
+    "completion": 4.6
+   },
+   {
+    "id": 12530,
+    "name": "Light infinity colour kit",
+    "completion": 4.7
+   },
+   {
+    "id": 12532,
+    "name": "Dragon sq shield ornament kit",
+    "completion": 4.6
+   },
+   {
+    "id": 12534,
+    "name": "Dragon chainbody ornament kit",
+    "completion": 4.7
+   },
+   {
+    "id": 12536,
+    "name": "Dragon legs/skirt ornament kit",
+    "completion": 4.7
+   },
+   {
+    "id": 12538,
+    "name": "Dragon full helm ornament kit",
+    "completion": 4.6
+   },
+   {
+    "id": 12540,
+    "name": "Deerstalker",
+    "completion": 4.6
+   },
+   {
+    "id": 12596,
+    "name": "Rangers' tunic",
+    "completion": 4.6
+   },
+   {
+    "id": 19943,
+    "name": "Arceuus scarf",
+    "completion": 4.7
+   },
+   {
+    "id": 19946,
+    "name": "Hosidius scarf",
+    "completion": 4.7
+   },
+   {
+    "id": 19949,
+    "name": "Lovakengj scarf",
+    "completion": 4.7
+   },
+   {
+    "id": 19952,
+    "name": "Piscarilius scarf",
+    "completion": 4.7
+   },
+   {
+    "id": 19955,
+    "name": "Shayzien scarf",
+    "completion": 4.7
+   },
+   {
+    "id": 19958,
+    "name": "Dark tuxedo jacket",
+    "completion": 0.6
+   },
+   {
+    "id": 19961,
+    "name": "Dark tuxedo cuffs",
+    "completion": 0.6
+   },
+   {
+    "id": 19964,
+    "name": "Dark trousers",
+    "completion": 0.6
+   },
+   {
+    "id": 19967,
+    "name": "Dark tuxedo shoes",
+    "completion": 0.6
+   },
+   {
+    "id": 19970,
+    "name": "Dark bow tie",
+    "completion": 0.6
+   },
+   {
+    "id": 19973,
+    "name": "Light tuxedo jacket",
+    "completion": 0.6
+   },
+   {
+    "id": 19976,
+    "name": "Light tuxedo cuffs",
+    "completion": 0.6
+   },
+   {
+    "id": 19979,
+    "name": "Light trousers",
+    "completion": 0.6
+   },
+   {
+    "id": 19982,
+    "name": "Light tuxedo shoes",
+    "completion": 0.6
+   },
+   {
+    "id": 19985,
+    "name": "Light bow tie",
+    "completion": 0.6
+   },
+   {
+    "id": 19988,
+    "name": "Blacksmith's helm",
+    "completion": 4.7
+   },
+   {
+    "id": 19991,
+    "name": "Bucket helm",
+    "completion": 4.7
+   },
+   {
+    "id": 19994,
+    "name": "Ranger gloves",
+    "completion": 4.6
+   },
+   {
+    "id": 19997,
+    "name": "Holy wraps",
+    "completion": 4.7
+   },
+   {
+    "id": 20002,
+    "name": "Dragon scimitar ornament kit",
+    "completion": 4.6
+   },
+   {
+    "id": 23185,
+    "name": "Ring of 3rd Age",
+    "completion": 2.3
+   },
+   {
+    "id": 23246,
+    "name": "Fremennik kilt",
+    "completion": 4.6
+   },
+   {
+    "id": 23249,
+    "name": "Rangers' tights",
+    "completion": 4.6
+   },
+   {
+    "id": 23252,
+    "name": "Giant boot",
+    "completion": 4.6
+   },
+   {
+    "id": 23255,
+    "name": "Uri's hat",
+    "completion": 4.6
+   },
+   {
+    "id": 23270,
+    "name": "Adamant dragon mask",
+    "completion": 4.6
+   },
+   {
+    "id": 23273,
+    "name": "Rune dragon mask",
+    "completion": 4.5
+   }
+  ]
+ },
+ {
+  "page": "Master Treasure Trails",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 19724,
+    "name": "Left eye patch",
+    "completion": 5.1
+   },
+   {
+    "id": 19730,
+    "name": "Bloodhound",
+    "completion": 1.1
+   },
+   {
+    "id": 20008,
+    "name": "Fancy tiara",
+    "completion": 5.1
+   },
+   {
+    "id": 20020,
+    "name": "Lesser demon mask",
+    "completion": 5.1
+   },
+   {
+    "id": 20023,
+    "name": "Greater demon mask",
+    "completion": 5.1
+   },
+   {
+    "id": 20026,
+    "name": "Black demon mask",
+    "completion": 5.1
+   },
+   {
+    "id": 20029,
+    "name": "Old demon mask",
+    "completion": 5.2
+   },
+   {
+    "id": 20032,
+    "name": "Jungle demon mask",
+    "completion": 5.2
+   },
+   {
+    "id": 20035,
+    "name": "Samurai kasa",
+    "completion": 5.1
+   },
+   {
+    "id": 20038,
+    "name": "Samurai shirt",
+    "completion": 5.2
+   },
+   {
+    "id": 20041,
+    "name": "Samurai gloves",
+    "completion": 5.1
+   },
+   {
+    "id": 20044,
+    "name": "Samurai greaves",
+    "completion": 5.2
+   },
+   {
+    "id": 20047,
+    "name": "Samurai boots",
+    "completion": 5.2
+   },
+   {
+    "id": 20050,
+    "name": "Obsidian cape (r)",
+    "completion": 5.1
+   },
+   {
+    "id": 20053,
+    "name": "Half moon spectacles",
+    "completion": 5.1
+   },
+   {
+    "id": 20056,
+    "name": "Ale of the gods",
+    "completion": 5.1
+   },
+   {
+    "id": 20062,
+    "name": "Torture ornament kit",
+    "completion": 5.1
+   },
+   {
+    "id": 20065,
+    "name": "Occult ornament kit",
+    "completion": 5.2
+   },
+   {
+    "id": 20068,
+    "name": "Armadyl godsword ornament kit",
+    "completion": 1.7
+   },
+   {
+    "id": 20071,
+    "name": "Bandos godsword ornament kit",
+    "completion": 1.7
+   },
+   {
+    "id": 20074,
+    "name": "Saradomin godsword ornament kit",
+    "completion": 1.8
+   },
+   {
+    "id": 20077,
+    "name": "Zamorak godsword ornament kit",
+    "completion": 1.8
+   },
+   {
+    "id": 20080,
+    "name": "Mummy's head",
+    "completion": 0.5
+   },
+   {
+    "id": 20083,
+    "name": "Mummy's body",
+    "completion": 0.5
+   },
+   {
+    "id": 20086,
+    "name": "Mummy's hands",
+    "completion": 0.5
+   },
+   {
+    "id": 20089,
+    "name": "Mummy's legs",
+    "completion": 0.5
+   },
+   {
+    "id": 20092,
+    "name": "Mummy's feet",
+    "completion": 0.5
+   },
+   {
+    "id": 20095,
+    "name": "Ankou mask",
+    "completion": 0.5
+   },
+   {
+    "id": 20098,
+    "name": "Ankou top",
+    "completion": 0.5
+   },
+   {
+    "id": 20101,
+    "name": "Ankou gloves",
+    "completion": 0.6
+   },
+   {
+    "id": 20104,
+    "name": "Ankou's leggings",
+    "completion": 0.5
+   },
+   {
+    "id": 20107,
+    "name": "Ankou socks",
+    "completion": 0.5
+   },
+   {
+    "id": 20110,
+    "name": "Bowl wig",
+    "completion": 5.2
+   },
+   {
+    "id": 20113,
+    "name": "Arceuus hood",
+    "completion": 5.2
+   },
+   {
+    "id": 20116,
+    "name": "Hosidius hood",
+    "completion": 5.2
+   },
+   {
+    "id": 20119,
+    "name": "Lovakengj hood",
+    "completion": 5.1
+   },
+   {
+    "id": 20122,
+    "name": "Piscarilius hood",
+    "completion": 5.2
+   },
+   {
+    "id": 20125,
+    "name": "Shayzien hood",
+    "completion": 5.1
+   },
+   {
+    "id": 20128,
+    "name": "Hood of darkness",
+    "completion": 5.1
+   },
+   {
+    "id": 20131,
+    "name": "Robe top of darkness",
+    "completion": 5.1
+   },
+   {
+    "id": 20134,
+    "name": "Gloves of darkness",
+    "completion": 5.1
+   },
+   {
+    "id": 20137,
+    "name": "Robe bottom of darkness",
+    "completion": 5.2
+   },
+   {
+    "id": 20140,
+    "name": "Boots of darkness",
+    "completion": 5.1
+   },
+   {
+    "id": 20143,
+    "name": "Dragon defender ornament kit",
+    "completion": 5.1
+   },
+   {
+    "id": 22236,
+    "name": "Dragon platebody ornament kit",
+    "completion": 0.5
+   },
+   {
+    "id": 22239,
+    "name": "Dragon kiteshield ornament kit",
+    "completion": 0.3
+   },
+   {
+    "id": 22246,
+    "name": "Anguish ornament kit",
+    "completion": 5.1
+   },
+   {
+    "id": 23185,
+    "name": "Ring of 3rd Age",
+    "completion": 2.3
+   },
+   {
+    "id": 23348,
+    "name": "Tormented ornament kit",
+    "completion": 5.1
+   }
+  ]
+ },
+ {
+  "page": "Hard Treasure Trails (Rare)",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 3481,
+    "name": "Gilded platebody",
+    "completion": 0.9
+   },
+   {
+    "id": 3483,
+    "name": "Gilded platelegs",
+    "completion": 0.9
+   },
+   {
+    "id": 3485,
+    "name": "Gilded plateskirt",
+    "completion": 0.9
+   },
+   {
+    "id": 3486,
+    "name": "Gilded full helm",
+    "completion": 1
+   },
+   {
+    "id": 3488,
+    "name": "Gilded kiteshield",
+    "completion": 0.9
+   },
+   {
+    "id": 10330,
+    "name": "3rd Age range top",
+    "completion": 0.2
+   },
+   {
+    "id": 10332,
+    "name": "3rd Age range legs",
+    "completion": 0.2
+   },
+   {
+    "id": 10334,
+    "name": "3rd Age range coif",
+    "completion": 0.2
+   },
+   {
+    "id": 10336,
+    "name": "3rd Age vambraces",
+    "completion": 0.2
+   },
+   {
+    "id": 10338,
+    "name": "3rd Age robe top",
+    "completion": 0.2
+   },
+   {
+    "id": 10340,
+    "name": "3rd Age robe",
+    "completion": 0.2
+   },
+   {
+    "id": 10342,
+    "name": "3rd Age mage hat",
+    "completion": 0.2
+   },
+   {
+    "id": 10344,
+    "name": "3rd Age amulet",
+    "completion": 0.2
+   },
+   {
+    "id": 10346,
+    "name": "3rd Age platelegs",
+    "completion": 0.2
+   },
+   {
+    "id": 10348,
+    "name": "3rd Age platebody",
+    "completion": 0.2
+   },
+   {
+    "id": 10350,
+    "name": "3rd Age full helmet",
+    "completion": 0.2
+   },
+   {
+    "id": 10352,
+    "name": "3rd Age kiteshield",
+    "completion": 0.2
+   },
+   {
+    "id": 20146,
+    "name": "Gilded med helm",
+    "completion": 0.9
+   },
+   {
+    "id": 20149,
+    "name": "Gilded chainbody",
+    "completion": 0.9
+   },
+   {
+    "id": 20152,
+    "name": "Gilded sq shield",
+    "completion": 1
+   },
+   {
+    "id": 20155,
+    "name": "Gilded 2h sword",
+    "completion": 0.9
+   },
+   {
+    "id": 20158,
+    "name": "Gilded spear",
+    "completion": 0.9
+   },
+   {
+    "id": 20161,
+    "name": "Gilded hasta",
+    "completion": 0.9
+   },
+   {
+    "id": 23242,
+    "name": "3rd Age plateskirt",
+    "completion": 0.2
+   }
+  ]
+ },
+ {
+  "page": "Elite Treasure Trails (Rare)",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 3481,
+    "name": "Gilded platebody",
+    "completion": 0.9
+   },
+   {
+    "id": 3483,
+    "name": "Gilded platelegs",
+    "completion": 0.9
+   },
+   {
+    "id": 3485,
+    "name": "Gilded plateskirt",
+    "completion": 0.9
+   },
+   {
+    "id": 3486,
+    "name": "Gilded full helm",
+    "completion": 1
+   },
+   {
+    "id": 3488,
+    "name": "Gilded kiteshield",
+    "completion": 0.9
+   },
+   {
+    "id": 10330,
+    "name": "3rd Age range top",
+    "completion": 0.2
+   },
+   {
+    "id": 10332,
+    "name": "3rd Age range legs",
+    "completion": 0.2
+   },
+   {
+    "id": 10334,
+    "name": "3rd Age range coif",
+    "completion": 0.2
+   },
+   {
+    "id": 10336,
+    "name": "3rd Age vambraces",
+    "completion": 0.2
+   },
+   {
+    "id": 10338,
+    "name": "3rd Age robe top",
+    "completion": 0.2
+   },
+   {
+    "id": 10340,
+    "name": "3rd Age robe",
+    "completion": 0.2
+   },
+   {
+    "id": 10342,
+    "name": "3rd Age mage hat",
+    "completion": 0.2
+   },
+   {
+    "id": 10344,
+    "name": "3rd Age amulet",
+    "completion": 0.2
+   },
+   {
+    "id": 10346,
+    "name": "3rd Age platelegs",
+    "completion": 0.2
+   },
+   {
+    "id": 10348,
+    "name": "3rd Age platebody",
+    "completion": 0.2
+   },
+   {
+    "id": 10350,
+    "name": "3rd Age full helmet",
+    "completion": 0.2
+   },
+   {
+    "id": 10352,
+    "name": "3rd Age kiteshield",
+    "completion": 0.2
+   },
+   {
+    "id": 12371,
+    "name": "Lava dragon mask",
+    "completion": 0.5
+   },
+   {
+    "id": 12389,
+    "name": "Gilded scimitar",
+    "completion": 0.9
+   },
+   {
+    "id": 12391,
+    "name": "Gilded boots",
+    "completion": 0.9
+   },
+   {
+    "id": 12422,
+    "name": "3rd Age wand",
+    "completion": 0.1
+   },
+   {
+    "id": 12424,
+    "name": "3rd Age bow",
+    "completion": 0.1
+   },
+   {
+    "id": 12426,
+    "name": "3rd Age longsword",
+    "completion": 0.1
+   },
+   {
+    "id": 12437,
+    "name": "3rd Age cloak",
+    "completion": 0.1
+   },
+   {
+    "id": 20005,
+    "name": "Ring of nature",
+    "completion": 0.5
+   },
+   {
+    "id": 20146,
+    "name": "Gilded med helm",
+    "completion": 0.9
+   },
+   {
+    "id": 20149,
+    "name": "Gilded chainbody",
+    "completion": 0.9
+   },
+   {
+    "id": 20152,
+    "name": "Gilded sq shield",
+    "completion": 1
+   },
+   {
+    "id": 20155,
+    "name": "Gilded 2h sword",
+    "completion": 0.9
+   },
+   {
+    "id": 20158,
+    "name": "Gilded spear",
+    "completion": 0.9
+   },
+   {
+    "id": 20161,
+    "name": "Gilded hasta",
+    "completion": 0.9
+   },
+   {
+    "id": 23242,
+    "name": "3rd Age plateskirt",
+    "completion": 0.2
+   },
+   {
+    "id": 23258,
+    "name": "Gilded coif",
+    "completion": 0.9
+   },
+   {
+    "id": 23261,
+    "name": "Gilded d'hide vambraces",
+    "completion": 0.9
+   },
+   {
+    "id": 23264,
+    "name": "Gilded d'hide body",
+    "completion": 0.9
+   },
+   {
+    "id": 23267,
+    "name": "Gilded d'hide chaps",
+    "completion": 0.9
+   },
+   {
+    "id": 23276,
+    "name": "Gilded pickaxe",
+    "completion": 0.9
+   },
+   {
+    "id": 23279,
+    "name": "Gilded axe",
+    "completion": 0.9
+   },
+   {
+    "id": 23282,
+    "name": "Gilded spade",
+    "completion": 0.9
+   }
+  ]
+ },
+ {
+  "page": "Master Treasure Trails (Rare)",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 3481,
+    "name": "Gilded platebody",
+    "completion": 0.9
+   },
+   {
+    "id": 3483,
+    "name": "Gilded platelegs",
+    "completion": 0.9
+   },
+   {
+    "id": 3485,
+    "name": "Gilded plateskirt",
+    "completion": 0.9
+   },
+   {
+    "id": 3486,
+    "name": "Gilded full helm",
+    "completion": 1
+   },
+   {
+    "id": 3488,
+    "name": "Gilded kiteshield",
+    "completion": 0.9
+   },
+   {
+    "id": 10330,
+    "name": "3rd Age range top",
+    "completion": 0.2
+   },
+   {
+    "id": 10332,
+    "name": "3rd Age range legs",
+    "completion": 0.2
+   },
+   {
+    "id": 10334,
+    "name": "3rd Age range coif",
+    "completion": 0.2
+   },
+   {
+    "id": 10336,
+    "name": "3rd Age vambraces",
+    "completion": 0.2
+   },
+   {
+    "id": 10338,
+    "name": "3rd Age robe top",
+    "completion": 0.2
+   },
+   {
+    "id": 10340,
+    "name": "3rd Age robe",
+    "completion": 0.2
+   },
+   {
+    "id": 10342,
+    "name": "3rd Age mage hat",
+    "completion": 0.2
+   },
+   {
+    "id": 10344,
+    "name": "3rd Age amulet",
+    "completion": 0.2
+   },
+   {
+    "id": 10346,
+    "name": "3rd Age platelegs",
+    "completion": 0.2
+   },
+   {
+    "id": 10348,
+    "name": "3rd Age platebody",
+    "completion": 0.2
+   },
+   {
+    "id": 10350,
+    "name": "3rd Age full helmet",
+    "completion": 0.2
+   },
+   {
+    "id": 10352,
+    "name": "3rd Age kiteshield",
+    "completion": 0.2
+   },
+   {
+    "id": 12389,
+    "name": "Gilded scimitar",
+    "completion": 0.9
+   },
+   {
+    "id": 12391,
+    "name": "Gilded boots",
+    "completion": 0.9
+   },
+   {
+    "id": 12422,
+    "name": "3rd Age wand",
+    "completion": 0.1
+   },
+   {
+    "id": 12424,
+    "name": "3rd Age bow",
+    "completion": 0.1
+   },
+   {
+    "id": 12426,
+    "name": "3rd Age longsword",
+    "completion": 0.1
+   },
+   {
+    "id": 12437,
+    "name": "3rd Age cloak",
+    "completion": 0.1
+   },
+   {
+    "id": 20011,
+    "name": "3rd Age axe",
+    "completion": 0
+   },
+   {
+    "id": 20014,
+    "name": "3rd Age pickaxe",
+    "completion": 0.1
+   },
+   {
+    "id": 20017,
+    "name": "Ring of coins",
+    "completion": 0.5
+   },
+   {
+    "id": 20059,
+    "name": "Bucket helm (g)",
+    "completion": 0.5
+   },
+   {
+    "id": 20146,
+    "name": "Gilded med helm",
+    "completion": 0.9
+   },
+   {
+    "id": 20149,
+    "name": "Gilded chainbody",
+    "completion": 0.9
+   },
+   {
+    "id": 20152,
+    "name": "Gilded sq shield",
+    "completion": 1
+   },
+   {
+    "id": 20155,
+    "name": "Gilded 2h sword",
+    "completion": 0.9
+   },
+   {
+    "id": 20158,
+    "name": "Gilded spear",
+    "completion": 0.9
+   },
+   {
+    "id": 20161,
+    "name": "Gilded hasta",
+    "completion": 0.9
+   },
+   {
+    "id": 23242,
+    "name": "3rd Age plateskirt",
+    "completion": 0.2
+   },
+   {
+    "id": 23258,
+    "name": "Gilded coif",
+    "completion": 0.9
+   },
+   {
+    "id": 23261,
+    "name": "Gilded d'hide vambraces",
+    "completion": 0.9
+   },
+   {
+    "id": 23264,
+    "name": "Gilded d'hide body",
+    "completion": 0.9
+   },
+   {
+    "id": 23267,
+    "name": "Gilded d'hide chaps",
+    "completion": 0.9
+   },
+   {
+    "id": 23276,
+    "name": "Gilded pickaxe",
+    "completion": 0.9
+   },
+   {
+    "id": 23279,
+    "name": "Gilded axe",
+    "completion": 0.9
+   },
+   {
+    "id": 23282,
+    "name": "Gilded spade",
+    "completion": 0.9
+   },
+   {
+    "id": 23336,
+    "name": "3rd Age druidic robe top",
+    "completion": 0
+   },
+   {
+    "id": 23339,
+    "name": "3rd Age druidic robe bottoms",
+    "completion": 0
+   },
+   {
+    "id": 23342,
+    "name": "3rd Age druidic staff",
+    "completion": 0
+   },
+   {
+    "id": 23345,
+    "name": "3rd Age druidic cloak",
+    "completion": 0
+   }
+  ]
+ },
+ {
+  "page": "Shared Treasure Trail Rewards",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 3827,
+    "name": "Saradomin page 1",
+    "completion": 31.4
+   },
+   {
+    "id": 3828,
+    "name": "Saradomin page 2",
+    "completion": 31.3
+   },
+   {
+    "id": 3829,
+    "name": "Saradomin page 3",
+    "completion": 31.3
+   },
+   {
+    "id": 3830,
+    "name": "Saradomin page 4",
+    "completion": 31.4
+   },
+   {
+    "id": 3831,
+    "name": "Zamorak page 1",
+    "completion": 31.2
+   },
+   {
+    "id": 3832,
+    "name": "Zamorak page 2",
+    "completion": 31.3
+   },
+   {
+    "id": 3833,
+    "name": "Zamorak page 3",
+    "completion": 31.4
+   },
+   {
+    "id": 3834,
+    "name": "Zamorak page 4",
+    "completion": 31.3
+   },
+   {
+    "id": 3835,
+    "name": "Guthix page 1",
+    "completion": 31.4
+   },
+   {
+    "id": 3836,
+    "name": "Guthix page 2",
+    "completion": 31.2
+   },
+   {
+    "id": 3837,
+    "name": "Guthix page 3",
+    "completion": 31.4
+   },
+   {
+    "id": 3838,
+    "name": "Guthix page 4",
+    "completion": 31.5
+   },
+   {
+    "id": 7329,
+    "name": "Red firelighter",
+    "completion": 52.7
+   },
+   {
+    "id": 7330,
+    "name": "Green firelighter",
+    "completion": 52.6
+   },
+   {
+    "id": 7331,
+    "name": "Blue firelighter",
+    "completion": 52.7
+   },
+   {
+    "id": 10326,
+    "name": "Purple firelighter",
+    "completion": 52.9
+   },
+   {
+    "id": 10327,
+    "name": "White firelighter",
+    "completion": 52.7
+   },
+   {
+    "id": 10476,
+    "name": "Purple sweets",
+    "completion": 71.3
+   },
+   {
+    "id": 12402,
+    "name": "Nardah teleport",
+    "completion": 42.3
+   },
+   {
+    "id": 12403,
+    "name": "Digsite teleport",
+    "completion": 42.2
+   },
+   {
+    "id": 12404,
+    "name": "Feldip hills teleport",
+    "completion": 42.4
+   },
+   {
+    "id": 12405,
+    "name": "Lunar isle teleport",
+    "completion": 42.3
+   },
+   {
+    "id": 12406,
+    "name": "Mort'ton teleport",
+    "completion": 42.3
+   },
+   {
+    "id": 12407,
+    "name": "Pest control teleport",
+    "completion": 42.3
+   },
+   {
+    "id": 12408,
+    "name": "Piscatoris teleport",
+    "completion": 42.4
+   },
+   {
+    "id": 12409,
+    "name": "Tai bwo wannai teleport",
+    "completion": 42.4
+   },
+   {
+    "id": 12410,
+    "name": "Iorwerth camp teleport",
+    "completion": 42.4
+   },
+   {
+    "id": 12411,
+    "name": "Mos le'harmless teleport",
+    "completion": 42.3
+   },
+   {
+    "id": 12613,
+    "name": "Bandos page 1",
+    "completion": 31.2
+   },
+   {
+    "id": 12614,
+    "name": "Bandos page 2",
+    "completion": 31.5
+   },
+   {
+    "id": 12615,
+    "name": "Bandos page 3",
+    "completion": 31.3
+   },
+   {
+    "id": 12616,
+    "name": "Bandos page 4",
+    "completion": 31.4
+   },
+   {
+    "id": 12617,
+    "name": "Armadyl page 1",
+    "completion": 31.3
+   },
+   {
+    "id": 12618,
+    "name": "Armadyl page 2",
+    "completion": 31.5
+   },
+   {
+    "id": 12619,
+    "name": "Armadyl page 3",
+    "completion": 31.4
+   },
+   {
+    "id": 12620,
+    "name": "Armadyl page 4",
+    "completion": 31.2
+   },
+   {
+    "id": 12621,
+    "name": "Ancient page 1",
+    "completion": 31.3
+   },
+   {
+    "id": 12622,
+    "name": "Ancient page 2",
+    "completion": 31.3
+   },
+   {
+    "id": 12623,
+    "name": "Ancient page 3",
+    "completion": 31.5
+   },
+   {
+    "id": 12624,
+    "name": "Ancient page 4",
+    "completion": 31.3
+   },
+   {
+    "id": 12642,
+    "name": "Lumberyard teleport",
+    "completion": 42.4
+   },
+   {
+    "id": 20220,
+    "name": "Holy blessing",
+    "completion": 32.5
+   },
+   {
+    "id": 20223,
+    "name": "Unholy blessing",
+    "completion": 32.7
+   },
+   {
+    "id": 20226,
+    "name": "Peaceful blessing",
+    "completion": 32.7
+   },
+   {
+    "id": 20229,
+    "name": "Honourable blessing",
+    "completion": 32.6
+   },
+   {
+    "id": 20232,
+    "name": "War blessing",
+    "completion": 32.8
+   },
+   {
+    "id": 20235,
+    "name": "Ancient blessing",
+    "completion": 32.7
+   },
+   {
+    "id": 20238,
+    "name": "Charge dragonstone jewellery scroll",
+    "completion": 42.3
+   },
+   {
+    "id": 21387,
+    "name": "Master scroll book (empty)",
+    "completion": 33.8
+   }
+  ]
+ },
+ {
+  "page": "Scroll Cases",
+  "tab": "Clues",
+  "items": [
+   {
+    "id": 30902,
+    "name": "Minor beginner scroll case",
+    "completion": 8.3
+   },
+   {
+    "id": 30904,
+    "name": "Major beginner scroll case",
+    "completion": 5.4
+   },
+   {
+    "id": 30906,
+    "name": "Minor easy scroll case",
+    "completion": 6.3
+   },
+   {
+    "id": 30908,
+    "name": "Major easy scroll case",
+    "completion": 3.6
+   },
+   {
+    "id": 30910,
+    "name": "Minor medium scroll case",
+    "completion": 9.7
+   },
+   {
+    "id": 30912,
+    "name": "Major medium scroll case",
+    "completion": 4.3
+   },
+   {
+    "id": 30914,
+    "name": "Minor hard scroll case",
+    "completion": 19.6
+   },
+   {
+    "id": 30916,
+    "name": "Major hard scroll case",
+    "completion": 9.3
+   },
+   {
+    "id": 30918,
+    "name": "Minor elite scroll case",
+    "completion": 7.1
+   },
+   {
+    "id": 30920,
+    "name": "Major elite scroll case",
+    "completion": 2.1
+   },
+   {
+    "id": 30922,
+    "name": "Minor master scroll case",
+    "completion": 7.4
+   },
+   {
+    "id": 30924,
+    "name": "Major master scroll case",
+    "completion": 3.3
+   },
+   {
+    "id": 30926,
+    "name": "Mimic scroll case",
+    "completion": 15.8
+   }
+  ]
+ },
+ {
+  "page": "Barbarian Assault",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 10547,
+    "name": "Healer hat",
+    "completion": 1.9
+   },
+   {
+    "id": 10548,
+    "name": "Fighter hat",
+    "completion": 2.4
+   },
+   {
+    "id": 10549,
+    "name": "Runner hat",
+    "completion": 1.9
+   },
+   {
+    "id": 10550,
+    "name": "Ranger hat",
+    "completion": 1.9
+   },
+   {
+    "id": 10551,
+    "name": "Fighter torso",
+    "completion": 36.7
+   },
+   {
+    "id": 10552,
+    "name": "Runner boots",
+    "completion": 2.5
+   },
+   {
+    "id": 10553,
+    "name": "Penance gloves",
+    "completion": 2.6
+   },
+   {
+    "id": 10555,
+    "name": "Penance skirt",
+    "completion": 1.9
+   },
+   {
+    "id": 10564,
+    "name": "Granite body",
+    "completion": 37
+   },
+   {
+    "id": 10589,
+    "name": "Granite helm",
+    "completion": 3.7
+   },
+   {
+    "id": 12703,
+    "name": "Pet Penance Queen",
+    "completion": 0.2
+   }
+  ]
+ },
+ {
+  "page": "Barracuda Trials",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 31732,
+    "name": "Stormy key",
+    "completion": 18
+   },
+   {
+    "id": 31733,
+    "name": "Barrel stand",
+    "completion": 17.2
+   },
+   {
+    "id": 31734,
+    "name": "Ralph's fabric roll",
+    "completion": 15.2
+   },
+   {
+    "id": 31744,
+    "name": "Fetid key",
+    "completion": 12.3
+   },
+   {
+    "id": 31745,
+    "name": "Captured wind mote",
+    "completion": 11.8
+   },
+   {
+    "id": 31746,
+    "name": "Gurtob's fabric roll",
+    "completion": 8
+   },
+   {
+    "id": 31756,
+    "name": "Serrated key",
+    "completion": 8.5
+   },
+   {
+    "id": 31757,
+    "name": "Heart of Ithell",
+    "completion": 8.2
+   },
+   {
+    "id": 31758,
+    "name": "Gwyna's fabric roll",
+    "completion": 4.5
+   }
+  ]
+ },
+ {
+  "page": "Brimhaven Agility Arena",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 2996,
+    "name": "Agility arena ticket",
+    "completion": 51.9
+   },
+   {
+    "id": 2997,
+    "name": "Pirate's hook",
+    "completion": 2.6
+   },
+   {
+    "id": 21061,
+    "name": "Graceful hood",
+    "completion": 6
+   },
+   {
+    "id": 21064,
+    "name": "Graceful cape",
+    "completion": 6
+   },
+   {
+    "id": 21067,
+    "name": "Graceful top",
+    "completion": 6
+   },
+   {
+    "id": 21070,
+    "name": "Graceful legs",
+    "completion": 6
+   },
+   {
+    "id": 21073,
+    "name": "Graceful gloves",
+    "completion": 6
+   },
+   {
+    "id": 21076,
+    "name": "Graceful boots",
+    "completion": 6
+   },
+   {
+    "id": 29482,
+    "name": "Brimhaven voucher",
+    "completion": 25.4
+   }
+  ]
+ },
+ {
+  "page": "Castle Wars",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 4068,
+    "name": "Decorative sword",
+    "completion": 4.3
+   },
+   {
+    "id": 4069,
+    "name": "Decorative armour",
+    "completion": 4.3
+   },
+   {
+    "id": 4070,
+    "name": "Decorative armour",
+    "completion": 4.2
+   },
+   {
+    "id": 4071,
+    "name": "Decorative helm",
+    "completion": 4.4
+   },
+   {
+    "id": 4072,
+    "name": "Decorative shield",
+    "completion": 4.3
+   },
+   {
+    "id": 4503,
+    "name": "Decorative sword",
+    "completion": 3.2
+   },
+   {
+    "id": 4504,
+    "name": "Decorative armour",
+    "completion": 2.8
+   },
+   {
+    "id": 4505,
+    "name": "Decorative armour",
+    "completion": 3.1
+   },
+   {
+    "id": 4506,
+    "name": "Decorative helm",
+    "completion": 3.3
+   },
+   {
+    "id": 4507,
+    "name": "Decorative shield",
+    "completion": 3.1
+   },
+   {
+    "id": 4508,
+    "name": "Decorative sword",
+    "completion": 1.3
+   },
+   {
+    "id": 4509,
+    "name": "Decorative armour",
+    "completion": 1.3
+   },
+   {
+    "id": 4510,
+    "name": "Decorative armour",
+    "completion": 1.3
+   },
+   {
+    "id": 4511,
+    "name": "Decorative helm",
+    "completion": 1.4
+   },
+   {
+    "id": 4512,
+    "name": "Decorative shield",
+    "completion": 1.3
+   },
+   {
+    "id": 4513,
+    "name": "Castlewars hood",
+    "completion": 4
+   },
+   {
+    "id": 4514,
+    "name": "Castlewars cloak",
+    "completion": 4
+   },
+   {
+    "id": 4515,
+    "name": "Castlewars hood",
+    "completion": 4
+   },
+   {
+    "id": 4516,
+    "name": "Castlewars cloak",
+    "completion": 4
+   },
+   {
+    "id": 11891,
+    "name": "Saradomin banner",
+    "completion": 2.6
+   },
+   {
+    "id": 11892,
+    "name": "Zamorak banner",
+    "completion": 2.6
+   },
+   {
+    "id": 11893,
+    "name": "Decorative armour",
+    "completion": 4.2
+   },
+   {
+    "id": 11894,
+    "name": "Decorative armour",
+    "completion": 3.1
+   },
+   {
+    "id": 11895,
+    "name": "Decorative armour",
+    "completion": 1.3
+   },
+   {
+    "id": 11896,
+    "name": "Decorative armour",
+    "completion": 3.4
+   },
+   {
+    "id": 11897,
+    "name": "Decorative armour",
+    "completion": 3.4
+   },
+   {
+    "id": 11898,
+    "name": "Decorative armour",
+    "completion": 3.6
+   },
+   {
+    "id": 11899,
+    "name": "Decorative armour",
+    "completion": 3.4
+   },
+   {
+    "id": 11900,
+    "name": "Decorative armour",
+    "completion": 3.4
+   },
+   {
+    "id": 11901,
+    "name": "Decorative armour",
+    "completion": 3.3
+   },
+   {
+    "id": 12637,
+    "name": "Saradomin halo",
+    "completion": 3.3
+   },
+   {
+    "id": 12638,
+    "name": "Zamorak halo",
+    "completion": 3.3
+   },
+   {
+    "id": 12639,
+    "name": "Guthix halo",
+    "completion": 3.2
+   },
+   {
+    "id": 25163,
+    "name": "Decorative boots",
+    "completion": 4.3
+   },
+   {
+    "id": 25165,
+    "name": "Decorative full helm",
+    "completion": 4.2
+   },
+   {
+    "id": 25167,
+    "name": "Decorative boots",
+    "completion": 3.3
+   },
+   {
+    "id": 25169,
+    "name": "Decorative full helm",
+    "completion": 3.2
+   },
+   {
+    "id": 25171,
+    "name": "Decorative boots",
+    "completion": 1.4
+   },
+   {
+    "id": 25174,
+    "name": "Decorative full helm",
+    "completion": 1.3
+   }
+  ]
+ },
+ {
+  "page": "Fishing Trawler",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 13258,
+    "name": "Angler hat",
+    "completion": 51.5
+   },
+   {
+    "id": 13259,
+    "name": "Angler top",
+    "completion": 51.4
+   },
+   {
+    "id": 13260,
+    "name": "Angler waders",
+    "completion": 51.5
+   },
+   {
+    "id": 13261,
+    "name": "Angler boots",
+    "completion": 51.4
+   }
+  ]
+ },
+ {
+  "page": "Giants' Foundry",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 27012,
+    "name": "Double ammo mould",
+    "completion": 19.9
+   },
+   {
+    "id": 27014,
+    "name": "Kovac's grog",
+    "completion": 19.4
+   },
+   {
+    "id": 27017,
+    "name": "Smithing catalyst",
+    "completion": 9.8
+   },
+   {
+    "id": 27019,
+    "name": "Ore pack",
+    "completion": 9.3
+   },
+   {
+    "id": 27021,
+    "name": "Colossal blade",
+    "completion": 6.3
+   },
+   {
+    "id": 27023,
+    "name": "Smiths tunic",
+    "completion": 10.9
+   },
+   {
+    "id": 27025,
+    "name": "Smiths trousers",
+    "completion": 10.3
+   },
+   {
+    "id": 27027,
+    "name": "Smiths boots",
+    "completion": 11.5
+   },
+   {
+    "id": 27029,
+    "name": "Smiths gloves",
+    "completion": 13.9
+   }
+  ]
+ },
+ {
+  "page": "Gnome Restaurant",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 9469,
+    "name": "Grand seed pod",
+    "completion": 2.3
+   },
+   {
+    "id": 9470,
+    "name": "Gnome scarf",
+    "completion": 2.4
+   },
+   {
+    "id": 9472,
+    "name": "Gnome goggles",
+    "completion": 2.3
+   },
+   {
+    "id": 9475,
+    "name": "Mint cake",
+    "completion": 2.2
+   }
+  ]
+ },
+ {
+  "page": "Guardians of the Rift",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 26792,
+    "name": "Abyssal pearls",
+    "completion": 69.3
+   },
+   {
+    "id": 26798,
+    "name": "Catalytic talisman",
+    "completion": 40.5
+   },
+   {
+    "id": 26807,
+    "name": "Abyssal green dye",
+    "completion": 14.2
+   },
+   {
+    "id": 26809,
+    "name": "Abyssal blue dye",
+    "completion": 14.3
+   },
+   {
+    "id": 26811,
+    "name": "Abyssal red dye",
+    "completion": 14.3
+   },
+   {
+    "id": 26813,
+    "name": "Abyssal needle",
+    "completion": 35.2
+   },
+   {
+    "id": 26815,
+    "name": "Ring of the elements",
+    "completion": 7.6
+   },
+   {
+    "id": 26820,
+    "name": "Guardian's eye",
+    "completion": 1.8
+   },
+   {
+    "id": 26822,
+    "name": "Abyssal lantern",
+    "completion": 21.3
+   },
+   {
+    "id": 26850,
+    "name": "Hat of the Eye",
+    "completion": 26.5
+   },
+   {
+    "id": 26852,
+    "name": "Robe top of the Eye",
+    "completion": 22.6
+   },
+   {
+    "id": 26854,
+    "name": "Robe bottoms of the Eye",
+    "completion": 27.7
+   },
+   {
+    "id": 26856,
+    "name": "Boots of the Eye",
+    "completion": 34.6
+   },
+   {
+    "id": 26901,
+    "name": "Abyssal protector",
+    "completion": 5.4
+   },
+   {
+    "id": 26908,
+    "name": "Intricate pouch",
+    "completion": 63.5
+   },
+   {
+    "id": 26910,
+    "name": "Tarnished locket",
+    "completion": 15.4
+   },
+   {
+    "id": 26912,
+    "name": "Lost bag",
+    "completion": 11
+   }
+  ]
+ },
+ {
+  "page": "Hallowed Sepulchre",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 24711,
+    "name": "Hallowed mark",
+    "completion": 23
+   },
+   {
+    "id": 24719,
+    "name": "Hallowed token",
+    "completion": 7.2
+   },
+   {
+    "id": 24721,
+    "name": "Hallowed grapple",
+    "completion": 12.5
+   },
+   {
+    "id": 24723,
+    "name": "Hallowed focus",
+    "completion": 10.8
+   },
+   {
+    "id": 24725,
+    "name": "Hallowed symbol",
+    "completion": 11.5
+   },
+   {
+    "id": 24727,
+    "name": "Hallowed hammer",
+    "completion": 10.1
+   },
+   {
+    "id": 24729,
+    "name": "Dark dye",
+    "completion": 6.2
+   },
+   {
+    "id": 24731,
+    "name": "Hallowed ring",
+    "completion": 11.6
+   },
+   {
+    "id": 24733,
+    "name": "Dark acorn",
+    "completion": 2.2
+   },
+   {
+    "id": 24740,
+    "name": "Strange old lockpick (full)",
+    "completion": 13.9
+   },
+   {
+    "id": 24763,
+    "name": "Mysterious page",
+    "completion": 14.6
+   },
+   {
+    "id": 24765,
+    "name": "Mysterious page",
+    "completion": 15.4
+   },
+   {
+    "id": 24767,
+    "name": "Mysterious page",
+    "completion": 16.8
+   },
+   {
+    "id": 24769,
+    "name": "Mysterious page",
+    "completion": 10.9
+   },
+   {
+    "id": 24771,
+    "name": "Mysterious page",
+    "completion": 5.2
+   },
+   {
+    "id": 24844,
+    "name": "Ring of endurance (uncharged)",
+    "completion": 2.9
+   }
+  ]
+ },
+ {
+  "page": "Last Man Standing",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 12757,
+    "name": "Blue dark bow paint",
+    "completion": 1.1
+   },
+   {
+    "id": 12759,
+    "name": "Green dark bow paint",
+    "completion": 1.1
+   },
+   {
+    "id": 12761,
+    "name": "Yellow dark bow paint",
+    "completion": 1.1
+   },
+   {
+    "id": 12763,
+    "name": "White dark bow paint",
+    "completion": 1.1
+   },
+   {
+    "id": 12769,
+    "name": "Frozen whip mix",
+    "completion": 1.5
+   },
+   {
+    "id": 12771,
+    "name": "Volcanic whip mix",
+    "completion": 1.7
+   },
+   {
+    "id": 12798,
+    "name": "Steam staff upgrade kit",
+    "completion": 2.2
+   },
+   {
+    "id": 12800,
+    "name": "Dragon pickaxe upgrade kit",
+    "completion": 3.2
+   },
+   {
+    "id": 12802,
+    "name": "Ward upgrade kit",
+    "completion": 1.9
+   },
+   {
+    "id": 12849,
+    "name": "Granite clamp",
+    "completion": 1.6
+   },
+   {
+    "id": 21202,
+    "name": "Lava staff upgrade kit",
+    "completion": 2.3
+   },
+   {
+    "id": 24189,
+    "name": "Deadman's chest",
+    "completion": 0.6
+   },
+   {
+    "id": 24190,
+    "name": "Deadman's legs",
+    "completion": 0.6
+   },
+   {
+    "id": 24191,
+    "name": "Deadman's cape",
+    "completion": 0.6
+   },
+   {
+    "id": 24192,
+    "name": "Armadyl halo",
+    "completion": 0.4
+   },
+   {
+    "id": 24195,
+    "name": "Bandos halo",
+    "completion": 0.3
+   },
+   {
+    "id": 24198,
+    "name": "Seren halo",
+    "completion": 0.5
+   },
+   {
+    "id": 24201,
+    "name": "Ancient halo",
+    "completion": 0.4
+   },
+   {
+    "id": 24204,
+    "name": "Brassica halo",
+    "completion": 0.3
+   },
+   {
+    "id": 24207,
+    "name": "Victor's cape (1)",
+    "completion": 7.8
+   },
+   {
+    "id": 24209,
+    "name": "Victor's cape (10)",
+    "completion": 3
+   },
+   {
+    "id": 24211,
+    "name": "Victor's cape (50)",
+    "completion": 1.1
+   },
+   {
+    "id": 24213,
+    "name": "Victor's cape (100)",
+    "completion": 0.6
+   },
+   {
+    "id": 24215,
+    "name": "Victor's cape (500)",
+    "completion": 0.1
+   },
+   {
+    "id": 24217,
+    "name": "Guthixian icon",
+    "completion": 0.4
+   },
+   {
+    "id": 24219,
+    "name": "Swift blade",
+    "completion": 1.1
+   },
+   {
+    "id": 24229,
+    "name": "Ornate maul handle",
+    "completion": 4.1
+   },
+   {
+    "id": 24520,
+    "name": "Victor's cape (1000)",
+    "completion": 0
+   },
+   {
+    "id": 24868,
+    "name": "Golden Armadyl special attack",
+    "completion": 1
+   },
+   {
+    "id": 24869,
+    "name": "Golden Bandos special attack",
+    "completion": 1.7
+   },
+   {
+    "id": 24870,
+    "name": "Golden Saradomin special attack",
+    "completion": 1.1
+   },
+   {
+    "id": 24871,
+    "name": "Golden Zamorak special attack",
+    "completion": 0.9
+   }
+  ]
+ },
+ {
+  "page": "Magic Training Arena",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 6889,
+    "name": "Mage's book",
+    "completion": 3.8
+   },
+   {
+    "id": 6908,
+    "name": "Beginner wand",
+    "completion": 8.2
+   },
+   {
+    "id": 6910,
+    "name": "Apprentice wand",
+    "completion": 7.7
+   },
+   {
+    "id": 6912,
+    "name": "Teacher wand",
+    "completion": 7.3
+   },
+   {
+    "id": 6914,
+    "name": "Master wand",
+    "completion": 7.2
+   },
+   {
+    "id": 6916,
+    "name": "Infinity top",
+    "completion": 1.4
+   },
+   {
+    "id": 6918,
+    "name": "Infinity hat",
+    "completion": 1.5
+   },
+   {
+    "id": 6920,
+    "name": "Infinity boots",
+    "completion": 13.9
+   },
+   {
+    "id": 6922,
+    "name": "Infinity gloves",
+    "completion": 1.6
+   },
+   {
+    "id": 6924,
+    "name": "Infinity bottoms",
+    "completion": 1.4
+   },
+   {
+    "id": 6926,
+    "name": "Bones to peaches",
+    "completion": 46.4
+   }
+  ]
+ },
+ {
+  "page": "Mahogany Homes",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 24872,
+    "name": "Carpenter's helmet",
+    "completion": 18.4
+   },
+   {
+    "id": 24874,
+    "name": "Carpenter's shirt",
+    "completion": 15.2
+   },
+   {
+    "id": 24876,
+    "name": "Carpenter's trousers",
+    "completion": 16.3
+   },
+   {
+    "id": 24878,
+    "name": "Carpenter's boots",
+    "completion": 20.4
+   },
+   {
+    "id": 24880,
+    "name": "Amy's saw",
+    "completion": 12.4
+   },
+   {
+    "id": 24884,
+    "name": "Supply crate",
+    "completion": 12.7
+   },
+   {
+    "id": 24885,
+    "name": "Hosidius blueprints",
+    "completion": 5.4
+   },
+   {
+    "id": 25629,
+    "name": "Plank sack",
+    "completion": 31.3
+   }
+  ]
+ },
+ {
+  "page": "Mastering Mixology",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 29974,
+    "name": "Prescription goggles",
+    "completion": 12.2
+   },
+   {
+    "id": 29978,
+    "name": "Alchemist labcoat",
+    "completion": 2.7
+   },
+   {
+    "id": 29982,
+    "name": "Alchemist pants",
+    "completion": 2.6
+   },
+   {
+    "id": 29986,
+    "name": "Alchemist gloves",
+    "completion": 2.6
+   },
+   {
+    "id": 29992,
+    "name": "Alchemist's amulet",
+    "completion": 11.7
+   },
+   {
+    "id": 29996,
+    "name": "Reagent pouch",
+    "completion": 4.2
+   },
+   {
+    "id": 30002,
+    "name": "Chugging barrel (disassembled)",
+    "completion": 3.5
+   }
+  ]
+ },
+ {
+  "page": "Pest Control",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 8839,
+    "name": "Void knight top",
+    "completion": 52.1
+   },
+   {
+    "id": 8840,
+    "name": "Void knight robe",
+    "completion": 51.8
+   },
+   {
+    "id": 8841,
+    "name": "Void knight mace",
+    "completion": 5.9
+   },
+   {
+    "id": 8842,
+    "name": "Void knight gloves",
+    "completion": 51.7
+   },
+   {
+    "id": 11663,
+    "name": "Void mage helm",
+    "completion": 37.1
+   },
+   {
+    "id": 11664,
+    "name": "Void ranger helm",
+    "completion": 51
+   },
+   {
+    "id": 11665,
+    "name": "Void melee helm",
+    "completion": 36.6
+   },
+   {
+    "id": 11666,
+    "name": "Void seal(8)",
+    "completion": 8.6
+   },
+   {
+    "id": 13072,
+    "name": "Elite void top",
+    "completion": 40.5
+   },
+   {
+    "id": 13073,
+    "name": "Elite void robe",
+    "completion": 40.4
+   }
+  ]
+ },
+ {
+  "page": "Rogues' Den",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 5553,
+    "name": "Rogue top",
+    "completion": 62.6
+   },
+   {
+    "id": 5554,
+    "name": "Rogue mask",
+    "completion": 63.2
+   },
+   {
+    "id": 5555,
+    "name": "Rogue trousers",
+    "completion": 61.8
+   },
+   {
+    "id": 5556,
+    "name": "Rogue gloves",
+    "completion": 61.3
+   },
+   {
+    "id": 5557,
+    "name": "Rogue boots",
+    "completion": 61.4
+   }
+  ]
+ },
+ {
+  "page": "Shades of Mort'ton",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 3470,
+    "name": "Fine cloth",
+    "completion": 15.9
+   },
+   {
+    "id": 12851,
+    "name": "Amulet of the Damned (full)",
+    "completion": 14.2
+   },
+   {
+    "id": 25434,
+    "name": "Zealot's robe top",
+    "completion": 4.5
+   },
+   {
+    "id": 25436,
+    "name": "Zealot's robe bottom",
+    "completion": 4.6
+   },
+   {
+    "id": 25438,
+    "name": "Zealot's helm",
+    "completion": 5
+   },
+   {
+    "id": 25440,
+    "name": "Zealot's boots",
+    "completion": 6.1
+   },
+   {
+    "id": 25442,
+    "name": "Bronze locks",
+    "completion": 3.3
+   },
+   {
+    "id": 25445,
+    "name": "Steel locks",
+    "completion": 3.2
+   },
+   {
+    "id": 25448,
+    "name": "Black locks",
+    "completion": 3.6
+   },
+   {
+    "id": 25451,
+    "name": "Silver locks",
+    "completion": 6.6
+   },
+   {
+    "id": 25454,
+    "name": "Gold locks",
+    "completion": 7.2
+   },
+   {
+    "id": 25474,
+    "name": "Tree wizards' journal",
+    "completion": 8.3
+   },
+   {
+    "id": 25476,
+    "name": "Bloody notes",
+    "completion": 8.6
+   },
+   {
+    "id": 25630,
+    "name": "Flamtaer bag",
+    "completion": 19.1
+   }
+  ]
+ },
+ {
+  "page": "Soul Wars",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 25340,
+    "name": "Ectoplasmator",
+    "completion": 2.9
+   },
+   {
+    "id": 25346,
+    "name": "Soul cape",
+    "completion": 0.5
+   },
+   {
+    "id": 25348,
+    "name": "Lil' Creator",
+    "completion": 1.1
+   }
+  ]
+ },
+ {
+  "page": "Temple Trekking",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 10933,
+    "name": "Lumberjack boots",
+    "completion": 44
+   },
+   {
+    "id": 10939,
+    "name": "Lumberjack top",
+    "completion": 46.6
+   },
+   {
+    "id": 10940,
+    "name": "Lumberjack legs",
+    "completion": 44.7
+   },
+   {
+    "id": 10941,
+    "name": "Lumberjack hat",
+    "completion": 44.1
+   }
+  ]
+ },
+ {
+  "page": "Tithe Farm",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 13226,
+    "name": "Herb sack",
+    "completion": 44.6
+   },
+   {
+    "id": 13353,
+    "name": "Gricoller's can",
+    "completion": 8.5
+   },
+   {
+    "id": 13639,
+    "name": "Seed box",
+    "completion": 11.8
+   },
+   {
+    "id": 13640,
+    "name": "Farmer's boro trousers",
+    "completion": 9
+   },
+   {
+    "id": 13642,
+    "name": "Farmer's jacket",
+    "completion": 9.1
+   },
+   {
+    "id": 13644,
+    "name": "Farmer's boots",
+    "completion": 10.4
+   },
+   {
+    "id": 13646,
+    "name": "Farmer's strawhat",
+    "completion": 19.6
+   }
+  ]
+ },
+ {
+  "page": "Trouble Brewing",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 8940,
+    "name": "Rum",
+    "completion": 3.6
+   },
+   {
+    "id": 8941,
+    "name": "Rum",
+    "completion": 3.5
+   },
+   {
+    "id": 8952,
+    "name": "Blue naval shirt",
+    "completion": 1.6
+   },
+   {
+    "id": 8953,
+    "name": "Green naval shirt",
+    "completion": 1.5
+   },
+   {
+    "id": 8954,
+    "name": "Red naval shirt",
+    "completion": 1.4
+   },
+   {
+    "id": 8955,
+    "name": "Brown naval shirt",
+    "completion": 1.3
+   },
+   {
+    "id": 8956,
+    "name": "Black naval shirt",
+    "completion": 1.6
+   },
+   {
+    "id": 8957,
+    "name": "Purple naval shirt",
+    "completion": 1.4
+   },
+   {
+    "id": 8958,
+    "name": "Grey naval shirt",
+    "completion": 1.4
+   },
+   {
+    "id": 8959,
+    "name": "Blue tricorn hat",
+    "completion": 1.7
+   },
+   {
+    "id": 8960,
+    "name": "Green tricorn hat",
+    "completion": 1.6
+   },
+   {
+    "id": 8961,
+    "name": "Red tricorn hat",
+    "completion": 1.6
+   },
+   {
+    "id": 8962,
+    "name": "Brown tricorn hat",
+    "completion": 1.5
+   },
+   {
+    "id": 8963,
+    "name": "Black tricorn hat",
+    "completion": 1.7
+   },
+   {
+    "id": 8964,
+    "name": "Purple tricorn hat",
+    "completion": 1.5
+   },
+   {
+    "id": 8965,
+    "name": "Grey tricorn hat",
+    "completion": 1.5
+   },
+   {
+    "id": 8966,
+    "name": "Cutthroat flag",
+    "completion": 1.3
+   },
+   {
+    "id": 8967,
+    "name": "Gilded smile flag",
+    "completion": 1.2
+   },
+   {
+    "id": 8968,
+    "name": "Bronze fist flag",
+    "completion": 1.1
+   },
+   {
+    "id": 8969,
+    "name": "Lucky shot flag",
+    "completion": 1.1
+   },
+   {
+    "id": 8970,
+    "name": "Treasure flag",
+    "completion": 1.1
+   },
+   {
+    "id": 8971,
+    "name": "Phasmatys flag",
+    "completion": 1.1
+   },
+   {
+    "id": 8988,
+    "name": "The stuff",
+    "completion": 7.7
+   },
+   {
+    "id": 8991,
+    "name": "Blue navy slacks",
+    "completion": 1.5
+   },
+   {
+    "id": 8992,
+    "name": "Green navy slacks",
+    "completion": 1.5
+   },
+   {
+    "id": 8993,
+    "name": "Red navy slacks",
+    "completion": 1.4
+   },
+   {
+    "id": 8994,
+    "name": "Brown navy slacks",
+    "completion": 1.3
+   },
+   {
+    "id": 8995,
+    "name": "Black navy slacks",
+    "completion": 1.6
+   },
+   {
+    "id": 8996,
+    "name": "Purple navy slacks",
+    "completion": 1.3
+   },
+   {
+    "id": 8997,
+    "name": "Grey navy slacks",
+    "completion": 1.4
+   }
+  ]
+ },
+ {
+  "page": "Vale Totems",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 31043,
+    "name": "Fletching knife",
+    "completion": 10.1
+   },
+   {
+    "id": 31052,
+    "name": "Bow string spool",
+    "completion": 10
+   },
+   {
+    "id": 31032,
+    "name": "Ent branch",
+    "completion": 16.5
+   },
+   {
+    "id": 31034,
+    "name": "Greenman mask",
+    "completion": 6.4
+   }
+  ]
+ },
+ {
+  "page": "Volcanic Mine",
+  "tab": "Minigames",
+  "items": [
+   {
+    "id": 12013,
+    "name": "Prospector helmet",
+    "completion": 64.9
+   },
+   {
+    "id": 12014,
+    "name": "Prospector jacket",
+    "completion": 53.2
+   },
+   {
+    "id": 12015,
+    "name": "Prospector legs",
+    "completion": 54.5
+   },
+   {
+    "id": 12016,
+    "name": "Prospector boots",
+    "completion": 55.5
+   },
+   {
+    "id": 21541,
+    "name": "Volcanic mine teleport",
+    "completion": 5.5
+   },
+   {
+    "id": 21697,
+    "name": "Ash covered tome",
+    "completion": 2.3
+   },
+   {
+    "id": 25615,
+    "name": "Large water container",
+    "completion": 3.4
+   },
+   {
+    "id": 27695,
+    "name": "Dragon pickaxe (broken)",
+    "completion": 0.9
+   }
+  ]
+ },
+ {
+  "page": "Aerial Fishing",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 13258,
+    "name": "Angler hat",
+    "completion": 51.5
+   },
+   {
+    "id": 13259,
+    "name": "Angler top",
+    "completion": 51.4
+   },
+   {
+    "id": 13260,
+    "name": "Angler waders",
+    "completion": 51.5
+   },
+   {
+    "id": 13261,
+    "name": "Angler boots",
+    "completion": 51.4
+   },
+   {
+    "id": 22838,
+    "name": "Fish sack",
+    "completion": 0.7
+   },
+   {
+    "id": 22840,
+    "name": "Golden tench",
+    "completion": 3.1
+   },
+   {
+    "id": 22842,
+    "name": "Pearl barbarian rod",
+    "completion": 1.6
+   },
+   {
+    "id": 22844,
+    "name": "Pearl fly fishing rod",
+    "completion": 1.3
+   },
+   {
+    "id": 22846,
+    "name": "Pearl fishing rod",
+    "completion": 2.3
+   }
+  ]
+ },
+ {
+  "page": "All Pets",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 11995,
+    "name": "Pet chaos elemental",
+    "completion": 6.2
+   },
+   {
+    "id": 12643,
+    "name": "Pet Dagannoth Supreme",
+    "completion": 1.3
+   },
+   {
+    "id": 12644,
+    "name": "Pet Dagannoth Prime",
+    "completion": 1.3
+   },
+   {
+    "id": 12645,
+    "name": "Pet Dagannoth Rex",
+    "completion": 1.8
+   },
+   {
+    "id": 12646,
+    "name": "Baby Mole",
+    "completion": 3.8
+   },
+   {
+    "id": 12647,
+    "name": "Kalphite Princess",
+    "completion": 1.5
+   },
+   {
+    "id": 12648,
+    "name": "Pet Smoke Devil",
+    "completion": 4.6
+   },
+   {
+    "id": 12649,
+    "name": "Pet Kree'arra",
+    "completion": 0.9
+   },
+   {
+    "id": 12650,
+    "name": "Pet General Graardor",
+    "completion": 1.6
+   },
+   {
+    "id": 12651,
+    "name": "Pet Zilyana",
+    "completion": 1
+   },
+   {
+    "id": 12652,
+    "name": "Pet K'ril Tsutsaroth",
+    "completion": 1
+   },
+   {
+    "id": 12653,
+    "name": "Prince Black Dragon",
+    "completion": 2.5
+   },
+   {
+    "id": 12655,
+    "name": "Pet Kraken",
+    "completion": 12.1
+   },
+   {
+    "id": 12703,
+    "name": "Pet Penance Queen",
+    "completion": 0.2
+   },
+   {
+    "id": 12816,
+    "name": "Pet dark core",
+    "completion": 0.5
+   },
+   {
+    "id": 12921,
+    "name": "Pet Snakeling",
+    "completion": 4.6
+   },
+   {
+    "id": 13071,
+    "name": "Chompy chick",
+    "completion": 6.9
+   },
+   {
+    "id": 13177,
+    "name": "Venenatis spiderling",
+    "completion": 2.3
+   },
+   {
+    "id": 13178,
+    "name": "Callisto cub",
+    "completion": 2.3
+   },
+   {
+    "id": 13179,
+    "name": "Vet'ion Jr.",
+    "completion": 2.5
+   },
+   {
+    "id": 13181,
+    "name": "Scorpia's offspring",
+    "completion": 1.1
+   },
+   {
+    "id": 13225,
+    "name": "TzRek-Jad",
+    "completion": 3.4
+   },
+   {
+    "id": 13247,
+    "name": "Hellpuppy",
+    "completion": 5
+   },
+   {
+    "id": 13262,
+    "name": "Abyssal orphan",
+    "completion": 3.3
+   },
+   {
+    "id": 13320,
+    "name": "Heron",
+    "completion": 9.2
+   },
+   {
+    "id": 13321,
+    "name": "Rock golem",
+    "completion": 11.8
+   },
+   {
+    "id": 13322,
+    "name": "Beaver",
+    "completion": 10.2
+   },
+   {
+    "id": 13324,
+    "name": "Baby chinchompa",
+    "completion": 1.7
+   },
+   {
+    "id": 19730,
+    "name": "Bloodhound",
+    "completion": 1.1
+   },
+   {
+    "id": 20659,
+    "name": "Giant Squirrel",
+    "completion": 6.5
+   },
+   {
+    "id": 20661,
+    "name": "Tangleroot",
+    "completion": 8.3
+   },
+   {
+    "id": 20663,
+    "name": "Rocky",
+    "completion": 10.6
+   },
+   {
+    "id": 20665,
+    "name": "Rift guardian",
+    "completion": 5
+   },
+   {
+    "id": 20693,
+    "name": "Phoenix",
+    "completion": 6.6
+   },
+   {
+    "id": 20851,
+    "name": "Olmlet",
+    "completion": 2.8
+   },
+   {
+    "id": 21273,
+    "name": "Skotos",
+    "completion": 11.7
+   },
+   {
+    "id": 21291,
+    "name": "Jal-Nib-Rek",
+    "completion": 0.6
+   },
+   {
+    "id": 21509,
+    "name": "Herbi",
+    "completion": 3
+   },
+   {
+    "id": 21748,
+    "name": "Noon",
+    "completion": 2
+   },
+   {
+    "id": 21992,
+    "name": "Vorki",
+    "completion": 4
+   },
+   {
+    "id": 22473,
+    "name": "Lil' Zik",
+    "completion": 2.6
+   },
+   {
+    "id": 22746,
+    "name": "Ikkle Hydra",
+    "completion": 4.5
+   },
+   {
+    "id": 23495,
+    "name": "Sraracha",
+    "completion": 2.5
+   },
+   {
+    "id": 23757,
+    "name": "Youngllef",
+    "completion": 6.6
+   },
+   {
+    "id": 23760,
+    "name": "Smolcano",
+    "completion": 1.7
+   },
+   {
+    "id": 24491,
+    "name": "Little Nightmare",
+    "completion": 0.8
+   },
+   {
+    "id": 25348,
+    "name": "Lil' Creator",
+    "completion": 1.1
+   },
+   {
+    "id": 25602,
+    "name": "Tiny tempor",
+    "completion": 2.9
+   },
+   {
+    "id": 26348,
+    "name": "Nexling",
+    "completion": 1.4
+   },
+   {
+    "id": 26901,
+    "name": "Abyssal protector",
+    "completion": 5.4
+   },
+   {
+    "id": 27352,
+    "name": "Tumeken's guardian",
+    "completion": 4.4
+   },
+   {
+    "id": 27590,
+    "name": "Muphin",
+    "completion": 1.8
+   },
+   {
+    "id": 28246,
+    "name": "Wisp",
+    "completion": 1.3
+   },
+   {
+    "id": 28248,
+    "name": "Butch",
+    "completion": 2.6
+   },
+   {
+    "id": 28250,
+    "name": "Baron",
+    "completion": 2.5
+   },
+   {
+    "id": 28252,
+    "name": "Lil'viathan",
+    "completion": 1.3
+   },
+   {
+    "id": 28801,
+    "name": "Scurry",
+    "completion": 1.5
+   },
+   {
+    "id": 28960,
+    "name": "Smol Heredit",
+    "completion": 0.7
+   },
+   {
+    "id": 28962,
+    "name": "Quetzin",
+    "completion": 3.4
+   },
+   {
+    "id": 29836,
+    "name": "Nid",
+    "completion": 4
+   },
+   {
+    "id": 30152,
+    "name": "Huberte",
+    "completion": 1.4
+   },
+   {
+    "id": 30154,
+    "name": "Moxi",
+    "completion": 0.7
+   },
+   {
+    "id": 30622,
+    "name": "Bran",
+    "completion": 1.9
+   },
+   {
+    "id": 30888,
+    "name": "Yami",
+    "completion": 1.5
+   },
+   {
+    "id": 31130,
+    "name": "Dom",
+    "completion": 2.3
+   },
+   {
+    "id": 31285,
+    "name": "Gull (pet)",
+    "completion": 0.5
+   },
+   {
+    "id": 31283,
+    "name": "Soup",
+    "completion": 1.7
+   },
+   {
+    "id": 33124,
+    "name": "Beef",
+    "completion": 4.6
+   },
+   {
+    "id": 33642,
+    "name": "Maggot marquess",
+    "completion": null
+   },
+   {
+    "id": 34042,
+    "name": "Aggy",
+    "completion": null
+   },
+   {
+    "id": 34040,
+    "name": "Mr McGroot",
+    "completion": null
+   }
+  ]
+ },
+ {
+  "page": "Boat Paints",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 32087,
+    "name": "Barracuda paint",
+    "completion": 0.8
+   },
+   {
+    "id": 32090,
+    "name": "Shark paint",
+    "completion": 14.9
+   },
+   {
+    "id": 32093,
+    "name": "Inky paint",
+    "completion": 0.6
+   },
+   {
+    "id": 32096,
+    "name": "Angler's paint",
+    "completion": 0.2
+   },
+   {
+    "id": 32099,
+    "name": "Salvor's paint",
+    "completion": 1.6
+   },
+   {
+    "id": 32102,
+    "name": "Armadylean paint",
+    "completion": 2.4
+   },
+   {
+    "id": 32104,
+    "name": "Zamorakian paint",
+    "completion": 2.8
+   },
+   {
+    "id": 32106,
+    "name": "Guthixian paint",
+    "completion": 2.5
+   },
+   {
+    "id": 32108,
+    "name": "Saradominist paint",
+    "completion": 2.8
+   },
+   {
+    "id": 32110,
+    "name": "Merchant's paint",
+    "completion": 0.1
+   },
+   {
+    "id": 32113,
+    "name": "Sandy paint",
+    "completion": 1.8
+   }
+  ]
+ },
+ {
+  "page": "Camdozaal",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 25635,
+    "name": "Barronite head",
+    "completion": 16.5
+   },
+   {
+    "id": 25637,
+    "name": "Barronite handle",
+    "completion": 9.1
+   },
+   {
+    "id": 25639,
+    "name": "Barronite guard",
+    "completion": 8.9
+   },
+   {
+    "id": 25641,
+    "name": "Barronite mace",
+    "completion": 8.1
+   },
+   {
+    "id": 25644,
+    "name": "Imcando hammer",
+    "completion": 21
+   },
+   {
+    "id": 25686,
+    "name": "Ancient globe",
+    "completion": 13.6
+   },
+   {
+    "id": 25688,
+    "name": "Ancient ledger",
+    "completion": 13.6
+   },
+   {
+    "id": 25690,
+    "name": "Ancient astroscope",
+    "completion": 13.7
+   },
+   {
+    "id": 25692,
+    "name": "Ancient treatise",
+    "completion": 13.6
+   },
+   {
+    "id": 25694,
+    "name": "Ancient carcanet",
+    "completion": 13.7
+   }
+  ]
+ },
+ {
+  "page": "Champion's Challenge",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 6798,
+    "name": "Earth warrior champion scroll",
+    "completion": 2.1
+   },
+   {
+    "id": 6799,
+    "name": "Ghoul champion scroll",
+    "completion": 2
+   },
+   {
+    "id": 6800,
+    "name": "Giant champion scroll",
+    "completion": 22.8
+   },
+   {
+    "id": 6801,
+    "name": "Goblin champion scroll",
+    "completion": 13.5
+   },
+   {
+    "id": 6802,
+    "name": "Hobgoblin champion scroll",
+    "completion": 2.9
+   },
+   {
+    "id": 6803,
+    "name": "Imp champion scroll",
+    "completion": 6.7
+   },
+   {
+    "id": 6804,
+    "name": "Jogre champion scroll",
+    "completion": 1.8
+   },
+   {
+    "id": 6805,
+    "name": "Lesser demon champion scroll",
+    "completion": 3.6
+   },
+   {
+    "id": 6806,
+    "name": "Skeleton champion scroll",
+    "completion": 11.6
+   },
+   {
+    "id": 6807,
+    "name": "Zombie champion scroll",
+    "completion": 7.6
+   },
+   {
+    "id": 21439,
+    "name": "Champion's cape",
+    "completion": 1.2
+   }
+  ]
+ },
+ {
+  "page": "Chompy Bird Hunting",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 2978,
+    "name": "Chompy bird hat",
+    "completion": 58.6
+   },
+   {
+    "id": 2979,
+    "name": "Chompy bird hat",
+    "completion": 50.3
+   },
+   {
+    "id": 2980,
+    "name": "Chompy bird hat",
+    "completion": 49.1
+   },
+   {
+    "id": 2981,
+    "name": "Chompy bird hat",
+    "completion": 47.7
+   },
+   {
+    "id": 2982,
+    "name": "Chompy bird hat",
+    "completion": 46.8
+   },
+   {
+    "id": 2983,
+    "name": "Chompy bird hat",
+    "completion": 46.5
+   },
+   {
+    "id": 2984,
+    "name": "Chompy bird hat",
+    "completion": 39.9
+   },
+   {
+    "id": 2985,
+    "name": "Chompy bird hat",
+    "completion": 39
+   },
+   {
+    "id": 2986,
+    "name": "Chompy bird hat",
+    "completion": 39.1
+   },
+   {
+    "id": 2987,
+    "name": "Chompy bird hat",
+    "completion": 13.7
+   },
+   {
+    "id": 2988,
+    "name": "Chompy bird hat",
+    "completion": 13.3
+   },
+   {
+    "id": 2989,
+    "name": "Chompy bird hat",
+    "completion": 13.1
+   },
+   {
+    "id": 2990,
+    "name": "Chompy bird hat",
+    "completion": 13
+   },
+   {
+    "id": 2991,
+    "name": "Chompy bird hat",
+    "completion": 1.7
+   },
+   {
+    "id": 2992,
+    "name": "Chompy bird hat",
+    "completion": 1.1
+   },
+   {
+    "id": 2993,
+    "name": "Chompy bird hat",
+    "completion": 0.8
+   },
+   {
+    "id": 2994,
+    "name": "Chompy bird hat",
+    "completion": 0.7
+   },
+   {
+    "id": 2995,
+    "name": "Chompy bird hat",
+    "completion": 0.7
+   },
+   {
+    "id": 13071,
+    "name": "Chompy chick",
+    "completion": 6.9
+   }
+  ]
+ },
+ {
+  "page": "Colossal Wyrm Agility",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 30040,
+    "name": "Colossal wyrm teleport scroll",
+    "completion": 7.6
+   },
+   {
+    "id": 30042,
+    "name": "Calcified acorn",
+    "completion": 5.5
+   },
+   {
+    "id": 30045,
+    "name": "Graceful hood",
+    "completion": 9.8
+   },
+   {
+    "id": 30048,
+    "name": "Graceful cape",
+    "completion": 9.8
+   },
+   {
+    "id": 30051,
+    "name": "Graceful top",
+    "completion": 9.8
+   },
+   {
+    "id": 30054,
+    "name": "Graceful legs",
+    "completion": 9.8
+   },
+   {
+    "id": 30057,
+    "name": "Graceful gloves",
+    "completion": 9.8
+   },
+   {
+    "id": 30060,
+    "name": "Graceful boots",
+    "completion": 9.8
+   }
+  ]
+ },
+ {
+  "page": "Creature Creation",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 25617,
+    "name": "Tea flask",
+    "completion": 23.6
+   },
+   {
+    "id": 25618,
+    "name": "Plain satchel",
+    "completion": 5.1
+   },
+   {
+    "id": 25619,
+    "name": "Green satchel",
+    "completion": 12.8
+   },
+   {
+    "id": 25620,
+    "name": "Red satchel",
+    "completion": 17.6
+   },
+   {
+    "id": 25621,
+    "name": "Black satchel",
+    "completion": 10.8
+   },
+   {
+    "id": 25622,
+    "name": "Gold satchel",
+    "completion": 5.1
+   },
+   {
+    "id": 25623,
+    "name": "Rune satchel",
+    "completion": 5.7
+   }
+  ]
+ },
+ {
+  "page": "Cyclopes",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 8844,
+    "name": "Bronze defender",
+    "completion": 82.2
+   },
+   {
+    "id": 8845,
+    "name": "Iron defender",
+    "completion": 82.1
+   },
+   {
+    "id": 8846,
+    "name": "Steel defender",
+    "completion": 81.9
+   },
+   {
+    "id": 8847,
+    "name": "Black defender",
+    "completion": 81.8
+   },
+   {
+    "id": 8848,
+    "name": "Mithril defender",
+    "completion": 81.7
+   },
+   {
+    "id": 8849,
+    "name": "Adamant defender",
+    "completion": 81.6
+   },
+   {
+    "id": 8850,
+    "name": "Rune defender",
+    "completion": 81.5
+   },
+   {
+    "id": 12954,
+    "name": "Dragon defender",
+    "completion": 80.5
+   }
+  ]
+ },
+ {
+  "page": "Elder Chaos Druids",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 20517,
+    "name": "Elder chaos top",
+    "completion": 2.6
+   },
+   {
+    "id": 20520,
+    "name": "Elder chaos robe",
+    "completion": 2.6
+   },
+   {
+    "id": 20595,
+    "name": "Elder chaos hood",
+    "completion": 2.5
+   }
+  ]
+ },
+ {
+  "page": "Forestry",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 10933,
+    "name": "Lumberjack boots",
+    "completion": 44
+   },
+   {
+    "id": 10939,
+    "name": "Lumberjack top",
+    "completion": 46.6
+   },
+   {
+    "id": 10940,
+    "name": "Lumberjack legs",
+    "completion": 44.7
+   },
+   {
+    "id": 10941,
+    "name": "Lumberjack hat",
+    "completion": 44.1
+   },
+   {
+    "id": 28138,
+    "name": "Funky shaped log",
+    "completion": 4.7
+   },
+   {
+    "id": 28140,
+    "name": "Log basket",
+    "completion": 27.6
+   },
+   {
+    "id": 28146,
+    "name": "Log brace",
+    "completion": 10.4
+   },
+   {
+    "id": 28166,
+    "name": "Clothes pouch blueprint",
+    "completion": 6.7
+   },
+   {
+    "id": 28169,
+    "name": "Forestry top",
+    "completion": 9.2
+   },
+   {
+    "id": 28171,
+    "name": "Forestry legs",
+    "completion": 9.2
+   },
+   {
+    "id": 28173,
+    "name": "Forestry hat",
+    "completion": 9.2
+   },
+   {
+    "id": 28175,
+    "name": "Forestry boots",
+    "completion": 9
+   },
+   {
+    "id": 28177,
+    "name": "Felling axe handle",
+    "completion": 12.3
+   },
+   {
+    "id": 28613,
+    "name": "Cape pouch",
+    "completion": 6.6
+   },
+   {
+    "id": 28616,
+    "name": "Pheasant cape",
+    "completion": 11.9
+   },
+   {
+    "id": 28618,
+    "name": "Pheasant boots",
+    "completion": 12
+   },
+   {
+    "id": 28620,
+    "name": "Pheasant hat",
+    "completion": 12.6
+   },
+   {
+    "id": 28622,
+    "name": "Pheasant legs",
+    "completion": 12.3
+   },
+   {
+    "id": 28626,
+    "name": "Fox whistle",
+    "completion": 7.7
+   },
+   {
+    "id": 28630,
+    "name": "Twitcher's gloves",
+    "completion": 10.4
+   },
+   {
+    "id": 28655,
+    "name": "Petal garland",
+    "completion": 8.4
+   },
+   {
+    "id": 28663,
+    "name": "Golden pheasant egg",
+    "completion": 6.7
+   },
+   {
+    "id": 28674,
+    "name": "Sturdy beehive parts",
+    "completion": 38.2
+   }
+  ]
+ },
+ {
+  "page": "Fossil Island Notes",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 21664,
+    "name": "Scribbled note",
+    "completion": 10.9
+   },
+   {
+    "id": 21666,
+    "name": "Partial note",
+    "completion": 10.4
+   },
+   {
+    "id": 21668,
+    "name": "Ancient note",
+    "completion": 10.1
+   },
+   {
+    "id": 21670,
+    "name": "Ancient writings",
+    "completion": 9.9
+   },
+   {
+    "id": 21672,
+    "name": "Experimental note",
+    "completion": 9.7
+   },
+   {
+    "id": 21674,
+    "name": "Paragraph of text",
+    "completion": 9.5
+   },
+   {
+    "id": 21676,
+    "name": "Musty smelling note",
+    "completion": 9.4
+   },
+   {
+    "id": 21678,
+    "name": "Hastily scrawled note",
+    "completion": 9.3
+   },
+   {
+    "id": 21680,
+    "name": "Old writing",
+    "completion": 9.2
+   },
+   {
+    "id": 21682,
+    "name": "Short note",
+    "completion": 9.1
+   }
+  ]
+ },
+ {
+  "page": "Glough's Experiments",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 19529,
+    "name": "Zenyte shard",
+    "completion": 27.4
+   },
+   {
+    "id": 19586,
+    "name": "Light frame",
+    "completion": 17.1
+   },
+   {
+    "id": 19589,
+    "name": "Heavy frame",
+    "completion": 10.9
+   },
+   {
+    "id": 19592,
+    "name": "Ballista limbs",
+    "completion": 21
+   },
+   {
+    "id": 19601,
+    "name": "Ballista spring",
+    "completion": 21
+   },
+   {
+    "id": 19610,
+    "name": "Monkey tail",
+    "completion": 11.8
+   }
+  ]
+ },
+ {
+  "page": "Hunter Guild",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 28962,
+    "name": "Quetzin",
+    "completion": 3.4
+   },
+   {
+    "id": 29263,
+    "name": "Guild hunter headwear",
+    "completion": 22.7
+   },
+   {
+    "id": 29265,
+    "name": "Guild hunter top",
+    "completion": 15.4
+   },
+   {
+    "id": 29267,
+    "name": "Guild hunter legs",
+    "completion": 11.4
+   },
+   {
+    "id": 29269,
+    "name": "Guild hunter boots",
+    "completion": 8.9
+   },
+   {
+    "id": 29309,
+    "name": "Huntsman's kit",
+    "completion": 23
+   }
+  ]
+ },
+ {
+  "page": "Lost Schematics",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 32401,
+    "name": "Salvaging station schematic",
+    "completion": 17.3
+   },
+   {
+    "id": 32402,
+    "name": "Gale catcher schematic",
+    "completion": 6.2
+   },
+   {
+    "id": 32403,
+    "name": "Eternal brazier schematic",
+    "completion": 9.3
+   },
+   {
+    "id": 32405,
+    "name": "Rosewood cargo hold schematic",
+    "completion": 4.8
+   },
+   {
+    "id": 32407,
+    "name": "Rosewood hull schematic",
+    "completion": 5
+   },
+   {
+    "id": 32408,
+    "name": "Rosewood & cotton sails schematic",
+    "completion": 3.6
+   },
+   {
+    "id": 32409,
+    "name": "Dragon helm schematic",
+    "completion": 3.8
+   },
+   {
+    "id": 32410,
+    "name": "Dragon keel schematic",
+    "completion": 2.7
+   },
+   {
+    "id": 32404,
+    "name": "Dragon salvaging hook schematic",
+    "completion": 3.7
+   },
+   {
+    "id": 32406,
+    "name": "Dragon cannon schematic",
+    "completion": 3.9
+   },
+   {
+    "id": 33143,
+    "name": "Ballistic attractor schematic",
+    "completion": 1.7
+   },
+   {
+    "id": 33423,
+    "name": "Bosun's workbench schematic",
+    "completion": 1.3
+   }
+  ]
+ },
+ {
+  "page": "Monkey Backpacks",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 24862,
+    "name": "Karamjan monkey",
+    "completion": 6.6
+   },
+   {
+    "id": 24863,
+    "name": "Zombie monkey",
+    "completion": 5.9
+   },
+   {
+    "id": 24864,
+    "name": "Maniacal monkey",
+    "completion": 5.3
+   },
+   {
+    "id": 24865,
+    "name": "Skeleton monkey",
+    "completion": 4.6
+   },
+   {
+    "id": 24866,
+    "name": "Kruk jr",
+    "completion": 4.3
+   },
+   {
+    "id": 24867,
+    "name": "Princely monkey",
+    "completion": 4.2
+   }
+  ]
+ },
+ {
+  "page": "Motherlode Mine",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 12013,
+    "name": "Prospector helmet",
+    "completion": 64.9
+   },
+   {
+    "id": 12014,
+    "name": "Prospector jacket",
+    "completion": 53.2
+   },
+   {
+    "id": 12015,
+    "name": "Prospector legs",
+    "completion": 54.5
+   },
+   {
+    "id": 12016,
+    "name": "Prospector boots",
+    "completion": 55.5
+   },
+   {
+    "id": 25627,
+    "name": "Coal bag",
+    "completion": 39.1
+   },
+   {
+    "id": 25628,
+    "name": "Gem bag",
+    "completion": 29.1
+   }
+  ]
+ },
+ {
+  "page": "My Notes",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 11341,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11342,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11343,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11344,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11345,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11346,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11347,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11348,
+    "name": "Ancient page",
+    "completion": 4
+   },
+   {
+    "id": 11349,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11350,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11351,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11352,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11353,
+    "name": "Ancient page",
+    "completion": 4
+   },
+   {
+    "id": 11354,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11355,
+    "name": "Ancient page",
+    "completion": 4
+   },
+   {
+    "id": 11356,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11357,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11358,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11359,
+    "name": "Ancient page",
+    "completion": 4
+   },
+   {
+    "id": 11360,
+    "name": "Ancient page",
+    "completion": 4
+   },
+   {
+    "id": 11361,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11362,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11363,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11364,
+    "name": "Ancient page",
+    "completion": 4
+   },
+   {
+    "id": 11365,
+    "name": "Ancient page",
+    "completion": 3.9
+   },
+   {
+    "id": 11366,
+    "name": "Ancient page",
+    "completion": 3.9
+   }
+  ]
+ },
+ {
+  "page": "Ocean Encounters",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 31770,
+    "name": "Tiny pearl",
+    "completion": 5.5
+   },
+   {
+    "id": 31773,
+    "name": "Small pearl",
+    "completion": 3
+   },
+   {
+    "id": 31776,
+    "name": "Shiny pearl",
+    "completion": 1.9
+   },
+   {
+    "id": 31779,
+    "name": "Bright pearl",
+    "completion": 1.5
+   },
+   {
+    "id": 31782,
+    "name": "Big pearl",
+    "completion": 1.1
+   },
+   {
+    "id": 31785,
+    "name": "Huge pearl",
+    "completion": 1.2
+   },
+   {
+    "id": 31788,
+    "name": "Enormous pearl",
+    "completion": 1.3
+   },
+   {
+    "id": 31791,
+    "name": "Shimmering pearl",
+    "completion": 1.1
+   },
+   {
+    "id": 31794,
+    "name": "Glistening pearl",
+    "completion": 1.3
+   },
+   {
+    "id": 31797,
+    "name": "Brilliant pearl",
+    "completion": 1
+   },
+   {
+    "id": 31800,
+    "name": "Radiant pearl",
+    "completion": 1.3
+   }
+  ]
+ },
+ {
+  "page": "Random Events",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 3057,
+    "name": "Mime mask",
+    "completion": 38
+   },
+   {
+    "id": 3058,
+    "name": "Mime top",
+    "completion": 38.9
+   },
+   {
+    "id": 3059,
+    "name": "Mime legs",
+    "completion": 38.2
+   },
+   {
+    "id": 3060,
+    "name": "Mime gloves",
+    "completion": 38.2
+   },
+   {
+    "id": 3061,
+    "name": "Mime boots",
+    "completion": 38.9
+   },
+   {
+    "id": 6180,
+    "name": "Lederhosen top",
+    "completion": 58.4
+   },
+   {
+    "id": 6181,
+    "name": "Lederhosen shorts",
+    "completion": 58.5
+   },
+   {
+    "id": 6182,
+    "name": "Lederhosen hat",
+    "completion": 58.3
+   },
+   {
+    "id": 6183,
+    "name": "Frog token",
+    "completion": 71.5
+   },
+   {
+    "id": 6654,
+    "name": "Camo top",
+    "completion": 71.9
+   },
+   {
+    "id": 6655,
+    "name": "Camo bottoms",
+    "completion": 56.4
+   },
+   {
+    "id": 6656,
+    "name": "Camo helmet",
+    "completion": 47.9
+   },
+   {
+    "id": 7592,
+    "name": "Zombie shirt",
+    "completion": 48.3
+   },
+   {
+    "id": 7593,
+    "name": "Zombie trousers",
+    "completion": 42.8
+   },
+   {
+    "id": 7594,
+    "name": "Zombie mask",
+    "completion": 41.3
+   },
+   {
+    "id": 7595,
+    "name": "Zombie gloves",
+    "completion": 42.7
+   },
+   {
+    "id": 7596,
+    "name": "Zombie boots",
+    "completion": 48.2
+   },
+   {
+    "id": 20590,
+    "name": "Stale baguette",
+    "completion": 5.4
+   },
+   {
+    "id": 25129,
+    "name": "Beekeeper's hat",
+    "completion": 47
+   },
+   {
+    "id": 25131,
+    "name": "Beekeeper's top",
+    "completion": 47.2
+   },
+   {
+    "id": 25133,
+    "name": "Beekeeper's legs",
+    "completion": 47.1
+   },
+   {
+    "id": 25135,
+    "name": "Beekeeper's gloves",
+    "completion": 47
+   },
+   {
+    "id": 25137,
+    "name": "Beekeeper's boots",
+    "completion": 47
+   }
+  ]
+ },
+ {
+  "page": "Revenants",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 21802,
+    "name": "Revenant cave teleport",
+    "completion": 27.6
+   },
+   {
+    "id": 21804,
+    "name": "Ancient crystal",
+    "completion": 5.3
+   },
+   {
+    "id": 21807,
+    "name": "Ancient emblem",
+    "completion": 5.5
+   },
+   {
+    "id": 21810,
+    "name": "Ancient totem",
+    "completion": 6.9
+   },
+   {
+    "id": 21813,
+    "name": "Ancient statuette",
+    "completion": 4.5
+   },
+   {
+    "id": 21817,
+    "name": "Bracelet of ethereum (uncharged)",
+    "completion": 21.7
+   },
+   {
+    "id": 21820,
+    "name": "Revenant ether",
+    "completion": 27
+   },
+   {
+    "id": 22299,
+    "name": "Ancient medallion",
+    "completion": 3
+   },
+   {
+    "id": 22302,
+    "name": "Ancient effigy",
+    "completion": 2.9
+   },
+   {
+    "id": 22305,
+    "name": "Ancient relic",
+    "completion": 2.9
+   },
+   {
+    "id": 22542,
+    "name": "Viggora's chainmace (u)",
+    "completion": 2.5
+   },
+   {
+    "id": 22547,
+    "name": "Craw's bow (u)",
+    "completion": 2.6
+   },
+   {
+    "id": 22552,
+    "name": "Thammaron's sceptre (u)",
+    "completion": 2.5
+   },
+   {
+    "id": 22557,
+    "name": "Amulet of avarice",
+    "completion": 3.6
+   }
+  ]
+ },
+ {
+  "page": "Rooftop Agility",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 11849,
+    "name": "Mark of Grace",
+    "completion": 96.8
+   },
+   {
+    "id": 11850,
+    "name": "Graceful hood",
+    "completion": 75.9
+   },
+   {
+    "id": 11852,
+    "name": "Graceful cape",
+    "completion": 72.5
+   },
+   {
+    "id": 11854,
+    "name": "Graceful top",
+    "completion": 74.8
+   },
+   {
+    "id": 11856,
+    "name": "Graceful legs",
+    "completion": 76.6
+   },
+   {
+    "id": 11858,
+    "name": "Graceful gloves",
+    "completion": 74.8
+   },
+   {
+    "id": 11860,
+    "name": "Graceful boots",
+    "completion": 70.4
+   }
+  ]
+ },
+ {
+  "page": "Sailing Miscellaneous",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 31996,
+    "name": "Dragon metal sheet",
+    "completion": 5.5
+   },
+   {
+    "id": 31406,
+    "name": "Dragon nails",
+    "completion": 6.9
+   },
+   {
+    "id": 31916,
+    "name": "Dragon cannonball",
+    "completion": 10.9
+   },
+   {
+    "id": 31946,
+    "name": "Echo pearl",
+    "completion": 1
+   },
+   {
+    "id": 31952,
+    "name": "Swift albatross feather",
+    "completion": 3
+   },
+   {
+    "id": 31954,
+    "name": "Narwhal horn",
+    "completion": 1.6
+   },
+   {
+    "id": 31959,
+    "name": "Ray barbs",
+    "completion": 3.8
+   },
+   {
+    "id": 31961,
+    "name": "Broken dragon hook",
+    "completion": 1.2
+   },
+   {
+    "id": 31949,
+    "name": "Bottled storm",
+    "completion": 1.1
+   },
+   {
+    "id": 32115,
+    "name": "Dragon cannon barrel",
+    "completion": 3.9
+   },
+   {
+    "id": 31989,
+    "name": "Boat bottle (empty)",
+    "completion": 13.2
+   },
+   {
+    "id": 33074,
+    "name": "Facility bottle (empty)",
+    "completion": 4.9
+   }
+  ]
+ },
+ {
+  "page": "Sea Treasures",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 32388,
+    "name": "Medallion fragment",
+    "completion": 7.2
+   },
+   {
+    "id": 32389,
+    "name": "Medallion fragment",
+    "completion": 4.8
+   },
+   {
+    "id": 32390,
+    "name": "Medallion fragment",
+    "completion": 5.3
+   },
+   {
+    "id": 32391,
+    "name": "Medallion fragment",
+    "completion": 4.7
+   },
+   {
+    "id": 32392,
+    "name": "Medallion fragment",
+    "completion": 5.5
+   },
+   {
+    "id": 32393,
+    "name": "Medallion fragment",
+    "completion": 4.8
+   },
+   {
+    "id": 32394,
+    "name": "Medallion fragment",
+    "completion": 5.7
+   },
+   {
+    "id": 32395,
+    "name": "Medallion fragment",
+    "completion": 8.6
+   },
+   {
+    "id": 32398,
+    "name": "Sailors' amulet (inert)",
+    "completion": 16.6
+   },
+   {
+    "id": 32863,
+    "name": "Rusty locket",
+    "completion": 2.6
+   },
+   {
+    "id": 32864,
+    "name": "Mouldy block",
+    "completion": 2.7
+   },
+   {
+    "id": 32865,
+    "name": "Dull knife",
+    "completion": 5.4
+   },
+   {
+    "id": 32866,
+    "name": "Broken compass",
+    "completion": 7
+   },
+   {
+    "id": 32867,
+    "name": "Rusty coin",
+    "completion": 7.9
+   },
+   {
+    "id": 32868,
+    "name": "Broken sextant",
+    "completion": 5.6
+   },
+   {
+    "id": 32869,
+    "name": "Mouldy doll",
+    "completion": 6
+   },
+   {
+    "id": 32870,
+    "name": "Smashed mirror",
+    "completion": 6.3
+   }
+  ]
+ },
+ {
+  "page": "Shayzien Armour",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 13357,
+    "name": "Shayzien gloves (1)",
+    "completion": 52.6
+   },
+   {
+    "id": 13358,
+    "name": "Shayzien boots (1)",
+    "completion": 52.6
+   },
+   {
+    "id": 13359,
+    "name": "Shayzien helm (1)",
+    "completion": 52.5
+   },
+   {
+    "id": 13360,
+    "name": "Shayzien greaves (1)",
+    "completion": 52.6
+   },
+   {
+    "id": 13361,
+    "name": "Shayzien platebody (1)",
+    "completion": 52.5
+   },
+   {
+    "id": 13362,
+    "name": "Shayzien gloves (2)",
+    "completion": 52.5
+   },
+   {
+    "id": 13363,
+    "name": "Shayzien boots (2)",
+    "completion": 52.4
+   },
+   {
+    "id": 13364,
+    "name": "Shayzien helm (2)",
+    "completion": 52.4
+   },
+   {
+    "id": 13365,
+    "name": "Shayzien greaves (2)",
+    "completion": 52.5
+   },
+   {
+    "id": 13366,
+    "name": "Shayzien platebody (2)",
+    "completion": 53.2
+   },
+   {
+    "id": 13367,
+    "name": "Shayzien gloves (3)",
+    "completion": 52.5
+   },
+   {
+    "id": 13368,
+    "name": "Shayzien boots (3)",
+    "completion": 52.5
+   },
+   {
+    "id": 13369,
+    "name": "Shayzien helm (3)",
+    "completion": 52.5
+   },
+   {
+    "id": 13370,
+    "name": "Shayzien greaves (3)",
+    "completion": 52.5
+   },
+   {
+    "id": 13371,
+    "name": "Shayzien platebody (3)",
+    "completion": 52.8
+   },
+   {
+    "id": 13372,
+    "name": "Shayzien gloves (4)",
+    "completion": 52.6
+   },
+   {
+    "id": 13373,
+    "name": "Shayzien boots (4)",
+    "completion": 52.6
+   },
+   {
+    "id": 13374,
+    "name": "Shayzien helm (4)",
+    "completion": 52.5
+   },
+   {
+    "id": 13375,
+    "name": "Shayzien greaves (4)",
+    "completion": 52.5
+   },
+   {
+    "id": 13376,
+    "name": "Shayzien platebody (4)",
+    "completion": 52.8
+   },
+   {
+    "id": 13377,
+    "name": "Shayzien gloves (5)",
+    "completion": 53.7
+   },
+   {
+    "id": 13378,
+    "name": "Shayzien boots (5)",
+    "completion": 53.7
+   },
+   {
+    "id": 13379,
+    "name": "Shayzien helm (5)",
+    "completion": 53.6
+   },
+   {
+    "id": 13380,
+    "name": "Shayzien greaves (5)",
+    "completion": 53.6
+   },
+   {
+    "id": 13381,
+    "name": "Shayzien body (5)",
+    "completion": 53.7
+   }
+  ]
+ },
+ {
+  "page": "Shooting Stars",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 25539,
+    "name": "Celestial ring (uncharged)",
+    "completion": 46.5
+   },
+   {
+    "id": 25547,
+    "name": "Star fragment",
+    "completion": 20.7
+   }
+  ]
+ },
+ {
+  "page": "Skilling Pets",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 13320,
+    "name": "Heron",
+    "completion": 9.2
+   },
+   {
+    "id": 13321,
+    "name": "Rock golem",
+    "completion": 11.8
+   },
+   {
+    "id": 13322,
+    "name": "Beaver",
+    "completion": 10.2
+   },
+   {
+    "id": 13324,
+    "name": "Baby chinchompa",
+    "completion": 1.7
+   },
+   {
+    "id": 20659,
+    "name": "Giant Squirrel",
+    "completion": 6.5
+   },
+   {
+    "id": 20661,
+    "name": "Tangleroot",
+    "completion": 8.3
+   },
+   {
+    "id": 20663,
+    "name": "Rocky",
+    "completion": 10.6
+   },
+   {
+    "id": 20665,
+    "name": "Rift guardian",
+    "completion": 5
+   },
+   {
+    "id": 31283,
+    "name": "Soup",
+    "completion": 1.7
+   }
+  ]
+ },
+ {
+  "page": "Slayer",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 3140,
+    "name": "Dragon chainbody",
+    "completion": 17.8
+   },
+   {
+    "id": 4099,
+    "name": "Mystic hat (dark)",
+    "completion": 4.6
+   },
+   {
+    "id": 4101,
+    "name": "Mystic robe top (dark)",
+    "completion": 42.4
+   },
+   {
+    "id": 4103,
+    "name": "Mystic robe bottom (dark)",
+    "completion": 43.5
+   },
+   {
+    "id": 4105,
+    "name": "Mystic gloves (dark)",
+    "completion": 14.4
+   },
+   {
+    "id": 4107,
+    "name": "Mystic boots (dark)",
+    "completion": 4.7
+   },
+   {
+    "id": 4109,
+    "name": "Mystic hat (light)",
+    "completion": 29
+   },
+   {
+    "id": 4111,
+    "name": "Mystic robe top (light)",
+    "completion": 37.3
+   },
+   {
+    "id": 4113,
+    "name": "Mystic robe bottom (light)",
+    "completion": 31.8
+   },
+   {
+    "id": 4115,
+    "name": "Mystic gloves (light)",
+    "completion": 15.3
+   },
+   {
+    "id": 4117,
+    "name": "Mystic boots (light)",
+    "completion": 7.5
+   },
+   {
+    "id": 4119,
+    "name": "Bronze boots",
+    "completion": 28.2
+   },
+   {
+    "id": 4121,
+    "name": "Iron boots",
+    "completion": 27.9
+   },
+   {
+    "id": 4123,
+    "name": "Steel boots",
+    "completion": 28.8
+   },
+   {
+    "id": 4125,
+    "name": "Black boots",
+    "completion": 68.3
+   },
+   {
+    "id": 4127,
+    "name": "Mithril boots",
+    "completion": 48.2
+   },
+   {
+    "id": 4129,
+    "name": "Adamant boots",
+    "completion": 49.9
+   },
+   {
+    "id": 4131,
+    "name": "Rune boots",
+    "completion": 45.3
+   },
+   {
+    "id": 4151,
+    "name": "Abyssal whip",
+    "completion": 37.2
+   },
+   {
+    "id": 4153,
+    "name": "Granite maul",
+    "completion": 47.8
+   },
+   {
+    "id": 6665,
+    "name": "Mudskipper hat",
+    "completion": 24.9
+   },
+   {
+    "id": 6666,
+    "name": "Flippers",
+    "completion": 25.2
+   },
+   {
+    "id": 6809,
+    "name": "Granite legs",
+    "completion": 15.6
+   },
+   {
+    "id": 7975,
+    "name": "Crawling hand",
+    "completion": 14
+   },
+   {
+    "id": 7976,
+    "name": "Cockatrice head",
+    "completion": 6.6
+   },
+   {
+    "id": 7977,
+    "name": "Basilisk head",
+    "completion": 16.1
+   },
+   {
+    "id": 7978,
+    "name": "Kurask head",
+    "completion": 11.8
+   },
+   {
+    "id": 7979,
+    "name": "Abyssal head",
+    "completion": 17.2
+   },
+   {
+    "id": 8901,
+    "name": "Black mask (10)",
+    "completion": 39.1
+   },
+   {
+    "id": 10589,
+    "name": "Granite helm",
+    "completion": 3.7
+   },
+   {
+    "id": 11037,
+    "name": "Brine sabre",
+    "completion": 15.5
+   },
+   {
+    "id": 11235,
+    "name": "Dark bow",
+    "completion": 12.4
+   },
+   {
+    "id": 11286,
+    "name": "Draconic visage",
+    "completion": 7.6
+   },
+   {
+    "id": 11840,
+    "name": "Dragon boots",
+    "completion": 29.3
+   },
+   {
+    "id": 11902,
+    "name": "Leaf-bladed sword",
+    "completion": 42.1
+   },
+   {
+    "id": 11908,
+    "name": "Uncharged trident",
+    "completion": 14.9
+   },
+   {
+    "id": 12002,
+    "name": "Occult necklace",
+    "completion": 22.8
+   },
+   {
+    "id": 12004,
+    "name": "Kraken tentacle",
+    "completion": 28.8
+   },
+   {
+    "id": 13265,
+    "name": "Abyssal dagger",
+    "completion": 12.1
+   },
+   {
+    "id": 20724,
+    "name": "Imbued heart",
+    "completion": 7.7
+   },
+   {
+    "id": 20727,
+    "name": "Leaf-bladed battleaxe",
+    "completion": 22.9
+   },
+   {
+    "id": 20730,
+    "name": "Mist battlestaff",
+    "completion": 19.5
+   },
+   {
+    "id": 20736,
+    "name": "Dust battlestaff",
+    "completion": 30.6
+   },
+   {
+    "id": 20849,
+    "name": "Dragon thrownaxe",
+    "completion": 23
+   },
+   {
+    "id": 21009,
+    "name": "Dragon sword",
+    "completion": 17.6
+   },
+   {
+    "id": 21028,
+    "name": "Dragon harpoon",
+    "completion": 20.9
+   },
+   {
+    "id": 21270,
+    "name": "Eternal gem",
+    "completion": 7.1
+   },
+   {
+    "id": 21637,
+    "name": "Wyvern visage",
+    "completion": 1.1
+   },
+   {
+    "id": 21643,
+    "name": "Granite boots",
+    "completion": 4.8
+   },
+   {
+    "id": 21646,
+    "name": "Granite longsword",
+    "completion": 11.2
+   },
+   {
+    "id": 22804,
+    "name": "Dragon knife",
+    "completion": 22.8
+   },
+   {
+    "id": 22957,
+    "name": "Drake's claw",
+    "completion": 12.6
+   },
+   {
+    "id": 22960,
+    "name": "Drake's tooth",
+    "completion": 12.9
+   },
+   {
+    "id": 22963,
+    "name": "Broken dragon hasta",
+    "completion": 13.4
+   },
+   {
+    "id": 22969,
+    "name": "Hydra's heart",
+    "completion": 11.3
+   },
+   {
+    "id": 22971,
+    "name": "Hydra's fang",
+    "completion": 13.6
+   },
+   {
+    "id": 22973,
+    "name": "Hydra's eye",
+    "completion": 16.7
+   },
+   {
+    "id": 22988,
+    "name": "Hydra tail",
+    "completion": 12.4
+   },
+   {
+    "id": 23047,
+    "name": "Mystic hat (dusk)",
+    "completion": 3.6
+   },
+   {
+    "id": 23050,
+    "name": "Mystic robe top (dusk)",
+    "completion": 3.5
+   },
+   {
+    "id": 23053,
+    "name": "Mystic robe bottom (dusk)",
+    "completion": 3.6
+   },
+   {
+    "id": 23056,
+    "name": "Mystic gloves (dusk)",
+    "completion": 3.6
+   },
+   {
+    "id": 23059,
+    "name": "Mystic boots (dusk)",
+    "completion": 3.6
+   },
+   {
+    "id": 24268,
+    "name": "Basilisk jaw",
+    "completion": 18.8
+   },
+   {
+    "id": 24288,
+    "name": "Dagon'hai hat",
+    "completion": 2.7
+   },
+   {
+    "id": 24291,
+    "name": "Dagon'hai robe top",
+    "completion": 2.8
+   },
+   {
+    "id": 24294,
+    "name": "Dagon'hai robe bottom",
+    "completion": 2.8
+   },
+   {
+    "id": 24777,
+    "name": "Blood shard",
+    "completion": 18.6
+   },
+   {
+    "id": 26221,
+    "name": "Ancient ceremonial top",
+    "completion": 8
+   },
+   {
+    "id": 26223,
+    "name": "Ancient ceremonial legs",
+    "completion": 8
+   },
+   {
+    "id": 26225,
+    "name": "Ancient ceremonial mask",
+    "completion": 8
+   },
+   {
+    "id": 26227,
+    "name": "Ancient ceremonial gloves",
+    "completion": 8
+   },
+   {
+    "id": 26229,
+    "name": "Ancient ceremonial boots",
+    "completion": 8.1
+   },
+   {
+    "id": 28583,
+    "name": "Warped sceptre (uncharged)",
+    "completion": 10.8
+   },
+   {
+    "id": 29084,
+    "name": "Sulphur blades",
+    "completion": 12.2
+   },
+   {
+    "id": 29455,
+    "name": "Teleport anchoring scroll",
+    "completion": 3.1
+   },
+   {
+    "id": 29806,
+    "name": "Aranea boots",
+    "completion": 10.4
+   },
+   {
+    "id": 29889,
+    "name": "Glacial temotli",
+    "completion": 13.7
+   },
+   {
+    "id": 29892,
+    "name": "Pendant of Ates (inert)",
+    "completion": 27.3
+   },
+   {
+    "id": 29895,
+    "name": "Frozen tear",
+    "completion": 34.6
+   },
+   {
+    "id": 30957,
+    "name": "Earthbound tecpatl",
+    "completion": 1.4
+   },
+   {
+    "id": 31081,
+    "name": "Antler guard",
+    "completion": 2.4
+   },
+   {
+    "id": 31084,
+    "name": "Alchemist's signet",
+    "completion": 3.5
+   },
+   {
+    "id": 31086,
+    "name": "Broken antler",
+    "completion": 7.7
+   },
+   {
+    "id": 31235,
+    "name": "Gryphon feather",
+    "completion": 7.1
+   },
+   {
+    "id": 31996,
+    "name": "Dragon metal sheet",
+    "completion": 5.5
+   },
+   {
+    "id": 32876,
+    "name": "Aquanite tendon",
+    "completion": 0.5
+   },
+   {
+    "id": 31243,
+    "name": "Horn of Plenty (empty)",
+    "completion": 0.8
+   },
+   {
+    "id": 33663,
+    "name": "Venator tooth",
+    "completion": null
+   },
+   {
+    "id": 33661,
+    "name": "Venator fang",
+    "completion": null
+   },
+   {
+    "id": 34401,
+    "name": "Necklace of Fangs",
+    "completion": null
+   },
+   {
+    "id": 34404,
+    "name": "Air diamond",
+    "completion": null
+   },
+   {
+    "id": 34410,
+    "name": "Water sapphire",
+    "completion": null
+   },
+   {
+    "id": 34416,
+    "name": "Earth emerald",
+    "completion": null
+   },
+   {
+    "id": 34422,
+    "name": "Fire ruby",
+    "completion": null
+   }
+  ]
+ },
+ {
+  "page": "Tormented Demons",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 29574,
+    "name": "Burning claw",
+    "completion": 18.6
+   },
+   {
+    "id": 29580,
+    "name": "Tormented synapse",
+    "completion": 20.6
+   },
+   {
+    "id": 29684,
+    "name": "Guthixian temple teleport",
+    "completion": 32.8
+   }
+  ]
+ },
+ {
+  "page": "TzHaar",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 6522,
+    "name": "Toktz-xil-ul",
+    "completion": 2.4
+   },
+   {
+    "id": 6523,
+    "name": "Toktz-xil-ak",
+    "completion": 2.1
+   },
+   {
+    "id": 6524,
+    "name": "Toktz-ket-xil",
+    "completion": 5.7
+   },
+   {
+    "id": 6525,
+    "name": "Toktz-xil-ek",
+    "completion": 2.1
+   },
+   {
+    "id": 6526,
+    "name": "Toktz-mej-tal",
+    "completion": 0.4
+   },
+   {
+    "id": 6528,
+    "name": "Tzhaar-ket-om",
+    "completion": 5.7
+   },
+   {
+    "id": 6568,
+    "name": "Obsidian cape",
+    "completion": 6.7
+   },
+   {
+    "id": 21298,
+    "name": "Obsidian helmet",
+    "completion": 1.6
+   },
+   {
+    "id": 21301,
+    "name": "Obsidian platebody",
+    "completion": 1.6
+   },
+   {
+    "id": 21304,
+    "name": "Obsidian platelegs",
+    "completion": 1.7
+   }
+  ]
+ },
+ {
+  "page": "Miscellaneous",
+  "tab": "Other",
+  "items": [
+   {
+    "id": 1249,
+    "name": "Dragon spear",
+    "completion": 48.5
+   },
+   {
+    "id": 2366,
+    "name": "Shield left half",
+    "completion": 53.6
+   },
+   {
+    "id": 6571,
+    "name": "Uncut onyx",
+    "completion": 17.1
+   },
+   {
+    "id": 7536,
+    "name": "Fresh crab claw",
+    "completion": 21.2
+   },
+   {
+    "id": 7538,
+    "name": "Fresh crab shell",
+    "completion": 20.5
+   },
+   {
+    "id": 7989,
+    "name": "Big bass",
+    "completion": 4
+   },
+   {
+    "id": 7991,
+    "name": "Big swordfish",
+    "completion": 8.4
+   },
+   {
+    "id": 7993,
+    "name": "Big shark",
+    "completion": 6.9
+   },
+   {
+    "id": 9007,
+    "name": "Right skull half",
+    "completion": 64
+   },
+   {
+    "id": 9008,
+    "name": "Left skull half",
+    "completion": 62.5
+   },
+   {
+    "id": 9010,
+    "name": "Top of sceptre",
+    "completion": 53.4
+   },
+   {
+    "id": 9011,
+    "name": "Bottom of sceptre",
+    "completion": 57.1
+   },
+   {
+    "id": 10976,
+    "name": "Long bone",
+    "completion": 86.1
+   },
+   {
+    "id": 10977,
+    "name": "Curved bone",
+    "completion": 48.7
+   },
+   {
+    "id": 11335,
+    "name": "Dragon full helm",
+    "completion": 0.5
+   },
+   {
+    "id": 11338,
+    "name": "Chewed bones",
+    "completion": 25
+   },
+   {
+    "id": 11942,
+    "name": "Ecumenical key",
+    "completion": 31.1
+   },
+   {
+    "id": 13071,
+    "name": "Chompy chick",
+    "completion": 6.9
+   },
+   {
+    "id": 13392,
+    "name": "Xeric's talisman (inert)",
+    "completion": 62.5
+   },
+   {
+    "id": 13576,
+    "name": "Dragon warhammer",
+    "completion": 11.5
+   },
+   {
+    "id": 19679,
+    "name": "Dark totem base",
+    "completion": 72.7
+   },
+   {
+    "id": 19681,
+    "name": "Dark totem middle",
+    "completion": 67.5
+   },
+   {
+    "id": 19683,
+    "name": "Dark totem top",
+    "completion": 64.1
+   },
+   {
+    "id": 19707,
+    "name": "Amulet of eternal glory",
+    "completion": 0.6
+   },
+   {
+    "id": 20433,
+    "name": "Evil chicken feet",
+    "completion": 2.1
+   },
+   {
+    "id": 20436,
+    "name": "Evil chicken wings",
+    "completion": 2
+   },
+   {
+    "id": 20439,
+    "name": "Evil chicken head",
+    "completion": 2.1
+   },
+   {
+    "id": 20442,
+    "name": "Evil chicken legs",
+    "completion": 2.1
+   },
+   {
+    "id": 20754,
+    "name": "Giant key",
+    "completion": 54.4
+   },
+   {
+    "id": 21343,
+    "name": "Mining gloves",
+    "completion": 21
+   },
+   {
+    "id": 21345,
+    "name": "Superior mining gloves",
+    "completion": 15.9
+   },
+   {
+    "id": 21392,
+    "name": "Expert mining gloves",
+    "completion": 14.6
+   },
+   {
+    "id": 21509,
+    "name": "Herbi",
+    "completion": 3
+   },
+   {
+    "id": 21649,
+    "name": "Merfolk trident",
+    "completion": 1.6
+   },
+   {
+    "id": 21838,
+    "name": "Shaman mask",
+    "completion": 2.2
+   },
+   {
+    "id": 21918,
+    "name": "Dragon limbs",
+    "completion": 4.6
+   },
+   {
+    "id": 22100,
+    "name": "Dragon metal slice",
+    "completion": 0.3
+   },
+   {
+    "id": 22103,
+    "name": "Dragon metal lump",
+    "completion": 0.9
+   },
+   {
+    "id": 22374,
+    "name": "Mossy key",
+    "completion": 51.6
+   },
+   {
+    "id": 22875,
+    "name": "Hespori seed",
+    "completion": 80.3
+   },
+   {
+    "id": 23522,
+    "name": "Mask of Ranul",
+    "completion": 2.8
+   },
+   {
+    "id": 23943,
+    "name": "Elven signet",
+    "completion": 5.2
+   },
+   {
+    "id": 23959,
+    "name": "Enhanced crystal teleport seed",
+    "completion": 14.8
+   },
+   {
+    "id": 24000,
+    "name": "Crystal grail",
+    "completion": 4.1
+   },
+   {
+    "id": 24034,
+    "name": "Dragonstone full helm",
+    "completion": 0.7
+   },
+   {
+    "id": 24037,
+    "name": "Dragonstone platebody",
+    "completion": 0.7
+   },
+   {
+    "id": 24040,
+    "name": "Dragonstone platelegs",
+    "completion": 0.7
+   },
+   {
+    "id": 24043,
+    "name": "Dragonstone boots",
+    "completion": 0.7
+   },
+   {
+    "id": 24046,
+    "name": "Dragonstone gauntlets",
+    "completion": 0.7
+   },
+   {
+    "id": 25844,
+    "name": "Orange egg sac",
+    "completion": 5.3
+   },
+   {
+    "id": 25846,
+    "name": "Blue egg sac",
+    "completion": 5.4
+   },
+   {
+    "id": 26945,
+    "name": "Pharaoh's sceptre (uncharged)",
+    "completion": 17.8
+   },
+   {
+    "id": 28813,
+    "name": "Broken zombie axe",
+    "completion": 20.1
+   },
+   {
+    "id": 30324,
+    "name": "Broken zombie helmet",
+    "completion": 3.3
+   },
+   {
+    "id": 30111,
+    "name": "Helmet of the moon",
+    "completion": 0
+   },
+   {
+    "id": 31408,
+    "name": "Giant blue krill",
+    "completion": 0.4
+   },
+   {
+    "id": 31412,
+    "name": "Golden haddock",
+    "completion": 0.3
+   },
+   {
+    "id": 31416,
+    "name": "Orangefin",
+    "completion": 0.2
+   },
+   {
+    "id": 31420,
+    "name": "Huge halibut",
+    "completion": 0.3
+   },
+   {
+    "id": 31424,
+    "name": "Purplefin",
+    "completion": 0.2
+   },
+   {
+    "id": 31428,
+    "name": "Swift marlin",
+    "completion": 0.2
+   },
+   {
+    "id": 31572,
+    "name": "Squid beak",
+    "completion": 2
+   },
+   {
+    "id": 34024,
+    "name": "Jeweller's chisel",
+    "completion": null
+   }
+  ]
+ }
+]

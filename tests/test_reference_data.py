@@ -7,7 +7,13 @@ from pathlib import Path
 
 import pytest
 
-from osrs_mcp.reference import combat_achievements, diary_tasks, quest_points, quest_reqs
+from osrs_mcp.reference import (
+    collection_log,
+    combat_achievements,
+    diary_tasks,
+    quest_points,
+    quest_reqs,
+)
 from osrs_mcp.requirements import player_quest_points
 from tests.conftest import fixture_json
 
@@ -310,3 +316,49 @@ def test_parse_xp_rewards():
         "Thieving": 1000,
     }
     assert refresh.parse_xp_rewards("no rewards here") == {}
+
+
+def test_collection_log_reference():
+    pages = collection_log()
+    assert len({p.page for p in pages}) == len(pages)
+    assert {p.tab for p in pages} == {"Bosses", "Raids", "Clues", "Minigames", "Other"}
+    assert all(p.items for p in pages)
+    assert len({item.id for p in pages for item in p.items}) > 1700
+    vorkath = next(p for p in pages if p.page == "Vorkath")
+    assert vorkath.tab == "Bosses" and "Vorki" in {item.name for item in vorkath.items}
+    assert [p.tab for p in pages][:1] == ["Bosses"]  # game order: Bosses first
+
+
+COLLECTION_LOG_PAGE = """==Ranks==
+===Bronze===
+==Bosses==
+===Abyssal Sire===
+===Crazy archaeologist===
+==Clues==
+===Hard Treasure Trail Rewards (Rare)===
+==Duplicate entries==
+===Abyssal Sire===
+"""
+
+
+def test_build_collection_log_from_wiki_shapes():
+    headings = refresh.parse_collection_log_headings(COLLECTION_LOG_PAGE)
+    assert headings == [
+        ("Bosses", "Abyssal Sire"),
+        ("Bosses", "Crazy archaeologist"),
+        ("Clues", "Hard Treasure Trail Rewards (Rare)"),
+    ]
+    items = [
+        {"id": 1, "name": "Pet", "tabs": ["Hard Treasure Trails (Rare)", "Abyssal Sire"]},
+        {"id": 2, "name": "Fedora", "tabs": ["Crazy Archaeologist"]},
+    ]
+    log = refresh.build_collection_log(items, {"1": 2.5}, headings)
+    assert [(p["page"], p["tab"]) for p in log] == [
+        ("Abyssal Sire", "Bosses"),
+        ("Crazy Archaeologist", "Bosses"),
+        ("Hard Treasure Trails (Rare)", "Clues"),
+    ]
+    assert log[0]["items"] == [{"id": 1, "name": "Pet", "completion": 2.5}]
+    assert log[1]["items"][0]["completion"] is None
+    with pytest.raises(RuntimeError, match="no heading"):
+        refresh.build_collection_log([{"id": 3, "name": "X", "tabs": ["Nowhere"]}], {}, headings)

@@ -2,8 +2,9 @@
 
 A personal remote [MCP](https://modelcontextprotocol.io) server that lets Claude read one Old
 School RuneScape account: skills, boss kill counts, quests, achievement diaries, combat
-achievements, recent gains and Grand Exchange prices. It's built to be added to claude.ai as a
-custom connector (web and mobile). It runs locally first, then on Google Cloud Run.
+achievements, collection log, recent gains and Grand Exchange prices. It's built to be added
+to claude.ai as a custom connector (web and mobile). It runs locally first, then on Google
+Cloud Run.
 
 It never handles Jagex credentials. Everything comes from public APIs, or (bank, inventory and
 gear) from the player's own RuneLite client pushing data out.
@@ -16,11 +17,11 @@ gear) from the player's own RuneLite client pushing data out.
 | Source | What it provides | Freshness |
 |---|---|---|
 | [Official hiscores](https://secure.runescape.com/m=hiscore_oldschool/overall) (`index_lite.json`) | Levels, XP, ranks, boss KCs, clues, minigames | Updates on logout/hop. Cached 5 min |
-| [WikiSync](https://oldschool.runescape.wiki/w/RuneScape:WikiSync) (RuneLite plugin) | Quest states, diary tasks, combat achievements, levels | Uploaded on login and as things change. Cached 5 min |
-| OSRS Wiki (build time) | Quest requirements, diary task text, CA names. See `scripts/refresh_reference_data.py` | Refreshed manually |
+| [WikiSync](https://oldschool.runescape.wiki/w/RuneScape:WikiSync) (RuneLite plugin) | Quest states, diary tasks, combat achievements, levels, collection log | Uploaded on login and as things change; the collection log only when its WikiSync button is pressed. Cached 5 min |
+| OSRS Wiki (build time) | Quest requirements, diary task text, CA names, collection log pages. See `scripts/refresh_reference_data.py` | Refreshed manually |
 | [Wise Old Man](https://wiseoldman.net) | Gains over a day/week/month/year | Per WOM snapshot. Cached 5 min |
 | [OSRS Wiki prices](https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices) | GE instant-buy/sell, buy limits, alch values | Cached 60 s (mapping 24 h) |
-| [Group Ironmen Tracker](https://github.com/christoabrown/group-ironmen-tracker) (RuneLite plugin) | Bank, inventory, equipment, rune pouch, quiver | Pushed within seconds of a change; the bank only when it's opened |
+| [Group Ironmen Tracker](https://github.com/christoabrown/group-ironmen-tracker) (RuneLite plugin) | Bank, inventory, equipment, rune pouch, quiver, new collection log items | Pushed within seconds of a change; the bank only when it's opened |
 
 Every outbound request sends a descriptive User-Agent with contact info. The Wiki requires this.
 
@@ -33,6 +34,7 @@ Every outbound request sends a descriptive User-Agent with contact info. The Wik
 | `get_quest_progress` | Quest states, plus what each unfinished quest still needs |
 | `get_diary_progress` | Diary progress per region/tier; remaining tasks and their missing requirements |
 | `get_combat_achievements` | CA points and completion per tier; filtered task list |
+| `get_collection_log` | Log slots per tab and page, the missing items most players have, and every item on a page |
 | `get_gains` | XP, levels and KCs gained over a period |
 | `refresh_gains_tracking` | Ask WOM for a fresh snapshot (rate-limited, so used sparingly) |
 | `get_item_price` | GE prices for an item. Partial names and typos are OK |
@@ -185,6 +187,11 @@ data. The tests cross-check it against a WikiSync payload.
 ```bash
 python -m uv run python scripts/refresh_reference_data.py
 ```
+
+GitHub Actions runs lint, format and tests on every push and pull request
+(`.github/workflows/ci.yml`). A separate workflow checks weekly, and whenever the skill
+changes, that the Wiki pages the osrs-coach skill names still exist (`wiki-links.yml`), so a
+Wiki outage can't fail a code change.
 
 ### Layout
 
