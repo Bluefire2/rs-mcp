@@ -3,7 +3,7 @@
 from datetime import UTC, datetime
 
 from pydantic import BaseModel
-from rapidfuzz import fuzz, process
+from rapidfuzz import fuzz, process, utils
 
 from osrs_mcp.errors import SourceError
 from osrs_mcp.http import HttpClient
@@ -46,7 +46,14 @@ def search(items: list[ItemInfo], query: str, limit: int) -> list[ItemInfo]:
     if substring:
         return substring[:limit]
     by_name = {i.name: i for i in items}
-    matches = process.extract(q, by_name.keys(), scorer=fuzz.WRatio, limit=limit, score_cutoff=70)
+    matches = process.extract(
+        q,
+        by_name.keys(),
+        scorer=fuzz.WRatio,
+        processor=utils.default_process,  # case-insensitive
+        limit=limit,
+        score_cutoff=70,
+    )
     return [by_name[name] for name, _score, _ in matches]
 
 
