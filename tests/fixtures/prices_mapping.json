@@ -1,0 +1,101 @@
+[
+ {
+  "examine": "A weapon from the Abyss.",
+  "id": 4151,
+  "members": true,
+  "lowalch": 48000,
+  "limit": 70,
+  "value": 120001,
+  "highalch": 72000,
+  "icon": "Abyssal whip.png",
+  "name": "Abyssal whip"
+ },
+ {
+  "examine": "A sturdy chestplate.",
+  "id": 11832,
+  "members": true,
+  "lowalch": 116004,
+  "limit": 8,
+  "value": 290010,
+  "highalch": 174006,
+  "icon": "Bandos chestplate.png",
+  "name": "Bandos chestplate"
+ },
+ {
+  "examine": "A sturdy pair of tassets.",
+  "id": 11834,
+  "members": true,
+  "lowalch": 115964,
+  "limit": 8,
+  "value": 289910,
+  "highalch": 173946,
+  "icon": "Bandos tassets.png",
+  "name": "Bandos tassets"
+ },
+ {
+  "examine": "Spikey, close combat weapon.",
+  "id": 13576,
+  "members": true,
+  "lowalch": 48000,
+  "limit": 8,
+  "value": 120000,
+  "highalch": 72000,
+  "icon": "Dragon warhammer.png",
+  "name": "Dragon warhammer"
+ },
+ {
+  "examine": "Logs cut from a magic tree.",
+  "id": 1513,
+  "members": true,
+  "lowalch": 128,
+  "limit": 12000,
+  "value": 320,
+  "highalch": 192,
+  "icon": "Magic logs.png",
+  "name": "Magic logs"
+ },
+ {
+  "examine": "Used for alchemy spells.",
+  "id": 561,
+  "members": false,
+  "lowalch": 72,
+  "limit": 18000,
+  "value": 180,
+  "highalch": 108,
+  "icon": "Nature rune.png",
+  "name": "Nature rune"
+ },
+ {
+  "examine": "Ammo suited for a boat's cannon or for a dwarf multicannon.",
+  "id": 2,
+  "members": true,
+  "lowalch": 2,
+  "limit": 11000,
+  "value": 5,
+  "highalch": 3,
+  "icon": "Steel cannonball.png",
+  "name": "Steel cannonball"
+ },
+ {
+  "examine": "Fires darts while coating them with venom.",
+  "id": 12924,
+  "members": true,
+  "lowalch": 48000,
+  "limit": 8,
+  "value": 120000,
+  "highalch": 72000,
+  "icon": "Toxic blowpipe (empty).png",
+  "name": "Toxic blowpipe (empty)"
+ },
+ {
+  "examine": "A mystical bow carved from the twisted remains of the Great Olm.",
+  "id": 20997,
+  "members": true,
+  "lowalch": 1600000,
+  "limit": 8,
+  "value": 4000000,
+  "highalch": 2400000,
+  "icon": "Twisted bow.png",
+  "name": "Twisted bow"
+ }
+]
