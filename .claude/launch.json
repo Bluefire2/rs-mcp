@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "osrs-mcp",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "uv", "run", "python", "-m", "osrs_mcp"],
+      "port": 8000
+    }
+  ]
+}
