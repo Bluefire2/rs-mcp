@@ -4,7 +4,9 @@ from fastmcp import FastMCP
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
-from osrs_mcp.config import get_settings
+from osrs_mcp.config import Settings, get_settings
+from osrs_mcp.sources import Sources
+from osrs_mcp.tools import register_all
 
 INSTRUCTIONS = """\
 Tools for one Old School RuneScape account: skills and boss kill counts from the official
@@ -14,8 +16,13 @@ came from and how fresh it is; mention staleness when it matters to the answer.
 If no player name is given, tools use the account owner's default name."""
 
 
-def create_app() -> FastMCP:
-    mcp = FastMCP("osrs-mcp", instructions=INSTRUCTIONS, version="0.1.0")
+def create_app(settings: Settings | None = None, sources: Sources | None = None) -> FastMCP:
+    settings = settings or get_settings()
+    sources = sources or Sources.create(settings)
+    # mask_error_details: unexpected exceptions reach the client as a generic error (and are
+    # logged here); SourceError/ToolError messages are written for the client and pass through.
+    mcp = FastMCP("osrs-mcp", instructions=INSTRUCTIONS, version="0.1.0", mask_error_details=True)
+    register_all(mcp, sources)
 
     @mcp.custom_route("/healthz", methods=["GET"], include_in_schema=False)
     async def healthz(request: Request) -> JSONResponse:

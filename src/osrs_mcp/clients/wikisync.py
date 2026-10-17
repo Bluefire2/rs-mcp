@@ -4,7 +4,7 @@ plugin. The plugin uploads when the player logs in and as things change in game.
 from datetime import datetime
 from urllib.parse import quote
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 
 from osrs_mcp.errors import SourceError
 from osrs_mcp.http import HttpClient
@@ -16,8 +16,8 @@ QUEST_STATES = {0: "not_started", 1: "in_progress", 2: "completed"}
 
 
 class DiaryTier(BaseModel):
-    complete: bool
-    tasks: list[bool]
+    complete: bool | None  # None: WikiSync didn't report whether the reward was claimed
+    tasks: list[bool | None]
 
 
 class WikiSyncData(BaseModel):
@@ -42,4 +42,10 @@ class WikiSyncClient:
             )
         if response.status_code != 200:
             raise SourceError(f"WikiSync returned HTTP {response.status_code}; try again shortly.")
-        return WikiSyncData.model_validate(response.json())
+        try:
+            return WikiSyncData.model_validate(response.json())
+        except (ValidationError, ValueError) as exc:
+            raise SourceError(
+                "WikiSync returned data in a format this server doesn't understand; the "
+                "server's WikiSync parser needs updating."
+            ) from exc
