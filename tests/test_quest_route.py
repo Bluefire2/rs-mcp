@@ -97,3 +97,26 @@ def test_quest_filter_still_reports_account_totals():
 )
 def test_typos_and_arabic_numerals_match(query, expected):
     assert [q.name for q in progress(account(), query).quests] == expected
+
+
+def test_start_only_prerequisite_does_not_count_its_completion_skills():
+    # Seen in a skill test: RFD's Sir Amik Varze subquest only needs Legends' Quest *started*,
+    # but the route counted Legends' Quest's completion skills (45 Herblore, 50 Thieving, ...).
+    result = progress(account(level=1), "Recipe for Disaster")
+    steps = {step.name: step for step in result.route}
+    assert steps["Legends' Quest"].needed == "start"
+    assert steps["Recipe for Disaster"].needed == "finish"
+    targets = {t.skill: t.need for t in result.route_skill_targets}
+    assert targets.get("Herblore", 0) < 45  # 45 is only needed to finish Legends' Quest
+    assert targets["Quest point"] == 175  # QP gates still count
+
+
+def test_finish_wins_when_a_quest_is_needed_both_ways():
+    # Legends' Quest is a full prerequisite of Dragon Slayer II.
+    steps = {s.name: s for s in progress(account(), "Dragon Slayer II").route}
+    assert steps["Legends' Quest"].needed == "finish"
+
+
+def test_route_counts_remaining_quests():
+    result = progress(account(), "Dragon Slayer II")
+    assert result.route_quests_remaining == len(result.route)

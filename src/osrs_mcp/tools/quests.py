@@ -35,6 +35,11 @@ class QuestEntry(BaseModel):
     missing_quests: list[str] = []
     missing_skills: list[MissingSkill] = []
     unverified: list[str] = []
+    needed: Literal["finish", "start"] | None = Field(
+        default=None,
+        description="Route steps only: 'start' means the route only needs this quest started, so "
+        "its skill requirements (often only needed to finish it) aren't in route_skill_targets",
+    )
 
 
 class QuestProgress(BaseModel):
@@ -55,7 +60,11 @@ class QuestProgress(BaseModel):
     route_skill_targets: list[MissingSkill] | None = Field(
         default=None,
         description="With `quest`: the highest level each skill needs anywhere on the route, "
-        "where the player is below it, biggest gap first",
+        "where the player is below it, biggest gap first (quest points included; skills of "
+        "steps that only need starting excluded)",
+    )
+    route_quests_remaining: int | None = Field(
+        default=None, description="With `quest`: number of unfinished quests on the route"
     )
 
 
@@ -82,27 +91,36 @@ def match_quests(names: list[str], query: str) -> list[str]:
     return [name for name, score, _index in matches if score >= best - 2]
 
 
-def unfinished_route(target: str, states: dict[str, int]) -> list[str]:
-    """Unfinished prerequisites of `target` at any depth, each before the quests that need it
-    (depth-first post-order), ending with the target itself."""
+def unfinished_route(target: str, states: dict[str, int]) -> list[tuple[str, str]]:
+    """Unfinished prerequisites of `target` at any depth as (quest, "finish" | "start"), each
+    before the quests that need it (depth-first post-order), ending with the target itself.
+
+    A quest reached only through "Started:<Quest>" edges is needed just "start"ed (e.g. Recipe
+    for Disaster's Sir Amik Varze subquest only needs Legends' Quest started). If anything needs
+    it finished, "finish" wins. Its own prerequisites are followed either way, since they're
+    needed to start it.
+    """
     reqs = quest_reqs()
     order: list[str] = []
-    seen: set[str] = set()
+    needed: dict[str, str] = {}
 
-    def visit(name: str) -> None:
-        if name in seen:
+    def visit(name: str, mode: str) -> None:
+        previous = needed.get(name)
+        if previous is not None:
+            if previous == "start" and mode == "finish":
+                needed[name] = "finish"
             return
-        seen.add(name)
+        needed[name] = mode
         req = reqs.get(name)
         for prereq in req.quests if req else []:
             prereq_name = prereq.removeprefix(STARTED)
-            needed = 1 if prereq.startswith(STARTED) else 2
-            if states.get(prereq_name, 0) < needed:
-                visit(prereq_name)
+            start_only = prereq.startswith(STARTED)
+            if states.get(prereq_name, 0) < (1 if start_only else 2):
+                visit(prereq_name, "start" if start_only else "finish")
         order.append(name)
 
-    visit(target)
-    return order
+    visit(target, "finish")
+    return [(name, needed[name]) for name in order]
 
 
 def build_quest_progress(
@@ -142,7 +160,7 @@ def build_quest_progress(
     for state in states.values():
         counts[QUEST_STATES[state]] += 1
 
-    route = route_targets = None
+    route = route_targets = route_remaining = None
     if quest:
         names = match_quests(sorted(states), quest)
         if not names:
@@ -151,14 +169,23 @@ def build_quest_progress(
             )
         entries = [entry_for(name) for name in names]
         if len(names) == 1:
-            route = [entry_for(name) for name in unfinished_route(names[0], states)]
+            route = []
+            for name, mode in unfinished_route(names[0], states):
+                step = entry_for(name)
+                step.needed = mode
+                route.append(step)
             targets: dict[str, MissingSkill] = {}
             for step in route:
                 for missing in step.missing_skills:
+                    # A start-only step's quest-point gate is a start requirement; its skill
+                    # levels usually aren't, so they don't count toward the route.
+                    if step.needed == "start" and missing.skill != "Quest point":
+                        continue
                     best = targets.get(missing.skill)
                     if best is None or missing.need > best.need:
                         targets[missing.skill] = missing
             route_targets = sorted(targets.values(), key=lambda m: m.need - m.have, reverse=True)
+            route_remaining = sum(1 for step in route if step.status != "completed")
     else:
         entries = []
         for name, state in sorted(states.items()):
@@ -189,6 +216,7 @@ def build_quest_progress(
         quests=entries,
         route=route,
         route_skill_targets=route_targets,
+        route_quests_remaining=route_remaining,
     )
 
 
