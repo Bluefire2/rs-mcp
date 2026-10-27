@@ -135,7 +135,8 @@ sent every second and are accepted but not stored.
 A second MCP endpoint, `<PUBLIC_BASE_URL>/public/mcp`, serves public data for **any** player to
 headless consumers that can't do the Google sign-in, such as a Discord bot. It is a separate
 FastMCP app in the same process (sharing the HTTP cache), guarded by a static bearer token, and
-is only mounted when `PUBLIC_API_TOKENS` is set.
+is only mounted when `PUBLIC_API_TOKENS` is set. `deploy/deploy.sh` always sets it, so in Cloud
+Run the endpoint is always on.
 
 - **On it:** `get_stats`, `get_activity_scores`, `get_quest_progress`, `get_diary_progress`,
   `get_combat_achievements`, `get_collection_log`, `get_gains`, `get_item_price`.

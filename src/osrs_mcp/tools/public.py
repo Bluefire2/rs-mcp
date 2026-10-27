@@ -15,7 +15,7 @@ from typing import Annotated, Literal
 from fastmcp import FastMCP
 from pydantic import Field
 
-from osrs_mcp.clients.wom import Period
+from osrs_mcp.clients.wom import NotTrackedError, Period
 from osrs_mcp.config import AccountType
 from osrs_mcp.errors import SourceError
 from osrs_mcp.sources import Sources
@@ -49,6 +49,12 @@ AccountTypeArg = Annotated[
 
 # Quest and diary requirements are checked as for a regular account (some are ironman-only).
 IS_IRONMAN = False
+
+# The owner's wording points at refresh_gains_tracking, which isn't on this endpoint.
+GAINS_NOTE = (
+    "Gains are measured between Wise Old Man snapshots, so anything since the latest snapshot "
+    "(window_end) is missing. Updating the player on wiseoldman.net takes a new snapshot."
+)
 
 
 def _name(rsn: str) -> str:
@@ -184,7 +190,14 @@ def register(mcp: FastMCP, sources: Sources) -> None:
         or year, from Wise Old Man (only for players Wise Old Man tracks). Only non-zero gains
         are listed, biggest first."""
         name = _name(rsn)
-        return build_gains(name, period, await sources.wom.gained(name, period))
+        try:
+            gained = await sources.wom.gained(name, period)
+        except NotTrackedError:
+            raise SourceError(
+                f"Wise Old Man isn't tracking '{name}', so there are no gains to show. The player "
+                "can start tracking by searching for their name on wiseoldman.net."
+            ) from None
+        return build_gains(name, period, gained).model_copy(update={"note": GAINS_NOTE})
 
     @mcp.tool(annotations=READ_ONLY)
     async def get_item_price(

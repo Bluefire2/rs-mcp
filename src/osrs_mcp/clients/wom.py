@@ -65,6 +65,10 @@ class UpdatedPlayer(BaseModel):
     updatedAt: datetime | None
 
 
+class NotTrackedError(SourceError):
+    """Wise Old Man doesn't track this player (HTTP 404)."""
+
+
 class WomClient:
     def __init__(self, http: HttpClient, api_key: str = "") -> None:
         self._http = http
@@ -89,7 +93,7 @@ class WomClient:
     @staticmethod
     def _raise_for(response: CachedResponse, rsn: str) -> None:
         if response.status_code == 404:
-            raise SourceError(
+            raise NotTrackedError(
                 f"Wise Old Man isn't tracking '{rsn}' yet. Call refresh_gains_tracking once to "
                 "start tracking; gains appear after a second update later on."
             )

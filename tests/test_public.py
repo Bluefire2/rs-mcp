@@ -1,8 +1,10 @@
 """The public endpoint (<PUBLIC_BASE_URL>/public/mcp): static bearer tokens, a fixed set of
 public-data tools, and no owner defaults or private data, whatever the owner's settings say."""
 
+import json
 import threading
 import time
+from contextlib import contextmanager
 
 import pytest
 import uvicorn
@@ -21,7 +23,7 @@ from osrs_mcp.snapshots import SnapshotStore
 from osrs_mcp.sources import Sources
 from tests.conftest import fixture_text
 from tests.test_auth import INIT, MCP_HEADERS, auth_settings
-from tests.test_tools import wikisync_collection_log
+from tests.test_tools import make_client, wikisync_collection_log
 
 ORIGIN = "https://rs.example.com"
 BASE = f"{ORIGIN}/osrs"
@@ -119,9 +121,10 @@ async def test_verifier_names_the_matching_token():
     assert await StaticBearerVerifier([]).verify_token("") is None
 
 
-@pytest.fixture
-def live_server():
-    """The full ASGI app on a real port, for a real MCP client over Streamable HTTP."""
+@contextmanager
+def serve_public():
+    """The full ASGI app on a real port; yields the public MCP URL for a real MCP client over
+    Streamable HTTP."""
     settings = public_settings(public_base_url="http://127.0.0.1")
     config = uvicorn.Config(http_app(settings), host="127.0.0.1", port=0, log_level="warning")
     server = uvicorn.Server(config)
@@ -132,9 +135,17 @@ def live_server():
         assert time.monotonic() < deadline and thread.is_alive(), "server didn't start"
         time.sleep(0.01)
     port = server.servers[0].sockets[0].getsockname()[1]
-    yield f"http://127.0.0.1:{port}/public/mcp"
-    server.should_exit = True
-    thread.join(timeout=10)
+    try:
+        yield f"http://127.0.0.1:{port}/public/mcp"
+    finally:
+        server.should_exit = True
+        thread.join(timeout=10)
+
+
+@pytest.fixture
+def live_server():
+    with serve_public() as url:
+        yield url
 
 
 async def test_tool_list_over_http_is_exactly_the_public_set(live_server):
@@ -187,10 +198,13 @@ async def test_player_tools_need_rsn_despite_default_rsn(mock_sources, tool):
     assert not mock_sources.calls  # nothing was looked up for the owner's default name
 
 
-async def test_get_stats_reads_regular_hiscores_despite_ironman_default(mock_sources):
+async def test_hiscores_tools_read_regular_hiscores_despite_ironman_default(mock_sources):
     async with make_public_client(default_account_type="ironman") as mcp:
         result = (await mcp.call_tool("get_stats", {"rsn": "Lynx Titan"})).structured_content
-    assert result["account_type"] == "regular"
+        assert result["account_type"] == "regular"
+        args = {"rsn": "Lynx Titan"}
+        result = (await mcp.call_tool("get_activity_scores", args)).structured_content
+        assert result["account_type"] == "regular"
     hiscores = [str(c.request.url) for c in mock_sources.calls if "hiscore" in str(c.request.url)]
     assert hiscores and all("/m=hiscore_oldschool/" in url for url in hiscores)
 
@@ -205,18 +219,44 @@ async def test_account_type_can_still_be_chosen(mock_sources):
     assert result["account_type"] == "ironman"
 
 
-async def test_collection_log_ignores_runelite_snapshot(mock_sources):
+async def test_quest_requirements_ignore_ironman_default(mock_sources):
+    # Doric's Quest needs 15 Mining for ironmen only.
+    payload = json.loads(fixture_text("wikisync_b0aty.json"))
+    payload["quests"]["Doric's Quest"] = 0
+    payload["levels"]["Mining"] = 1
+    mock_sources.get(url__regex=r"https://sync\.runescape\.wiki/.*").respond(200, json=payload)
+    args = {"rsn": "B0aty", "quest": "Doric's Quest"}
+    # Control: the owner's tool does change with the account type for this player, so equal
+    # public results below mean the public tool ignores it, not that the fixture can't tell.
+    owner = []
+    for account_type in ("regular", "ironman"):
+        async with make_client(default_account_type=account_type) as mcp:
+            owner.append((await mcp.call_tool("get_quest_progress", args)).structured_content)
+    assert owner[0]["quests"] != owner[1]["quests"]
+    public = []
+    for account_type in ("regular", "ironman"):
+        async with make_public_client(default_account_type=account_type) as mcp:
+            public.append((await mcp.call_tool("get_quest_progress", args)).structured_content)
+    assert public[0]["quests"] == public[1]["quests"] == owner[0]["quests"]
+
+
+async def test_collection_log_ignores_runelite_snapshot(mock_sources, monkeypatch):
     # The owner's endpoint would merge this snapshot in (2 slots); the public one must not.
     mock_sources.get(url__regex=r"https://sync\.runescape\.wiki/.*").respond(
         200, json=wikisync_collection_log([21907])
     )
     store = MemoryStore()
     await SnapshotStore(store).put("Lynx Titan", "collection_log", {"11286": 1, "21907": 3})
-    settings = Settings(_env_file=None, auth_mode="none", store_backend="memory")
-    sources = Sources.create(settings, HttpClient("tests/0.1", backoff_base=0))
-    async with Client(create_public_app(settings, sources)) as mcp:
-        args = {"rsn": "Lynx Titan", "page": "Vorkath"}
-        result = (await mcp.call_tool("get_collection_log", args)).structured_content
+    args = {"rsn": "Lynx Titan", "page": "Vorkath"}
+    # Control: the owner's tool sees the seeded snapshot.
+    async with make_client(store=store) as mcp:
+        owner = (await mcp.call_tool("get_collection_log", args)).structured_content
+    assert owner["obtained"] == 2
+    # The full app, with the seeded store as the one the server itself would use.
+    monkeypatch.setattr("osrs_mcp.server.make_store", lambda settings: store)
+    with serve_public() as url:
+        async with Client(StreamableHttpTransport(url, auth=TOKEN)) as mcp:
+            result = (await mcp.call_tool("get_collection_log", args)).structured_content
     assert result["obtained"] == 1 and result["runelite_as_of"] is None
     items = {item["name"]: item for item in result["page_details"][0]["items"]}
     assert not items["Draconic visage"]["obtained"]
@@ -240,3 +280,15 @@ async def test_public_tools_answer(mock_sources):
         assert gains.structured_content["total_xp_gained"] > 0
         price = await mcp.call_tool("get_item_price", {"query": "whip"})
         assert price.structured_content["matches"][0]["name"] == "Abyssal whip"
+
+
+async def test_gains_wording_fits_the_public_endpoint(mock_sources):
+    async with make_public_client() as mcp:
+        gains = await mcp.call_tool("get_gains", {"rsn": "Lynx Titan"})
+        assert "refresh_gains_tracking" not in gains.structured_content["note"]
+        mock_sources.get(url__regex=r"https://api\.wiseoldman\.net/v2/players/.*/gained.*").respond(
+            404, text=fixture_text("wom_not_found.json")
+        )
+        with pytest.raises(ToolError, match="isn't tracking") as error:
+            await mcp.call_tool("get_gains", {"rsn": "Nobody Here"})
+    assert "refresh_gains_tracking" not in str(error.value)
