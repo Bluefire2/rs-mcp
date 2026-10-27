@@ -63,6 +63,19 @@ class Settings(BaseSettings):
     # (before validation), to pin the plugin's real payload shapes. Leave unset normally.
     ingest_capture_dir: str = ""
 
+    # A second MCP endpoint, <PUBLIC_BASE_URL>/public/mcp, with public-data tools for any player
+    # (no bank, gear or owner defaults), for bots that can't do Google sign-in. Comma-separated
+    # static bearer tokens, one per consumer; blank leaves the endpoint unmounted.
+    public_api_tokens: str = ""
+
+    @property
+    def public_enabled(self) -> bool:
+        return bool(self.public_tokens)
+
+    @property
+    def public_tokens(self) -> list[str]:
+        return [token.strip() for token in self.public_api_tokens.split(",") if token.strip()]
+
     @property
     def ingest_enabled(self) -> bool:
         return bool(self.gim_group.strip() and self.ingest_token.strip())

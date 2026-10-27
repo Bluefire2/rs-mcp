@@ -130,6 +130,29 @@ group name and the player name, and limit bodies to 2 MB. Snapshots are stored p
 kind in `STORE_DIR` (collection `snapshots`). Position, HP/prayer and the current target are
 sent every second and are accepted but not stored.
 
+### Public mount (for bots)
+
+A second MCP endpoint, `<PUBLIC_BASE_URL>/public/mcp`, serves public data for **any** player to
+headless consumers that can't do the Google sign-in, such as a Discord bot. It is a separate
+FastMCP app in the same process (sharing the HTTP cache), guarded by a static bearer token, and
+is only mounted when `PUBLIC_API_TOKENS` is set.
+
+- **On it:** `get_stats`, `get_activity_scores`, `get_quest_progress`, `get_diary_progress`,
+  `get_combat_achievements`, `get_collection_log`, `get_gains`, `get_item_price`.
+- **Not on it:** `get_bank` and `get_equipment_and_inventory` (private RuneLite data), and
+  `refresh_gains_tracking` (a write against Wise Old Man on the owner's quota). Its
+  `get_collection_log` reads WikiSync only, never RuneLite snapshots.
+- **No owner defaults:** `rsn` is required on every player tool, and `account_type` defaults to
+  `regular` rather than `DEFAULT_ACCOUNT_TYPE`. Anything a bot can call, any of its users can
+  make it call, so "my stats" must never quietly mean the owner's.
+
+To add a consumer, generate a token (the `PUBLIC_API_TOKENS` line from `python -m osrs_mcp.keys`)
+and append it to `PUBLIC_API_TOKENS`, comma-separated; give each consumer its own so one can be
+revoked alone. The consumer sends `Authorization: Bearer <token>`. A missing or wrong token gets
+a plain `401` with no OAuth metadata. In Cloud Run the value lives in the
+`osrs-mcp-public-api-tokens` secret (`deploy/deploy.sh` creates it once): add a new secret
+version with the extra token and redeploy.
+
 ### Trying it from Claude
 
 claude.ai (web, Desktop and mobile) connects from Anthropic's cloud, so it **can't reach
@@ -199,6 +222,7 @@ Wiki outage can't fail a code change.
 src/osrs_mcp/
   server.py         FastMCP app, /healthz, entry point
   auth.py           Google sign-in via FastMCP's OAuth proxy + email allowlist
+  public_auth.py    static bearer tokens for the public mount
   ingest/gim.py     Group Ironmen Tracker-compatible endpoints the RuneLite plugin pushes to
   snapshots.py      per-player snapshots (bank, inventory, ...) in the key-value store
   store.py          key-value storage (file tree / memory / Firestore)
@@ -210,6 +234,7 @@ src/osrs_mcp/
   requirements.py   quest/diary requirement checking
   game.py           XP table, combat level
   tools/            the MCP tools
+  tools/public.py   the public mount's tools (public data, rsn required)
 scripts/            fixture capture, reference-data refresh
 tests/
 ```
