@@ -5,9 +5,9 @@
 #   deploy/deploy.sh             # do it
 #
 # Reads non-secret settings and two secrets (GOOGLE_CLIENT_SECRET, INGEST_TOKEN) from the local
-# .env. JWT_SIGNING_KEY and STORAGE_ENCRYPTION_KEY are generated fresh for the cloud the first
-# time. Secret values are never printed. Existing secrets are never overwritten; to rotate one,
-# add a new version with `gcloud secrets versions add` and redeploy.
+# .env. JWT_SIGNING_KEY, STORAGE_ENCRYPTION_KEY and PUBLIC_API_TOKENS are generated fresh for the
+# cloud the first time. Secret values are never printed. Existing secrets are never overwritten;
+# to rotate one, add a new version with `gcloud secrets versions add` and redeploy.
 #
 # Env vars and secrets are applied with --update-* (merge), so anything set on the service by
 # hand survives a redeploy.
@@ -163,6 +163,9 @@ create_secret osrs-mcp-google-client-secret "$(env_value GOOGLE_CLIENT_SECRET)"
 create_secret osrs-mcp-ingest-token "$(env_value INGEST_TOKEN)"
 create_secret osrs-mcp-jwt-signing-key "$(new_key)"
 create_secret osrs-mcp-storage-encryption-key "$(new_fernet)"
+# Bearer token(s) for the public endpoint (<PUBLIC_URL>/public/mcp), comma-separated, one per
+# consumer. Read it with `gcloud secrets versions access latest --secret=osrs-mcp-public-api-tokens`.
+create_secret osrs-mcp-public-api-tokens "$(new_key)"
 
 # --- build --------------------------------------------------------------------------------------
 
@@ -194,7 +197,8 @@ ENV_ARG="${ENV_ARG%##}"
 SECRETS_ARG="GOOGLE_CLIENT_SECRET=osrs-mcp-google-client-secret:latest,\
 INGEST_TOKEN=osrs-mcp-ingest-token:latest,\
 JWT_SIGNING_KEY=osrs-mcp-jwt-signing-key:latest,\
-STORAGE_ENCRYPTION_KEY=osrs-mcp-storage-encryption-key:latest"
+STORAGE_ENCRYPTION_KEY=osrs-mcp-storage-encryption-key:latest,\
+PUBLIC_API_TOKENS=osrs-mcp-public-api-tokens:latest"
 
 run run deploy "$SERVICE" --image="$IMAGE" --region="$REGION" \
   --service-account="$SA" --allow-unauthenticated \
@@ -231,7 +235,9 @@ echo "  env var names:"
 CHECK="${RUN_URL}${PREFIX}"
 echo "  $CHECK/health: $(curl -s -o /dev/null -w "%{http_code}" "$CHECK/health")"
 echo "  /mcp without token: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'content-type: application/json' -d '{}' "$CHECK/mcp") (expect 401)"
+echo "  /public/mcp without token: $(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'content-type: application/json' -d '{}' "$CHECK/public/mcp") (expect 401)"
 echo "  protected resource: $(curl -s "$RUN_URL/.well-known/oauth-protected-resource${PREFIX}/mcp")"
 log "Done. Connector URL: $PUBLIC_URL/mcp"
 echo "  Google OAuth redirect URI: $PUBLIC_URL/auth/callback"
 echo "  RuneLite plugin base URL:  $PUBLIC_URL"
+echo "  Public endpoint (bots):    $PUBLIC_URL/public/mcp"
