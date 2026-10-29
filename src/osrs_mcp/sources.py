@@ -4,6 +4,7 @@ from dataclasses import dataclass
 
 from osrs_mcp.clients.hiscores import HiscoresClient
 from osrs_mcp.clients.prices import PricesClient
+from osrs_mcp.clients.wiki import WikiClient
 from osrs_mcp.clients.wikisync import WikiSyncClient
 from osrs_mcp.clients.wom import WomClient
 from osrs_mcp.config import AccountType, Settings
@@ -18,6 +19,7 @@ class Sources:
     wikisync: WikiSyncClient
     wom: WomClient
     prices: PricesClient
+    wiki: WikiClient
 
     @classmethod
     def create(cls, settings: Settings, http: HttpClient | None = None) -> Sources:
@@ -28,6 +30,7 @@ class Sources:
             wikisync=WikiSyncClient(http),
             wom=WomClient(http, settings.wom_api_key),
             prices=PricesClient(http),
+            wiki=WikiClient(http),
         )
 
     def rsn(self, rsn: str | None) -> str:

@@ -20,7 +20,8 @@ gear) from the player's own RuneLite client pushing data out.
 | [WikiSync](https://oldschool.runescape.wiki/w/RuneScape:WikiSync) (RuneLite plugin) | Quest states, diary tasks, combat achievements, levels, collection log | Uploaded on login and as things change; the collection log only when its WikiSync button is pressed. Cached 5 min |
 | OSRS Wiki (build time) | Quest requirements, diary task text, CA names, collection log pages. See `scripts/refresh_reference_data.py` | Refreshed manually |
 | [Wise Old Man](https://wiseoldman.net) | Gains over a day/week/month/year | Per WOM snapshot. Cached 5 min |
-| [OSRS Wiki prices](https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices) | GE instant-buy/sell, buy limits, alch values | Cached 60 s (mapping 24 h) |
+| [OSRS Wiki prices](https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices) | GE instant-buy/sell, buy limits, alch values, price history | Cached 60 s (mapping 24 h, history 5-60 min) |
+| [OSRS Wiki](https://oldschool.runescape.wiki) (live, MediaWiki API) | Page search, and page text: infoboxes, drop tables, quest details | Cached 1 h |
 | [Group Ironmen Tracker](https://github.com/christoabrown/group-ironmen-tracker) (RuneLite plugin) | Bank, inventory, equipment, rune pouch, quiver, new collection log items | Pushed within seconds of a change; the bank only when it's opened |
 
 Every outbound request sends a descriptive User-Agent with contact info. The Wiki requires this.
@@ -38,6 +39,9 @@ Every outbound request sends a descriptive User-Agent with contact info. The Wik
 | `get_gains` | XP, levels and KCs gained over a period |
 | `refresh_gains_tracking` | Ask WOM for a fresh snapshot (rate-limited, so used sparingly) |
 | `get_item_price` | GE prices for an item. Partial names and typos are OK |
+| `get_price_history` | An item's price over the last day/week/month/year: change, low/high, volume, up to 120 chart points |
+| `search_wiki` | Find OSRS Wiki pages by name or topic |
+| `get_wiki_page` | A Wiki page as plain text: the intro and infobox, or one section such as Drops or Details |
 | `get_bank` | Bank contents with GE values and total; search, minimum value, sort |
 | `get_equipment_and_inventory` | Worn gear by slot, inventory, rune pouch, quiver |
 
@@ -139,7 +143,8 @@ is only mounted when `PUBLIC_API_TOKENS` is set. `deploy/deploy.sh` always sets 
 Run the endpoint is always on.
 
 - **On it:** `get_stats`, `get_activity_scores`, `get_quest_progress`, `get_diary_progress`,
-  `get_combat_achievements`, `get_collection_log`, `get_gains`, `get_item_price`.
+  `get_combat_achievements`, `get_collection_log`, `get_gains`, `get_item_price`,
+  `get_price_history`, `search_wiki`, `get_wiki_page`.
 - **Not on it:** `get_bank` and `get_equipment_and_inventory` (private RuneLite data), and
   `refresh_gains_tracking` (a write against Wise Old Man on the owner's quota). Its
   `get_collection_log` reads WikiSync only, never RuneLite snapshots.
@@ -230,7 +235,7 @@ src/osrs_mcp/
   config.py         settings from env / .env
   http.py           shared HTTP client: User-Agent, timeout, retry, TTL cache
   sources.py        wires the data-source clients together
-  clients/          hiscores, WikiSync, Wise Old Man, prices
+  clients/          hiscores, WikiSync, Wise Old Man, prices, Wiki pages
   reference/        Wiki reference data (JSON) and loaders
   requirements.py   quest/diary requirement checking
   game.py           XP table, combat level

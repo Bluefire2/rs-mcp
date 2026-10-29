@@ -21,9 +21,18 @@ READ_ONLY = ToolAnnotations(read_only_hint=True, open_world_hint=True)
 
 
 def register_all(mcp: FastMCP, sources: Sources, snapshots: SnapshotStore) -> None:
-    from osrs_mcp.tools import achievements, bank, collection_log, gains, prices, quests, stats
+    from osrs_mcp.tools import (
+        achievements,
+        bank,
+        collection_log,
+        gains,
+        prices,
+        quests,
+        stats,
+        wiki,
+    )
 
-    for module in (stats, quests, achievements, gains, prices):
+    for module in (stats, quests, achievements, gains, prices, wiki):
         module.register(mcp, sources)
     for module in (collection_log, bank):
         module.register(mcp, sources, snapshots)
