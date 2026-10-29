@@ -40,8 +40,13 @@ PUBLIC_TOOLS = {
     "get_collection_log",
     "get_gains",
     "get_item_price",
+    "get_price_history",
+    "search_wiki",
+    "get_wiki_page",
 }
-PLAYER_TOOLS = sorted(PUBLIC_TOOLS - {"get_item_price"})
+PLAYER_TOOLS = sorted(
+    PUBLIC_TOOLS - {"get_item_price", "get_price_history", "search_wiki", "get_wiki_page"}
+)
 
 
 def public_settings(**overrides) -> Settings:

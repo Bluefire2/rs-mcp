@@ -29,6 +29,9 @@ EXPECTED_TOOLS = {
     "get_gains",
     "refresh_gains_tracking",
     "get_item_price",
+    "get_price_history",
+    "search_wiki",
+    "get_wiki_page",
     "get_bank",
     "get_equipment_and_inventory",
 }

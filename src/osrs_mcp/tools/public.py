@@ -7,6 +7,7 @@ module, so a private tool can't appear here by a missed flag. Differences from t
   checked as for a regular account.
 - get_collection_log reads WikiSync only, never the owner's RuneLite snapshots.
 - No get_bank, get_equipment_and_inventory or refresh_gains_tracking.
+The wiki module is registered whole: its tools read only the Wiki, never any player's data.
 """
 
 import asyncio
@@ -19,7 +20,7 @@ from osrs_mcp.clients.wom import NotTrackedError, Period
 from osrs_mcp.config import AccountType
 from osrs_mcp.errors import SourceError
 from osrs_mcp.sources import Sources
-from osrs_mcp.tools import READ_ONLY
+from osrs_mcp.tools import READ_ONLY, wiki
 from osrs_mcp.tools.achievements import (
     CaTierName,
     CombatAchievementProgress,
@@ -30,7 +31,13 @@ from osrs_mcp.tools.achievements import (
 )
 from osrs_mcp.tools.collection_log import CollectionLog, TabName, build_collection_log
 from osrs_mcp.tools.gains import Gains, build_gains
-from osrs_mcp.tools.prices import ItemPrices, build_prices
+from osrs_mcp.tools.prices import (
+    ItemPrices,
+    PriceHistory,
+    PricePeriod,
+    build_prices,
+    price_history,
+)
 from osrs_mcp.tools.quests import QuestProgress, StatusFilter, build_quest_progress
 from osrs_mcp.tools.stats import (
     ActivityScores,
@@ -209,3 +216,15 @@ def register(mcp: FastMCP, sources: Sources) -> None:
         items = await sources.prices.mapping()
         latest = await sources.prices.latest()
         return build_prices(query, items, latest, limit)
+
+    @mcp.tool(annotations=READ_ONLY)
+    async def get_price_history(
+        query: Annotated[str, Field(description="Item name; partial names and typos are OK")],
+        period: Annotated[PricePeriod, Field(description="How far back to look")] = "month",
+    ) -> PriceHistory:
+        """Grand Exchange price history for the best-matching item over the last day, week,
+        month or year: start and end price, change, low and high, trade volume, and up to 120
+        points for a chart. Use get_item_price for the current price."""
+        return await price_history(sources, query, period)
+
+    wiki.register(mcp, sources)
