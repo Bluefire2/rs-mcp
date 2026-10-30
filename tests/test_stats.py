@@ -48,3 +48,25 @@ def test_xp_minus_one_means_no_data():
     attack = next(s for s in stats.skills if s.skill == "Attack")
     assert attack.level is None and attack.xp is None
     assert stats.combat_level is None
+
+
+def test_wikisync_levels_that_dont_fit_the_hiscores_xp_are_ignored():
+    # Seen live on "Zezima": WikiSync had 99 in every skill, the hiscores 28M total XP.
+    payload = payload_outside_ranked_range()
+    payload["skills"][4].update(level=1, xp=-1)  # Hitpoints, not listed
+    maxed = {s["name"]: 99 for s in payload["skills"][1:]}
+    stats = build_stats(parse(payload, "regular", datetime.now(UTC)), maxed)
+    assert all(s.level_source == "hiscores" for s in stats.skills)
+    assert next(s for s in stats.skills if s.skill == "Attack").level == 50
+    assert stats.total_level == 1200
+    assert "ignored" in stats.source
+
+
+def test_unlisted_skills_share_the_rest_of_the_total_xp():
+    payload = payload_outside_ranked_range()
+    payload["skills"][4].update(level=1, xp=-1)  # Hitpoints: 2.5M - 23 x 101,333 = 169,341 XP
+    hiscores = parse(payload, "regular", datetime.now(UTC))
+    fits = build_stats(hiscores, {"Hitpoints": 60})  # 273,742 XP: a session's worth more
+    assert next(s for s in fits.skills if s.skill == "Hitpoints").level == 60
+    too_much = build_stats(hiscores, {"Hitpoints": 99})  # 13M XP
+    assert next(s for s in too_much.skills if s.skill == "Hitpoints").level is None
