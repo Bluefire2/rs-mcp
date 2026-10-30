@@ -22,6 +22,14 @@ MERGED_SOURCE = (
     "come from WikiSync (the RuneLite plugin, synced on login), where they're higher than the "
     "hiscores show"
 )
+IGNORED_WIKISYNC_SOURCE = (
+    "Official OSRS hiscores (cached up to 5 minutes); WikiSync reports higher levels for this "
+    "name, but they were ignored because they need far more XP than the hiscores' total"
+)
+
+# How far behind WikiSync the hiscores can plausibly be: they update on logout or world hop,
+# so by one play session's XP.
+MAX_UNSYNCED_XP = 5_000_000
 
 
 class SkillStat(BaseModel):
@@ -60,14 +68,42 @@ def _with_xp(stat: SkillStat, xp: int) -> SkillStat:
     return stat
 
 
+def _min_xp(level: int) -> int:
+    return XP_FOR_LEVEL[min(level, len(XP_FOR_LEVEL) - 1)]
+
+
+def _unexplained_xp(hiscores: Hiscores, wikisync_levels: Mapping[str, int]) -> int:
+    """XP that WikiSync's levels need beyond what the hiscores account for. Skills the hiscores
+    don't list (XP -1) still count towards their total XP, so those share what's left of it."""
+    if hiscores.overall.xp is None:
+        return 0
+    extra = listed_xp = unlisted_need = 0
+    for s in hiscores.skills:
+        need = _min_xp(wikisync_levels[s.name]) if s.name in wikisync_levels else 0
+        if s.xp is None:
+            unlisted_need += need
+        else:
+            listed_xp += s.xp
+            extra += max(need - s.xp, 0)
+    unlisted_xp = max(hiscores.overall.xp - listed_xp, 0)
+    return extra + max(unlisted_need - unlisted_xp, 0)
+
+
 def build_stats(hiscores: Hiscores, wikisync_levels: Mapping[str, int] | None = None) -> Stats:
     """Hiscore stats, with any skill WikiSync reports higher taken from WikiSync.
 
     Seen on a real account: the hiscores still showed recently trained skills at level 1 with 0 XP
     (they only update on logout or world hop) while WikiSync already had the real level
     (Agility 25). Levels never go down, so the higher of the two is the more current.
+
+    Also seen: WikiSync had 99 in every skill for "Zezima", whose hiscores show 28M total XP
+    (WikiSync isn't tied to the hiscores account, and accepts uploads from other world types).
+    So WikiSync is ignored when its levels need more XP than the hiscores could be missing.
     """
     wikisync_levels = wikisync_levels or {}
+    ignored = _unexplained_xp(hiscores, wikisync_levels) > MAX_UNSYNCED_XP
+    if ignored:
+        wikisync_levels = {}
     skills = []
     for s in hiscores.skills:
         synced = wikisync_levels.get(s.name)
@@ -82,7 +118,7 @@ def build_stats(hiscores: Hiscores, wikisync_levels: Mapping[str, int] | None = 
                 xp_to_next_level=None,
                 xp_to_99=None,
             )
-            skills.append(_with_xp(stat, XP_FOR_LEVEL[min(synced, len(XP_FOR_LEVEL) - 1)]))
+            skills.append(_with_xp(stat, _min_xp(synced)))
             continue
         if s.level is None or s.xp is None:
             skills.append(
@@ -119,7 +155,7 @@ def build_stats(hiscores: Hiscores, wikisync_levels: Mapping[str, int] | None = 
     return Stats(
         rsn=hiscores.rsn,
         account_type=hiscores.account_type,
-        source=MERGED_SOURCE if merged else HISCORES_SOURCE,
+        source=MERGED_SOURCE if merged else IGNORED_WIKISYNC_SOURCE if ignored else HISCORES_SOURCE,
         fetched_at=hiscores.fetched_at,
         total_level=total_level,
         total_xp=hiscores.overall.xp,
@@ -205,7 +241,8 @@ def register(mcp: FastMCP, sources: Sources) -> None:
         """Skill levels, XP and ranks from the official hiscores, plus total level, computed
         combat level, XP to the next level and to 99 for every skill, and the closest 99s.
         Hiscore data updates when the player logs out or hops worlds; any skill WikiSync reports
-        higher (the hiscores can lag for unranked skills) is taken from WikiSync and marked."""
+        higher (the hiscores can lag for unranked skills) is taken from WikiSync and marked,
+        unless WikiSync's levels need far more XP than the hiscores' total."""
         name = sources.rsn(rsn)
         hiscores, synced = await asyncio.gather(
             sources.hiscores.fetch(name, sources.account_type(account_type)),
