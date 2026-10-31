@@ -1,5 +1,6 @@
 """get_stats and get_activity_scores, from the official hiscores (levels topped up from
-WikiSync where the hiscores lag)."""
+WikiSync where the hiscores lag, plus quest, diary and combat achievement progress from
+WikiSync)."""
 
 import asyncio
 from collections.abc import Mapping
@@ -10,11 +11,15 @@ from fastmcp import FastMCP
 from pydantic import BaseModel, Field
 
 from osrs_mcp.clients.hiscores import Hiscores
+from osrs_mcp.clients.wikisync import WikiSyncData
 from osrs_mcp.config import AccountType
 from osrs_mcp.errors import SourceError
 from osrs_mcp.game import COMBAT_SKILLS, MAX_LEVEL, XP_FOR_LEVEL, combat_level, xp_to_level
+from osrs_mcp.reference import diary_tasks
+from osrs_mcp.requirements import player_quest_points
 from osrs_mcp.sources import Sources
 from osrs_mcp.tools import READ_ONLY, AccountTypeArg, Rsn
+from osrs_mcp.tools.achievements import combat_achievement_points
 
 HISCORES_SOURCE = "Official OSRS hiscores (cached up to 5 minutes)"
 MERGED_SOURCE = (
@@ -24,7 +29,8 @@ MERGED_SOURCE = (
 )
 IGNORED_WIKISYNC_SOURCE = (
     "Official OSRS hiscores (cached up to 5 minutes); WikiSync reports higher levels for this "
-    "name, but they were ignored because they need far more XP than the hiscores' total"
+    "name, but they need far more XP than the hiscores' total, so its levels, quests, diaries "
+    "and combat achievements were all ignored"
 )
 
 # How far behind WikiSync the hiscores can plausibly be: they update on logout or world hop,
@@ -47,6 +53,21 @@ class SkillStat(BaseModel):
     xp_to_99: int | None = Field(description="0 once the skill is 99")
 
 
+class AccountProgress(BaseModel):
+    quest_points: int | None = Field(description="None without (usable) WikiSync data")
+    diary_tiers_completed: int | None = Field(
+        description="Achievement diary tiers with every task done; None without WikiSync data"
+    )
+    diary_tiers_total: int
+    combat_achievement_points: int | None = Field(description="None without WikiSync data")
+    clue_scrolls: int | None = Field(
+        description="Clue scrolls of all tiers completed; None below the hiscores' minimum"
+    )
+    collections_logged: int | None = Field(
+        description="Collection log slots filled; None below the hiscores' minimum"
+    )
+
+
 class Stats(BaseModel):
     rsn: str
     account_type: AccountType
@@ -57,6 +78,36 @@ class Stats(BaseModel):
     combat_level: int | None = Field(description="None if a combat skill has no data")
     closest_99s: list[str] = Field(description="Up to five non-99 skills, least XP remaining first")
     skills: list[SkillStat]
+    progress: AccountProgress = Field(
+        description="Quests, diaries and combat achievements (WikiSync), clue scrolls and "
+        "collection log (hiscores)"
+    )
+
+
+def _activity(hiscores: Hiscores, name: str) -> int | None:
+    return next((a.score for a in hiscores.activities if a.name == name), None)
+
+
+def build_progress(hiscores: Hiscores, wikisync: WikiSyncData | None) -> AccountProgress:
+    diary_total = sum(len(tiers) for tiers in diary_tasks().values())
+    diaries = quests = ca_points = None
+    if wikisync is not None:
+        quests = player_quest_points(wikisync.quests)
+        diaries = sum(
+            1
+            for tiers in wikisync.achievement_diaries.values()
+            for tier in tiers.values()
+            if tier.complete or (tier.tasks and all(tier.tasks))
+        )
+        ca_points = combat_achievement_points(wikisync.combat_achievements)
+    return AccountProgress(
+        quest_points=quests,
+        diary_tiers_completed=diaries,
+        diary_tiers_total=diary_total,
+        combat_achievement_points=ca_points,
+        clue_scrolls=_activity(hiscores, "Clue Scrolls (all)"),
+        collections_logged=_activity(hiscores, "Collections Logged"),
+    )
 
 
 def _with_xp(stat: SkillStat, xp: int) -> SkillStat:
@@ -89,7 +140,7 @@ def _unexplained_xp(hiscores: Hiscores, wikisync_levels: Mapping[str, int]) -> i
     return extra + max(unlisted_need - unlisted_xp, 0)
 
 
-def build_stats(hiscores: Hiscores, wikisync_levels: Mapping[str, int] | None = None) -> Stats:
+def build_stats(hiscores: Hiscores, wikisync: WikiSyncData | None = None) -> Stats:
     """Hiscore stats, with any skill WikiSync reports higher taken from WikiSync.
 
     Seen on a real account: the hiscores still showed recently trained skills at level 1 with 0 XP
@@ -98,12 +149,13 @@ def build_stats(hiscores: Hiscores, wikisync_levels: Mapping[str, int] | None = 
 
     Also seen: WikiSync had 99 in every skill for "Zezima", whose hiscores show 28M total XP
     (WikiSync isn't tied to the hiscores account, and accepts uploads from other world types).
-    So WikiSync is ignored when its levels need more XP than the hiscores could be missing.
+    So WikiSync is ignored when its levels need more XP than the hiscores could be missing; its
+    quests, diaries and combat achievements then can't be trusted either.
     """
-    wikisync_levels = wikisync_levels or {}
+    wikisync_levels: Mapping[str, int] = wikisync.levels if wikisync else {}
     ignored = _unexplained_xp(hiscores, wikisync_levels) > MAX_UNSYNCED_XP
     if ignored:
-        wikisync_levels = {}
+        wikisync, wikisync_levels = None, {}
     skills = []
     for s in hiscores.skills:
         synced = wikisync_levels.get(s.name)
@@ -162,6 +214,7 @@ def build_stats(hiscores: Hiscores, wikisync_levels: Mapping[str, int] | None = 
         combat_level=combat,
         closest_99s=[s.skill for s in remaining[:5]],
         skills=skills,
+        progress=build_progress(hiscores, wikisync),
     )
 
 
@@ -242,11 +295,13 @@ def register(mcp: FastMCP, sources: Sources) -> None:
         combat level, XP to the next level and to 99 for every skill, and the closest 99s.
         Hiscore data updates when the player logs out or hops worlds; any skill WikiSync reports
         higher (the hiscores can lag for unranked skills) is taken from WikiSync and marked,
-        unless WikiSync's levels need far more XP than the hiscores' total."""
+        unless WikiSync's levels need far more XP than the hiscores' total. Also quest points,
+        achievement diary tiers and combat achievement points (WikiSync), and clue scrolls and
+        collection log slots (hiscores)."""
         name = sources.rsn(rsn)
         hiscores, synced = await asyncio.gather(
             sources.hiscores.fetch(name, sources.account_type(account_type)),
-            _wikisync_levels(sources, name),
+            _wikisync(sources, name),
         )
         return build_stats(hiscores, synced)
 
@@ -269,9 +324,9 @@ def register(mcp: FastMCP, sources: Sources) -> None:
         return build_activities(hiscores, category, include_unranked)
 
 
-async def _wikisync_levels(sources: Sources, rsn: str) -> dict[str, int]:
-    """WikiSync levels, or none if the player doesn't use WikiSync (it's optional here)."""
+async def _wikisync(sources: Sources, rsn: str) -> WikiSyncData | None:
+    """WikiSync data, or None if the player doesn't use WikiSync (it's optional here)."""
     try:
-        return (await sources.wikisync.fetch(rsn)).levels
+        return await sources.wikisync.fetch(rsn)
     except SourceError:
-        return {}
+        return None

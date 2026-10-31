@@ -159,6 +159,15 @@ class CombatAchievementProgress(BaseModel):
     tasks: list[CaTask] = Field(description="Filtered tasks, easiest tier first, up to limit")
 
 
+def combat_achievement_points(completed: list[int]) -> int:
+    reference = combat_achievements()
+    return sum(
+        CA_POINTS.get(reference[ca_id].tier or "", 0)
+        for ca_id in set(completed)
+        if ca_id in reference
+    )
+
+
 def build_combat_achievements(
     data: WikiSyncData,
     tier: CaTierName | None,

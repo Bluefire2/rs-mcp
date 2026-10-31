@@ -43,7 +43,7 @@ from osrs_mcp.tools.stats import (
     ActivityScores,
     Category,
     Stats,
-    _wikisync_levels,
+    _wikisync,
     build_activities,
     build_stats,
 )
@@ -77,10 +77,12 @@ def register(mcp: FastMCP, sources: Sources) -> None:
         """Skill levels, XP and ranks from the official hiscores, plus total level, computed
         combat level, XP to the next level and to 99 for every skill, and the closest 99s.
         Hiscore data updates when the player logs out or hops worlds; any skill WikiSync reports
-        higher is taken from WikiSync and marked."""
+        higher is taken from WikiSync and marked, unless WikiSync's levels need far more XP than
+        the hiscores' total. Also quest points, achievement diary tiers and combat achievement
+        points (WikiSync), and clue scrolls and collection log slots (hiscores)."""
         name = _name(rsn)
         hiscores, synced = await asyncio.gather(
-            sources.hiscores.fetch(name, account_type), _wikisync_levels(sources, name)
+            sources.hiscores.fetch(name, account_type), _wikisync(sources, name)
         )
         return build_stats(hiscores, synced)
 
