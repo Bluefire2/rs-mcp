@@ -21,7 +21,7 @@ you can connect a client to either one, or to both.
 | Endpoint | `<PUBLIC_BASE_URL>/mcp` | `<PUBLIC_BASE_URL>/public/mcp` |
 | For | The owner, from claude.ai (web, Desktop, mobile) or Claude Code | Headless consumers that can't do a browser sign-in, such as a Discord bot |
 | Auth | Google sign-in (OAuth), restricted to `ALLOWED_EMAIL` | Static bearer token from `PUBLIC_API_TOKENS`, one per consumer |
-| Players | The owner by default (`DEFAULT_RSN`); `rsn` is optional | Any player; `rsn` is required on every player tool |
+| Players | The owner by default (`DEFAULT_RSN`); `rsn` is optional. Other players are read with the owner's account type and ironman rules unless `account_type` is passed | Any player; `rsn` is required on every player tool. Every player is treated as a regular account unless `account_type` is passed |
 | Private data | Bank, inventory and gear pushed by the owner's RuneLite client | None |
 | Enabled | Always | Only when `PUBLIC_API_TOKENS` is set (`deploy/deploy.sh` always sets it) |
 
@@ -32,8 +32,8 @@ give a bot a token for the public server. Neither needs the other's credentials.
 account (with bank and gear) next to other players'. See
 [Using both together](#using-both-together).
 
-They share one process, so they share the HTTP cache too: a hiscores lookup on one is a cache
-hit on the other for the next 5 minutes. The private server's endpoint is always mounted,
+They share one process, so they share the HTTP cache too: the same upstream request made on one
+is a cache hit on the other, within that source's cache time (see [Data sources](#data-sources)). The private server's endpoint is always mounted,
 because the RuneLite ingest routes, sign-in pages and health check live on it.
 
 ## Data sources
@@ -70,7 +70,7 @@ Every outbound request sends a descriptive User-Agent with contact info. The Wik
 | `get_equipment_and_inventory` | Worn gear by slot, inventory, rune pouch, quiver | ✓ | — |
 
 1. On the public server it reads WikiSync only, never the owner's RuneLite snapshots.
-2. It writes to Wise Old Man on the owner's rate-limit quota.
+2. It writes to Wise Old Man, using the server's rate limit (its IP, or `WOM_API_KEY`).
 
 Other differences on the public server: `account_type` defaults to `regular` rather than
 `DEFAULT_ACCOUNT_TYPE`, and quest and diary requirements are checked as for a regular account.
@@ -100,8 +100,9 @@ python -m uv run python -m osrs_mcp.keys >> .env
 ```
 
 This appends `JWT_SIGNING_KEY` and `STORAGE_ENCRYPTION_KEY` (private server), `INGEST_TOKEN`
-(RuneLite ingest) and `PUBLIC_API_TOKENS` (public server). Leave `PUBLIC_API_TOKENS` blank if
-you don't want the public server.
+(RuneLite ingest) and `PUBLIC_API_TOKENS` (public server). If you don't want the public server,
+delete the appended `PUBLIC_API_TOKENS` line: when a key appears twice in `.env`, the last line
+wins.
 
 Then set up Google sign-in for the private server (below), or set `AUTH_MODE=none` to skip it
 during development. Start the server:
@@ -114,7 +115,10 @@ python -m uv run python -m osrs_mcp
 |---|---|
 | Private MCP | `http://localhost:8000/mcp` |
 | Public MCP | `http://localhost:8000/public/mcp` (only with `PUBLIC_API_TOKENS` set) |
-| Health check | `http://localhost:8000/healthz` (`/health` on Cloud Run) |
+| Health check | `http://localhost:8000/healthz` or `/health` (on Cloud Run only `/health` gets through) |
+
+With a path in `PUBLIC_BASE_URL` (for example `https://rs.example.com/osrs`), all of these move
+under that path: `/osrs/mcp`, `/osrs/public/mcp`, `/osrs/health`.
 
 `AUTH_MODE=none` opens the **private** endpoint to anyone who can reach it, bank and gear
 included. Only use it on localhost. It doesn't affect the public endpoint, which always
@@ -263,8 +267,9 @@ private server there.
 claude mcp add --transport http osrs-public http://localhost:8000/public/mcp --header "Authorization: Bearer <token>"
 ```
 
-For a deployed server, use `<PUBLIC_BASE_URL>/public/mcp`. Add `--scope user` to make it
-available in every project; never commit a token in a project-scoped `.mcp.json`.
+For a deployed server, use `<PUBLIC_BASE_URL>/public/mcp`. The default scope keeps the token in
+your local Claude Code config; `--scope user` makes it available in every project. Avoid
+`--scope project`, which writes the token into `.mcp.json` in the repo.
 
 ### MCP Inspector
 
@@ -301,7 +306,8 @@ asyncio.run(main())
 ```
 
 A bot that lets an LLM answer questions can pass the same URL and token to its model's MCP
-support (for example the Claude API's MCP connector) instead of calling tools itself.
+support (for example the Claude API's MCP connector) instead of calling tools itself. The Claude
+API connects from Anthropic's cloud, so like claude.ai it needs the deployed URL, not localhost.
 
 ### Checking a token with curl
 
@@ -325,9 +331,11 @@ claude mcp add --transport http osrs-public http://localhost:8000/public/mcp --h
 
 The tools have the same names on both servers; Claude Code prefixes each with its server's
 name, so they don't clash. Questions about your own account,
-bank or gear go to `osrs`; it also accepts any other player's `rsn`, so the public server adds
-nothing for the owner beyond letting a token-based client in. Connecting both is most useful
-for testing what a bot will see.
+bank or gear go to `osrs`. Lookups of other players work on either, but differ: `osrs` reads them
+with your `DEFAULT_ACCOUNT_TYPE` and checks quest and diary requirements with your ironman rules,
+while `osrs-public` treats them as regular accounts unless `account_type` is passed. For an
+ironman owner, the public server gives the right answers for other, non-ironman players.
+Connecting both is also the easiest way to see exactly what a bot will see.
 
 ## Development
 
@@ -339,9 +347,10 @@ python -m uv run pytest
 python -m uv run ruff check .
 ```
 
-The tests run every tool on both servers through a real FastMCP client. Outbound HTTP is mocked
-with responses captured from the live APIs (`tests/fixtures/`). `tests/test_public.py` pins the
-public server's exact tool list, so a private tool can't appear on it by accident. To
+The tests run every private-server tool through a real FastMCP client. Outbound HTTP is mocked
+with responses captured from the live APIs (`tests/fixtures/`). `tests/test_public.py` covers
+the public server: its exact tool list (so a private tool can't appear on it by accident), its
+token auth, the required `rsn`, and where its answers differ from the private server's. To
 re-capture the fixtures after an API changes:
 
 ```bash
@@ -377,8 +386,8 @@ src/osrs_mcp/
   reference/        Wiki reference data (JSON) and loaders
   requirements.py   quest/diary requirement checking
   game.py           XP table, combat level
-  tools/            the private server's tools
-  tools/public.py   the public server's tools (wrappers over tools/, rsn required)
+  tools/            the private server's tools, and the build_* functions both servers share
+  tools/public.py   the public server's tools (wrappers over the build_* functions, rsn required)
 scripts/            fixture capture, reference-data refresh
 tests/
 ```
@@ -396,8 +405,10 @@ tests/
   uncommitted build inputs;
 - deploys with `--update-env-vars` / `--update-secrets`, which merge, so settings changed by
   hand on the service survive;
-- checks the result: one container, the right image and service account, env var names,
-  `/health`, and a 401 from both `/mcp` and `/public/mcp`.
+- prints the result for you to check (it doesn't fail on a mismatch): container count, image
+  and service account, env var names, the `/health` status, the status from `/mcp` and
+  `/public/mcp` without a token (expect 401 from both), and the OAuth protected-resource
+  document.
 
 ```bash
 bash deploy/deploy.sh --dry-run
@@ -414,31 +425,54 @@ them with `PROJECT=… REGION=… DOMAIN=… PREFIX=…`. The Firestore location
 created. Run it from Git Bash; it calls the POSIX `gcloud`, because `gcloud.cmd` breaks
 arguments containing spaces.
 
-The deploy always turns on the public server. The private server's settings (`GOOGLE_*`,
-`ALLOWED_EMAIL`, `DEFAULT_RSN`, `GIM_GROUP`, `INGEST_TOKEN`) are required, since its endpoint is
-always mounted.
+`deploy.sh` stops unless `.env` sets `GCP_PROJECT`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`,
+`ALLOWED_EMAIL`, `DEFAULT_RSN`, `CONTACT`, `GIM_GROUP` and `INGEST_TOKEN`. It always deploys with
+`AUTH_MODE=google` and a public-server token, so in Cloud Run both servers are always on.
+
+The **public URL** below is the `PUBLIC_BASE_URL` the script deploys:
+`https://<DEPLOY_DOMAIN><DEPLOY_PREFIX>` with a custom domain, otherwise the service's run.app URL
+(`https://osrs-mcp-<project number>.<region>.run.app`). The script prints it at the end, along
+with the exact redirect URI, connector URL, plugin base URL and public endpoint.
 
 After the first deploy, for the private server:
-1. Add `https://<service URL>/auth/callback` to the Google OAuth client's **Authorized redirect
-   URIs**. The service URL is printed, and is `https://osrs-mcp-<project number>.<region>.run.app`.
-2. In the Group Ironmen Tracker plugin, set **Server base URL override** to the service URL.
-3. In claude.ai, add `<service URL>/mcp` as a custom connector (see
+1. Add `<public URL>/auth/callback` to the Google OAuth client's **Authorized redirect URIs**.
+2. In the Group Ironmen Tracker plugin, set **Server base URL override** to the public URL.
+3. In claude.ai, add `<public URL>/mcp` as a custom connector (see
    [Integration guide: private server](#integration-guide-private-server)).
-4. To publish the Google OAuth app (so sign-ins don't expire after 7 days), use `<service URL>/`
-   as the homepage and `<service URL>/privacy` as the privacy policy on the Branding page.
+4. To publish the Google OAuth app (so sign-ins don't expire after 7 days), use `<public URL>/`
+   as the homepage and `<public URL>/privacy` as the privacy policy on the Branding page.
 
 And for the public server, read the generated token and give it to the consumer, with
-`<service URL>/public/mcp`:
+`<public URL>/public/mcp`. Pass the same project as `GCP_PROJECT`, since the script doesn't use
+gcloud's active project:
 
 ```bash
-gcloud secrets versions access latest --secret=osrs-mcp-public-api-tokens
+gcloud secrets versions access latest --secret=osrs-mcp-public-api-tokens --project=<GCP_PROJECT>
 ```
 
-To add or revoke a consumer, add a new secret version holding the full comma-separated list,
-then redeploy (or deploy a new revision) so the service reads it:
+To add or revoke a consumer:
 
-```bash
-printf '%s' "<token1>,<token2>" | gcloud secrets versions add osrs-mcp-public-api-tokens --data-file=-
-```
+1. Read the current list with the command above. The new version replaces the whole list.
+2. Add a new secret version with the full comma-separated list you want:
+
+   ```bash
+   printf '%s' "<token1>,<token2>" | gcloud secrets versions add osrs-mcp-public-api-tokens --data-file=- --project=<GCP_PROJECT>
+   ```
+
+3. Roll out a new revision so the service reads it. Running instances keep the old list until
+   then, so a revoked token keeps working until this step. Re-running the deploy script does
+   this, but also rebuilds the image; this only makes a new revision:
+
+   ```bash
+   gcloud run services update osrs-mcp --region=us-west1 --project=<GCP_PROJECT> --update-secrets=PUBLIC_API_TOKENS=osrs-mcp-public-api-tokens:latest
+   ```
+
+   Check that `latestReadyRevisionName` changed, with `gcloud run services describe osrs-mcp
+   --region=us-west1 --project=<GCP_PROJECT>`.
+4. When revoking, disable the old version so the revoked token can't be read back from it:
+
+   ```bash
+   gcloud secrets versions disable <old version number> --secret=osrs-mcp-public-api-tokens --project=<GCP_PROJECT>
+   ```
 
 See [docs/PLAN.md](docs/PLAN.md).
